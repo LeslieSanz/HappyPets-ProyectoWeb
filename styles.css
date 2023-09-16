@@ -10,10 +10,34 @@
   body {
     height: 100vh;
     width: 100%;
-    background: url(gatito.jpg);
-    background-position: center;
-    background-size: cover;
+    background: rgb(245, 192, 15);
   }
+
+  /*inicio de header*/
+  .header{
+    width: 100%;
+    height: 4em;
+    background: rgb(147, 103, 26);
+  }
+
+  /*inicio del banner*/
+  .banner{
+    width: 100%;
+    height: calc(100vh - 4em);
+    background: rgb(213, 157, 4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*inicio del articulo*/
+  .article{
+    width: 100%;
+    height: 100vh;
+    background: rgb(235, 212, 138);
+  }
+  
   
   .sidebar {
     position: fixed;
@@ -21,7 +45,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 1.0);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: column;
