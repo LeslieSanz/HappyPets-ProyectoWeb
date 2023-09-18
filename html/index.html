@@ -1,87 +1,80 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial scale=1,0">
-        <title>Happy Pets</title> 
-        
-        <link 
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        />
-        <link 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Pets</title>
+    <link 
         rel="stylesheet"
         href="../css/styles.css"
-        />
-        
-    </head>
-    <body>
-        <!--CABECERA-->
-        <header class="header">
-            <img src="" alt="logo de la empresa"
-            class="logo">
-        </header> 
-
-        <!--BARRA DE NAVEGACIÓN LATERAL-->
-        <nav class="sidebar">
-            <div class="logo">
-                <img src="../img/logopets.jpeg" alt="" />
-                <h2>Happy Pets</h2>
-            </div>
-            <ul class="links">
-                <h4>Acerca de Nosotros</h4>
-                <li>
-                  <i class="fas fa-life-ring"></i>
-                  <a href="#">Historia</a>
-                </li>
-                <li>
-                    <i class="fas fa-book"></i>
-                    <a href="consultas.html">Consultas</a>
-                </li>
-                <li>
-                    <i class="fas fa-life-ring"></i>
-                    <a href="contacto.html">Contáctanos</a>
-                  </li>
-                <hr/>
-
-                <h4>Servicios</h4>
-                <li>
-                  <i class="fas fa-house"></i>
-                  <a href="adopta.html">Adopta</a>
-                </li>
-                <li>
-                    <i class="fas fa-list"></i>
-                    <a href="donaciones.html">Donaciones</a>
-                </li>     
-                <li>
-                    <i class="fas fa-list"></i>
-                    <a href="#">Apadrina</a>
-                </li>            
-                <hr/>
-            </ul>
+    />
+</head>
+<body>
+    <!--CABECERA-->
+    <header>
+        <a href="#" class="logo">
+           <img src="../img/logopets.jpeg" alt="logo de la empresa" class="logo-img">
+           <h2 class="logo-nombre">Happy Pets</h2>
+        </a>
+        <!--BARRA DE NAVEGACIÓN-->
+        <nav>
+            <a href="#">¿Quiénes somos?</a>
+            <a href="#">Adopta</a>
+            <a href="#">Donaciones</a>
+            <a href="#">Contacto</a>
+            <a href="#">Iniciar sesión</a>
         </nav>
+    </header>
+    <!--SECCIÓN 1-->
+    <section id="hero">
+        <h1>Adopta y salva una vida</h1>
+        <button>Adopta ya</button>
+    </section>
 
-        <!--SECCIÓN 1 -->
-        <section class="banner">
-            <h1>Adopta y salva una vida</h1>
-            <div class="centered-container">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fpit quos, vero quae cupiditate earum saepe sint sunt maiores. Optio, culpa eveniet!Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt animi praesentium, voluptatibus explicabo tempore molestias ab dolor blanditiis.</p>
+    <section id="razones">
+        <div class="container">
+            <div class="img-container"></div>
+            <div class="texto">
+                <h2>¿Por qué adoptar?</h2>
+                <ul>
+                    <li>✔️Estás salvando no una, si no, dos vidas al liberar un espacio en el refugio</li>
+                    <li>✔️Mejoran tu salud y serás más feliz</li>
+                    <li>✔️Beneficia a los niños</li>
+                    <li>✔️Ayudarás a controlar la sobrepoblación de animales</li>
+                    <li>✔️Porque sí</li>
+                </ul>
             </div>
-            <a href="#"
-            class="btn-banner">BOTON</a>
-        </section>
-
-        <!--SECCIÓN 2 -->
-        <section class="article">
-            <h2 class="titulo del articulo">¿Por qué adoptar?</h2>
-            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ea enim corporis necessitatibus, provident itaque quos mollitia aliquam minus beatae esse, assumenda ratione reprehenderit eius asperiores corrupti facilis, nisi consectetur!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum animi labore sunt facilis sapiente a quasi consequatur ad ullam distinctio placeat quaerat reprehenderit incidunt libero in, laborum aut eligendi.</p>
-        
-        </section>
-
-        <!--PIE DE PÁGINA-->
-        <footer class="footer"></footer>
-             
-    </body>
-</html>
-  </body>
+        </div>
+    </section>
+    <!--SECCIÓN 2-->
+    <section id="testimonios">
+        <div class="container">
+            <h2>Testimonios</h2>
+            <div class="carta">
+                <h3>Testimonio 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit rerum quae odit, 
+                veniam eius quidem totam iste nostrum similique architecto mollitia aperiam tempore 
+                in delectus aspernatur? Natus deleniti ea aspernatur.</p>
+            </div>
+            <div class="carta">
+                <h3>Testimonio 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit rerum quae odit, 
+                veniam eius quidem totam iste nostrum similique architecto mollitia aperiam tempore 
+                in delectus aspernatur? Natus deleniti ea aspernatur.</p>
+            </div>
+            <div class="carta">
+                <h3>Testimonio 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit rerum quae odit, 
+                veniam eius quidem totam iste nostrum similique architecto mollitia aperiam tempore 
+                in delectus aspernatur? Natus deleniti ea aspernatur.</p>
+            </div>
+        </div>
+    </section>
+    <!--PIE DE PÁGINA-->
+    <footer>
+        <div class="container">
+            <p>&copy;Gatominith</p>
+        </div>
+    </footer>
+</body>
 </html>
