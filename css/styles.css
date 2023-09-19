@@ -1,8 +1,3 @@
-/* Establece el modelo de caja en border-box para que el padding y el borde no afecten al tamaño total de los elementos */
-* {
-  box-sizing: border-box;
-}
-
 /* Estilos generales para el cuerpo del documento */
 body {
   font-family: 'Roboto', sans-serif;
@@ -32,7 +27,7 @@ header h2 {
 /* Estilos para el logotipo en el encabezado */
 .logo {
   display: flex;
-  margin-left: 75px;
+  align-items: center;
 }
 
 /* Estilos para la imagen del logotipo en el encabezado */
@@ -41,10 +36,29 @@ header h2 {
   margin-right: 10px;
 }
 
-/* Estilos para los enlaces de navegación en el encabezado */
-nav a {
+/* Estilos para la barra de navegación */
+nav {
+  flex: 1; /* Esto permite que la barra de navegación ocupe todo el espacio restante */
+}
+
+/* Estilos para la lista no ordenada en la barra de navegación */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Estilos para los elementos de la lista en la barra de navegación */
+nav li {
   font-weight: 600;
-  padding-right: 10px;
+}
+
+/* Estilos para los enlaces de navegación */
+nav a {
+  text-decoration: none;
+  color: black;
 }
 
 /* Estilos al pasar el cursor por encima de los enlaces de navegación */
@@ -53,13 +67,16 @@ nav a:hover {
 }
 
 /* Estilos para pantallas con un ancho máximo de 700px */
-@media(max-width: 700px) {
+@media (max-width: 700px) {
   header {
     flex-direction: column;
+    align-items: center;
   }
 
-  nav {
-    padding: 10px 0px;
+  /* Ajusta el espacio entre elementos en la barra de navegación */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -135,4 +152,3 @@ button {
   max-width: 1400px;
   margin: auto;
 }
-
