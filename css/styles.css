@@ -1,4 +1,5 @@
-/* Establece el modelo de caja en border-box para que el padding y el borde no afecten al tamaño total de los elementos */
+/* Establece el modelo de caja en border-box para que el padding y el borde 
+no afecten al tamaño total de los elementos */
 * {
   box-sizing: border-box;
 }
@@ -114,9 +115,4 @@ nav a:hover {
   background-size: cover;
   background-position: center center;
   height: 300px
-
-
-
-
-
-
+}
