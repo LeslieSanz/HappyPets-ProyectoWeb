@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box ;
+  box-sizing: border-box;
 }
 
 /* Estilos generales para el cuerpo del documento */
@@ -15,10 +15,10 @@ body {
 a {
   text-decoration: none;
   color: black;
-} 
+}
 
 /* Estilos para el encabezado */
-header { 
+header {
   display: flex;
   min-height: 70px;
   background-color: white;
@@ -69,34 +69,34 @@ nav a:hover {
   color: rgb(236, 214, 70);
 }
 
-.menu i{
+.menu i {
   margin-right: 5px;
 }
 
-.menu > li{
+.menu>li {
   position: relative;
-  display: inline-block; 
+  display: inline-block;
 }
 
 /*Submenu*/
-.submenu{
+.submenu {
   position: absolute;
   background-color: rgb(245, 183, 26);
   width: 90%;
   display: none;
 }
 
-.submenu li a{
+.submenu li a {
   display: block;
   padding: 15px;
   color: white;
 }
 
-.submenu li a:hover{
+.submenu li a:hover {
   color: black;
 }
 
-.menu li:hover .submenu{
+.menu li:hover .submenu {
   display: block;
 }
 
