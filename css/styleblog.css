@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Estilos para los enlaces */
+  a {
+    text-decoration: none;
+    color: black;
+  } 
+  
+  /* Estilos para el encabezado */
+  header { 
+    display: flex;
+    min-height: 70px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-left: 75px;
+    margin-right: 75px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /* Estilos para el título "Happy Pets" en el encabezado */
+  header h2 {
+    color: rgb(141, 80, 36);
+  }
+  
+  /* Estilos para el logotipo en el encabezado */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilos para la imagen del logotipo en el encabezado */
+  .logo img {
+    height: 70px;
+    margin-right: 10px;
+  }
+  ul {
+    list-style: none;
+  }
+  /* Estilos para la barra de navegación */
+  /* Estilos para la lista no ordenada en la barra de navegación */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+  }
+  
+  /* Estilos para los enlaces de navegación */
+  nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding-right: 20px;
+  }
+  
+  /* Estilos al pasar el cursor por encima de los enlaces de navegación */
+  nav a:hover {
+    color: rgb(236, 214, 70);
+  }
+  
+  .menu i{
+    margin-right: 5px;
+  }
+  
+  .menu > li{
+    position: relative;
+    display: inline-block; 
+  }
+  
+  /*Submenu*/
+  .submenu{
+    position: absolute;
+    background-color: rgb(245, 183, 26);
+    width: 90%;
+    display: none;
+  }
+  
+  .submenu li a{
+    display: block;
+    padding: 15px;
+    color: white;
+  }
+  
+  .submenu li a:hover{
+    color: black;
+  }
+  
+  .menu li:hover .submenu{
+    display: block;
+  }
+  
+  
+  /* Estilos para pantallas con un ancho máximo de 700px */
+  @media (max-width: 700px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Ajusta el espacio entre elementos en la barra de navegación */
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Estilos para la sección hero (imagen de fondo y texto centrado) */
+  #hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/perritosblog.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  /* Estilos para el título en la sección hero */
+  #hero h1 {
+    font-size: 70px;
+  }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.footer {
+    background-color: #26262b;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .Links-de-Redes a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .Links-de-Redes a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+
+/*responsive*/
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+.contenido {
+  display: flex;
+  margin: 60px;
+}
+.secciones {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+.contenido .articulos .secciones img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.contenido .articulos .secciones p {
+  
+}
