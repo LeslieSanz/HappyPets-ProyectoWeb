@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-* {
+*{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box ;
 }
 
 /* Estilos generales para el cuerpo del documento */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* Estilos para los enlaces */
 a {
   text-decoration: none;
   color: black;
-}
+} 
 
 /* Estilos para el encabezado */
-header {
+header { 
   display: flex;
   min-height: 70px;
   background-color: white;
@@ -69,35 +69,38 @@ nav a:hover {
   color: rgb(236, 214, 70);
 }
 
-.menu i {
+.menu i{
   margin-right: 5px;
 }
 
-.menu>li {
+.menu > li{
   position: relative;
-  display: inline-block;
+  display: inline-block; 
 }
 
 /*Submenu*/
-.submenu {
+.submenu{
   position: absolute;
   background-color: rgb(245, 183, 26);
   width: 90%;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
 }
 
-.submenu li a {
+.submenu li a{
   display: block;
   padding: 15px;
   color: white;
 }
 
-.submenu li a:hover {
+.submenu li a:hover{
   color: black;
 }
 
-.menu li:hover .submenu {
-  display: block;
+.menu li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
 }
 
 
@@ -133,7 +136,13 @@ nav a:hover {
 
 /* Estilos para el título en la sección hero */
 #hero h1 {
-  font-size: 70px;
+  font-size: 50px;
+}
+
+#hero h2 {
+  font-size: 46px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
 }
 
 /* Estilos para la sección "razones" */
@@ -175,6 +184,7 @@ button {
   font-size: 1.5em;
   font-weight: bold;
   padding: 10px 20px;
+  margin-top: 20px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
@@ -182,8 +192,60 @@ button {
   background-color: rgb(245, 183, 26);
 }
 
-/* Estilos para el contenedor principal */
-.container {
-  max-width: 1400px;
-  margin: auto;
+#testimonios{
+  width: 100%;
+  max-width: 1500px;
+  text-align: center;
 }
+
+#testimonios h2{
+  margin-top: 80px;
+    font-size: 40px;
+}
+
+.parrafo1{
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.container-testimonios{
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.comentario{
+  width: 340px;
+  margin: 20px;
+  background-color: antiquewhite;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px 5px black;
+}
+
+.foto-perfil{
+  margin: auto;
+  width: 150px;
+  height: 120px;
+  background-image: url(../img/persona.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  position: relative;
+  top: -60px;
+}
+
+.comentario h3{
+  margin-top: -40px;
+}
+
+.comentario p{
+  margin-top: 10px;
+}
+
+
+
