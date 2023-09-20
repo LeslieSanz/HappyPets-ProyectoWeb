@@ -7,9 +7,9 @@
     <title>Reporta-Happy Pets</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/reporta.css" />
-    <link rel="icon" href = "../img/logopets.jpeg" type = "image/x-icon">
-    <script src="https://kit.fontawesome.com/09bca36bc3.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
     <!--CABECERA-->
     <header>
@@ -20,7 +20,7 @@
         <!--BARRA DE NAVEGACIÓN-->
         <nav>
             <ul class="menu">
-                <li><a href="#">¿Quiénes somos?</a></li>
+                <li><a href="index.html">¿Quiénes somos?</a></li>
                 <li><i class="fa-solid fa-newspaper"></i><a href="#">Blog</a></li>
                 <li>
                     <i class="fa-solid fa-paw"></i><a href="#">Deja tu huella</a>
@@ -49,77 +49,90 @@
         </h1>
 
         <button id="BotonBanner">¡Reporta!</button>
+
+
     </section>
 
     <!-- PARTE DE ANIMALES EXTRAVIADOS-->
     <section id="animalesExtraviados">
         <div class="container">
             <h2>Peluditos extraviados</h2>
-            <div class="carta">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias natus
-                    aspernatur debitis nesciunt perspiciatis eius ut aliquid veritatis.
-                    Explicabo accusantium magni facere aspernatur officiis perferendis
-                    veritatis. Maiores est voluptatibus magnam!
-                </p>
-                <button id="BotonPE"> + Info</button>
-            </div>
 
-            <div class="carta">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias natus
-                    aspernatur debitis nesciunt perspiciatis eius ut aliquid veritatis.
-                    Explicabo accusantium magni facere aspernatur officiis perferendis
-                    veritatis. Maiores est voluptatibus magnam!
-                </p>
-                <button id="BotonPE"> + Info</button>
-            </div>
-            <div class="carta">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias natus
-                    aspernatur debitis nesciunt perspiciatis eius ut aliquid veritatis.
-                    Explicabo accusantium magni facere aspernatur officiis perferendis
-                    veritatis. Maiores est voluptatibus magnam!
-                </p>
-                <button id="BotonPE"> + Info</button>
+            <div class="programas">
+                <div class="carta">
+                    <p id="p1">
+                        Encontrado en: San Juan de Lurigancho <br>
+                        Esta hambriendo y cojeando<br>
+                        Necesita de atención médica
+                    </p>
+                    <button id="BotonPE"> + Info</button>
+                </div>
+
+                <div class="carta">
+                    <p>
+                        Encontrado en: Callo <br>
+                        Ha sido encontrado durmiendo en la calle<br>
+                        Necesita de atención médica
+                    </p>
+                    <button id="BotonPE"> + Info</button>
+                </div>
+                <div class="carta">
+                    <p>
+                        Encontrado en: San Martin de Porres <br>
+                        Ha sido encontrado comiendo en la basura<br>
+                        Necesita de atención médica
+                    </p>
+                    <button id="BotonPE"> + Info</button>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- PARTE PARA REPORTA UN ANIMAL-->
 
-    <section id="formularioReporte">
-        <div class="container">
+    <section id="form">
+
+
+        <div class="container2">
+            <h1>Formulario de Reporte</h1>
             <form>
-                <h2>Reporta</h2>
+                <div class="form1">
+                    <h2>Información del Informante</h2>
+                    <label for="nombres-apellidos">Nombres y Apellidos</label>
+                    <input type="text" id="nombres-apellidos" name="nombres-apellidos" required>
 
-                <h3>Información del informante</h3>
-                <label for="nombres y apellidos">Ingrese sus nombres y apellidos</label>
-                <input type="text" id="nombres y apellidos" class="box" />
+                    <label for="celular">Celular</label>
+                    <input type="text" id="celular" name="celular" required>
 
-                <label for="celular">Ingrese su celular</label>
-                <input type="text" id="celular" class="box" />
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
 
-                <label for="correo">Ingrese sus correo</label>
-                <input type="text" id="correo" class="box" />
+                <div class="form2">
+                    <h2>Información del Animal</h2>
+                    <label for="especie">Especie del Animal Encontrado</label>
+                    <input type="text" id="especie" name="especie" required>
 
-                <h3>Información del animal</h3>
-                <label for="especie">Ingrese la especie del animal encontrado</label>
-                <input type="text" id="especie" class="box" />
+                    <label for="distrito">Distrito del Animal Encontrado</label>
+                    <input type="text" id="distrito" name="distrito" required>
 
-                <label for="distrito">Ingrese distrito donde se encontró el animal</label>
-                <input type="text" id="distrito" class="box" />
+                    <label for="direccion">Dirección de la Calle</label>
+                    <input type="text" id="direccion" name="direccion" required>
 
-                <label for="direccion">Ingrese la direccion de calle</label>
-                <input type="text" id="direccion" class="box" />
+                    <label for="referencia">Referencia de la Calle</label>
+                    <input type="text" id="referencia" name="referencia" required>
 
-                <label for="referencia">Ingrese una referencia de la dirección</label>
-                <input type="text" id="referencia" class="box" />
+                    <label for="info-adicional">Información Adicional (máx. 120 caracteres)</label>
+                    <textarea id="info-adicional" name="info-adicional" rows="4" maxlength="120"></textarea>
+                </div>
 
-                <label for="Indicacion">Informacion adicional o nota del animal</label>
-                <textarea id="mensaje" cols="120" rows="10"></textarea>
+                <button type="submit" class="submit">Enviar</button>
             </form>
         </div>
+
+
+
     </section>
 
     <!--PIE DE PÁGINA-->
@@ -146,15 +159,28 @@
                 <div class="footer-col">
                     <h4>Redes Sociales</h4>
                     <div class="Links-de-Redes">
-                        <a href="https://www.facebook.com/profile.php?id=61551118926851"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61551118926851"> <i
+                                class="fab fa-facebook-f"></i></a>
                         <a href="#"> <i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com/happypets2023web?igshid=NGVhN2U2NjQ0Yg=="> <i class="fab fa-instagram"></i></a>
+                        <a href="https://instagram.com/happypets2023web?igshid=NGVhN2U2NjQ0Yg=="> <i
+                                class="fab fa-instagram"></i></a>
                         <a href="#"> <i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+
+    <!-- TERRIBLEMENTE OPCIONAL-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("BotonBanner").addEventListener("click", function () {
+                var seccion = document.getElementById("form");
+                seccion.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
 
 
 </body>

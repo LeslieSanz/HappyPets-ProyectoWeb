@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -11,7 +13,7 @@ h3 {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
 }
 
@@ -20,6 +22,7 @@ body {
 
 /* CONFIGURACIONES DE BOTON DEL BANNER */
 #BotonBanner {
+    cursor: pointer;
     font-size: 1.80em;
     font-weight: bold;
     padding: 9px 15px;
@@ -31,6 +34,7 @@ body {
     ;
     background-color: rgb(245, 183, 26);
     transition: transform 0.2s;
+    margin: 15px;
 }
 
 #BotonBanner:hover {
@@ -40,6 +44,8 @@ body {
 
 /* CONFIGURACIONES DE BOTON DE PERRITOS EXTRAVIADOS */
 #BotonPE {
+    cursor: pointer;
+    margin: 5px 5px;
     font-size: 1.35em;
     font-weight: bold;
     padding: 9px 15px;
@@ -53,6 +59,7 @@ body {
     ;
     transition: transform 0.2s;
     /* Agrega una transición suave para el efecto de agrandamiento */
+
 
 }
 
@@ -89,93 +96,188 @@ body {
     background-size: cover;
     background-position: center center;
 }
-ul {
-    list-style: none;
-  }
-.row {
-    display: flex;
-    flex-wrap: wrap;
-  }
 
-.footer {
-    background-color: #26262b;
-    padding: 70px 0;
+/* ANIMALES EXTRAVIADOS */
+
+#animalesExtraviados {
+    background-color: blanchedalmond;
+    text-align: center;
 }
 
-.footer-col {
-    width: 25%;
-    padding: 0 15px;
+#animalesExtraviados h2 {
+    margin-top: 0;
 }
 
-.footer-col h4 {
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
+#animalesExtraviados .container {
+    padding: 70px 0px;
+}
+
+#animalesExtraviados p {
+    color: white;
+    display: none;
+}
+
+/* Agrega un nuevo estilo para centrar el botón en la parte inferior */
+#animalesExtraviados .carta {
+    margin: 10px;
+    padding: 150px;
+    border-radius: 10px;
+
+}
+
+
+
+
+.carta:first-child {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url(../img/perroCallejero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.carta:nth-child(2) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url(../img/gatitoPerdido.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.carta:nth-child(3) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url(../img/gatitoCallejero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+#form {
+    background-color: rgb(206, 172, 85);
+}
+
+.container2 h1 {
     margin-bottom: 30px;
-    font-weight: 500;
-    position: relative;
 }
 
-.footer-col h4::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #e91e63;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
+.container2 h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
-.footer-col ul li:not(:last-child) {
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra horizontalmente en el centro */
+    justify-content: center;
+    /* Centra verticalmente en el centro */
+
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
-.footer-col ul li a {
+.submit {
+
+
+
+    cursor: pointer;
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 9px 15px;
+    border-radius: 9px;
+    border: 0px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(83, 63, 13, 0.5);
+    ;
+    background-color: rgb(245, 183, 26);
+    transition: transform 0.2s;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra horizontalmente en el centro */
+    justify-content: center;
+    /* Centra verticalmente en el centro */
+}
+
+.submit:hover {
+    transform: scale(1.1);
+
+}
+
+.container2 .box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
     font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
-    transition: all 0.3s ease;
-}
-
-.footer-col ul li a:hover {
-    color: #ffffff;
-    padding-left: 8px;
-}
-
-.footer-col .Links-de-Redes a {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
-}
-
-.footer-col .Links-de-Redes a:hover {
-    color: #24262b;
-    background-color: #ffffff;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 3);
 }
 
 
-/*responsive*/
-@media (max-width: 767px) {
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
+@media(min-width: 720px) {
+    #animalesExtraviados .programas {
+        display: flex;
+        justify-content: center;
+        padding: 1px;
+
+
     }
-}
 
-@media (max-width: 574px) {
-    .footer-col {
-        width: 100%;
+    #animalesExtraviados .carta {
+        margin: 10px;
+        border-radius: 10px;
+        padding: 86px;
+
     }
+
+    #animalesExtraviados p {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #BotonPE {
+        padding: 5px 20px;
+
+    }
+
+    .container2 .box {
+        padding: 50px;
+    }
+
+
+
+
+
 }
