@@ -1,35 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Pets</title>
-    <link   rel="stylesheet"   href="../css/styles.css"  />
-    <link rel="icon" href = "../img/logopets.jpeg" type = "image/x-icon">
-    <script src="https://kit.fontawesome.com/09bca36bc3.js" crossorigin="anonymous"></script>
-    
-</head>
-<body>
+    <link rel="stylesheet" href="../css/stylecontac.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../img/logopets.jpeg" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/09bca36bc3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <!--CABECERA-->
     <header>
-        <a href="../html/index.html" class="logo">
-           <img src="../img/logopets.jpeg" alt="logo de la empresa" class="logo-img">
-           <h2 class="logo-nombre">Happy Pets</h2>
-        </a>
-        <!--BARRA DE NAVEGACIÓN-->
-        <nav>
-            <ul class="menu">
-                <li><a href="#">¿Quiénes somos?</a></li>
-                <li><i class="fa-solid fa-newspaper"></i><a href="#">Blog</a></li>
-                <li><i class="fa-solid fa-paw"></i><a href="#">Deja tu huella</a>
-                    <ul class="submenu">
-                        <li><a href="../html/adopta.html">Adopta</a></li>
-                        <li><a href="../html/reporta.html">Reporta</a></li>
-                        <li><a href="#">Donaciones</a>
-                    </ul>
-                </li>
-                <li><i class="fa-regular fa-envelope"></i><a href="#">Contacto</a></li>
-                <li><i class="fa-solid fa-user"></i><a href="../html/login.html">Iniciar sesión</a></li>
+      <a href="../html/index.html" class="logo">
+        <img
+          src="../img/logopets.jpeg"
+          alt="logo de la empresa"
+          class="logo-img"
+        />
+        <h2 class="logo-nombre">Happy Pets</h2>
+      </a>
+      <!--BARRA DE NAVEGACIÓN-->
+      <nav>
+        <ul class="menu">
+          <li><a href="#">¿Quiénes somos?</a></li>
+          <li><i class="fa-solid fa-newspaper"></i><a href="#">Blog</a></li>
+          <li>
+            <i class="fa-solid fa-paw"></i><a href="#">Deja tu huella</a>
+            <ul class="submenu">
+              <li><a href="../html/adopta.html">Adopta</a></li>
+              <li><a href="../html/reporta.html">Reporta</a></li>
+              <li><a href="#">Donaciones</a></li>
             </ul>
-        </nav>
+          </li>
+          <li>
+            <i class="fa-regular fa-envelope"></i
+            ><a href="../html/contacto.html">Contacto</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-user"></i
+            ><a href="../html/login.html">Iniciar sesión</a>
+          </li>
+        </ul>
+      </nav>
     </header>
+    <div class="container">
+      <div class="contact-form">
+        <h2>Escríbenos</h2>
+        <h3>
+          Si tienes alguna sugerencia o pregunta, hacernos alguna donación o ser
+          parte de nuestro equipo mandanos un mensaje!
+        </h3>
+        <form action="">
+          <!--el id se usará para el javascript-->
+          <p>
+            <label for="nombre">Escribe tu nombre </label>
+            <input type="text" id="nombre" class="box" />
+          </p>
+          <p>
+            <label for="correo">Correo electronico</label>
+            <input type="email" id="email" class="box" />
+          </p>
+          <p>
+            <label for="telefono">Número de celular</label>
+            <input
+              type="tel"
+              id="telefono"
+              class="box"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+            />
+          </p>
+          <p>
+            <label for="asunto">Asunto/Motivo</label>
+            <input type="text" id="asunto" class="box" />
+          </p>
+          <p class="block">
+            <!--para que este en una franja (block)-->
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              class="box"
+              name="Mensaje"
+              id="mensaje"
+              cols="20"
+              rows="10"
+            ></textarea>
+            <!-- el name no es necesario, porque está relacionado al codigo del servidor-->
+          </p>
+          <p class="block">
+            <button>Send</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
