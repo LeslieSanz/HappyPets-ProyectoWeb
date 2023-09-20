@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Pets</title>
-    <link 
-        rel="stylesheet"
-        href="../css/styles.css"
-    />
 
-    <link 
-        rel="stylesheet"
-        href="../css/reporta.css"
-    />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Pets</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <link rel="stylesheet" href="../css/reporta.css" />
 </head>
+
 <body>
     <!--CABECERA-->
     <header>
         <a href="#" class="logo">
-           <img src="../img/logopets.jpeg" alt="logo de la empresa" class="logo-img">
-           <h2 class="logo-nombre">Happy Pets</h2>
+            <img src="../img/logopets.jpeg" alt="logo de la empresa" class="logo-img" />
+            <h2 class="logo-nombre">Happy Pets</h2>
         </a>
         <!--BARRA DE NAVEGACIÓN-->
         <nav>
@@ -31,17 +27,87 @@
         </nav>
     </header>
 
+    <!-- PARTE DEL BANNNER-->
 
+    <section id="BannerPrincipal">
+        <h1>
+            Los peluditos te necesitan <br />
+            Sé su voz, reporta
+        </h1>
 
+        <button id="BotonBanner">¡Reporta!</button>
+    </section>
 
+    <!-- PARTE DE ANIMALES EXTRAVIADOS-->
+    <section id="animalesExtraviados">
+        <div class="container">
+            <h2>Peluditos extraviados</h2>
+            <div class="carta">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias natus
+                    aspernatur debitis nesciunt perspiciatis eius ut aliquid veritatis.
+                    Explicabo accusantium magni facere aspernatur officiis perferendis
+                    veritatis. Maiores est voluptatibus magnam!
+                </p>
+                <button id="BotonPE"> + Info</button>
+            </div>
 
+            <div class="carta">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias natus
+                    aspernatur debitis nesciunt perspiciatis eius ut aliquid veritatis.
+                    Explicabo accusantium magni facere aspernatur officiis perferendis
+                    veritatis. Maiores est voluptatibus magnam!
+                </p>
+                <button id="BotonPE"> + Info</button>
+            </div>
+            <div class="carta">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias natus
+                    aspernatur debitis nesciunt perspiciatis eius ut aliquid veritatis.
+                    Explicabo accusantium magni facere aspernatur officiis perferendis
+                    veritatis. Maiores est voluptatibus magnam!
+                </p>
+                <button id="BotonPE"> + Info</button>
+            </div>
+        </div>
+    </section>
 
+    <!-- PARTE PARA REPORTA UN ANIMAL-->
 
+    <section id="formularioReporte">
+        <div class="container">
+            <form>
+                <h2>Reporta</h2>
 
+                <h3>Información del informante</h3>
+                <label for="nombres y apellidos">Ingrese sus nombres y apellidos</label>
+                <input type="text" id="nombres y apellidos" class="box" />
 
+                <label for="celular">Ingrese su celular</label>
+                <input type="text" id="celular" class="box" />
 
+                <label for="correo">Ingrese sus correo</label>
+                <input type="text" id="correo" class="box" />
 
+                <h3>Información del animal</h3>
+                <label for="especie">Ingrese la especie del animal encontrado</label>
+                <input type="text" id="especie" class="box" />
 
+                <label for="distrito">Ingrese distrito donde se encontró el animal</label>
+                <input type="text" id="distrito" class="box" />
+
+                <label for="direccion">Ingrese la direccion de calle</label>
+                <input type="text" id="direccion" class="box" />
+
+                <label for="referencia">Ingrese una referencia de la dirección</label>
+                <input type="text" id="referencia" class="box" />
+
+                <label for="Indicacion">Informacion adicional o nota del animal</label>
+                <textarea id="mensaje" cols="120" rows="10"></textarea>
+            </form>
+        </div>
+    </section>
 
     <!--PIE DE PÁGINA-->
     <footer>
@@ -49,5 +115,8 @@
             <p>&copy;Gatominith</p>
         </div>
     </footer>
+
+
 </body>
+
 </html>
