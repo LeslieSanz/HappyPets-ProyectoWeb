@@ -1,93 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Pets</title>
-    
-    <link 
-        rel="stylesheet" 
-        href="../css/styles.css"
-    />
-    
 
-    <script src="https://kit.fontawesome.com/09bca36bc3.js" crossorigin="anonymous"></script>
-    
-</head>
-<body>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../css/dona.css" />
+
+    <script
+      src="https://kit.fontawesome.com/09bca36bc3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <!--CABECERA-->
     <header>
-        <a href="../html/index.html" class="logo">
-           <img src="../img/logopets.jpeg" alt="logo de la empresa" class="logo-img">
-           <h2 class="logo-nombre">Happy Pets</h2>
-        </a>
-        <!--BARRA DE NAVEGACIÓN-->
-        <nav>
-            <ul class="menu">
-                <li><a href="#">¿Quiénes somos?</a></li>
-                <li><i class="fa-solid fa-newspaper"></i><a href="#">Blog</a></li>
-                <li><i class="fa-solid fa-paw"></i><a href="#">Deja tu huella</a>
-                    <ul class="submenu">
-                        <li><a href="../html/adopta.html">Adopta</a></li>
-                        <li><a href="../html/reporta.html">Reporta</a></li>
-                        <li><a href="#">Donaciones</a>
-                    </ul>
-                </li>
-                <li><i class="fa-regular fa-envelope"></i><a href="#">Contacto</a></li>
-                <li><i class="fa-solid fa-user"></i><a href="../html/login.html">Iniciar sesión</a></li>
+      <a href="../html/index.html" class="logo">
+        <img
+          src="../img/logopets.jpeg"
+          alt="logo de la empresa"
+          class="logo-img"
+        />
+        <h2 class="logo-nombre">Happy Pets</h2>
+      </a>
+      <!--BARRA DE NAVEGACIÓN-->
+      <nav>
+        <ul class="menu">
+          <li><a href="#">¿Quiénes somos?</a></li>
+          <li><i class="fa-solid fa-newspaper"></i><a href="#">Blog</a></li>
+          <li>
+            <i class="fa-solid fa-paw"></i><a href="#">Deja tu huella</a>
+            <ul class="submenu">
+              <li><a href="../html/adopta.html">Adopta</a></li>
+              <li><a href="../html/reporta.html">Reporta</a></li>
+              <li><a href="#">Donaciones</a></li>
             </ul>
-        </nav>
+          </li>
+          <li>
+            <i class="fa-regular fa-envelope"></i><a href="#">Contacto</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-user"></i
+            ><a href="../html/login.html">Iniciar sesión</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <!--Tipos de donativos-->
-    <div class="Section">
-      <div class="title">
-        <h1>Tipos de donativos</h1>
-      </div>
-      <div class="servicios">
-        <div class="card">
-          <div class="icon">
-            <i></i>
-          </div>
-          <h2>Donación monetaria</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iusto
-            numquam eaque voluptate obcaecati qui vitae quas. Odit repellat,
-            vel, consectetur perspiciatis fugit autem porro illo temporibus
-            eaque inventore reprehenderit!
-          </p>
-          <a href="" class="button">Apoya aquí</a>
+    <!--Sección 1-->
+    <section id="TIPOS">
+      <!--Tipos de donativos-->
+      <div class="Section">
+        <div class="title">
+          <h1>Tipos de donativos</h1>
         </div>
-        <div class="card">
+        <div class="servicios">
+          <div class="card">
             <div class="icon">
-              <i></i>
+              <i class="fa-solid fa-money-bill"></i>
             </div>
-            <h2>Donación de alimentos</h2>
+            <h2>Donación monetaria</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iusto
-              numquam eaque voluptate obcaecati qui vitae quas. Odit repellat,
-              vel, consectetur perspiciatis fugit autem porro illo temporibus
-              eaque inventore reprehenderit!
+              La donación monetaria es una forma importante de apoyar nuestra
+              causa. Tu contribución financiera nos ayuda a llevar a cabo
+              proyectos y programas que benefician a quienes más lo necesitan.
+              Cada donación cuenta y hace una diferencia significativa en
+              nuestras operaciones.
             </p>
-            <a href="" class="button">Apoya aquí</a>
+            <a href="#Dinero" class="button">Apoya aquí</a>
           </div>
           <div class="card">
             <div class="icon">
-              <i></i>
+              <i class="fa-solid fa-bowl-food"></i>
+            </div>
+            <h2>Donación de alimentos</h2>
+            <p>
+              Contribuye con nuestra iniciativa de donación de alimentos. Tu
+              generosidad garantiza que las personas con hambre reciban
+              alimentos nutritivos y deliciosos. Juntos podemos combatir la
+              inseguridad alimentaria y brindar esperanza a quienes la
+              necesitan.
+            </p>
+            <a href="#Comida" class="button">Apoya aquí</a>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <i class="fa-solid fa-shield-cat"></i>
             </div>
             <h2>Donación de objetos</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iusto
-              numquam eaque voluptate obcaecati qui vitae quas. Odit repellat,
-              vel, consectetur perspiciatis fugit autem porro illo temporibus
-              eaque inventore reprehenderit!
+              Tus donaciones de objetos pueden marcar la diferencia en la vida
+              de muchas personas. Aceptamos una variedad de objetos en buen
+              estado, desde ropa hasta artículos para el hogar. Ayúdanos a
+              proporcionar recursos esenciales a quienes más los necesitan.
             </p>
-            <a href="" class="button">Apoya aquí</a>
+            <a href="#Objetos" class="button">Apoya aquí</a>
           </div>
+        </div>
       </div>
-    </div>
-  
-
-
-</body>
-
+    </section>
+    <!--Sección 2-->
+    <section id="Dinero">
+      <div class="Section">
+        <div class="title">
+          <h1>Apoyo económico</h1>
+        </div>
+        <div class="servicios">
+          <div class="card" style="height: 510px">
+            <h2>Método de transferencia</h2>
+            <p>Tenemos estos 2 bancos disponibles para transferencias</p>
+            <p>BCP: 19378445869515744 --- Scotiabank: 1874581217862</p>
+            <img
+              src="../img/tarjeta-de-debito.png"
+              style="width: 200px"
+              alt="Logo de bcp"
+            />
+          </div>
+          <div class="card" style="height: 510px">
+            <h2>Método Yape</h2>
+            <p>
+              Tenemos Yape la billetera digital más utilizada en Perú esperadno
+              por tu donación
+            </p>
+            <img
+              src="../img/qrYape.PNG"
+              style="width: 200px"
+              alt="QR de yape"
+            />
+          </div>
+          <div class="card" style="height: 510px">
+            <h2>Método Plin</h2>
+            <p>
+              Por último, pero no menos importante ¡Plin!, la segunda billetera
+              digital más usada del Perú
+            </p>
+            <img
+              src="../img/qrPlin.PNG"
+              style="width: 200px"
+              alt="QR de plin"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Sección 3-->
+    <section id="Comida">
+      <div class="Section">
+        <div class="titulo">
+          <h1>Apoyo alimenticio</h1>
+        </div>
+        <div class="servicios">
+          <div class="card">
+            <h2>Método de donación alimenticia</h2>
+            <p>
+              Aceptamos alimentos para mascotas, esta sería de gran ayuda para
+              las mascotas que tenemos si no puedes ayudar adoptando o con
+              dinero, este metodo siempre es importante para que nuestros
+              animales puedan alimentarse. Para donar escribe al +51 963 029 680
+            </p>
+            <img
+              src="../img/comida-de-perro.png"
+              style="width: 200px"
+              alt="Imagen de comida"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Sección 4-->
+    <section id="Objetos">
+      <div class="Section">
+        <div class="titulo">
+          <h1>Apoyo con algún objeto</h1>
+        </div>
+        <div class="servicios">
+          <div class="card">
+            <h2>Método de donación de objetos</h2>
+            <p>
+              Cualquier tipo de objeto que pueda tener en su casa sin que los
+              usen sus mascotas, vienen de gran ayuda para las mascotas que
+              tenemos en el refugio. Entre los objetos a preferencia son: Camas,
+              rascadores, platos de alimentos o juguetes. Para donar escribe al
+              +51 963 029 680
+            </p>
+            <img
+              src="../img/collar.png"
+              style="width: 200px"
+              alt="imagen de cama con perro"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
