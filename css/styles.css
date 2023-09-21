@@ -192,7 +192,24 @@ button {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   color: white;
   background-color: rgb(245, 183, 26);
+  transition: transform 0.2s;
+  cursor: pointer;
+  /* Agrega una transición suave para el efecto de agrandamiento */
+
+
 }
+
+#botonInicio:hover {
+  transform: scale(1.1);
+  /* Aumenta el tamaño en un 10% al pasar el cursor */
+
+
+
+}
+
+
+
+
 .row {
   display: flex;
   flex-wrap: wrap;

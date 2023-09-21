@@ -38,7 +38,8 @@
     <section id="hero">
         <h1>Brindemos refugio y cariño</h1>
         <h2>a quienes más lo necesitan</h2>
-        <button>Adopta ya</button>
+        <button id="botonInicio" >Adopta ya</button>
+        
     </section>
 
     <section id="razones">
@@ -119,6 +120,13 @@
             <small>&copy; 2023 <b>HappyPets</b> - Todos los Derechos Reservados.</small>
         </section>
     </footer>
+
+    <script>
+        document.getElementById("botonInicio").onclick = function() {
+            // Redirigir al usuario al archivo HTML deseado
+            window.location.href = "adopta.html";
+        };
+    </script>
 </body>
 </html>
 </html>
