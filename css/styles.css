@@ -3,12 +3,14 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box ;
+  box-sizing: border-box;
 }
 
 /* Estilos generales para el cuerpo del documento */
 body {
   font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 /* Estilos para los enlaces */
@@ -19,15 +21,16 @@ a {
 
 /* Estilos para el encabezado */
 header { 
-  display: flex;
-  min-height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: white;
-  justify-content: space-between;
+  padding: 0px 10%;
+  display: flex;
   align-items: center;
-  padding: 10px;
-  margin-left: 75px;
-  margin-right: 75px;
-  font-family: 'Quicksand', sans-serif;
+  justify-content: space-between;  
+  z-index: 1000;
 }
 
 /* Estilos para el título "Happy Pets" en el encabezado */
@@ -46,78 +49,107 @@ header h2 {
   height: 70px;
   margin-right: 10px;
 }
-ul {
+
+.nav ul{
   list-style: none;
 }
-/* Estilos para la barra de navegación */
-/* Estilos para la lista no ordenada en la barra de navegación */
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  justify-content: space-around;
-}
 
-/* Estilos para los enlaces de navegación */
-nav a {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  padding-right: 20px;
-}
-
-/* Estilos al pasar el cursor por encima de los enlaces de navegación */
-nav a:hover {
-  color: rgb(236, 214, 70);
-}
-
-.menu i{
+.nav i{
   margin-right: 5px;
 }
 
-.menu > li{
+.nav ul li{
+  float: left;
   position: relative;
-  display: inline-block; 
 }
 
-/*Submenu*/
-.submenu{
-  position: absolute;
-  background-color: rgb(245, 183, 26);
-  width: 90%;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 1.5s;
-}
-
-.submenu li a{
-  display: block;
-  padding: 15px;
-  color: white;
-}
-
-.submenu li a:hover{
+.nav ul li a{
+  font-size: 16px;
   color: black;
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  transition: all .2s ease;
+  font-weight: bold;
 }
 
-.menu li:hover .submenu{
-  visibility: visible;
-  opacity: 1;
+.nav ul li a:hover{
+  background-color: rgb(245, 183, 26);  
+  border-radius: 10px;
 }
 
+.nav ul li ul{
+  position: absolute;
+  right: 0;
+  width: 155px;  
+  background-color: rgb(245, 183, 26);
+  display: none;
+}
 
-/* Estilos para pantallas con un ancho máximo de 700px */
-@media (max-width: 700px) {
-  header {
-    flex-direction: column;
-    align-items: center;
+.nav ul li ul li a{
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.nav ul li ul li ul{
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+
+.nav ul li ul li{
+  width: 100%;
+}
+
+.nav ul li:hover > ul{
+  display: initial;
+}
+
+label[for="toggle"] {
+  font-size: 30px;
+}
+
+#toggle,
+header label{
+  display: none; 
+  cursor: pointer;
+}
+
+@media(max-width:950px){
+  header label{
+    display: initial;
+  }
+  header{
+    padding: 20px 10%;
+    margin: 0;
+  }
+  header .nav{
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    left: 0;
+    background-color: white;
+    display: none; 
   }
 
-  /* Ajusta el espacio entre elementos en la barra de navegación */
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  .nav ul li{
+    width: 100%;
   }
+
+  .nav ul li a{
+    padding: 8px 30px 8px 10%;
+  }
+  
+  .nav ul li ul{
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  #toggle:checked ~ .nav{
+    display: flex;
+  }
+
 }
 
 /* Estilos para la sección hero (imagen de fondo y texto centrado) */
