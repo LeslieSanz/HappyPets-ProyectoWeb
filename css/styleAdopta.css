@@ -1,0 +1,65 @@
+  
+  .container {
+    max-width:1170px;
+    margin: auto;
+    position: relative;
+    margin-top: 70px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  section .container {
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+  }
+  section .card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+  }
+  section .card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+  }
+  section .card img{
+    width: 100%;
+    height: 210px;
+  }
+  section .card .contenido {
+    padding: 15px;
+    text-align: center;
+  }
+  section .card .contenido p {
+    line-height: 1.5;
+    color: #6a6a6a;
+  }
+  section .card .contenido h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  section .card .contenido a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+  }
+  section .card .contenido a:hover {
+    background: #2fb4cc;
+    color: #fff;
+  }
+  

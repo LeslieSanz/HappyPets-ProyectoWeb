@@ -4,49 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Pets</title>
-
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="../css/dona.css" />
-
+    <link rel="icon" href = "../img/logopets.png" type = "image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/styleDona.css" />
+    <link rel="stylesheet"   href="../css/header.css" />
+    <link rel="stylesheet"   href="../css/footer.css" />
     <script
       src="https://kit.fontawesome.com/09bca36bc3.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <!--CABECERA-->
-    <header>
-      <a href="../html/index.html" class="logo">
-        <img
-          src="../img/logopets.jpeg"
-          alt="logo de la empresa"
-          class="logo-img"
-        />
-        <h2 class="logo-nombre">Happy Pets</h2>
-      </a>
-      <!--BARRA DE NAVEGACIÓN-->
-      <nav>
-        <ul class="menu">
-          <li><a href="../html/index.html">¿Quiénes somos?</a></li>
-          <li><i class="fa-solid fa-newspaper"></i><a href="../html/blog.html">Blog</a></li>
-          <li>
-            <i class="fa-solid fa-paw"></i><a href="#">Deja tu huella</a>
-            <ul class="submenu">
-              <li><a href="../html/adopta.html">Adopta</a></li>
-              <li><a href="../html/reporta.html">Reporta</a></li>
-              <li><a href="../html/donaciones.html">Donaciones</a></li>
-            </ul>
-          </li>
-          <li>
-            <i class="fa-regular fa-envelope"></i><a href="../html/contacto.html">Contacto</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-user"></i
-            ><a href="../html/login.html">Iniciar sesión</a>
-          </li>
+   <!--CABECERA-->
+   <header>
+    <a href="../html/index.html" class="logo">
+       <img src="../img/logopets.jpeg" alt="logo de la empresa" class="logo-img">
+       <h2 class="logo-nombre">Happy Pets</h2>
+    </a>
+    <input type="checkbox"  id="toggle">
+    <label for="toggle">&#9776;</label>
+    <!--BARRA DE NAVEGACIÓN-->
+    <nav class="nav">
+        <ul>  
+            <li><a href="#">¿Quiénes somos?</a></li>
+            <li><a href="../html/blog.html"><i class="fa-solid fa-newspaper"></i>Blog</a></li>
+            <li><a href="#"><i class="fa-solid fa-paw"></i>Deja tu huella</a>
+                <ul>
+                    <li><a href="../html/adopta.html">Adopta</a></li>
+                    <li><a href="../html/reporta.html">Reporta</a></li>
+                    <li><a href="../html/donaciones.html">Donaciones</a>
+                </ul>
+            </li>
+            <li><a href="../html/contacto.html">Contacto</a></li>
+            <li><a href="../html/login.html">Iniciar sesión</a></li>
         </ul>
-      </nav>
-    </header>
+    </nav>
+</header>
+
     <!--Sección 1-->
     <section id="TIPOS">
       <!--Tipos de donativos-->
@@ -194,7 +187,8 @@
     </section>
 
 
-    <!--PIE DE PÁGINA-->
+    <!--PIE DE PAGINA-->
+
     <footer class="pie-pagina">
       <section class="grupo-1">
           <div class="box">
@@ -205,12 +199,30 @@
               </figure>
           </div>
           <div class="box">
-              <h2>SOBRE NOSOTROS</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+              <h2>SERVICIOS</h2>
+              <ul>
+                  <li><a href="../html/adopta.html">Adopta</a></li>
+                  <li><a href="../html/reporta.html">Reporta</a></li>
+                  <li><a href="../html/donaciones.html">Donaciones</a></li>
+                  <li><a href="../html/blog.html">Blog</a></li>
+              </ul>
           </div>
           <div class="box">
-              <h2>SÍGUENOS</h2>
+              <h2>CONTACTO</h2>
+              <ul>
+                  <li>
+                      <p><i class="fa-solid fa-phone"></i>+51 995 900 778</p>
+                  </li>
+                  <li>
+                      <p><i class="fa-solid fa-envelope"></i>happypets@gmail.com</p>
+                  </li>
+                  <li>
+                      <p><i class="fa-solid fa-map-pin"></i>Jr. Francisco de Toledo 248</p>
+                  </li>
+              </ul>
+          </div>
+          <div class="box">
+              <h2>REDES SOCIALES</h2>
               <div class="red-social">
                   <a href="https://www.facebook.com/profile.php?id=61551118926851" target="_blank" class="fa fa-facebook"></a>
                   <a href="https://instagram.com/happypets2023web?igshid=NGVhN2U2NjQ0Yg==" target="_blank" class="fa fa-instagram"></a>
