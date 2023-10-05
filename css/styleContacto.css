@@ -1,15 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-*{
-
-    box-sizing: border-box;
-    
-}
-
 body{
     background-color: rgb(245, 183, 26);
-    font-family: 'Quicksand', sans-serif;
-    padding: 0 1.5em;
+
 }
 
 .container{
@@ -62,7 +53,7 @@ body{
   
 
   
-  .box{
+  .respuesta{
     border: none;
     background-color: #f4f4fd;
     width: 100%;

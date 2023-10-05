@@ -7,6 +7,8 @@
 body{
     width:100%;
     background-color: white;
+    position: relative;
+    margin-top: 70px;
 }
 .title h1{
     text-align: center;

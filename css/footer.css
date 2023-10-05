@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos generales para el cuerpo del documento */
+  body {
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+/*Estilos para el Pie de Pagina*/
+.pie-pagina{
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:rgb(255, 215, 153);
+  }
+  
+  .pie-pagina ul{
+    list-style: none;
+  }
+  
+  .pie-pagina ul li{
+    padding: 5px;
+  }
+  
+  .pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:30px;
+    padding: 30px 0px;
+  }
+  .pie-pagina .grupo-1 .box figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pie-pagina .grupo-1 .box figure img{
+    width: 150px;
+  }
+  .pie-pagina .grupo-1 .box h2{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .pie-pagina .grupo-1 .box p{
+    color: black;
+    margin-bottom: 5px;
+  }
+  .pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: rgb(170, 111, 70);
+    text-align: center;
+    transition: color 0.3s ease;
+    border-radius: 50%;
+  }
+  .pie-pagina .grupo-1 .red-social a:hover{
+    color: black;
+  }
+  .pie-pagina .grupo-2{
+    background-color: rgb(170, 111, 70);
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+  }
+  .pie-pagina .grupo-2 small{
+    font-size: 15px;
+  }
+  @media screen and (max-width:950px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+  }
+  
