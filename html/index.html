@@ -11,7 +11,12 @@
 
     <link rel="icon" href = "../img/logopets.png" type = "image/x-icon">
     <script src="https://kit.fontawesome.com/09bca36bc3.js" crossorigin="anonymous"></script>
-    
+    <script>
+        document.getElementById("botonInicio").onclick = function() {
+            // Redirigir al usuario al archivo HTML deseado
+            window.location.href = "adopta.html";
+        };
+    </script>
 </head>
 <body>
     <!--CABECERA-->
@@ -45,56 +50,57 @@
     <section id="hero">
         <h1>Brindemos refugio y cariño</h1>
         <h2>a quienes más lo necesitan</h2>
-        <button id="botonInicio" >Adopta ya</button>
-        
+        <button id="botonInicio" >Adopta ya</button>    
     </section>
 
-    <section id="razones">
-        <div class="container">
-            <div class="img-container"></div>
-            <div class="texto">
-                <h2>¿Por qué adoptar?</h2>
-                <ul>
-                    <li>✔️Estás salvando no una, si no, dos vidas al liberar un espacio en el refugio</li>
-                    <li>✔️Mejoran tu salud y serás más feliz</li>
-                    <li>✔️Beneficia a los niños</li>
-                    <li>✔️Ayudarás a controlar la sobrepoblación de animales</li>
-                    <li>✔️Porque sí</li>
-                </ul>
+    <section id="cifras">
+        <div class="resultados">
+            <div class="container-resultados">
+                <div class="resultados-frase">
+                    Encuentra a tu compañero peludo en nuestro refugio
+                </div>
+                <div class="resultados-numeros">
+                    <p>
+                        <span>+120</span><br>rescatados
+                    </p>
+                    <p>
+                        <span>+300</span><br>adoptados
+                    </p>
+                    <p>
+                        <span>+50</span><br>encontrados
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-    <!--SECCIÓN 2-->
-    <section id="testimonios"> 
-        <h2>Testimonios</h2>
-        <p class="parrafo1">Explora nuestros conmovedores testimonios de adopción, donde el amor incondicional y las 
-            segundas oportunidades se entrelazan en cada historia. Cada uno es un recordatorio de cómo la adopción cambia 
-            vidas y llena los corazones de alegría. Únete a nosotros en este viaje de emociones y gratitud.</p>
-        <div class="container-testimonios">
-            <div class="comentario">
-                <div class="foto-perfil1"></div>
-                <h3>Testimonio 1</h3>
-                <p><i class="fa-solid fa-quote-left"></i>Jamás imaginé cuánto amor y gratitud podría traer un gatito 
-                    rescatado a mi vida. Gracias a Happy Pets, adopté a mi pequeño amigo y desde entonces, hemos compartido
-                    risas, abrazos y aventuras inolvidables. ¡La adopción cambió mi mundo para mejor!</p>
-            </div>
-            <div class="comentario">
-                <div class="foto-perfil2"></div>
-                <h3>Testimonio 2</h3>
-                <p><i class="fa-solid fa-quote-left"></i>Adoptar a un perro de Happy Pets no solo me dio un leal amigo, 
-                    sino que también me enseñó el verdadero significado de la lealtad y la conexión. Cada día, mi peludo compañero me recuerda la importancia de vivir el 
-                    presente y disfrutar las cosas simples de la vida. Estoy agradecido por esta increíble experiencia.</p>
-            </div>
-            <div class="comentario">
-                <div class="foto-perfil3"></div>
-                <h3>Testimonio 3</h3>
-                <p><i class="fa-solid fa-quote-left"></i>La decisión de adoptar a mi nuevo gatito en Happy Pets fue 
-                    impulsada por un deseo de hacer una diferencia en su vida y en la mía. Desde el primer día, su amor 
-                    y travesuras llenaron mi hogar de alegría. Cada vez que miro esos ojos brillantes, sé que hicimos la 
-                    elección correcta al adoptar.</p>
+
+    <!-- <section id="servicios">
+        <div class="container-servicios">
+            <h2>¡Deja tu huella!</h2>
+            <div class="cartas">
+                <div class="carta-item">
+                    <img src="../img/Adr.jpg" alt="servicio1">
+                    <p class="titulo-servicio">Adopciones</p>
+                    <p>Puedes adoptar</p>
+                    <button>Hazlo ya</button>
+                </div>
+                <div class="carta-item">
+                    <img src="../img/Adr.jpg" alt="servicio2">
+                    <p class="titulo-servicio">Reportes</p>
+                    <p>Puedes reportar animales perdidos</p>
+                    <button>Hazlo ya</button>
+                </div>
+                <div class="carta-item">
+                    <img src="../img/Adr.jpg" alt="servicio3">
+                    <p class="titulo-servicio">Donaciones</p>
+                    <p>Puedes donar</p>
+                    <button>Hazlo ya</button>
+                </div>
             </div>
         </div>
-    </section> 
+    </section> -->
+
+
 
     <!--PIE DE PAGINA-->
 
@@ -146,11 +152,6 @@
     </footer>
     
 
-    <script>
-        document.getElementById("botonInicio").onclick = function() {
-            // Redirigir al usuario al archivo HTML deseado
-            window.location.href = "adopta.html";
-        };
-    </script>
+    
 </body>
 </html>

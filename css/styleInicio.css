@@ -27,41 +27,109 @@
   font-weight: 500;
 }
 
-/* Estilos para la sección "razones" */
-#razones .container {
-  text-align: center;
-  padding: 150px 12px;
+#cifras .resultados{
+  background-color: rgb(245, 183, 26);
+}
+
+.resultados .container-resultados {
   display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 30px;
+  flex-direction: row; 
+}
+
+.resultados .resultados-numeros{
+  display: flex;
+  align-items: center;
   justify-content: center;
-  background-color: rgb(245, 245, 245);
+  color: white;
 }
 
-/* Estilos para el título en la sección "razones" */
-#razones h2 {
+.resultados .resultados-frase{
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  width: 50%;
+}
+
+.resultados .resultados-numeros p{
+  text-align: center;
+  margin: 0 30px;
+  font-size: 20px;
+}
+
+.resultados .resultados-numeros p span{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#servicios h2{
+  margin-top: 50px;
   font-size: 40px;
+  text-align: center;
 }
 
-/* Estilos para la lista de razones en la sección "razones" */
-#razones ul {
-  list-style-type: none;
+#servicios .cartas{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-/* Estilos para los elementos de la lista en la sección "razones" */
-#razones li {
-  margin: 16px 0px;
+#servicios .cartas .carta-item{
+  margin: 10px auto;
+  width: 80%;
+  text-align: center;
+  flex-direction: column;
+  margin: 0px 20px;
+  padding: 20px 0px;
+  padding: 30px 0;
+  border-radius: 20px;
+  box-shadow: 0px 35px 97px -15px rgba(0, 0, 0, 0.08);
 }
 
-/* Estilos para la imagen de fondo en la sección "razones" */
-#razones .img-container {
-  background-image: url(../img/razonesjpg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 300px;
-  width: 500px;
+#servicios .cartas .img{
+  max-width: 100%; /* Hace que la imagen sea responsive */
+  height: auto;
 }
 
-/* Estilos para los botones */
+#servicios .cartas .titulo-servicio{
+  margin-bottom: 5px;
+  font-weight: 1000;
+  font-size: 1.2rem;
+
+}
+
+
+
+@media screen and (max-width: 950px) {
+  .resultados .container-resultados {
+    flex-direction: column; /* Cambiar a disposición en columna para pantallas pequeñas */
+    text-align: center; /* Centrar el contenido en pantallas pequeñas */
+  }
+
+  .resultados .resultados-frase,
+  .resultados .resultados-numeros {
+    width: 100%; /* Establecer el ancho al 100% para ocupar todo el espacio disponible */
+  }
+
+  .resultados .resultados-numeros p {
+    margin: 20px 0; /* Añadir espacio entre los números para mejorar la legibilidad en pantallas pequeñas */
+    font-size: 10px; /* Reducir aún más el tamaño de fuente para números en pantallas pequeñas */
+  }
+
+  .container-servicios{
+    display: flex;
+    flex-direction: column;
+}
+  .carta-item{
+      width: 100%;
+      margin: 20px 0px;
+  }
+}
+
+
 button {
   font-size: 1.5em;
   font-weight: bold;
@@ -75,9 +143,7 @@ button {
   transition: transform 0.2s;
   cursor: pointer;
   /* Agrega una transición suave para el efecto de agrandamiento */
-
-
-}
+ } 
 
 #botonInicio:hover {
   transform: scale(1.1);
@@ -116,7 +182,7 @@ button {
 .comentario{
   width: 340px;
   margin: 20px;
-  background-color: antiquewhite;
+  background-color: rgb(151, 126, 94);
   padding: 20px;
   text-align: center;
   border-radius: 10px;

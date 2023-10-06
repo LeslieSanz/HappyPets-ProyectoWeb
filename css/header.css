@@ -114,6 +114,7 @@ header h2 {
 
 label[for="toggle"] {
   font-size: 30px;
+  font-weight: bold;
 }
 
 #toggle,
