@@ -9,9 +9,9 @@
 
 /* Estilos generales para el cuerpo del documento */
 body {
-  
   min-height: 100vh;
   box-sizing: border-box;
+  
 }
 
 a {

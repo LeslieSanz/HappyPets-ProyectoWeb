@@ -47,7 +47,9 @@
     align-items: center;
   }
   .pie-pagina .grupo-1 .box figure img{
-    width: 150px;
+    width: 100%; 
+    max-width: 150px;  
+    height: auto; 
   }
   .pie-pagina .grupo-1 .box h2{
     color: black;

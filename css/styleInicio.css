@@ -191,3 +191,54 @@ button{
   transform: scale(1.1);
   /* Aumenta el tamaño en un 10% al pasar el cursor */
 }
+
+.carrusel {
+  display: flex;
+  align-items: center;
+}
+
+.carrusel-items {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 30px 0px;
+}
+
+.carrusel-item {
+  min-width: 300px;
+  max-width: 300px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.carrusel-item:last-child {
+  margin-right: 0; 
+} 
+
+.carrusel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding: 40px;
+}
+
+.carrusel-item:hover {
+  transform: scale(1.2);
+}
+
+/* Hacer el carrusel responsive con media queries */
+@media screen and (max-width: 768px) {
+  .carrusel-item {
+    min-width: 80%; /* Ajusta el ancho para dispositivos de pantalla más pequeña */
+    max-width: 80%; /* Ajusta el ancho máximo para dispositivos de pantalla más pequeña */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carrusel-item {
+    min-width: 100%; /* Ocupa todo el ancho para pantallas aún más pequeñas */
+    max-width: 100%; /* Asegura que el ancho no exceda el 100% del contenedor */
+    margin-right: 0; /* Elimina el espacio entre los elementos */
+  }
+}
+
