@@ -11,12 +11,7 @@
 
     <link rel="icon" href = "../img/logopets.png" type = "image/x-icon">
     <script src="https://kit.fontawesome.com/09bca36bc3.js" crossorigin="anonymous"></script>
-    <script>
-        document.getElementById("botonInicio").onclick = function() {
-            // Redirigir al usuario al archivo HTML deseado
-            window.location.href = "adopta.html";
-        };
-    </script>
+
 </head>
 <body>
     <!--CABECERA-->
@@ -48,8 +43,8 @@
     <!--SECCIÓN 1-->
 
     <section id="hero">
-        <h1>Brindemos refugio y cariño</h1>
-        <h2>a quienes más lo necesitan</h2>
+        <h1>Brindemos refugio</h1> 
+        <h2>a quienes más lo necesitan</h2> 
         <button id="botonInicio" >Adopta ya</button>    
     </section>
 
@@ -74,33 +69,53 @@
         </div>
     </section>
 
-    <!-- <section id="servicios">
-        <div class="container-servicios">
-            <h2>¡Deja tu huella!</h2>
-            <div class="cartas">
-                <div class="carta-item">
-                    <img src="../img/Adr.jpg" alt="servicio1">
-                    <p class="titulo-servicio">Adopciones</p>
-                    <p>Puedes adoptar</p>
-                    <button>Hazlo ya</button>
-                </div>
-                <div class="carta-item">
-                    <img src="../img/Adr.jpg" alt="servicio2">
-                    <p class="titulo-servicio">Reportes</p>
-                    <p>Puedes reportar animales perdidos</p>
-                    <button>Hazlo ya</button>
-                </div>
-                <div class="carta-item">
-                    <img src="../img/Adr.jpg" alt="servicio3">
-                    <p class="titulo-servicio">Donaciones</p>
-                    <p>Puedes donar</p>
-                    <button>Hazlo ya</button>
-                </div>
+    <section id="servicios">
+        <div class="container"> 
+            <div class="title">
+                <h1>¿Cómo puedo ayudar?</h1>
+                <p>Descubre maneras de marcar la diferencia con Happy Pets. Cada gesto cuenta para crear 
+                    un hogar amoroso para los animales. ¡Deja tu huella hoy! </p>
+            </div>
+        <div class="card">
+            <figure>
+                <img src="../img/adopta.png">
+            </figure>
+            <div class="contenido">
+                <h3>Adopciones</h3>
+                <p>Descubre el amor incondicional adoptando 
+                    un perro o gato en Happy Pets: tu vida y 
+                    la suya cambiarán para siempre.
+                </p>
+                <a href="../html/adopta.html">Leer Más</a>
             </div>
         </div>
-    </section> -->
-
-
+        <div class="card">
+            <figure>
+                <img src="../img/donacion.png">
+            </figure>
+            <div class="contenido">
+                <h3>Donaciones</h3>
+                <p>Contribuye monetariamente, con alimentos, etc. 
+                    Tu ayuda construye un futuro mejor para nuestros amigos sin hogar.
+                </p>
+                <a href="../html/donaciones.html">Leer Más</a>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="../img/encontrar.png">
+            </figure>
+            <div class="contenido">
+                <h3>Reportes</h3>
+                <p>¿Has visto a un animal perdido? Reporta avistamientos
+                     y ayúdanos a reunir familias. Juntos podemos 
+                     salvar vidas peludas.
+                    
+                </p>
+                <a href="../html/reporta.html">Leer Más</a>
+            </div>
+        </div>
+    </div></section> 
 
     <!--PIE DE PAGINA-->
 
@@ -150,8 +165,13 @@
             <small>&copy; 2023 <b>HappyPets</b> - Todos los Derechos Reservados.</small>
         </section>
     </footer>
-    
+    <script>
+        document.getElementById("botonInicio").onclick = function() {
+            // Redirigir al usuario al archivo HTML deseado
+            window.location.href = "adopta.html";
+        };
+    </script>    
 
     
-</body>
+    </body>
 </html>

@@ -18,11 +18,11 @@
 
 /* Estilos para el título en la sección hero */
 #hero h1 {
-  font-size: 50px;
+  font-size: 3.5em;
 }
 
 #hero h2 {
-  font-size: 46px;
+  font-size: 2.5em;
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
 }
@@ -44,6 +44,8 @@
   align-items: center;
   justify-content: center;
   color: white;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .resultados .resultados-frase{
@@ -51,6 +53,8 @@
   font-size: 1.4rem;
   font-weight: 600;
   width: 50%;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .resultados .resultados-numeros p{
@@ -63,47 +67,82 @@
   font-size: 30px;
   font-weight: 600;
 }
+  
+.container {
+  max-width:1200px;
+  margin: auto;
+  position: relative;
+  margin-top: 70px;
+}
 
-#servicios h2{
-  margin-top: 50px;
-  font-size: 40px;
+.title h1{
+  text-align: center;
+  padding: 30px;
+  font-size: 35px;
+}
+
+.title p{
   text-align: center;
 }
 
-#servicios .cartas{
+section .container {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  max-width: 1000px;
+  margin-top: 5px;
 }
 
-#servicios .cartas .carta-item{
-  margin: 10px auto;
-  width: 80%;
-  text-align: center;
-  flex-direction: column;
-  margin: 0px 20px;
-  padding: 20px 0px;
-  padding: 30px 0;
-  border-radius: 20px;
-  box-shadow: 0px 35px 97px -15px rgba(0, 0, 0, 0.08);
-}
-
-#servicios .cartas .img{
-  max-width: 100%; /* Hace que la imagen sea responsive */
+section .card {
   height: auto;
+  margin: 25px;
+  padding: 15px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  /* Agrega sombra para el efecto de brillo */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  cursor: default;
+  transition: all 400ms ease;
 }
 
-#servicios .cartas .titulo-servicio{
-  margin-bottom: 5px;
-  font-weight: 1000;
-  font-size: 1.2rem;
+section .card img{
+  width: 100%;
+  height: auto;
+  padding: 30px;
+}
+section .card .contenido {
+  padding: 15px;
+  text-align: center;
+}
+section .card .contenido h3{
+  max-width: 100%; /* Evita que los títulos y párrafos sean más anchos que la carta */
+  overflow: hidden; /* Oculta el desbordamiento si el contenido es demasiado largo */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar que hay más contenido oculto */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
 
+section .card .contenido p{
+  font-size: 13px;
+}
+
+section .card .contenido a {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 10px;
+  color: rgb(170, 111, 70);
+  border: 1px solid rgb(170, 111, 70);
+  border-radius: 4px;
+  transition: all 400ms ease;
+}
+section .card .contenido a:hover {
+  background: rgb(170, 111, 70);
+  color: #fff;
 }
 
 
-
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 720px) {
   .resultados .container-resultados {
     flex-direction: column; /* Cambiar a disposición en columna para pantallas pequeñas */
     text-align: center; /* Centrar el contenido en pantallas pequeñas */
@@ -119,18 +158,21 @@
     font-size: 10px; /* Reducir aún más el tamaño de fuente para números en pantallas pequeñas */
   }
 
-  .container-servicios{
-    display: flex;
-    flex-direction: column;
-}
-  .carta-item{
-      width: 100%;
-      margin: 20px 0px;
+  #hero h1 {
+    font-size: 2em; /* Tamaño de fuente para pantallas medianas */
   }
-}
 
+  #hero h2 {
+    font-size: 1.5em; /* Tamaño de fuente para pantallas medianas */
+  }
 
-button {
+  .container{
+    display: flex;
+    flex-direction: column; 
+  }
+} 
+
+button{
   font-size: 1.5em;
   font-weight: bold;
   padding: 10px 20px;
@@ -148,76 +190,4 @@ button {
 #botonInicio:hover {
   transform: scale(1.1);
   /* Aumenta el tamaño en un 10% al pasar el cursor */
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-#testimonios{
-  width: 100%;
-  max-width: 1500px;
-  text-align: center;
-}
-
-#testimonios h2{
-  margin-top: 80px;
-    font-size: 40px;
-}
-
-.parrafo1{
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  margin-top: 20px;
-}
-
-.container-testimonios{
-  width: 100%;
-  display: flex; 
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.comentario{
-  width: 340px;
-  margin: 20px;
-  background-color: rgb(151, 126, 94);
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0px 0px 30px 5px black;
-}
-
-.foto-perfil1,
-.foto-perfil2,
-.foto-perfil3{
-  margin: auto;
-  width: 150px;
-  height: 120px;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
-  position: relative;
-  top: -60px;
-}
-
-.foto-perfil1{
-  background-image: url(../img/alejo.jpg);
-}
-
-.foto-perfil2{
-  background-image: url(../img/perro-dueno.jpg);
-}
-
-.foto-perfil3{
-  background-image: url(../img/Dom.jpg);
-}
-
-.comentario h3{
-  margin-top: -40px;
-}
-
-.comentario p{
-  margin-top: 10px;
 }
