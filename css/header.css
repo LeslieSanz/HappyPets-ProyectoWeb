@@ -4,11 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* Estilos generales para el cuerpo del documento */
 body {
-  font-family: 'Quicksand', sans-serif;
+  
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -114,6 +115,7 @@ header h2 {
 
 label[for="toggle"] {
   font-size: 30px;
+  font-weight: bold;
 }
 
 #toggle,

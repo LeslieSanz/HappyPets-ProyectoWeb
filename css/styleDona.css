@@ -59,10 +59,11 @@ body{
     margin-bottom: 20px;
 }
 .card p{
-    font-size: 17px;
+    font-size: 12px;
     margin-bottom: 30px;
     line-height: 1.5;
     color: rgb(141, 80, 36);
+    text-align: justify;
 }
 .button{
     font-size: 15px;

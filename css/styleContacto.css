@@ -2,7 +2,6 @@ body{
     background-color: rgb(245, 183, 26);
 
 }
-
 .container{
     background-color: #fff;
     max-width:  1170px;
@@ -42,6 +41,21 @@ body{
     margin-bottom: 25px;
     padding: 0;
   
+  }
+
+  button {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: rgb(245, 183, 26);
+    transition: transform 0.2s;
+    cursor: pointer;
+    /* Agrega una transición suave para el efecto de agrandamiento */
   }
 
   
