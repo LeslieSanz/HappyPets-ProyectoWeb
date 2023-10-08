@@ -11,7 +11,7 @@
 
     <link rel="icon" href = "../img/logopets.png" type = "image/x-icon">
     <script src="https://kit.fontawesome.com/09bca36bc3.js" crossorigin="anonymous"></script>
-    
+
 </head>
 <body>
     <!--CABECERA-->
@@ -43,58 +43,79 @@
     <!--SECCIÓN 1-->
 
     <section id="hero">
-        <h1>Brindemos refugio y cariño</h1>
-        <h2>a quienes más lo necesitan</h2>
-        <button id="botonInicio" >Adopta ya</button>
-        
+        <h1>Brindemos refugio</h1> 
+        <h2>a quienes más lo necesitan</h2> 
+        <button id="botonInicio" >Adopta ya</button>    
     </section>
 
-    <section id="razones">
-        <div class="container">
-            <div class="img-container"></div>
-            <div class="texto">
-                <h2>¿Por qué adoptar?</h2>
-                <ul>
-                    <li>✔️Estás salvando no una, si no, dos vidas al liberar un espacio en el refugio</li>
-                    <li>✔️Mejoran tu salud y serás más feliz</li>
-                    <li>✔️Beneficia a los niños</li>
-                    <li>✔️Ayudarás a controlar la sobrepoblación de animales</li>
-                    <li>✔️Porque sí</li>
-                </ul>
+    <section id="cifras">
+        <div class="resultados">
+            <div class="container-resultados">
+                <div class="resultados-frase">
+                    Encuentra a tu compañero peludo en nuestro refugio
+                </div>
+                <div class="resultados-numeros">
+                    <p>
+                        <span>+120</span><br>rescatados
+                    </p>
+                    <p>
+                        <span>+300</span><br>adoptados
+                    </p>
+                    <p>
+                        <span>+50</span><br>encontrados
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-    <!--SECCIÓN 2-->
-    <section id="testimonios"> 
-        <h2>Testimonios</h2>
-        <p class="parrafo1">Explora nuestros conmovedores testimonios de adopción, donde el amor incondicional y las 
-            segundas oportunidades se entrelazan en cada historia. Cada uno es un recordatorio de cómo la adopción cambia 
-            vidas y llena los corazones de alegría. Únete a nosotros en este viaje de emociones y gratitud.</p>
-        <div class="container-testimonios">
-            <div class="comentario">
-                <div class="foto-perfil1"></div>
-                <h3>Testimonio 1</h3>
-                <p><i class="fa-solid fa-quote-left"></i>Jamás imaginé cuánto amor y gratitud podría traer un gatito 
-                    rescatado a mi vida. Gracias a Happy Pets, adopté a mi pequeño amigo y desde entonces, hemos compartido
-                    risas, abrazos y aventuras inolvidables. ¡La adopción cambió mi mundo para mejor!</p>
+
+    <section id="servicios">
+        <div class="container"> 
+            <div class="title">
+                <h1>¿Cómo puedo ayudar?</h1>
+                <p>Descubre maneras de marcar la diferencia con Happy Pets. Cada gesto cuenta para crear 
+                    un hogar amoroso para los animales. ¡Deja tu huella hoy! </p>
             </div>
-            <div class="comentario">
-                <div class="foto-perfil2"></div>
-                <h3>Testimonio 2</h3>
-                <p><i class="fa-solid fa-quote-left"></i>Adoptar a un perro de Happy Pets no solo me dio un leal amigo, 
-                    sino que también me enseñó el verdadero significado de la lealtad y la conexión. Cada día, mi peludo compañero me recuerda la importancia de vivir el 
-                    presente y disfrutar las cosas simples de la vida. Estoy agradecido por esta increíble experiencia.</p>
-            </div>
-            <div class="comentario">
-                <div class="foto-perfil3"></div>
-                <h3>Testimonio 3</h3>
-                <p><i class="fa-solid fa-quote-left"></i>La decisión de adoptar a mi nuevo gatito en Happy Pets fue 
-                    impulsada por un deseo de hacer una diferencia en su vida y en la mía. Desde el primer día, su amor 
-                    y travesuras llenaron mi hogar de alegría. Cada vez que miro esos ojos brillantes, sé que hicimos la 
-                    elección correcta al adoptar.</p>
+        <div class="card">
+            <figure>
+                <img src="../img/adopta.png">
+            </figure>
+            <div class="contenido">
+                <h3>Adopciones</h3>
+                <p>Descubre el amor incondicional adoptando 
+                    un perro o gato en Happy Pets: tu vida y 
+                    la suya cambiarán para siempre.
+                </p>
+                <a href="../html/adopta.html">Leer Más</a>
             </div>
         </div>
-    </section> 
+        <div class="card">
+            <figure>
+                <img src="../img/donacion.png">
+            </figure>
+            <div class="contenido">
+                <h3>Donaciones</h3>
+                <p>Contribuye monetariamente, con alimentos, etc. 
+                    Tu ayuda construye un futuro mejor para nuestros amigos sin hogar.
+                </p>
+                <a href="../html/donaciones.html">Leer Más</a>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="../img/encontrar.png">
+            </figure>
+            <div class="contenido">
+                <h3>Reportes</h3>
+                <p>¿Has visto a un animal perdido? Reporta avistamientos
+                     y ayúdanos a reunir familias. Juntos podemos 
+                     salvar vidas peludas.
+                    
+                </p>
+                <a href="../html/reporta.html">Leer Más</a>
+            </div>
+        </div>
+    </div></section> 
 
     <!--PIE DE PAGINA-->
 
@@ -144,13 +165,13 @@
             <small>&copy; 2023 <b>HappyPets</b> - Todos los Derechos Reservados.</small>
         </section>
     </footer>
-    
-
     <script>
         document.getElementById("botonInicio").onclick = function() {
             // Redirigir al usuario al archivo HTML deseado
             window.location.href = "adopta.html";
         };
-    </script>
-</body>
+    </script>    
+
+    
+    </body>
 </html>

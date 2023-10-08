@@ -18,51 +18,161 @@
 
 /* Estilos para el título en la sección hero */
 #hero h1 {
-  font-size: 50px;
+  font-size: 3.5em;
 }
 
 #hero h2 {
-  font-size: 46px;
+  font-size: 2.5em;
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
 }
 
-/* Estilos para la sección "razones" */
-#razones .container {
-  text-align: center;
-  padding: 150px 12px;
+#cifras .resultados{
+  background-color: rgb(245, 183, 26);
+}
+
+.resultados .container-resultados {
   display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 30px;
+  flex-direction: row; 
+}
+
+.resultados .resultados-numeros{
+  display: flex;
+  align-items: center;
   justify-content: center;
-  background-color: rgb(245, 245, 245);
+  color: white;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
-/* Estilos para el título en la sección "razones" */
-#razones h2 {
-  font-size: 40px;
+.resultados .resultados-frase{
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  width: 50%;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-/* Estilos para la lista de razones en la sección "razones" */
-#razones ul {
-  list-style-type: none;
+.resultados .resultados-numeros p{
+  text-align: center;
+  margin: 0 30px;
+  font-size: 20px;
 }
 
-/* Estilos para los elementos de la lista en la sección "razones" */
-#razones li {
-  margin: 16px 0px;
+.resultados .resultados-numeros p span{
+  font-size: 30px;
+  font-weight: 600;
+}
+  
+.container {
+  max-width:1200px;
+  margin: auto;
+  position: relative;
+  margin-top: 70px;
 }
 
-/* Estilos para la imagen de fondo en la sección "razones" */
-#razones .img-container {
-  background-image: url(../img/razonesjpg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 300px;
-  width: 500px;
+.title h1{
+  text-align: center;
+  padding: 30px;
+  font-size: 35px;
 }
 
-/* Estilos para los botones */
-button {
+.title p{
+  text-align: center;
+}
+
+section .container {
+  width: 100%;
+  display: flex;
+  max-width: 1000px;
+  margin-top: 5px;
+}
+
+section .card {
+  height: auto;
+  margin: 25px;
+  padding: 15px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  /* Agrega sombra para el efecto de brillo */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+section .card img{
+  width: 100%;
+  height: auto;
+  padding: 30px;
+}
+section .card .contenido {
+  padding: 15px;
+  text-align: center;
+}
+section .card .contenido h3{
+  max-width: 100%; /* Evita que los títulos y párrafos sean más anchos que la carta */
+  overflow: hidden; /* Oculta el desbordamiento si el contenido es demasiado largo */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar que hay más contenido oculto */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+section .card .contenido p{
+  font-size: 13px;
+}
+
+section .card .contenido a {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 10px;
+  color: rgb(170, 111, 70);
+  border: 1px solid rgb(170, 111, 70);
+  border-radius: 4px;
+  transition: all 400ms ease;
+}
+section .card .contenido a:hover {
+  background: rgb(170, 111, 70);
+  color: #fff;
+}
+
+
+@media screen and (max-width: 720px) {
+  .resultados .container-resultados {
+    flex-direction: column; /* Cambiar a disposición en columna para pantallas pequeñas */
+    text-align: center; /* Centrar el contenido en pantallas pequeñas */
+  }
+
+  .resultados .resultados-frase,
+  .resultados .resultados-numeros {
+    width: 100%; /* Establecer el ancho al 100% para ocupar todo el espacio disponible */
+  }
+
+  .resultados .resultados-numeros p {
+    margin: 20px 0; /* Añadir espacio entre los números para mejorar la legibilidad en pantallas pequeñas */
+    font-size: 10px; /* Reducir aún más el tamaño de fuente para números en pantallas pequeñas */
+  }
+
+  #hero h1 {
+    font-size: 2em; /* Tamaño de fuente para pantallas medianas */
+  }
+
+  #hero h2 {
+    font-size: 1.5em; /* Tamaño de fuente para pantallas medianas */
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column; 
+  }
+} 
+
+button{
   font-size: 1.5em;
   font-weight: bold;
   padding: 10px 20px;
@@ -75,83 +185,9 @@ button {
   transition: transform 0.2s;
   cursor: pointer;
   /* Agrega una transición suave para el efecto de agrandamiento */
-
-
-}
+ } 
 
 #botonInicio:hover {
   transform: scale(1.1);
   /* Aumenta el tamaño en un 10% al pasar el cursor */
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-#testimonios{
-  width: 100%;
-  max-width: 1500px;
-  text-align: center;
-}
-
-#testimonios h2{
-  margin-top: 80px;
-    font-size: 40px;
-}
-
-.parrafo1{
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  margin-top: 20px;
-}
-
-.container-testimonios{
-  width: 100%;
-  display: flex; 
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.comentario{
-  width: 340px;
-  margin: 20px;
-  background-color: antiquewhite;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0px 0px 30px 5px black;
-}
-
-.foto-perfil1,
-.foto-perfil2,
-.foto-perfil3{
-  margin: auto;
-  width: 150px;
-  height: 120px;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
-  position: relative;
-  top: -60px;
-}
-
-.foto-perfil1{
-  background-image: url(../img/alejo.jpg);
-}
-
-.foto-perfil2{
-  background-image: url(../img/perro-dueno.jpg);
-}
-
-.foto-perfil3{
-  background-image: url(../img/Dom.jpg);
-}
-
-.comentario h3{
-  margin-top: -40px;
-}
-
-.comentario p{
-  margin-top: 10px;
 }
