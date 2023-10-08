@@ -5,26 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reporta-Happy Pets</title>
-    <link rel="icon" href = "../img/logopets.png" type = "image/x-icon">
+    <link rel="icon" href="../img/logopets.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styleReporta.css" />
-    <link rel="stylesheet"   href="../css/header.css" />
-    <link rel="stylesheet"   href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
     <script src="https://kit.fontawesome.com/09bca36bc3.js" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
 </head>
 
 <body>
-     <!--CABECERA-->
-     <header>
+    <!--CABECERA-->
+    <header>
         <a href="../html/index.html" class="logo">
-           <img src="../img/logopets.jpeg" alt="logo de la empresa" class="logo-img">
-           <h2 class="logo-nombre">Happy Pets</h2>
+            <img src="../img/logopets.jpeg" alt="logo de la empresa" class="logo-img">
+            <h2 class="logo-nombre">Happy Pets</h2>
         </a>
-        <input type="checkbox"  id="toggle">
+        <input type="checkbox" id="toggle">
         <label for="toggle">&#9776;</label>
         <!--BARRA DE NAVEGACIÓN-->
         <nav class="nav">
-            <ul>  
+            <ul>
                 <li><a href="#">¿Quiénes somos?</a></li>
                 <li><a href="../html/blog.html"><i class="fa-solid fa-newspaper"></i>Blog</a></li>
                 <li><a href="#"><i class="fa-solid fa-paw"></i>Deja tu huella</a>
@@ -40,9 +42,11 @@
         </nav>
     </header>
 
+
+
     <!-- PARTE DEL BANNNER-->
 
-    <section id="BannerPrincipal">
+    <section class="section-banner">
         <h1>
             Los peluditos te necesitan <br />
             Sé su voz, reporta
@@ -51,53 +55,39 @@
         <button id="BotonBanner">¡Reporta!</button>
 
 
+
     </section>
 
+
     <!-- PARTE DE ANIMALES EXTRAVIADOS-->
-    <section id="animalesExtraviados">
-        <div class="container">
-            <h2>Peluditos extraviados</h2>
-
-            <div class="programas">
-                <div class="carta">
-                    <p id="p1">
-                        Encontrado en: San Juan de Lurigancho <br>
-                        Esta hambriendo y cojeando<br>
-                        Necesita de atención médica
-                    </p>
-                    <button id="BotonPE"> + Info</button>
-                </div>
-
-                <div class="carta">
-                    <p>
-                        Encontrado en: Callo <br>
-                        Ha sido encontrado durmiendo en la calle<br>
-                        Necesita de atención médica
-                    </p>
-                    <button id="BotonPE"> + Info</button>
-                </div>
-                <div class="carta">
-                    <p>
-                        Encontrado en: San Martin de Porres <br>
-                        Ha sido encontrado comiendo en la basura<br>
-                        Necesita de atención médica
-                    </p>
-                    <button id="BotonPE"> + Info</button>
-                </div>
-
+    <section class="section-animales">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
 
+
     <!-- PARTE PARA REPORTA UN ANIMAL-->
 
-    <section id="form">
+    <section class="section-formulario">
 
 
-        <div class="container2">
+        <div class="section-formulario__div--container2">
             <h1>Formulario de Reporte</h1>
             <form>
-                <div class="form1">
+                <div class="section-formulario__div--form1">
                     <h2>Información del Informante</h2>
                     <label for="nombres-apellidos">Nombres y Apellidos</label>
                     <input type="text" id="nombres-apellidos" name="nombres-apellidos" required>
@@ -109,7 +99,7 @@
                     <input type="email" id="correo" name="correo" required>
                 </div>
 
-                <div class="form2">
+                <div class="section-formulario__div--form2">
                     <h2>Información del Animal</h2>
                     <label for="especie">Especie del Animal Encontrado</label>
                     <input type="text" id="especie" name="especie" required>
@@ -135,7 +125,7 @@
 
     </section>
 
-   <!--PIE DE PAGINA-->
+    <!--PIE DE PAGINA-->
     <footer class="pie-pagina">
         <section class="grupo-1">
             <div class="box">
@@ -171,8 +161,10 @@
             <div class="box">
                 <h2>REDES SOCIALES</h2>
                 <div class="red-social">
-                    <a href="https://www.facebook.com/profile.php?id=61551118926851" target="_blank" class="fa fa-facebook"></a>
-                    <a href="https://instagram.com/happypets2023web?igshid=NGVhN2U2NjQ0Yg==" target="_blank" class="fa fa-instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61551118926851" target="_blank"
+                        class="fa fa-facebook"></a>
+                    <a href="https://instagram.com/happypets2023web?igshid=NGVhN2U2NjQ0Yg==" target="_blank"
+                        class="fa fa-instagram"></a>
                     <a href="#" class="fa fa-twitter"></a>
                     <a href="#" class="fa fa-youtube"></a>
                 </div>

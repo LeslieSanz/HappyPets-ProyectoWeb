@@ -1,0 +1,73 @@
+ //Una opción para ordenar por un atributo numérico.  (2puntos) (nagito)
+    public int hallaMenorPC1(int i, int indMax){
+        double menor = arregloAlumno[i].getPc1(); int indMenor =i;
+        for( int j =i; j<=indMax; j++){
+            if(arregloAlumno[j].getPc1()< menor){
+                menor = arregloAlumno[j].getPc1(); indMenor = j;
+            }
+        }
+        return indMenor;
+    }
+    
+    public void ordenarPorPc1(){
+        int indMax=arregloAlumno.length-1;    
+        int indMenor;
+        Alumno aux;
+        for(int i = 0; i <= indMax; i++){
+            indMenor = hallaMenorPC1(i, indMax);
+            aux = arregloAlumno[indMenor];
+            
+            arregloAlumno[indMenor] =arregloAlumno[i];
+            arregloAlumno[i]=aux;
+            
+        }    
+    }
+    
+    public int hallaMenorPC2(int i, int indMax){
+        double menor = arregloAlumno[i].getPc2(); int indMenor =i;
+        for( int j =i; j<=indMax; j++){
+            if(arregloAlumno[j].getPc2()< menor){
+                menor = arregloAlumno[j].getPc2(); indMenor = j;
+            }
+        }
+        return indMenor;
+    }
+    
+    public void ordenarPorPc2(){
+        int indMax=arregloAlumno.length-1;    
+        int indMenor;
+        Alumno aux;
+        for(int i = 0; i <= indMax; i++){
+            indMenor = hallaMenorPC2(i, indMax);
+            aux = arregloAlumno[indMenor];
+            
+            arregloAlumno[indMenor] =arregloAlumno[i];
+            arregloAlumno[i]=aux;
+            
+        }    
+    }
+    
+    public int hallaMenorPC3(int i, int indMax){
+        double menor = arregloAlumno[i].getPc3(); int indMenor =i;
+        for( int j =i; j<=indMax; j++){
+            if(arregloAlumno[j].getPc1()< menor){
+                menor = arregloAlumno[j].getPc3(); indMenor = j;
+            }
+        }
+        return indMenor;
+    }
+    
+    public void ordenarPorPc3(){
+        int indMax=arregloAlumno.length-1;    
+        int indMenor;
+        Alumno aux;
+        for(int i = 0; i <= indMax; i++){
+            indMenor = hallaMenorPC3(i, indMax);
+            aux = arregloAlumno[indMenor];
+            
+            arregloAlumno[indMenor] =arregloAlumno[i];
+            arregloAlumno[i]=aux;
+            
+        }    
+    }
+    
