@@ -1,3 +1,7 @@
+body {
+    min-height: 100vh;
+}
+
 h1 {
     font-size: 3.5em;
 }
@@ -89,60 +93,94 @@ h3 {
 /* ------------------------------ ANIMALES EXTRAVIADOS -------------------------------*/
 .section-animales {
     background-color: blanchedalmond;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    padding: 10px;
 }
 
-.section-animales h2 {
-    margin-top: 0;
+/* ----------------------------------CARRUSEL DE CARTAS--------------------------------------------------*/
+
+.section-animales__DIV {
+    width: 90%;
+    margin: 10px;
+    padding: 10px 40px;
 }
 
-.section-animales .container {
-    padding: 70px 0px;
+.section-animales__DIV .swiper {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
-.section-animales p {
+
+.section-animales__DIV .swiper-slide {
+
+    width: 91%;
+    position: relative;
+    text-align: start;
+    font-size: 18px;
+    background: blanchedalmond;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    margin: 15px;
+
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.section-animales__DIV .cardDescription {
+    padding: 1rem;
+}
+
+.swiper-button-next {
+    right: 25px !important;
+    z-index: 0 !important;
+    transform: translateY(1550%) !important;
+}
+
+.swiper-button-prev {
+    left: 25px !important;
+    z-index: 0 !important;
+    transform: translateY(1550%) !important;
+}
+
+
+.Reporte {
+
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 9px 15px;
+    border-radius: 9px;
+    border: 0px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     color: white;
-    display: none;
-}
-
-.section-animales__div--container {
-    max-width: 1400px;
-    margin: auto;
-}
-
-/* ----FOTOS DE LOS ANIMALES---- */
-
-.carta:first-child {
-    background-image: linear-gradient(0deg,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)),
-        url(../img/perroCallejero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    text-shadow: 2px 2px 4px rgba(83, 63, 13, 0.5);
+    ;
+    background-color: rgb(245, 183, 26);
+    transition: transform 0.2s;
+    margin-top: 20px;
 
 }
 
-.carta:nth-child(2) {
-    background-image: linear-gradient(0deg,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)),
-        url(../img/gatitoPerdido.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
+.Reporte:hover {
+    transform: translateX(-50%) scale(1.1);
 
-.carta:nth-child(3) {
-    background-image: linear-gradient(0deg,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)),
-        url(../img/gatitoCallejero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
 }
-
 
 
 
@@ -175,31 +213,6 @@ h3 {
 
 }
 
-/* ----------------------------------CARRUSEL DE CARTAS--------------------------------------------------*/
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-
 
 
 
@@ -224,6 +237,11 @@ textarea {
 
 .submit {
 
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
     cursor: pointer;
     font-size: 1.15em;
     font-weight: bold;
@@ -246,7 +264,7 @@ textarea {
 }
 
 .submit:hover {
-    transform: scale(1.1);
+    transform: translateX(-50%) scale(1.1);
 
 }
 
