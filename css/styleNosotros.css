@@ -1,0 +1,50 @@
+#refugio {
+    position: relative;
+    margin-top: 70px;
+    height: 90vh;
+    background-color: #f2f2f2;
+  }
+
+#refugio .container_refugio{
+    max-width: 1440px;
+    padding: 50px 5%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+#refugio .refugio_img{
+    width: 50%;
+}
+
+#refugio .refugio_img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#refugio .refugio_texto{
+    width: 50%;
+    padding-left: 60px;
+} 
+
+#refugio .refugio_texto h2{
+    font-size: 1.7em;
+}
+
+#refugio .refugio_texto p{
+    margin: 20px 0;
+}
+
+@media (max-width: 950px){
+    #refugio .container_refugio{
+        flex-direction: column-reverse;
+    }
+
+    #refugio .refugio_texto,
+    #refugio .refugio_img{
+        width: 100%;
+        text-align: center;
+    } 
+
+}
+
