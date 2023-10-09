@@ -40,57 +40,199 @@
     <section id="hero">
         <h1>Blog</h1>
     </section>
-    <main>
-        <div class="contenido">
-            <div class="articulos">
-                <div class="secciones">
-                    <div>
-                        <h2>Universidad</h2>
-                        <p>La Universidad Tecnológica del Perú (UTP) se distingue no solo por su excelencia académica, sino también por su compromiso inquebrantable con la innovación y la adopción de nuevas tecnologías. Entendemos que el mundo actual está en constante evolución y que es crucial preparar a nuestros estudiantes para enfrentar los desafíos del futuro.
-                            En este sentido, fomentamos activamente la curiosidad intelectual y la búsqueda de nuevos conocimientos entre nuestros alumnos. A través de programas de educación continua, talleres y conferencias, brindamos oportunidades para que los estudiantes exploren áreas emergentes y se mantengan actualizados en las últimas tendencias y avances en sus campos de estudio.
-                            La UTP también promueve la adopción de tecnologías disruptivas como parte integral del proceso educativo. Creemos que la integración de herramientas tecnológicas en el aula y en los proyectos de investigación potencia la formación de profesionales más versátiles y preparados para enfrentar los retos del mercado laboral globalizado.
-                            Además, fomentamos la colaboración y la interdisciplinariedad. Creamos espacios de encuentro entre distintas áreas de estudio para propiciar el intercambio de ideas y la generación de soluciones innovadoras. Esto se traduce en proyectos conjuntos entre estudiantes de diferentes facultades, lo cual no solo enriquece la experiencia académica, sino que también prepara a nuestros alumnos para enfrentar problemas complejos que requieren un enfoque multifacético.
-                            La UTP está comprometida con la formación de profesionales que no solo destacan en su campo de estudio, sino que también están preparados para liderar en la adopción de nuevas tecnologías en el ámbito laboral. A través de alianzas estratégicas con la industria y la promoción de actividades de emprendimiento e innovación, buscamos impulsar el desarrollo de soluciones creativas y tecnológicas que impacten positivamente en la sociedad y el mercado.</p>
-                    </div>
-                    <div><img src="../img/UTP.jpg"></div>
-                </div>
-                <div class="secciones">
-                    <div><img src="../img/Dom.jpg"></div>
-                    <div>
-                        <h2>Dominith</h2>
-                        <p>Hola, soy Dominith y desde que tengo memoria, los animales han ocupado un lugar especial en mi corazón. He dedicado gran parte de mi tiempo a colaborar con refugios y organizaciones de rescate, aprendiendo lecciones valiosas sobre la importancia de la adopción. Cada charla y taller que imparto busca transmitir el amor y gratitud que los perros y gatos muestran cuando encuentran un hogar cálido y lleno de afecto. Mi misión es inspirar a otros para que consideren la adopción como una opción responsable y humana.</p>
-                    </div>
-                </div>
-                <div class="secciones">
-                    <div>
-                        <h2>Leslie</h2>
-                        <p>Soy Leslie y siento una conexión profunda con los animales. Mi pasión es promover la adopción responsable y he invertido tiempo y esfuerzo en sensibilizar a mi comunidad sobre esta causa. Organizo eventos de adopción y ofrezco consejos valiosos sobre el cuidado y entrenamiento de mascotas. Creo firmemente que la adopción no solo salva vidas, sino que también transforma las nuestras para mejor. Cada día, me comprometo a ser una embajadora de esta causa, demostrando que la adopción es un acto de amor y responsabilidad.</p>
-                    </div>
-                    <div><img src="../img/Les.jpg"></div>
-                </div>
-                <div class="secciones">
-                    <div><img src="../img/WalR.jpg"></div>
-                    <div>
-                        <h2>Walter</h2>
-                        <p>Soy Walter, y mi misión es educar a la comunidad sobre el comportamiento y necesidades de nuestros queridos perros y gatos. A través de talleres interactivos, comparto conocimientos sobre cómo establecer relaciones positivas con nuestras mascotas. Creo en la comunicación efectiva y el respeto mutuo entre humanos y animales. Para mí, la adopción es un compromiso de por vida, y cada día trabajo para que más personas entiendan la importancia de crear hogares felices y equilibrados para todas las partes involucradas.</p>
-                    </div>
-                </div>
-                <div class="secciones">
-                    <div>
-                        <h2>Adrian</h2>
-                        <p>Soy Adrian y he asumido la responsabilidad de ser defensor de los gatos callejeros. Me he convertido en una voz incansable por su bienestar. A través de mi labor, he concientizado a mi comunidad sobre la importancia de brindar ayuda a estos felinos desfavorecidos. Organizo campañas de esterilización y comparto consejos prácticos sobre cómo cuidar y proteger a los gatos callejeros. Cada gesto, por pequeño que sea, puede marcar la diferencia en la vida de un ser necesitado, y esa es mi motivación diaria.</p>
-                    </div>
-                    <div><img src="../img/Adr.jpg"></div>
-                </div>
-                <div class="secciones">
-                    <div><img src="../img/Ant.jpg"></div>
-                    <div>
-                        <h2>Anthony</h2>
-                        <p>Soy Anthony y he asumido el desafío de liderar la promoción de la adopción de mascotas en mi comunidad. Mi entusiasmo ha movilizado a jóvenes a participar en campañas de adopción y concienciación. Comparto mi experiencia personal sobre la adopción de mi fiel compañero canino, destacando cómo esta decisión ha enriquecido mi vida y me ha enseñado lecciones de responsabilidad y empatía. Mi dedicación a esta causa ha dejado una huella positiva en mi entorno y ha inspirado a muchos a seguir mi ejemplo.</p>
-                    </div>
-                </div>
-            </div>
+    
+        <!--post_filtro-->
+      <div class="Container post-filtro">
+        <span class="Elemento-filtro filtro-activo" data-filter="todos"
+          >Todos</span
+        >
+        <span class="Elemento-filtro" data-filter="adopcion">Adopción</span>
+        <span class="Elemento-filtro" data-filter="curiosidades"
+          >Curiosidades</span
+        >
+        <span class="Elemento-filtro" data-filter="vida saludable"
+          >Vida saludable</span
+        >
+        <span class="Elemento-filtro" data-filter="noticias">Noticias</span>
+      </div>
+
+      <!--publicaciones/posts-->
+      <section class="post container">
+        <!--publicacion 1-->
+        <div class="post-box curiosidades">
+          <img src="../img/blog-img/post1.jpg" alt="" class="post-img" />
+          <h2 class="category">Curiosidades</h2>
+          <a href="https://elcomercio.pe/wuf/planeas-viajar-por-el-peru-con-tu-mascota-ten-esto-en-cuenta-noticia/" target="_blank" class="post-title">
+            ¿Planeas viajar por el Perú con tu mascota? ¡Ten esto en cuenta!
+          </a>
+          <span class="post-fecha">12 Ago 2022</span>
+          <p class="post-descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            beatae ut esse?
+          </p>
+          <!--Autor1-->
+          <div class="perfil">
+            <img src="../img/blog-img/Adr.jpg" alt="" class="perfil-img" />
+            <span class="perfil-nombre">Adrián Cisneros</span>
+          </div>
         </div>
+        <!--publicacion 2-->
+        <div class="post-box noticias">
+          <img src="../img/blog-img/post2.jfif" alt="" class="post-img" />
+          <h2 class="category">Noticias</h2>
+          <a href="pag-sig.html" class="post-title">
+            Perro con traje de gala es bendecido por sacerdote durante misa en
+            Iquitos: “Ay, qué hermoso firulais”
+          </a>
+          <span class="post-fecha">12 Ago 2022</span>
+          <p class="post-descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            beatae ut esse?
+          </p>
+          <!--Autor2-->
+          <div class="perfil">
+            <img src="../img/blog-img/Les.jpg" alt="" class="perfil-img" />
+            <span class="perfil-nombre">Leslie Sanchez</span>
+          </div>
+        </div>
+
+        <!--publicacion 3-->
+        <div class="post-box vida saludable">
+          <img src="../img/blog-img/postopc.jpeg" alt="" class="post-img" />
+          <h2 class="category">Vida saludable</h2>
+          <a href="pag-sig.html" class="post-title">
+            Cómo recuperar a tu pareja
+          </a>
+          <span class="post-fecha">12 Ago 2022</span>
+          <p class="post-descripcion">
+            Quiero recuperar a mi novio Anthony George Peña, sé q he hecho cosas malas, pero me arrepiento de hacerlo y quiero cambiar para de esta manera estar con èl toda mi vida
+          </p>
+          <!--Autor3-->
+          <div class="perfil">
+            <img src="../img/blog-img/Dom.jpg" alt="" class="perfil-img" />
+            <span class="perfil-nombre">Dominith Anton</span>
+          </div>
+        </div>
+
+        <!--publicacion 4-->
+        <div class="post-box curiosidades">
+          <img src="../img/blog-img/post1.jpg" alt="" class="post-img" />
+          <h2 class="category">Curiosidades</h2>
+          <a href="pag-sig.html" class="post-title">
+            ¿Planeas viajar por el Perú con tu mascota? ¡Ten esto en cuenta!
+          </a>
+          <span class="post-fecha">12 Ago 2022</span>
+          <p class="post-descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            beatae ut esse?
+          </p>
+          <!--Autor4-->
+          <div class="perfil">
+            <img src="../img/blog-img/Adr.jpg" alt="" class="perfil-img" />
+            <span class="perfil-nombre">Adrián Cisneros</span>
+          </div>
+        </div>
+        <!--publicacion 5-->
+        <div class="post-box noticias">
+          <img src="../img/blog-img/post2.jfif" alt="" class="post-img" />
+          <h2 class="category">Noticias</h2>
+          <a href="pag-sig.html" class="post-title">
+            Perro con traje de gala es bendecido por sacerdote durante misa en
+            Iquitos: “Ay, qué hermoso firulais”
+          </a>
+          <span class="post-fecha">12 Ago 2022</span>
+          <p class="post-descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            beatae ut esse?
+          </p>
+          <!--Autor5-->
+          <div class="perfil">
+            <img src="../img/blog-img/Les.jpg" alt="" class="perfil-img" />
+            <span class="perfil-nombre">Leslie Sanchez</span>
+          </div>
+        </div>
+
+        <!--publicacion 6-->
+        <div class="post-box vida saludable">
+          <img src="../img/blog-img/post3.jpg" alt="" class="post-img" />
+          <h2 class="category">Vida saludable</h2>
+          <a href="pag-sig.html" class="post-title">
+            Cómo recuperar a tu pareja
+          </a>
+          <span class="post-fecha">12 Ago 2022</span>
+          <p class="post-descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            beatae ut esse?
+          </p>
+          <!--Autor6-->
+          <div class="perfil">
+            <img src="../img/blog-img/Dom.jpg" alt="" class="perfil-img" />
+            <span class="perfil-nombre">Dominith Anton</span>
+          </div>
+        </div>
+        <!--publicacion 7-->
+        <div class="post-box curiosidades">
+          <img src="../img/blog-img/post1.jpg" alt="" class="post-img" />
+          <h2 class="category">Curiosidades</h2>
+          <a href="pag-sig.html" class="post-title">
+            ¿Planeas viajar por el Perú con tu mascota? ¡Ten esto en cuenta!
+          </a>
+          <span class="post-fecha">12 Ago 2022</span>
+          <p class="post-descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            beatae ut esse?
+          </p>
+          <!--Autor7-->
+          <div class="perfil">
+            <img src="../img/blog-img/Adr.jpg" alt="" class="perfil-img" />
+            <span class="perfil-nombre">Adrián Cisneros</span>
+          </div>
+        </div>
+        <!--publicacion 8-->
+        <div class="post-box adopcion">
+          <img src="../img/blog-img/post2.jfif" alt="" class="post-img" />
+          <h2 class="category">Adopci{on</h2>
+          <a href="pag-sig.html" class="post-title">
+            Perro con traje de gala es bendecido por sacerdote durante misa en
+            Iquitos: “Ay, qué hermoso firulais”
+          </a>
+          <span class="post-fecha">12 Ago 2022</span>
+          <p class="post-descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            beatae ut esse?
+          </p>
+          <!--Autor8-->
+          <div class="perfil">
+            <img src="../img/blog-img/Les.jpg" alt="" class="perfil-img" />
+            <span class="perfil-nombre">Leslie Sanchez</span>
+          </div>
+        </div>
+
+        <!--publicacion 9-->
+        <div class="post-box Vida saludable">
+          <img src="../img/blog-img/post3.jpg" alt="" class="post-img" />
+          <h2 class="category">Vida saludable</h2>
+          <a href="pag-sig.html" class="post-title">
+            Cómo recuperar a tu pareja
+          </a>
+          <span class="post-fecha">12 Ago 2022</span>
+          <p class="post-descripcion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            beatae ut esse?
+          </p>
+          <!--Autor9-->
+          <div class="perfil">
+            <img src="../img/blog-img/Dom.jpg" alt="" class="perfil-img" />
+            <span class="perfil-nombre">Dominith Anton</span>
+          </div>
+        </div>
+      </section>
+      <script
+        src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"
+      ></script>
+      <script src="..js/noticias.js"></script>
     </main>
     <!--PIE DE PAGINA-->
     <footer class="pie-pagina">
