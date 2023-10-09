@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Pets</title>
-    
     <link rel="stylesheet"   href="../css/styleInicio.css" />
     <link rel="stylesheet"   href="../css/header.css" />
     <link rel="stylesheet"   href="../css/footer.css" />
@@ -12,8 +11,10 @@
     <link rel="icon" href = "../img/logopets.png" type = "image/x-icon">
     <script src="https://kit.fontawesome.com/09bca36bc3.js" crossorigin="anonymous"></script>
 
+    
 </head>
 <body>
+    
     <!--CABECERA-->
     <header>
         <a href="../html/index.html" class="logo">
@@ -43,9 +44,9 @@
     <!--SECCIÓN 1-->
 
     <section id="hero">
-        <!-- <h1>Brindemos refugio</h1> 
+        <h1>Brindemos refugio</h1> 
         <h2>a quienes más lo necesitan</h2> 
-        <button id="botonInicio" >Adopta ya</button>     -->
+        <a href="../html/adopta.html" >Adopta ya</a>     
     </section>
 
     <section id="cifras">
@@ -71,11 +72,11 @@
 
     <section id="servicios">
         <div class="container"> 
-            <!-- <div class="title">
+            <div class="title">
                 <h1>¿Cómo puedo ayudar?</h1>
                 <p>Descubre maneras de marcar la diferencia con Happy Pets. Cada gesto cuenta para crear 
                     un hogar amoroso para los animales. ¡Deja tu huella hoy! </p>
-            </div> -->
+            </div>
         <div class="card">
             <figure>
                 <img src="../img/adopta.png">
@@ -117,6 +118,73 @@
         </div>
     </div></section> 
 
+     <!--SLIDER DE TESTIMONIOS-->
+     <section class="slider">
+        <div class="titulo-testimonios">
+            <h1>Historias que mueven colas y corazones</h1>
+            <p>Explora nuestras conmovedoras historias de adopción, donde el amor incondicional y las 
+                segundas oportunidades se entrelazan en cada historia.</p>
+        </div>
+        <div class="slider_container contenedore">
+            <img src="../img/leftarrow.svg" class="slider_arrow" id="before">
+
+            <section class="slider_body slider_body--show" data-id="1">
+                <div class="slider_text">
+                    <h2>Amor rescatado, un mundo transformado</h2>
+                    <p class="slider_review"><i class="fa-solid fa-quote-left"></i>
+                        Jamás imaginé cuánto amor y gratitud podría traer un perrito 
+                    rescatado a mi vida. Gracias a Happy Pets, adopté a mi pequeño amigo y desde entonces, hemos compartido
+                    risas, abrazos y aventuras inolvidables. ¡La adopción cambió mi mundo para mejor!
+                    <i class="fa-solid fa-quote-right"></i></p>
+                </div>
+                <figure class="slider_picture">
+                    <img src="../img/testi1.png" class="slider_img">
+                </figure>
+            </section>
+
+            <section class="slider_body" data-id="2">
+                <div class="slider_text">
+                    <h2>Un viaje de adopción gatuna</h2>
+                    <p class="slider_review"><i class="fa-solid fa-quote-left"></i>
+                        La decisión de adoptar a mi nuevo gatito en Happy Pets fue 
+                        impulsada por un deseo de hacer una diferencia en su vida y en la mía. Desde el primer día, su amor 
+                        y travesuras llenaron mi hogar de alegría. Cada vez que miro esos ojos brillantes, sé que hicimos la 
+                        elección correcta al adoptar
+                    <i class="fa-solid fa-quote-right"></i></p>
+                </div>
+                <figure class="slider_picture">
+                    <img src="../img/testi2.png" class="slider_img">
+                </figure>
+            </section>
+
+            <section class="slider_body" data-id="3">
+                <div class="slider_text">
+                    <h2>Lecciones de la vida con patas</h2>
+                    <p class="slider_review"><i class="fa-solid fa-quote-left"></i>
+                        Adoptar a un perro no solo nos dio un leal amigo, 
+                        sino que también nos enseñó el verdadero significado de la lealtad y la conexión. Cada día, nuestro peludo compañero nos recuerda la importancia de vivir el 
+                        presente y disfrutar las cosas simples de la vida. Estamos agradecido por esta increíble experiencia.
+                    <i class="fa-solid fa-quote-right"></i></p>
+                </div>
+                <figure class="slider_picture">
+                    <img src="../img/testi3.png" class="slider_img">
+                </figure>
+            </section>
+
+            <img src="../img/rightarrow.svg" class="slider_arrow" id="next">
+
+        </div>
+    </section>
+
+
+    <script src="../js/slider.js"></script> 
+
+    <section class="unete">
+        <h1 class="titulo-unete">Sé parte de nuestra manada</h1>
+        <a href="javascript:popUp('registro.html')">Súmate al cambio hoy</a> 
+    </section>
+
+    <!--CARRUSEL DE LOGOS DE AUSPICIADORES-->
     <div class="carrusel">
         <div class="carrusel-items">
           <div class="carrusel-item">
@@ -141,8 +209,8 @@
       </div>
       <script src="../js/main.js"></script>
 
-    <!--PIE DE PAGINA-->
 
+    <!--PIE DE PAGINA-->
     <footer class="pie-pagina">
         <section class="grupo-1">
             <div class="box">
@@ -189,12 +257,7 @@
             <small>&copy; 2023 <b>HappyPets</b> - Todos los Derechos Reservados.</small>
         </section>
     </footer>
-    <script>
-        document.getElementById("botonInicio").onclick = function() {
-            // Redirigir al usuario al archivo HTML deseado
-            window.location.href = "adopta.html";
-        };
-    </script>    
+      
 
     </body>
 </html>
