@@ -10,7 +10,7 @@
   height: 90vh;
   color: white;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../img/gato-y-perro-de-la-calle.jpg);
+    url(../img/inicio-img/gato-y-perro-de-la-calle.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -125,7 +125,7 @@ section .card .contenido p{
   font-size: 13px;
 }
 
-section .card .contenido a {
+section .card .contenido a{
   text-decoration: none;
   display: inline-block;
   font-weight: bold;
@@ -133,12 +133,13 @@ section .card .contenido a {
   margin-top: 10px;
   color: rgb(170, 111, 70);
   border: 1px solid rgb(170, 111, 70);
-  border-radius: 4px;
+  border-radius: 20px;
   transition: all 400ms ease;
 }
 section .card .contenido a:hover {
   background: rgb(170, 111, 70);
   color: #fff;
+  transform: scale(1.1);
 }
 
 
@@ -172,13 +173,13 @@ section .card .contenido a:hover {
   }
 } 
 
-button{
-  font-size: 1.5em;
+#hero a,
+.unete a{
+  font-size: 1.3em;
   font-weight: bold;
   padding: 10px 20px;
   margin-top: 20px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   color: white;
   background-color: rgb(245, 183, 26);
@@ -187,7 +188,219 @@ button{
   /* Agrega una transición suave para el efecto de agrandamiento */
  } 
 
-#botonInicio:hover {
+ .unete a{
+  margin-top: 3px;
+ }
+
+ #hero a:hover,
+ .unete a:hover{
   transform: scale(1.1);
   /* Aumenta el tamaño en un 10% al pasar el cursor */
 }
+
+/*testimonios*/
+
+.contenedore{
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider{
+  background-color: #f2f2f2;
+  padding: 40px 0;
+}
+
+.slider_container{
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  align-items: center;
+  gap: 1em;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  box-sizing: border-box;
+}
+
+.slider_body{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  opacity: 0;
+  pointer-events: none;
+  display: grid;
+  background-color: #f2f2f2;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  transition: opacity 2.5s; 
+  max-width: 100%; /* Asegura que el cuerpo del slider no se desborde */
+  box-sizing: border-box;
+}
+
+.slider_body--show{
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 2.5s; 
+} 
+
+.slider_img{
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.slider_text{
+  max-width: 100%;
+}
+
+.slider_text h2{
+  padding-bottom: 10px;
+}
+
+.subtitle{
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.slider_review{
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.slider_arrow{
+  cursor: pointer;
+  width: 90%;
+}
+
+.slider_arrow:nth-of-type(2){
+  justify-self: end;
+}
+
+.titulo-testimonios h1{
+  text-align: center;
+  padding: 20px;
+  font-size: 35px;
+}
+
+.titulo-testimonios p{
+  text-align: center;
+  padding-left: 5vw; /* Utiliza un 5% del ancho de la ventana como margen izquierdo */
+  padding-right: 5vw; /* Utiliza un 5% del ancho de la ventana como margen derecho */
+  margin: 0 auto; /* Centra el elemento horizontalmente */
+  max-width: 1000px; /* Establece un ancho máximo para el contenido */
+  padding-bottom: 25px;
+}
+
+.slider_review p{
+  font-size: 1.5vw; /* El texto tendrá el 2% del ancho de la ventana como tamaño de fuente */
+  margin: 2vh 0; 
+}
+
+.unete {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.unete h1{
+  padding: 20px;
+}
+
+.carrusel {
+  display: flex;
+  align-items: center;
+}
+
+.carrusel-items {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 30px 0px;
+}
+
+.carrusel-item {
+  min-width: 300px;
+  max-width: 300px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.carrusel-item:last-child {
+  margin-right: 0; 
+} 
+
+.carrusel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding: 40px;
+}
+
+.carrusel-item:hover {
+  transform: scale(1.2);
+}
+
+/* Hacer el carrusel responsive con media queries */
+@media screen and (max-width: 768px) {
+  .carrusel-item {
+    min-width: 80%; /* Ajusta el ancho para dispositivos de pantalla más pequeña */
+    max-width: 80%; /* Ajusta el ancho máximo para dispositivos de pantalla más pequeña */
+  }
+}
+
+@media (max-width: 950px) {
+  .slider_body {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+  }
+  .slider_picture{
+    grid-row: 1/2;
+  }
+
+  .slider_img {
+    width: 210px;
+    height: 210px;
+  }
+}
+
+
+
+@media screen and (max-width: 680px) {
+  .carrusel-item {
+    min-width: 100%; /* Ocupa todo el ancho para pantallas aún más pequeñas */
+    max-width: 100%; /* Asegura que el ancho no exceda el 100% del contenedor */
+    margin-right: 0; /* Elimina el espacio entre los elementos */
+  }
+
+  .slider_container{
+    grid-template-columns: 25px 1fr 25px;
+  }
+
+  .slider_arrow{
+    width: 100%;
+  }
+
+  .slider_img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .subtitle{
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+  
+  .slider_review{
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+}
+
