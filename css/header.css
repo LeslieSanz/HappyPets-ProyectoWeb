@@ -22,8 +22,8 @@ a {
 header { 
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 0; 
+  right: 0; 
   background-color: white;
   padding-left: 75px;
   padding-right: 75px;

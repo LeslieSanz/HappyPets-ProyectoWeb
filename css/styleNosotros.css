@@ -1,7 +1,6 @@
 #refugio {
     position: relative;
     margin-top: 70px;
-    height: 90vh;
     background-color: #f2f2f2;
   }
 
@@ -15,6 +14,7 @@
 
 #refugio .refugio_img{
     width: 50%;
+    border-radius: 10px;
 }
 
 #refugio .refugio_img img{
@@ -45,6 +45,37 @@
         width: 100%;
         text-align: center;
     } 
-
 }
 
+.historia {
+    background-color:  rgb(245, 183, 26)
+}
+
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 0px 5%;
+}
+
+.container_timeline{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    background-color: yellow;
+}
+
+.textbox{
+    padding: 20px 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.left_container{
+    left: 0;
+}
+
+.right_container{
+    left: 50%;
+}
