@@ -294,6 +294,7 @@ iframe {
 
 .section-formulario__div--container2 h1 {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .section-formulario__div--container2 h2 {
@@ -316,7 +317,9 @@ iframe {
 }
 
 
-
+.form-flex div {
+    padding: 10px;
+}
 
 
 
@@ -408,6 +411,21 @@ textarea {
 
 
 @media(min-width: 920px) {
+
+    .form-flex {
+        margin: auto;
+        display: flex;
+        width: 100%;
+
+    }
+
+    .form-text {
+        font-size: 100%;
+    }
+
+    .section-formulario__div--container2 {
+        width: 100%;
+    }
 
 
     .container {
