@@ -93,11 +93,15 @@ h3 {
 /* ------------------------------ ANIMALES EXTRAVIADOS -------------------------------*/
 .section-animales {
     background-color: blanchedalmond;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 70px;
     padding: 10px;
+
 }
 
 /* ----------------------------------CARRUSEL DE CARTAS--------------------------------------------------*/
@@ -223,11 +227,16 @@ h3 {
     transform: translate(-50%, -50%);
     z-index: 1001;
     background-color: rgb(255, 244, 227);
+    background-image: url("../img/reporta-img/fondo2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    max-width: 80%;
+
+    max-width: 720px;
     overflow-y: auto;
     width: 70%;
+    padding: 30px;
 }
 
 /* Estilos para la X de cierre */
@@ -283,48 +292,92 @@ h3 {
 iframe {
     width: 100%;
     height: auto;
+
 }
 
 
 /* --------------------------------- FORMULARIO --------------------------------------*/
+
+/* ESTILOS BASICOS DE LA SECCION*/
 .section-formulario {
     background-color: rgb(206, 172, 85);
+    background-image: url("../img/reporta-img/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
-
+/* PONE EN EL CENTRO Y DA SOMBRAS AL TITULO DEL FORMULARIO*/
 .section-formulario__div--container2 h1 {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     margin-bottom: 30px;
     text-align: center;
+
 }
 
+/* PONE SOMBRAS Y ESPACIADO AL H2(INFO DE CONTACTO Y ANIMAL)*/
 .section-formulario__div--container2 h2 {
+
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     font-size: 24px;
     margin-bottom: 30px;
 }
 
-
+/* RESPONSIVE PARA EL FORMULARIO */
 .section-formulario__div--container2 {
-    max-width: 1200px;
+    /* HACE QUE LOS CONTENEDORES NO OCUPEN TODO EL ESPACIO */
+    max-width: 1600px;
+
+    /* HACE QUE SE MANTENGA CENTRADO*/
     margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+    /*COMO SI FUERAN MARGENES*/
+    padding: 40px;
+
     align-items: center;
-    /* Centra horizontalmente en el centro */
-    justify-content: center;
-    /* Centra verticalmente en el centro */
 
 }
 
+form {
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.form-text {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+
+
+select {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 17px;
+
+}
+
+.form-flex {
+    margin: 0;
+    width: auto;
+}
 
 .form-flex div {
     padding: 10px;
 }
 
 
-
+.form-text h2 {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
 
 label {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
@@ -333,6 +386,7 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -373,6 +427,10 @@ textarea {
 
 }
 
+.form-text img {
+    display: none;
+}
+
 .container2 .box {
     width: 100%;
     padding: 10px;
@@ -383,12 +441,21 @@ textarea {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 3);
 }
 
+
+
+
+
+
+
+
+
 @media(min-width: 680px) {
 
     .content-pop img {
         max-width: 400px;
         height: auto;
         margin-bottom: 20px;
+
     }
 
     .container {
@@ -412,15 +479,34 @@ textarea {
 
 @media(min-width: 920px) {
 
-    .form-flex {
-        margin: auto;
-        display: flex;
+    .form-text img {
+        display: block;
+
+    }
+
+    .section-formulario__div--form1 {
+        width: 70%;
+    }
+
+    .section-formulario__div--form2 {
+        width: 70%;
+    }
+
+    form {
+        text-align: center;
+        margin: 0;
         width: 100%;
+    }
+
+    .form-flex {
+        text-align: -webkit-center;
+        margin: 0;
+        display: flex;
 
     }
 
     .form-text {
-        font-size: 100%;
+        font-size: 110%;
     }
 
     .section-formulario__div--container2 {
@@ -474,7 +560,6 @@ textarea {
     iframe {
         max-width: 600px;
         height: 250px;
-        border: 0;
     }
 
 

@@ -37,7 +37,7 @@
         <!--BARRA DE NAVEGACIÓN-->
         <nav class="nav">
             <ul>
-                <li><a href="#">¿Quiénes somos?</a></li>
+                <li><a href="../html/nosotros.html">¿Quiénes somos?</a></li>
                 <li><a href="../html/blog.html"><i class="fa-solid fa-newspaper"></i>Blog</a></li>
                 <li><a href="#"><i class="fa-solid fa-paw"></i>Deja tu huella</a>
                     <ul>
@@ -437,14 +437,11 @@
 
 
     </section>
-
-
     <!-- Enlance que vincula con el js-->
     <script src="../js/reporta.js"></script>
 
 
     <!-- PARTE PARA REPORTA UN ANIMAL-->
-
     <section class="section-formulario" id="form">
 
 
@@ -465,6 +462,7 @@
 
                             <label for="correo">Correo</label>
                             <input type="email" id="correo" name="correo" required>
+                            <img src="..\img\reporta-img/gato-gif.gif">
                         </div>
                     </div>
 
@@ -474,7 +472,17 @@
 
                             <h2>Información del Animal</h2>
                             <label for="especie">Especie del Animal Encontrado</label>
-                            <input type="text" id="especie" name="especie" required>
+
+                            <select id="animal" name="animal" onchange="mostrarCampoTexto()">
+                                <option value="gato">Felino</option>
+                                <option value="perro">Canino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+
+                            <div id="otro-texto" style="display: none;">
+                                <label for="otroAnimal">Especifica:</label>
+                                <input type="text" id="otroAnimal" name="otroAnimal">
+                            </div>
 
                             <label for="distrito">Distrito del Animal Encontrado</label>
                             <input type="text" id="distrito" name="distrito" required>
@@ -488,11 +496,16 @@
                             <label for="info-adicional">Información Adicional (máx. 120 caracteres)</label>
                             <textarea id="info-adicional" name="info-adicional" rows="4" maxlength="120"></textarea>
 
+                            <div class="add-new-photo first" id="add-photo">
+                                <span> <i class="icon-camara"></i></span>
+
+                            </div>
+                            <input class="form-subir" type="file" multiple id="add-new-photo" name="imagenes[]">
                         </div>
                     </div>
                 </div>
                 <div class="form-boton">
-                    <button type="submit" class="submit">Enviar</button>
+                    <button type="submit" class="submit" formaction="#form">Enviar</button>
                 </div>
 
 
@@ -503,6 +516,8 @@
 
 
     </section>
+
+
 
     <!--PIE DE PAGINA-->
     <footer class="pie-pagina">

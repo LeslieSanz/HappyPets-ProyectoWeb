@@ -1,5 +1,7 @@
 
 
+
+  
 //-------------------------------CODIGO PARA CARRUSEL DE CARTAS------------------
 
 var swiper = new Swiper('.swiper-container', {
@@ -105,4 +107,29 @@ var swiper = new Swiper('.swiper-container', {
 	});
 	
 
-	//MAPA
+// Obtener el formulario por su id
+const formulario = document.getElementById('form');
+
+// Agregar un evento de escucha para el envío del formulario
+formulario.addEventListener('submit', function(event) {
+  event.preventDefault(); // Evitar el envío predeterminado del formulario
+
+  // Obtener la sección objetivo por su id
+  const seccionDestino = document.getElementById('form');
+
+  // Desplazarse hacia la sección objetivo
+  seccionDestino.scrollIntoView({ behavior: 'smooth' });
+});
+
+
+//mostrara la parte de otros, en el formulario
+function mostrarCampoTexto() {
+	var select = document.getElementById("animal");
+	var otroTexto = document.getElementById("otro-texto");
+
+	if (select.value === "otro") {
+	  otroTexto.style.display = "block"; // Mostrar el campo de entrada de texto
+	} else {
+	  otroTexto.style.display = "none"; // Ocultar el campo de entrada de texto
+	}
+  }
