@@ -182,7 +182,7 @@
     left: -15px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
     .timeline{
         margin: 50px auto;
     }
@@ -214,4 +214,102 @@
     }
  
 }
+
+#nuestroequipo{
+    background-color: #f2f2f2;
+}
+
+.container-equipo{
+    margin: 20px 40px;
+}
+
+.titulo-equipo{
+    font-size: 60px;
+}
+
+.titulo-equipo span{
+    font-style: italic;
+    font-size: 30px;
+}
+
+.perfiles{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 100px;
+}
+.perfil{
+    flex-basis: 260px;
+}
+
+.perfil .perfil-img{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.perfil:hover .perfil-img{
+    filter: grayscale(0);
+}
+
+.nombre-usuario{
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.perfil h5{
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
+.perfil p{
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify; 
+}
+
+@media only screen and (max-width:1150px){
+    .perfiles{
+        flex-direction: column;
+    }
+
+    .perfil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil p{
+        text-align: center;
+        margin: 20px 60px 80px 60px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .titulo-equipo{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .titulo-equipo span{
+        font-size: 15px;
+    }
+
+    .perfiles{
+        margin: 20px 0;
+    }
+    .perfil p{
+        margin: 20px 10px;
+    }
+
+    
+}
+
+
+
+
 
