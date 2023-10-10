@@ -113,6 +113,11 @@ h3 {
     overflow: hidden;
 }
 
+.swiper-wrapper {
+    margin: 15px;
+}
+
+
 .container .swiper-container {
     width: 100%;
     height: 100%;
@@ -123,6 +128,7 @@ h3 {
 }
 
 
+
 .container .swiper-slide {
     position: relative;
     text-align: start;
@@ -130,7 +136,7 @@ h3 {
     background: blanchedalmond;
     border-radius: 15px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    margin: 15px;
+
 
 }
 
@@ -274,6 +280,11 @@ h3 {
     margin-top: 20px 0;
 }
 
+iframe {
+    width: 100%;
+    height: auto;
+}
+
 
 /* --------------------------------- FORMULARIO --------------------------------------*/
 .section-formulario {
@@ -371,31 +382,83 @@ textarea {
 
 @media(min-width: 680px) {
 
-    .container {
-        width: 89%;
+    .content-pop img {
+        max-width: 400px;
+        height: auto;
+        margin-bottom: 20px;
     }
-}
-
-@media(min-width: 1240px) {
 
     .container {
-        width: 95%;
+        width: 85%;
     }
-}
 
-@media(min-width: 920px) {
     .swiper-button-next {
         right: 25px !important;
-        transform: translateY(1670%) !important;
+        transform: translateY(750px) !important;
     }
 
     .swiper-button-prev {
         left: 25px !important;
-        transform: translateY(1550%) !important;
+        transform: translateY(750px) !important;
+    }
+
+}
+
+
+
+
+@media(min-width: 920px) {
+
+
+    .container {
+        width: 90%;
+    }
+
+    .swiper-button-next {
+        right: 25px !important;
+        transform: translateY(800px) !important;
+    }
+
+    .swiper-button-prev {
+        left: 25px !important;
+        transform: translateY(800px) !important;
     }
 }
 
+
+@media(min-width: 1240px) {
+
+    .swiper-button-next {
+        right: 25px !important;
+        transform: translateY(750px) !important;
+    }
+
+    .swiper-button-prev {
+        left: 25px !important;
+        transform: translateY(750px) !important;
+    }
+}
+
+
+
+
+
+
 @media(min-width: 720px) {
+    #popup {
+        max-width: 600px;
+    }
+
+    .div-text {
+        max-width: 600px;
+    }
+
+    iframe {
+        max-width: 600px;
+        height: 250px;
+        border: 0;
+    }
+
 
     .section-animales__div--programas {
         display: flex;

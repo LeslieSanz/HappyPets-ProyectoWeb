@@ -7,7 +7,7 @@ var swiper = new Swiper('.swiper-container', {
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev'
 	},
-	slidesPerView: 1,
+	slidesPerView: 'auto',
 	spaceBetween: 10,
 	// init: false,
 	pagination: {
@@ -23,7 +23,7 @@ var swiper = new Swiper('.swiper-container', {
 	  },
 	  680: {
 		slidesPerView: 2,
-		spaceBetween: 40,
+		spaceBetween: 30,
 	  },
 	  920: {
 		slidesPerView: 3,
