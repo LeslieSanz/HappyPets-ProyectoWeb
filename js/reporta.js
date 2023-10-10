@@ -47,3 +47,62 @@ var swiper = new Swiper('.swiper-container', {
 	});
 	
 	
+//--------------------------VENTANA EMERGENTE----------------------
+
+	$(document).ready( function(){
+		$("#boton1").on("click", function(){
+			$("#popup").fadeIn("slow") ;
+		});
+		$("#boton2").on("click", function(){
+			$("#popup").fadeIn("slow") ;
+		});
+
+		$("#close").on("click", function(){
+			$("#popup").fadeOut("slow") ;
+		});
+	});
+
+
+
+
+
+	// Asigna el evento de apertura a los botones 1 al 9
+    for (let i = 1; i <= 9; i++) {
+        $(`#boton${i}`).on("click", function () {
+            abrirPopup(i);
+        });
+    }
+	function abrirPopup(imagenId) {
+        // Oculta todas las imágenes
+        $(".content-pop div[id^='imagen']").hide();
+        // Muestra la imagen correspondiente
+        $(`#imagen${imagenId}`).show();
+        $("#popup").fadeIn("slow");
+    }
+
+
+	
+	
+
+
+	$(document).ready(function () {
+		
+		$("#close").on("click", function (event) {
+			event.preventDefault();
+			var targetSectionId = $(this).data("target");
+			var targetSection = $(targetSectionId)[0];
+	
+			if (targetSection) {
+				targetSection.scrollIntoView({
+					behavior: "smooth",
+					block: "start"
+				});
+			}
+	
+			$("#popup").fadeOut("slow");
+			$(".overlay").fadeOut("slow");
+		});
+	});
+	
+
+	//MAPA
