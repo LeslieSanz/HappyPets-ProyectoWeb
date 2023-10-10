@@ -1,4 +1,8 @@
-var swiper = new Swiper('.mySwiper', {
+
+
+//-------------------------------CODIGO PARA CARRUSEL DE CARTAS------------------
+
+var swiper = new Swiper('.swiper-container', {
 	navigation: {
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev'
@@ -31,3 +35,15 @@ var swiper = new Swiper('.mySwiper', {
 	  },
 	} 
     });
+
+
+//DIRIGIR BOTON DEL BANNER A SECCION DE FORMULARIO
+
+	document.addEventListener("DOMContentLoaded", function () {
+		document.getElementById("BotonBanner").addEventListener("click", function () {
+			var seccion = document.getElementById("form");
+			seccion.scrollIntoView({ behavior: "smooth"});
+		});
+	});
+	
+	
