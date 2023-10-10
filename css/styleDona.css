@@ -105,3 +105,13 @@ body{
         margin: 20px 0px;
     }
 }
+
+#economico:checked ~ #donaciones .alimentos, #economico:checked ~ #donaciones .articulos{
+    display:none;
+}
+#alimentos:checked ~ #donaciones .economico, #alimentos:checked ~ #donaciones .articulos{
+    display:none;
+}
+#articulos:checked ~ #donaciones .economico, #articulos:checked ~ #donaciones .alimentos{
+    display:none;
+}
