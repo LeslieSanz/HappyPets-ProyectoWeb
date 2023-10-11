@@ -4,29 +4,34 @@
         <meta charset="UTF-8">
         <title>Login-HappyPets</title>
         <link rel="stylesheet" href="../css/styleLogin.css"> 
-        <link rel="icon" href = "../img/logopets.png" type = "image/x-icon">
+        <link rel="icon" href = "../img/logos/logopets.png" type = "image/x-icon">
     </head>
     <body>
-        <div class="box">
+        <main>
+        <div class="box-log">
             <span class="borderLine"></span>
-            <form>
+            <form method="post" action="">
                 <h2>Iniciar sesión</h2>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input id="usuario" type="text" required="required" name="usuario">
                     <span>Usuario</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" required="required">
+                    <input id="password" type="password" required="required" name="password">
                     <span>Contraseña</span>
                     <i></i>
+                </div>
+                <div class="ver">
+                    <div class="fas fa-eye verPassword" onclick="vista()" id="verPassword"></div>
                 </div>
                 <div class="links">
                     <a href="#">Recordar contraseña</a>
                     <a href="../html/registro.html">Registrarse</a>
                 </div>
-                <input type="submit" value="Login">
+                <input name="btningresar" class="btn" type="submit" value="Login">
             </form>
         </div>
+        </main>
     </body>
 </html>
