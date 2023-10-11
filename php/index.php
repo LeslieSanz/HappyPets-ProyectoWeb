@@ -47,7 +47,7 @@
     <section id="hero">
         <h1>Brindemos refugio</h1>
         <h2>a quienes más lo necesitan</h2>
-        <a href="../html/adopta.html">Adopta ya</a>
+        <a href="../php/adopta.php">Adopta ya</a>
     </section>
 
     <section id="cifras">
@@ -91,7 +91,7 @@
                         un perro o gato en Happy Pets: tu vida y
                         la suya cambiarán para siempre.
                     </p>
-                    <a href="../html/adopta.html">Leer Más</a>
+                    <a href="../php/adopta.php">Leer Más</a>
                 </div>
             </div>
             <div class="card">
@@ -103,7 +103,7 @@
                     <p>Contribuye monetariamente, con alimentos, etc.
                         Tu ayuda construye un futuro mejor para nuestros amigos sin hogar.
                     </p>
-                    <a href="../html/donaciones.html">Leer Más</a>
+                    <a href="../php/donaciones.php">Leer Más</a>
                 </div>
             </div>
             <div class="card">
@@ -117,7 +117,7 @@
                         salvar vidas peludas.
 
                     </p>
-                    <a href="../html/reporta.html">Leer Más</a>
+                    <a href="../php/reporta.php">Leer Más</a>
                 </div>
             </div>
         </div>
