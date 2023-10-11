@@ -246,6 +246,7 @@
   align-items: center;
   justify-content: center;
   transition: all 100ms ease;
+  margin-left: 120px;
 }
 
 .boton-like .heart-bg:hover {
@@ -262,7 +263,8 @@
   font-family: "Roboto", sans-serif;
   color: #888;
   font-weight: 750;
-
+  margin-left: 6px;
+   ;
 }
 
 
