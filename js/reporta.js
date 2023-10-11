@@ -157,6 +157,9 @@ function borrarTexto(input) {
 	}
   }
 
+
+  
+
   function mostrarImagen() {
 	const botonFile = document.getElementById('boton-file');
 	const imagenPrevia = document.getElementById('imagen-previa');

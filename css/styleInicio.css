@@ -27,7 +27,7 @@
   font-weight: 500;
 }
 
-#cifras .resultados{
+#cifras .resultados {
   background-color: rgb(245, 183, 26);
 }
 
@@ -36,10 +36,10 @@
   text-align: center;
   justify-content: space-between;
   padding: 30px;
-  flex-direction: row; 
+  flex-direction: row;
 }
 
-.resultados .resultados-numeros{
+.resultados .resultados-numeros {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@
   padding-left: 50px;
 }
 
-.resultados .resultados-frase{
+.resultados .resultados-frase {
   color: white;
   font-size: 1.4rem;
   font-weight: 600;
@@ -57,31 +57,31 @@
   padding-right: 50px;
 }
 
-.resultados .resultados-numeros p{
+.resultados .resultados-numeros p {
   text-align: center;
   margin: 0 30px;
   font-size: 20px;
 }
 
-.resultados .resultados-numeros p span{
+.resultados .resultados-numeros p span {
   font-size: 30px;
   font-weight: 600;
 }
-  
+
 .container {
-  max-width:1200px;
+  max-width: 1200px;
   margin: auto;
   position: relative;
   margin-top: 70px;
 }
 
-.title h1{
+.title h1 {
   text-align: center;
   padding: 30px;
   font-size: 35px;
 }
 
-.title p{
+.title p {
   text-align: center;
 }
 
@@ -105,27 +105,33 @@ section .card {
   transition: all 400ms ease;
 }
 
-section .card img{
+section .card img {
   width: 100%;
   height: auto;
   padding: 30px;
 }
+
 section .card .contenido {
   padding: 15px;
   text-align: center;
 }
-section .card .contenido h3{
-  max-width: 100%; /* Evita que los títulos y párrafos sean más anchos que la carta */
-  overflow: hidden; /* Oculta el desbordamiento si el contenido es demasiado largo */
-  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar que hay más contenido oculto */
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+
+section .card .contenido h3 {
+  max-width: 100%;
+  /* Evita que los títulos y párrafos sean más anchos que la carta */
+  overflow: hidden;
+  /* Oculta el desbordamiento si el contenido es demasiado largo */
+  text-overflow: ellipsis;
+  /* Agrega puntos suspensivos (...) para indicar que hay más contenido oculto */
+  white-space: nowrap;
+  /* Evita que el texto se divida en varias líneas */
 }
 
-section .card .contenido p{
+section .card .contenido p {
   font-size: 13px;
 }
 
-section .card .contenido a{
+section .card .contenido a {
   text-decoration: none;
   display: inline-block;
   font-weight: bold;
@@ -136,6 +142,7 @@ section .card .contenido a{
   border-radius: 20px;
   transition: all 400ms ease;
 }
+
 section .card .contenido a:hover {
   background: rgb(170, 111, 70);
   color: #fff;
@@ -143,38 +150,10 @@ section .card .contenido a:hover {
 }
 
 
-@media screen and (max-width: 720px) {
-  .resultados .container-resultados {
-    flex-direction: column; /* Cambiar a disposición en columna para pantallas pequeñas */
-    text-align: center; /* Centrar el contenido en pantallas pequeñas */
-  }
 
-  .resultados .resultados-frase,
-  .resultados .resultados-numeros {
-    width: 100%; /* Establecer el ancho al 100% para ocupar todo el espacio disponible */
-  }
-
-  .resultados .resultados-numeros p {
-    margin: 20px 0; /* Añadir espacio entre los números para mejorar la legibilidad en pantallas pequeñas */
-    font-size: 10px; /* Reducir aún más el tamaño de fuente para números en pantallas pequeñas */
-  }
-
-  #hero h1 {
-    font-size: 2em; /* Tamaño de fuente para pantallas medianas */
-  }
-
-  #hero h2 {
-    font-size: 1.5em; /* Tamaño de fuente para pantallas medianas */
-  }
-
-  .container{
-    display: flex;
-    flex-direction: column; 
-  }
-} 
 
 #hero a,
-.unete a{
+.unete a {
   font-size: 1.3em;
   font-weight: bold;
   padding: 10px 20px;
@@ -186,42 +165,43 @@ section .card .contenido a:hover {
   transition: transform 0.2s;
   cursor: pointer;
   /* Agrega una transición suave para el efecto de agrandamiento */
- } 
+}
 
- .unete a{
+.unete a {
   margin-top: 3px;
- }
+}
 
- #hero a:hover,
- .unete a:hover{
+#hero a:hover,
+.unete a:hover {
   transform: scale(1.1);
   /* Aumenta el tamaño en un 10% al pasar el cursor */
 }
 
 /*testimonios*/
 
-.contenedore{
+.contenedore {
   width: 70%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.slider{
+.slider {
   background-color: #f2f2f2;
   padding: 40px 0;
 }
 
-.slider_container{
+.slider_container {
   display: grid;
   grid-template-columns: 50px 1fr 50px;
   align-items: center;
   gap: 1em;
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin: 0 auto;
+  /* Centra el contenedor horizontalmente */
   box-sizing: border-box;
 }
 
-.slider_body{
+.slider_body {
   grid-column: 2/3;
   grid-row: 1/2;
   opacity: 0;
@@ -230,18 +210,19 @@ section .card .contenido a:hover {
   background-color: #f2f2f2;
   grid-template-columns: 1fr max-content;
   align-items: center;
-  transition: opacity 2.5s; 
-  max-width: 100%; /* Asegura que el cuerpo del slider no se desborde */
+  transition: opacity 2.5s;
+  max-width: 100%;
+  /* Asegura que el cuerpo del slider no se desborde */
   box-sizing: border-box;
 }
 
-.slider_body--show{
+.slider_body--show {
   opacity: 1;
   pointer-events: unset;
-  transition: opacity 2.5s; 
-} 
+  transition: opacity 2.5s;
+}
 
-.slider_img{
+.slider_img {
   width: 230px;
   height: 230px;
   border-radius: 50%;
@@ -250,52 +231,57 @@ section .card .contenido a:hover {
   margin: 0 auto;
 }
 
-.slider_text{
+.slider_text {
   max-width: 100%;
 }
 
-.slider_text h2{
+.slider_text h2 {
   padding-bottom: 10px;
 }
 
-.subtitle{
+.subtitle {
   font-size: 2.5em;
   margin-bottom: 20px;
 }
 
-.slider_review{
+.slider_review {
   font-weight: 300;
   font-size: 20px;
   line-height: 1.7;
 }
 
-.slider_arrow{
+.slider_arrow {
   cursor: pointer;
   width: 90%;
 }
 
-.slider_arrow:nth-of-type(2){
+.slider_arrow:nth-of-type(2) {
   justify-self: end;
 }
 
-.titulo-testimonios h1{
+.titulo-testimonios h1 {
   text-align: center;
   padding: 20px;
   font-size: 35px;
 }
 
-.titulo-testimonios p{
+.titulo-testimonios p {
   text-align: center;
-  padding-left: 5vw; /* Utiliza un 5% del ancho de la ventana como margen izquierdo */
-  padding-right: 5vw; /* Utiliza un 5% del ancho de la ventana como margen derecho */
-  margin: 0 auto; /* Centra el elemento horizontalmente */
-  max-width: 1000px; /* Establece un ancho máximo para el contenido */
+  padding-left: 5vw;
+  /* Utiliza un 5% del ancho de la ventana como margen izquierdo */
+  padding-right: 5vw;
+  /* Utiliza un 5% del ancho de la ventana como margen derecho */
+  margin: 0 auto;
+  /* Centra el elemento horizontalmente */
+  max-width: 1000px;
+  /* Establece un ancho máximo para el contenido */
   padding-bottom: 25px;
 }
 
-.slider_review p{
-  font-size: 1.5vw; /* El texto tendrá el 2% del ancho de la ventana como tamaño de fuente */
-  margin: 2vh 0; 
+.slider_review p {
+  font-size: 1.5vw;
+  /* El texto tendrá el 2% del ancho de la ventana como tamaño de fuente */
+  margin: 2vh 0;
 }
 
 .unete {
@@ -309,7 +295,7 @@ section .card .contenido a:hover {
   flex-direction: column;
 }
 
-.unete h1{
+.unete h1 {
   padding: 20px;
 }
 
@@ -333,8 +319,8 @@ section .card .contenido a:hover {
 }
 
 .carrusel-item:last-child {
-  margin-right: 0; 
-} 
+  margin-right: 0;
+}
 
 .carrusel-item img {
   width: 100%;
@@ -347,43 +333,21 @@ section .card .contenido a:hover {
   transform: scale(1.2);
 }
 
-/* Hacer el carrusel responsive con media queries */
-@media screen and (max-width: 768px) {
-  .carrusel-item {
-    min-width: 80%; /* Ajusta el ancho para dispositivos de pantalla más pequeña */
-    max-width: 80%; /* Ajusta el ancho máximo para dispositivos de pantalla más pequeña */
-  }
-}
-
-@media (max-width: 950px) {
-  .slider_body {
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content 1fr;
-  }
-  .slider_picture{
-    grid-row: 1/2;
-  }
-
-  .slider_img {
-    width: 210px;
-    height: 210px;
-  }
-}
-
-
-
 @media screen and (max-width: 680px) {
   .carrusel-item {
-    min-width: 100%; /* Ocupa todo el ancho para pantallas aún más pequeñas */
-    max-width: 100%; /* Asegura que el ancho no exceda el 100% del contenedor */
-    margin-right: 0; /* Elimina el espacio entre los elementos */
+    min-width: 100%;
+    /* Ocupa todo el ancho para pantallas aún más pequeñas */
+    max-width: 100%;
+    /* Asegura que el ancho no exceda el 100% del contenedor */
+    margin-right: 0;
+    /* Elimina el espacio entre los elementos */
   }
 
-  .slider_container{
+  .slider_container {
     grid-template-columns: 25px 1fr 25px;
   }
 
-  .slider_arrow{
+  .slider_arrow {
     width: 100%;
   }
 
@@ -392,15 +356,158 @@ section .card .contenido a:hover {
     height: 180px;
   }
 
-  .subtitle{
+  .subtitle {
     font-size: 2rem;
     line-height: 1.6;
   }
-  
-  .slider_review{
+
+  .slider_review {
     font-size: 1rem;
     line-height: 1.6;
   }
 
 }
 
+@media screen and (max-width: 900px) {
+  .resultados .container-resultados {
+    flex-direction: column;
+    /* Cambiar a disposición en columna para pantallas pequeñas */
+    text-align: center;
+    /* Centrar el contenido en pantallas pequeñas */
+  }
+
+  .resultados .resultados-frase,
+  .resultados .resultados-numeros {
+    width: 100%;
+    /* Establecer el ancho al 100% para ocupar todo el espacio disponible */
+  }
+
+  .resultados .resultados-numeros p {
+    margin: 20px 0;
+    /* Añadir espacio entre los números para mejorar la legibilidad en pantallas pequeñas */
+    font-size: 10px;
+    /* Reducir aún más el tamaño de fuente para números en pantallas pequeñas */
+  }
+
+  #hero h1 {
+    font-size: 2em;
+    /* Tamaño de fuente para pantallas medianas */
+  }
+
+  #hero h2 {
+    font-size: 1.5em;
+    /* Tamaño de fuente para pantallas medianas */
+  }
+
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .card {
+
+    width: 60%;
+    height: 80%;
+  }
+
+  .container .card img {
+
+    width: 70%;
+  }
+
+  .container .card .contenido h3 {
+    font-size: 30px;
+  }
+
+  .container .card .contenido p {
+    padding: 5px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .carrusel-item {
+    width: 1000px;
+  }
+
+  .carrusel-item img {
+    width: 50%;
+
+  }
+
+
+
+  @media (max-width: 950px) {
+
+    .resultados .container-resultados {
+      flex-direction: column;
+      /* Cambiar a disposición en columna para pantallas pequeñas */
+      text-align: center;
+      /* Centrar el contenido en pantallas pequeñas */
+    }
+
+    .resultados .resultados-frase,
+    .resultados .resultados-numeros {
+      width: 100%;
+      /* Establecer el ancho al 100% para ocupar todo el espacio disponible */
+    }
+
+    .resultados .resultados-numeros p {
+      margin: 20px 0;
+      /* Añadir espacio entre los números para mejorar la legibilidad en pantallas pequeñas */
+      font-size: 10px;
+      /* Reducir aún más el tamaño de fuente para números en pantallas pequeñas */
+    }
+
+    #hero h1 {
+      font-size: 2em;
+      /* Tamaño de fuente para pantallas medianas */
+    }
+
+    #hero h2 {
+      font-size: 1.5em;
+      /* Tamaño de fuente para pantallas medianas */
+    }
+
+
+
+    #servicios .container {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+    }
+
+    .title h1 {
+      padding: 5px;
+    }
+
+    .title p {
+      padding: 5px;
+    }
+
+    .slider_body {
+      grid-template-columns: 1fr;
+      grid-template-rows: max-content 1fr;
+    }
+
+    .slider_picture {
+      grid-row: 1/2;
+    }
+
+    .slider_img {
+      width: 210px;
+      height: 210px;
+    }
+
+
+    .carrusel-item {
+      min-width: 90%;
+      /* Ajusta el ancho para dispositivos de pantalla más pequeña */
+      max-width: 80%;
+      /* Ajusta el ancho máximo para dispositivos de pantalla más pequeña */
+    }
+  }
