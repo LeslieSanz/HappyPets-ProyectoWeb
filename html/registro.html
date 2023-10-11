@@ -5,40 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro-HappyPets</title>
     <link rel="stylesheet" href="../css/styleRegistro.css">
-    <link rel="icon" href = "../img/logopets.png" type = "image/x-icon">
+    <link rel="icon" href = "../img/logos/logopets.png" type = "image/x-icon">
 </head>
 <body>
-    <body>
-        <div class="box">
+        <main>
+        <div class="box-log">
             <span class="borderLine"></span>
-            <form>
+            <form method="post">
                 <h2>Registrarse</h2>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input id="usuario" type="text" required="required" name="usuario">
                     <span>Usuario</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="email" required="required">
+                    <input id="email" type="email" required="required" name="email">
                     <span>Email</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" required="required">
+                    <input id="password" type="password" required="required" name="password">
                     <span>Contraseña</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" required="required">
+                    <input id="repassword" type="password" required="required" name="repassword">
                     <span>Repetir Contraseña</span>
                     <i></i>
                 </div>
                 <div class="links">
                     <a href="../html/login.html">Iniciar Sesión</a>
                 </div>
-                <input type="submit" value="Registrarse">
+                <input type="submit" value="Registrarse" name="registro">
             </form>
         </div>
-    </body>
+        </main>
 </body>
 </html>
