@@ -62,4 +62,56 @@
     background: #2fb4cc;
     color: #fff;
   }
-  
+section.but{
+  width: 100%;
+  height: 25vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+section .btn{
+  margin-right:40px;
+  border: none;
+  outline: none;
+  padding: 9px 25px;
+  background: rgb(245, 183, 26);
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+section .btn:hover{
+  background: rgb(252, 207, 110);
+}
+
+main{
+  background-image: url(../img/adopta-img/gozu.jpg);
+}
+
+section {
+  background: transparent;
+}
+
+@media (max-width: 945px) {
+  section .container {
+    display: block; /* Cambiar de flex a bloque para que las tarjetas se apilen verticalmente */
+    max-width: 100vh 10%; /* Quitar el ancho máximo para que las tarjetas ocupen el ancho completo del contenedor */
+    margin: 0; /* Quitar el margen para aprovechar al máximo el espacio */
+    left: 100vh 10%;
+  }
+
+  section.but{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    padding: 10px;
+  }
+
+  section .card {
+    width: 60%;
+    margin: 10px auto; /* Asegurarse de que cada tarjeta ocupe el ancho completo del contenedor */
+  }
+
+}
