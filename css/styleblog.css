@@ -106,21 +106,7 @@
         width: 100%;
     }
 }
-.contenido {
-  display: flex;
-  margin: 60px;
-}
-.secciones {
-  display: flex;
-  align-items: center;
-  padding: 40px;
-}
-.contenido .articulos .secciones img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-}
+
 
 /*todo noticias*/
 ::selection{
@@ -154,14 +140,21 @@
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(280px,auto));
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin: 5%;
+  /*margin-top: 50px;
+  margin-bottom: 50px;*/
 }
 .post-box{
   background-color: #fff ;
-  /*falta cambios*/
-  box-shadow: 0 4px 14px hsl(355dg 25% 15% / 10%);
+  /*falta cambios
+  box-shadow: 0 4px 20px hsl(355dg 25% 15% / 10%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1)*/;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
   padding: 15px;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem; 
 }
 .post-img{
   width: 100%;
@@ -198,7 +191,7 @@
   margin: 5px 0 10px;
     /*para hacer el titulo en 3 lineas*/
     display:  -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -215,3 +208,174 @@
   object-position: center;
   border: 2px solid rgb(245, 183, 26) ;
 }
+.perfil-nombre{
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap; /* Evitar el corte de texto en varias líneas */
+  overflow: hidden; /* Ocultar cualquier texto que sobresalga del contenedor */
+  text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) si el texto es demasiado largo */
+}
+
+/*corazon de mrd*/
+.boton-like .icono-corazon {
+  height: 100px;
+  width: 100px;
+  background: url("../img/blog-img/heart.png");
+  background-position: left;
+  cursor: pointer;
+  position: absolute;
+}
+
+/*animación del corazon*/
+.boton-like .icono-corazon.liked {
+  animation: like-anim 0.7s steps(28) forwards;
+}
+
+@keyframes like-anim {
+  to {
+    background-position: right;
+  }
+}
+/**/
+.boton-like .heart-bg {
+  background: rgba(255, 192, 200, 0);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 100ms ease;
+  margin-left: 120px;
+}
+
+.boton-like .heart-bg:hover {
+  background: rgba(255, 192, 200, 0.7);
+}
+
+.boton-like {
+  display: flex;
+  align-items: center;
+}
+
+.boton-like .contador-like {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #888;
+  font-weight: 750;
+  margin-left: 6px;
+   ;
+}
+
+
+/*post-pagina*/
+.post-header{
+  width: 100%;
+  height: 500px;
+  background: #1a1e21;
+}
+.post-container{
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+}
+.header-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem !important;
+}
+.back-home{
+  color: rgb(245, 183, 26) ;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+.header-title{
+  width: 90%;
+  font-size: 2.6rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.header-img{
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+}
+.post-content{
+  margin-top: 6rem !important;
+}
+.sub-heading{
+  font-size: 1.5rem;
+  margin-bottom: 1rem ;
+}
+.sub-sub-heading{
+  font-size: 1.2rem;
+}
+.post-text{
+  font-size: 1rem;
+  line-height: 1.7rem;
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.comentarios {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.comentarios div {
+  margin-bottom: 10px;
+}
+
+.formulario {
+  border: 0px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 58px;
+  max-width: 100%;
+
+  display:grid;
+  justify-content: center;
+  margin: 5%;
+  
+  
+  
+}
+
+.formulario label,
+.formulario textarea,
+.formulario input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.formulario textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.formulario button {
+  background-color:  rgb(245, 183, 26);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+
+
+
