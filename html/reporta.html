@@ -451,56 +451,93 @@
 
                 <div class="form-flex">
                     <div class="section-formulario__div--form1">
+                        <h2>Información de contacto</h2>
+                        <div class="form-container1">
 
-                        <div class="form-text">
-                            <h2>Información de contacto</h2>
-                            <label for="nombres-apellidos">Nombres y Apellidos</label>
-                            <input type="text" id="nombres-apellidos" name="nombres-apellidos" required>
 
-                            <label for="celular">Celular</label>
-                            <input type="text" id="celular" name="celular" required>
+                            <div class="nombre-div">
+                                <label for="nombres-apellidos">Nombres y Apellidos</label>
+                                <input type="text" class="form-text" name="nombres-apellidos"
+                                    value="Ingrese nombres y apellidos" oninput="cambiarColor(this)"
+                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)">
+                            </div>
 
-                            <label for="correo">Correo</label>
-                            <input type="email" id="correo" name="correo" required>
-                            <img src="..\img\reporta-img/gato-gif.gif">
+                            <div class="celular-div">
+                                <label for="celular">Celular</label>
+                                <input type="text" class="form-text" name="celular" oninput="cambiarColor(this)"
+                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)"
+                                    value="Ingrese su telefono(opcional)">
+
+                            </div>
+
+                            <div class="correo-div">
+                                <label for="correo">Correo</label>
+                                <input type="email" class="form-text" name="correo" oninput="cambiarColor(this)"
+                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)"
+                                    value="Ingrese su correo electronico" required>
+                            </div>
                         </div>
                     </div>
 
                     <div class="section-formulario__div--form2">
+                        <h2>Información del Animal</h2>
 
-                        <div class="form-text">
+                        <div class="form-container2">
 
-                            <h2>Información del Animal</h2>
-                            <label for="especie">Especie del Animal Encontrado</label>
+                            <div class="bloque-div">
+                                <label for="especie">Especie del Animal Encontrado</label>
 
-                            <select id="animal" name="animal" onchange="mostrarCampoTexto()">
-                                <option value="gato">Felino</option>
-                                <option value="perro">Canino</option>
-                                <option value="otro">Otro</option>
-                            </select>
+                                <select id="animal" name="animal" onchange="mostrarCampoTexto()">
+                                    <option value="gato">Ingrese especie</option>
+                                    <option value="gato">Felino</option>
+                                    <option value="perro">Canino</option>
+                                    <option value="otro">Otro</option>
+                                </select>
 
-                            <div id="otro-texto" style="display: none;">
-                                <label for="otroAnimal">Especifica:</label>
-                                <input type="text" id="otroAnimal" name="otroAnimal">
+                                <div id="otro-texto" style="display: none;">
+                                    <label for="otroAnimal">Especifica:</label>
+                                    <input type="text" class="form-text" name="otroAnimal" oninput="cambiarColor(this)"
+                                        onfocus="borrarTexto(this)" onblur="restaurarTexto(this)"
+                                        value="Ingrese especie">
+                                </div>
+
+                                <label for="distrito">Distrito del Animal Encontrado</label>
+                                <input type="text" class="form-text" name="distrito" oninput="cambiarColor(this)"
+                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)" value="Ingrese Distrito"
+                                    required>
+
+                                <label for="direccion">Dirección de la Calle</label>
+                                <input type="text" class="form-text" name="direccion" oninput="cambiarColor(this)"
+                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)"
+                                    value="Ingrese dirección exacta" required>
+
+
+
+                                <label for="referencia">Referencia de la Calle</label>
+                                <input type="text" class="form-text" name="referencia" oninput="cambiarColor(this)"
+                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)"
+                                    value="Ingrese referencia (opcional)">
+
+
+                                <label for="info-adicional">Información Adicional (máx. 120 caracteres)</label>
+                                <textarea id="info-adicional" name="info-adicional" rows="4" maxlength="120"
+                                    style="font-size: 17px;"></textarea>
+                            </div>
+                            <div class="container-fotos">
+                                <div class="form-foto">
+                                    <input type="file" id="boton-file" accept="image/*" onchange="mostrarImagen()">
+
+                                    <input type="button" value="Subir Foto del animal" class="form-file"
+                                        onclick="document.getElementById('boton-file').click()">
+                                </div>
+                                <div id="previsualizacion">
+                                    <p>Imagen previa:</p>
+                                    <img id="imagen-previa" src="#" alt="Vista previa de la imagen">
+                                    <p id="nombre-archivo">Nombre del archivo: <span></span></p>
+                                </div>
+
                             </div>
 
-                            <label for="distrito">Distrito del Animal Encontrado</label>
-                            <input type="text" id="distrito" name="distrito" required>
-
-                            <label for="direccion">Dirección de la Calle</label>
-                            <input type="text" id="direccion" name="direccion" required>
-
-                            <label for="referencia">Referencia de la Calle</label>
-                            <input type="text" id="referencia" name="referencia" required>
-
-                            <label for="info-adicional">Información Adicional (máx. 120 caracteres)</label>
-                            <textarea id="info-adicional" name="info-adicional" rows="4" maxlength="120"></textarea>
-
-                            <div class="add-new-photo first" id="add-photo">
-                                <span> <i class="icon-camara"></i></span>
-
-                            </div>
-                            <input class="form-subir" type="file" multiple id="add-new-photo" name="imagenes[]">
                         </div>
                     </div>
                 </div>

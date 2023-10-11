@@ -105,7 +105,7 @@ h3 {
 .container {
     width: 70%;
     z-index: 0 !important;
-    background-color: transparent;
+
 }
 
 .mySwiper {
@@ -115,6 +115,7 @@ h3 {
 
 .swiper-wrapper {
     margin: 15px;
+
 }
 
 
@@ -217,9 +218,7 @@ h3 {
 /* Estilos para el popup */
 #popup {
 
-    height: 90%;
-
-
+    height: 75%;
 
 
     display: none;
@@ -300,93 +299,121 @@ iframe {
 
 
 /* --------------------------------- FORMULARIO --------------------------------------*/
+/*ESTILO BASICOS DE LA SECCION */
 .section-formulario {
+
     background-color: rgb(206, 172, 85);
     background-image: url("../img/reporta-img/fondo.png");
+    /* QUE EL FONDO NO SE REPITA CONSTANTEMENTE*/
     background-repeat: no-repeat;
     background-size: cover;
+    /* QUE SE POSICIONE EN EL CENTRO*/
     background-position: center center;
 }
 
-
-/* PONE EN EL CENTRO Y DA SOMBRAS AL TITULO DEL FORMULARIO*/
-.section-formulario__div--container2 h1 {
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    margin-bottom: 30px;
-    text-align: center;
-
-}
-
-/* PONE SOMBRAS Y ESPACIADO AL H2(INFO DE CONTACTO Y ANIMAL)*/
-.section-formulario__div--container2 h2 {
-
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
-
 /* RESPONSIVE PARA EL FORMULARIO */
 .section-formulario__div--container2 {
+    /* ESTO HACE QUE NO SE EXPANDAN MÁS LOS INPUTS*/
     max-width: 1600px;
+    /* HACE QUE NO SE GENERE MARGENES */
     margin: 0 auto;
     /*COMO SI FUERAN MARGENES*/
     padding: 40px;
 
-    align-items: center;
+}
+
+/* PONE EN EL CENTRO Y DA SOMBRAS AL TITULO DEL FORMULARIO*/
+.section-formulario__div--container2 h1 {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    /* DISTANCIA QUE EL TITULO ESTA CON EL INFO DE CONTACTO*/
+    margin-bottom: 15px;
+    text-align: center;
 
 }
 
+/* CENTRA TODOS LOS ITEMS DEL FORMULARIO*/
 form {
     align-items: center;
     text-align: center;
     margin: 0;
 }
 
-/* */
+/* form-flex CONTENEDOR DE TODO INFO CONTACTO Y ANIMAL*/
 
-.form-text {
+
+/* SE AGARRA LOS CONTENEDORES INFO CONTACTO Y INFO ANIMAL*/
+.form-flex div {
+    /* AGREGA UN ESPACIADO ENTRE INFO CONTACTO Y ANIMAL*/
+    padding: 10px;
+}
+
+
+/* PONE SOMBRAS Y ESPACIADO AL H2(INFO DE CONTACTO Y ANIMAL)*/
+.form-container h2 {
+
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    font-size: 25px;
+    /* ESPACIO ENTRE TEXTOS*/
+    margin-bottom: 25px;
+}
+
+/* CONTENEDOR DE LOS SUBTITULOS, LABEL E INPUTS*/
+.form-container {
     /* HACE QUE LOS MARGENES NO AUMENTE*/
     margin: 0 auto;
     /* ESTO PONE INDICA EL TAMAÑO DE LOS  INPUT*/
     max-width: 80%;
 }
 
-
-select {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* TEXTO DENTRO DE CADA INFO (texto de titulo de los inputs)*/
+label {
+    /*SOMBRA */
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    display: block;
     margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+/* */
+/* TEXTO DENTRO DE CADA INFO(TEXTO DEL INPUT)*/
+.form-text {
+    font-size: 17px;
+    /* PONE EL COLOR GRIS POR DEFECTO */
+    color: #7c7b7b;
+
+}
+
+/* SELECCION DE ESPECIE DEL ANIMAL*/
+select {
+    /* sombra */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    /* El ancho del input*/
+    width: 100%;
+
+    /* le da como grosor */
+    padding: 10px;
+    /* -------bordes---------*/
+    /* borde difuminado*/
+    border: 1px solid #ccc;
+
+    /* borde redondo*/
+    border-radius: 5px;
+    /* le da espacio entre lineas*/
+    margin-bottom: 10px;
+    /* la letra dentro */
     font-size: 17px;
 
 }
 
-.form-flex {
-    margin: 0;
-    width: auto;
-}
 
-.form-flex div {
-    padding: 10px;
-}
-
-
-.form-text h2 {
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-}
-
-label {
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
+/* PARECE QUE LE DA ESTILO A LOS CUADROS*/
 input[type="text"],
 input[type="email"],
+
+
+/* ESTILO AL TEXTAREA*/
 textarea {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -396,54 +423,137 @@ textarea {
     margin-bottom: 10px;
 }
 
-.form-text img {
-    display: none;
-}
-
+/*  BOTON DE ENVIAR */
+/* */
 .submit {
 
     position: relative;
-    bottom: 0;
+
+    /* HACEN QUE SE POSICIONE EN EL CENTRO */
     left: 50%;
     transform: translateX(-50%);
 
+    /* CURSOR Y TAMAÑO DE LA LETRA*/
     cursor: pointer;
     font-size: 1.15em;
     font-weight: bold;
+    margin-top: 20px;
+
+    /* DIMENSIONES DEL BOTON(PRIMERO - ANCHO, SEGUNDO - ALTO) */
     padding: 9px 15px;
     border-radius: 9px;
+    /* LE QUITA EL BORDE*/
     border: 0px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+    /* COLOR LETRA */
     color: white;
     text-shadow: 2px 2px 4px rgba(83, 63, 13, 0.5);
-    ;
     background-color: rgb(245, 183, 26);
-    transition: transform 0.2s;
-    margin-top: 20px;
+
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Centra horizontalmente en el centro */
-    justify-content: center;
-    /* Centra verticalmente en el centro */
+
+    /* PARA EL HOVER */
+    transition: transform 0.2s;
+
+
 }
 
+/* HOVER PARA BOTON ENVIAR */
 .submit:hover {
     transform: translateX(-50%) scale(1.1);
 
 }
 
-.container2 .box {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 3);
+/* PARA RESPONSIVO DEL FORMULARIO*/
+.form-container img {
+    display: none;
 }
 
+
+
+
+/* ESTILO DEL BOTON PRA SUBIR UNA IMAGEN - FORM*/
+/* ID DEL BOTON FILE */
+#boton-file {
+    display: none;
+}
+
+
+/* CLASE PARA ESTILO DEL BTN SUBIR ARCHIVO*/
+.form-file {
+    /*QUITARLE EL MARGEN*/
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(83, 63, 13, 0.5);
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 17px;
+    background-color: rgb(245, 183, 26);
+    cursor: pointer;
+
+    border-radius: 3px;
+    border-bottom: 3px solid rgb(245, 183, 26);
+
+    text-align: center;
+    /* PARA EL HOVER */
+    transition: transform 0.2s;
+
+
+
+}
+
+.form-file:hover {
+    transition: all .4s;
+    transform: scale(1.02);
+    background-color: rgb(197, 146, 17);
+
+}
+
+/**/
+/*PARTE DE SUBIR FOTO DE ANIMAL*/
+
+#imagen-previa {
+    /* da espacio entre el nombre del archivo y la imagen*/
+    padding: 25px;
+    padding-top: 5px;
+
+    width: 100%;
+    display: block;
+}
+
+#previsualizacion p {
+    color: azure;
+    font-size: 17px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#nombre-archivo {
+    color: azure;
+    font-weight: bold;
+    font-size: 17px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.5);
+}
+
+
+
+
+
+
+
 @media(min-width: 680px) {
+    #imagen-previa {
+
+        margin: 0 auto;
+        /* da espacio entre el nombre del archivo y la imagen*/
+        padding: 25px;
+        padding-top: 5px;
+        width: 90%;
+        display: block;
+    }
+
 
     .content-pop img {
         max-width: 400px;
@@ -455,6 +565,8 @@ textarea {
         width: 85%;
     }
 
+    /*  POSICION DE LAS FLECHAS DEL CARRUSEL*/
+
     .swiper-button-next {
         right: 25px !important;
         transform: translateY(750px) !important;
@@ -466,79 +578,20 @@ textarea {
     }
 
 }
-
-
-
-
-@media(min-width: 920px) {
-    .form-text img {
-        display: block;
-
-    }
-
-    .section-formulario__div--form1 {
-        width: 70%;
-    }
-
-    .section-formulario__div--form2 {
-        width: 70%;
-    }
-
-    form {
-        text-align: center;
-        margin: 0;
-        width: 100%;
-    }
-
-    .form-flex {
-        text-align: -webkit-center;
-        margin: 0;
-        display: flex;
-
-    }
-
-    .form-text {
-        font-size: 110%;
-    }
-
-
-
-
-    .container {
-        width: 90%;
-    }
-
-    .swiper-button-next {
-        right: 25px !important;
-        transform: translateY(800px) !important;
-    }
-
-    .swiper-button-prev {
-        left: 25px !important;
-        transform: translateY(800px) !important;
-    }
-}
-
-
-@media(min-width: 1240px) {
-
-    .swiper-button-next {
-        right: 25px !important;
-        transform: translateY(750px) !important;
-    }
-
-    .swiper-button-prev {
-        left: 25px !important;
-        transform: translateY(750px) !important;
-    }
-}
-
-
-
-
 
 
 @media(min-width: 720px) {
+
+    #imagen-previa {
+        margin: 0 auto;
+        /* da espacio entre el nombre del archivo y la imagen*/
+        padding: 25px;
+        padding-top: 5px;
+        width: 80%;
+        display: block;
+    }
+
+
     #popup {
         max-width: 600px;
     }
@@ -585,6 +638,133 @@ textarea {
 
 
 
+}
+
+@media(min-width: 820px) {
+    #imagen-previa {
+        margin: 0 auto;
+        /* da espacio entre el nombre del archivo y la imagen*/
+        padding: 25px;
+        padding-top: 5px;
+        width: 70%;
+        display: block;
+    }
+
+}
+
+@media(min-width: 920px) {
 
 
+
+    /* */
+    /* HACE QUE LA PREVISUALIZACIÓN SE VEA*/
+    #imagen-previa {
+        margin: 0 auto;
+        /* da espacio entre el nombre del archivo y la imagen*/
+        padding: 25px;
+        padding-top: 5px;
+        width: 80%;
+        display: block;
+    }
+
+
+
+    .container {
+        width: 90%;
+    }
+
+    .swiper-button-next {
+        right: 25px !important;
+        transform: translateY(800px) !important;
+    }
+
+    .swiper-button-prev {
+        left: 25px !important;
+        transform: translateY(800px) !important;
+    }
+}
+
+@media(min-width: 1080px) {
+
+
+    /* RESPONSIVE PARA EL FORMULARIO */
+    .section-formulario__div--container2 {
+        /* ESTO HACE QUE NO SE EXPANDAN MÁS LOS INPUTS*/
+        max-width: 100%;
+        /* HACE QUE NO SE GENERE MARGENES */
+        margin: 0 auto;
+        /*COMO SI FUERAN MARGENES*/
+        padding: 40px;
+
+    }
+
+    /* HACE QUE LA INFORMACION DE CONTACTO DE DIVIDA */
+    .form-container1 {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .nombre-div {
+        width: 100%;
+    }
+
+    .celular-div {
+        width: 100%;
+    }
+
+    .correo-div {
+        width: 100%;
+    }
+
+    /* */
+    /* HACE QUE LA INFORMACION DE ANIMAL DE DIVIDA */
+    .form-container2 {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bloque-div {
+        width: 110%;
+    }
+
+    .container-fotos {
+        height: 100%;
+        width: 90%;
+    }
+
+    #previsualizacion {
+        width: 100%;
+    }
+
+    /* IMAGEN DE PREVISUALIZACION*/
+    #imagen-previa {
+        margin: 0 auto;
+        /* da espacio entre el nombre del archivo y la imagen*/
+        padding-top: 5px;
+        width: 80%;
+        max-width: 450px;
+    }
+
+
+
+
+
+}
+
+@media(min-width: 1240px) {
+
+    .swiper-button-next {
+        right: 25px !important;
+        transform: translateY(750px) !important;
+    }
+
+    .swiper-button-prev {
+        left: 25px !important;
+        transform: translateY(750px) !important;
+    }
 }

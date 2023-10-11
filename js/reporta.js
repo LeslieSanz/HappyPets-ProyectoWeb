@@ -133,3 +133,49 @@ function mostrarCampoTexto() {
 	  otroTexto.style.display = "none"; // Ocultar el campo de entrada de texto
 	}
   }
+
+
+//borra el texto de los input en el formulario
+function borrarTexto(input) {
+	if (input.value === input.getAttribute("value")) {
+	  input.value = ""; // Borra el texto si es igual al valor original
+	}
+  }
+  
+  function restaurarTexto(input) {
+	if (input.value === "") {
+	  input.value = input.getAttribute("value"); // Restaura el valor original si el campo está vacío
+	}
+  }
+
+
+  function cambiarColor(input) {
+	if (input.value !== "") {
+	  input.style.color = "black"; // Cambia el color a azul cuando se ingresa texto
+	} else {
+	  input.style.color = "#7c7b7b"; // Restaura el color original cuando el campo está vacío
+	}
+  }
+
+  function mostrarImagen() {
+	const botonFile = document.getElementById('boton-file');
+	const imagenPrevia = document.getElementById('imagen-previa');
+	const nombreArchivo = document.getElementById('nombre-archivo').querySelector('span');
+  
+	const archivo = botonFile.files[0];
+  
+	if (archivo) {
+	  const lector = new FileReader();
+  
+	  lector.onload = function (e) {
+		imagenPrevia.src = e.target.result;
+	  };
+  
+	  lector.readAsDataURL(archivo);
+  
+	  nombreArchivo.textContent = archivo.name;
+	  document.getElementById('previsualizacion').style.display = 'block';
+	} else {
+	  document.getElementById('previsualizacion').style.display = 'none';
+	}
+  }
