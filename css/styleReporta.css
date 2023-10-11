@@ -218,6 +218,10 @@ h3 {
 #popup {
 
     height: 90%;
+
+
+
+
     display: none;
     position: fixed;
     top: 50%;
@@ -225,11 +229,18 @@ h3 {
     transform: translate(-50%, -50%);
     z-index: 1001;
     background-color: rgb(255, 244, 227);
+    background-image: url("../img/reporta-img/fondo2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     max-width: 80%;
+
+    max-width: 720px;
     overflow-y: auto;
     width: 70%;
+    padding: 30px;
 }
 
 /* Estilos para la X de cierre */
@@ -291,39 +302,84 @@ iframe {
 /* --------------------------------- FORMULARIO --------------------------------------*/
 .section-formulario {
     background-color: rgb(206, 172, 85);
+    background-image: url("../img/reporta-img/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 
+/* PONE EN EL CENTRO Y DA SOMBRAS AL TITULO DEL FORMULARIO*/
 .section-formulario__div--container2 h1 {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     margin-bottom: 30px;
+    text-align: center;
+
 }
 
+/* PONE SOMBRAS Y ESPACIADO AL H2(INFO DE CONTACTO Y ANIMAL)*/
 .section-formulario__div--container2 h2 {
+
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     font-size: 24px;
     margin-bottom: 30px;
 }
 
 
+/* RESPONSIVE PARA EL FORMULARIO */
 .section-formulario__div--container2 {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+    /*COMO SI FUERAN MARGENES*/
+    padding: 40px;
+
     align-items: center;
-    /* Centra horizontalmente en el centro */
-    justify-content: center;
-    /* Centra verticalmente en el centro */
 
 }
 
+form {
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+/* */
+
+.form-text {
+    /* HACE QUE LOS MARGENES NO AUMENTE*/
+    margin: 0 auto;
+    /* ESTO PONE INDICA EL TAMAÑO DE LOS  INPUT*/
+    max-width: 80%;
+}
 
 
+select {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 17px;
+
+}
+
+.form-flex {
+    margin: 0;
+    width: auto;
+}
+
+.form-flex div {
+    padding: 10px;
+}
 
 
-
+.form-text h2 {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
 
 label {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
@@ -332,11 +388,16 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.form-text img {
+    display: none;
 }
 
 .submit {
@@ -410,6 +471,37 @@ textarea {
 
 
 @media(min-width: 920px) {
+    .form-text img {
+        display: block;
+
+    }
+
+    .section-formulario__div--form1 {
+        width: 70%;
+    }
+
+    .section-formulario__div--form2 {
+        width: 70%;
+    }
+
+    form {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .form-flex {
+        text-align: -webkit-center;
+        margin: 0;
+        display: flex;
+
+    }
+
+    .form-text {
+        font-size: 110%;
+    }
+
+
 
 
     .container {
