@@ -1,3 +1,7 @@
+body{
+    background-color: #f2f2f2;
+}
+
 #refugio {
     position: relative;
     margin-top: 90px;
@@ -232,11 +236,19 @@
     font-size: 30px;
 }
 
-.perfiles{
+.perfiles-1{
     display: flex;
     justify-content: space-around;
     margin: 20px 100px;
 }
+
+.perfiles-2{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 300px;
+    padding-bottom: 30px;
+}
+
 .perfil{
     flex-basis: 260px;
 }
@@ -272,7 +284,8 @@
 }
 
 @media only screen and (max-width:1150px){
-    .perfiles{
+    .perfiles-1,
+    .perfiles-2{
         flex-direction: column;
     }
 
@@ -299,7 +312,8 @@
         font-size: 15px;
     }
 
-    .perfiles{
+    .perfiles-1,
+    .perfiles-2{
         margin: 20px 0;
     }
     .perfil p{
