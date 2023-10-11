@@ -10,6 +10,31 @@ body{
     position: relative;
     margin-top: 70px;
 }
+#hero {
+    position: relative;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/pdonativos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #hero h1 {
+  font-size: 3.5em;
+}
+
+#hero h2 {
+  font-size: 2.5em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
 .title h1{
     text-align: center;
     padding-top: 50px;
@@ -31,9 +56,16 @@ body{
     margin: 75px auto;
     text-align: center;
 }
+
 .card:hover{
     background-color: rgb(218, 198, 68);
     transition: 0.4s ease;
+    transform: translateY(-3%);
+}
+.card2:hover{
+    background-color: rgb(218, 198, 68);
+    transition: 0.4s ease;
+    transform: translateY(-3%);
 }
 
 .card{
@@ -49,6 +81,19 @@ body{
     border-radius: 10px;
     cursor: pointer;
 }
+.card2{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+    padding: 20px 20px;
+    background-color: rgb(245, 183, 26);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .card .icon{
     font-size: 35px;
     margin-bottom: 10px;
@@ -59,11 +104,21 @@ body{
     margin-bottom: 20px;
 }
 .card p{
-    font-size: 12px;
+    font-size: 20px;
     margin-bottom: 30px;
     line-height: 1.5;
     color: rgb(141, 80, 36);
     text-align: justify;
+}
+.card2 p{
+    font-size: 30px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: rgb(141, 80, 36);
+    text-align: justify;
+}
+.card2 img{
+    padding: 1px 20px;
 }
 .button{
     font-size: 15px;
@@ -77,6 +132,7 @@ body{
 .button:hover{
     background-color: rgb(189, 171, 58);
     transition: 0.4s ease;
+    
 }
 .titulo h1{
     text-align: center;
@@ -105,6 +161,45 @@ body{
         margin: 20px 0px;
     }
 }
+
+
+
+input[type="radio"]{
+    display: none;
+}
+label{
+    position: relative;
+    color:rgb(245, 183, 26);
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    border: 2px solid rgb(245, 183, 26);
+    border-radius: 5px;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+label:before{
+    content: "";
+    height: 30px;
+    width: 30px;
+    border: 3px solid rgb(245, 183, 26);
+    border-radius:  50%;
+    margin-right: 20px;
+}
+input[type="radio"]:checked + label{
+    background-color: rgb(245, 183, 26);
+    color: white;
+}
+input[type="radio"]:checked + label:before{
+    height: 16px;
+    width: 16px;
+    border: 10px solid white;
+    background-color: rgb(245, 183, 26);
+
+}
+
 
 #economico:checked ~ #donaciones .alimentos, #economico:checked ~ #donaciones .articulos{
     display:none;
