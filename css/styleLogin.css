@@ -4,24 +4,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+main {
     min-height: 100vh;
-    background: #23242a;
+    background-image: url(../img/adopta-img/log.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;	
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.box {
+.box-log {
     position: relative;
     width: 380px;
     height: 420px;
-    background: #1c1c1c;
+    background: rgb(141, 80, 36);
     border-radius: 8px;
     overflow: hidden;
 }
-.box::before {
+.box-log::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -29,7 +33,7 @@ body {
     width: 380px;
     height: 420px;
 }
-.box::after {
+.box-log::after {
     content: '';
     position: absolute;
     top: -50%;
@@ -37,12 +41,12 @@ body {
     width: 380px;
     height: 420px;
 }
-.borderLine {
+.box-log .borderLine {
     position: absolute;
     top: 0;
     inset: 0;
 }
-.borderLine::before {
+.box-log .borderLine::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -50,7 +54,7 @@ body {
     width: 380px;
     height: 420px;
 }
-.borderLine::after {
+.box-log .borderLine::after {
     content: '';
     position: absolute;
     top: -50%;
@@ -58,28 +62,28 @@ body {
     width: 380px;
     height: 420px;
 }
-.box form {
+.box-log form {
     position: absolute;
     inset: 4px;
-    background: #222;
+    background: rgb(255, 243, 235);
     padding: 50px 40px;
     border-radius: 8px;
     z-index: 2;
     display: flex;
     flex-direction: column;
 }
-.box form h2 {
-    color: #fff;
+.box-log form h2 {
+    color: rgb(141, 80, 36);
     font-weight: 500;
     text-align: center;
     letter-spacing: 0.1em;
 }
-.box form .inputBox {
+.box-log form .inputBox {
     position: relative;
     width: 300px;
     margin-top: 35px;
 }
-.box form .inputBox input {
+.box-log form .inputBox input {
     position: relative;
     width: 100%;
     padding: 20px 10px 10px;
@@ -87,63 +91,63 @@ body {
     outline: none;
     border: none;
     box-shadow: none;
-    color: #23242a;
+    color: rgb(141, 80, 36);
     font-size: 1em;
     letter-spacing: 0.05em;
     transition: 0.5s;
     z-index: 10;
 }
-.box form .inputBox span {
+.box-log form .inputBox span {
     position: absolute;
     left: 0;
     padding: 20px 0px 10px;
     pointer-events: none;
-    color: #8f8f8f;
+    color: rgb(141, 80, 36);
     font-size: 1em;
     letter-spacing: 0.05em;
     transition: 0.5s;
 }
-.box form .inputBox input:valid ~ span ,
-.box form .inputBox input:focus ~ span {
-    color: #fff;
+.box-log form .inputBox input:valid ~ span ,
+.box-log form .inputBox input:focus ~ span {
+    color: rgb(141, 80, 36);
     font-size: 0.75em;
     transform: translateY(-34px);
 }
-.box form .inputBox i {
+.box-log form .inputBox i {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: rgb(245, 183, 26);
     border-radius: 4px;
     overflow: hidden;
     transition: 0.5s;
     pointer-events: none;
 }
-.box form .inputBox input:valid ~ i ,
-.box form .inputBox input:focus ~ i {
+.box-log form .inputBox input:valid ~ i ,
+.box-log form .inputBox input:focus ~ i {
     height: 44px;
 }
-.box form .links {
+.box-log form .links {
     display: flex;
     justify-content: space-between;
 }
-.box form .links a {
+.box-log form .links a {
     margin: 10px 0;
     font-size: 0.75em;
-    color: #8f8f8f;
+    color: rgb(141, 80, 36);
     text-decoration: none;
 }
-.box form .links a:hover,
-.box form .links a:nth-child(2) {
-    color: #fff;
+.box-log form .links a:hover,
+.box-log form .links a:nth-child(2) {
+    color: rgb(141, 80, 36);
 }
-.box form input[type="submit"] {
+.box-log form input[type="submit"] {
     border: none;
     outline: none;
     padding: 9px 25px;
-    background: #fff;
+    background: rgb(141, 80, 36);
     cursor: pointer;
     font-size: 0.9em;
     border-radius: 4px;
@@ -151,6 +155,19 @@ body {
     width: 100px;
     margin-top: 10px;
 }
-.box form input[type="submit"]:active {
+.box-log form input[type="submit"]:active {
     opacity: 0.8;
+}
+.view{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.verPassword{
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    float: right;
+    margin-top: -60px;
 }
