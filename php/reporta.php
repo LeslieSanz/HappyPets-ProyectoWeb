@@ -59,7 +59,7 @@
     <section class="section-banner">
         <h1>
             Los peluditos te necesitan <br />
-            Sé su voz, reporta
+            Sé su voz, reporta. SI ves esto, esto es una prueba
         </h1>
 
         <button id="BotonBanner">¡Reporta!</button>
