@@ -1,212 +1,117 @@
-*{
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
-}
-body{
-    width:100%;
-    background-color: white;
+  
+  .container {
+    max-width:1170px;
+    margin: auto;
     position: relative;
     margin-top: 70px;
-}
-#hero {
-    position: relative;
-    margin-top: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 90vh;
-    color: white;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(../img/pdonativos.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
   }
-  #hero h1 {
-  font-size: 3.5em;
-}
-
-#hero h2 {
-  font-size: 2.5em;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 500;
-}
-.title h1{
-    text-align: center;
-    padding-top: 50px;
-    font-size: 42px;
-}
-.title h1::after{
-    content: "";
-    height: 4px;
-    width: 330px;
-    background-color: rgb(141, 80, 36);
-    display: block;
-    margin: auto;
-}
-.servicios{
-    width: 85%;
+  .row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 75px auto;
-    text-align: center;
-}
-
-.card:hover{
-    background-color: rgb(218, 198, 68);
-    transition: 0.4s ease;
-    transform: translateY(-3%);
-}
-.card2:hover{
-    background-color: rgb(218, 198, 68);
-    transition: 0.4s ease;
-    transform: translateY(-3%);
-}
-
-.card{
+    flex-wrap: wrap;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  section .container {
     width: 100%;
-    height: 400px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin: 0px 20px;
-    padding: 20px 20px;
-    background-color: rgb(245, 183, 26);
-    border-radius: 10px;
-    cursor: pointer;
-}
-.card2{
+    max-width: 1100px;
+  }
+  section .card {
     width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 20px;
-    padding: 20px 20px;
-    background-color: rgb(245, 183, 26);
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.card .icon{
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-.card h2{
-    font-size: 28px;
-    color: rgb(141, 80, 36);
-    margin-bottom: 20px;
-}
-.card p{
-    font-size: 20px;
-    margin-bottom: 30px;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+  }
+  section .card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+  }
+  section .card img{
+    width: 100%;
+    height: 210px;
+  }
+  section .card .contenido {
+    padding: 15px;
+    text-align: center;
+  }
+  section .card .contenido p {
     line-height: 1.5;
-    color: rgb(141, 80, 36);
-    text-align: justify;
-}
-.card2 p{
-    font-size: 30px;
-    margin-bottom: 30px;
-    line-height: 1.5;
-    color: rgb(141, 80, 36);
-    text-align: justify;
-}
-.card2 img{
-    padding: 1px 20px;
-}
-.button{
-    font-size: 15px;
+    color: #6a6a6a;
+  }
+  section .card .contenido h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  section .card .contenido a {
     text-decoration: none;
-    background-color: rgb(255, 243, 235);
-    color: rgb(141, 80, 36);
-    padding: 8px 12px;
-    border-radius: 5px;
-    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+  }
+  section .card .contenido a:hover {
+    background: #2fb4cc;
+    color: #fff;
+  }
+section.but{
+  width: 100%;
+  height: 25vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
-.button:hover{
-    background-color: rgb(189, 171, 58);
-    transition: 0.4s ease;
-    
-}
-.titulo h1{
-    text-align: center;
-    padding-top: 50px;
-    font-size: 42px;
-}
-.servicios img{
-    text-align: left;
-}
-.titulo h1::after{
-    content: "";
-    height: 4px;
-    width: 450px;
-    background-color: #000;
-    display: block;
-    margin: auto;
-}
-@media screen and (max-width: 940px){
-    .servicios{
-        display: flex;
-        flex-direction: column;
-    }
-    .card{
-        width: 85%;
-        display: flex;
-        margin: 20px 0px;
-    }
+section .btn{
+  margin-right:40px;
+  border: none;
+  outline: none;
+  padding: 9px 25px;
+  background: rgb(245, 183, 26);
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
-
-
-input[type="radio"]{
-    display: none;
+section .btn:hover{
+  background: rgb(252, 207, 110);
 }
-label{
-    position: relative;
-    color:rgb(245, 183, 26);
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
-    border: 2px solid rgb(245, 183, 26);
-    border-radius: 5px;
-    padding: 10px 50px;
+
+main{
+  background-image: url(../img/adopta-img/gozu.jpg);
+}
+
+section {
+  background: transparent;
+}
+
+@media (max-width: 945px) {
+  section .container {
+    display: block; /* Cambiar de flex a bloque para que las tarjetas se apilen verticalmente */
+    max-width: 100vh 10%; /* Quitar el ancho máximo para que las tarjetas ocupen el ancho completo del contenedor */
+    margin: 0; /* Quitar el margen para aprovechar al máximo el espacio */
+    left: 100vh 10%;
+  }
+
+  section.but{
+    width: 100%;
+    height: 40vh;
     display: flex;
-    align-items: center;
-    cursor: pointer;
+    padding: 10px;
+  }
 
-}
-label:before{
-    content: "";
-    height: 30px;
-    width: 30px;
-    border: 3px solid rgb(245, 183, 26);
-    border-radius:  50%;
-    margin-right: 20px;
-}
-input[type="radio"]:checked + label{
-    background-color: rgb(245, 183, 26);
-    color: white;
-}
-input[type="radio"]:checked + label:before{
-    height: 16px;
-    width: 16px;
-    border: 10px solid white;
-    background-color: rgb(245, 183, 26);
+  section .card {
+    width: 60%;
+    margin: 10px auto; /* Asegurarse de que cada tarjeta ocupe el ancho completo del contenedor */
+  }
 
-}
-
-
-#economico:checked ~ #donaciones .alimentos, #economico:checked ~ #donaciones .articulos{
-    display:none;
-}
-#alimentos:checked ~ #donaciones .economico, #alimentos:checked ~ #donaciones .articulos{
-    display:none;
-}
-#articulos:checked ~ #donaciones .economico, #articulos:checked ~ #donaciones .alimentos{
-    display:none;
 }
