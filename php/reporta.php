@@ -447,7 +447,8 @@
 
         <div class="section-formulario__div--container2">
             <h1>Formulario de Reporte</h1>
-            <form>
+
+            <form method="post" action="REPORTAPRUEBA.php">
 
                 <div class="form-flex">
                     <div class="section-formulario__div--form1">
@@ -525,7 +526,10 @@
                             </div>
                             <div class="container-fotos">
                                 <div class="form-foto">
-                                    <input type="file" id="boton-file" accept="image/*" onchange="mostrarImagen()">
+                                    <input type="file" id="boton-file" 
+                                    name="foto-animal"
+                                    accept="image/*" onchange="mostrarImagen()"
+                                    required>
 
                                     <input type="button" value="Subir Foto del animal" class="form-file"
                                         onclick="document.getElementById('boton-file').click()">
@@ -543,13 +547,20 @@
                     </div>
                 </div>
                 <div class="form-boton">
-                    <button type="submit" class="submit" formaction="#form">Enviar</button>
+                    <button type="submit" 
+                    name= "enviarDatosForm"
+                    class="submit" formaction="#form">Enviar</button>
                 </div>
 
 
 
             </form>
         </div>
+
+
+        <?php 
+        include("REPORTAPRUEBA.php");
+        ?>
 
 
 
@@ -607,7 +618,7 @@
         </section>
     </footer>
 
-
+    
 
 
 </body>
