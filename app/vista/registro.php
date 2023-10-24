@@ -15,7 +15,7 @@
                 <h2>Registrarse</h2>
                 <?php
                 include("../config/database.php");
-                include("../controlador/controlador_registrar_usuario.php")
+                include("../controlador/usuarioControlador.php")
                 ?>
                 <div class="inputBox">
                     <input id="usuario" type="text" required="required" name="usuario">

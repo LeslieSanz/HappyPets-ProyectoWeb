@@ -14,7 +14,7 @@
                 <h2>Iniciar sesión</h2>
                 <?php
                 include("../config/database.php");
-                include("../controlador/controlador_usuario.php")
+                include("../controlador/usuarioControlador.php")
                 ?>
                 <div class="inputBox">
                     <input id="usuario" type="text" required="required" name="usuario">
@@ -31,7 +31,7 @@
                 </div>
                 <div class="links">
                     <a href="#">Recordar contraseña</a>
-                    <a href="../html/registro.html">Registrarse</a>
+                    <a href="registro.php">Registrarse</a>
                 </div>
                 <input name="btningresar" class="btn" type="submit" value="Login">
             </form>

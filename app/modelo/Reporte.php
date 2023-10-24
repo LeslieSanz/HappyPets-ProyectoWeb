@@ -1,99 +1,38 @@
 <?php
+require_once __DIR__ . '/../config/database.php';
 
 class Reporte {
-    private $nombre;
-    private $celular;
-    private $correo;
-    private $animal;
-    private $distrito;
-    private $referencia;
-    private $direccion;
-    private $infoAdicional;
-    private $fotoAnimal;
 
-    // Constructor
-    public function __construct($nombre, $celular, $correo, $animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal) {
-        $this->nombre = $nombre;
-        $this->celular = $celular;
-        $this->correo = $correo;
-        $this->animal = $animal;
-        $this->distrito = $distrito;
-        $this->referencia = $referencia;
-        $this->direccion = $direccion;
-        $this->infoAdicional = $infoAdicional;
-        $this->fotoAnimal = $fotoAnimal;
-    }
+    private $conn;
 
-    // Getters y setters adicionales
-    public function getNombre() {
-        return $this->nombre;
+    // Constructor para asignar la conexión a la propiedad $conn
+    public function __construct($conn) {
+        $this->conn = $conn;
     }
+    //CRUD
+    public function agregarReporte($nombre, $celular, $correo, $animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal) {
+        
+        $sql = "INSERT INTO reportes (nombre, celular, correo, animal, distrito, referencia, direccion, info_adicional, foto_animal) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $this->conn->prepare($sql);
 
-    public function setNombre($nombre) {
-        $this->nombre = $nombre;
-    }
+        // Verificar si la consulta preparada se ejecutó correctamente
+        if ($stmt) {
+            // Asociar los parámetros y ejecutar la consulta
+            $stmt->bind_param("sssssssss", $nombre, $celular, $correo, $animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal);
+            $stmt->execute();
 
-    public function getCelular() {
-        return $this->celular;
-    }
+            // Verificar si la inserción fue exitosa
+            if ($stmt->affected_rows > 0) {
+                return true; // Reporte agregado exitosamente
+            } else {
+                return false; // Error al agregar el reporte
+            }
 
-    public function setCelular($celular) {
-        $this->celular = $celular;
+            // Cerrar la consulta preparada
+            $stmt->close();
+        } else {
+            return false; // Error al preparar la consulta
+        }
     }
-
-    public function getCorreo() {
-        return $this->correo;
-    }
-
-    public function setCorreo($correo) {
-        $this->correo = $correo;
-    }
-
-    public function getAnimal() {
-        return $this->animal;
-    }
-
-    public function setAnimal($animal) {
-        $this->animal = $animal;
-    }
-
-    public function getDistrito() {
-        return $this->distrito;
-    }
-
-    public function setDistrito($distrito) {
-        $this->distrito = $distrito;
-    }
-
-    public function getReferencia() {
-        return $this->referencia;
-    }
-
-    public function setReferencia($referencia) {
-        $this->referencia = $referencia;
-    }
-
-    public function getDireccion() {
-        return $this->direccion;
-    }
-
-    public function setDireccion($direccion) {
-        $this->direccion = $direccion;
-    }
-
-    public function getInfoAdicional() {
-        return $this->infoAdicional;
-    }
-
-    public function setInfoAdicional($infoAdicional) {
-        $this->infoAdicional = $infoAdicional;
-    }
-
-    public function getFotoAnimal() {
-        return $this->fotoAnimal;
-    }
-
-    public function setFotoAnimal($fotoAnimal) {
-        $this->fotoAnimal = $fotoAnimal;
-    }
+    
 }
