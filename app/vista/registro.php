@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro-HappyPets</title>
+    <link rel="stylesheet" href="../../css/styleRegistro.css">
+    <link rel="icon" href = "../../img/logos/logopets.png" type = "image/x-icon">
+</head>
+<body>
+        <main>
+        <div class="box-log">
+            <span class="borderLine"></span>
+            <form method="post">
+                <h2>Registrarse</h2>
+                <?php
+                include("../config/database.php");
+                include("../controlador/controlador_registrar_usuario.php")
+                ?>
+                <div class="inputBox">
+                    <input id="usuario" type="text" required="required" name="usuario">
+                    <span>Usuario</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input id="email" type="email" required="required" name="email">
+                    <span>Email</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input id="password" type="password" required="required" name="password">
+                    <span>Contraseña</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input id="repassword" type="password" required="required" name="repassword">
+                    <span>Repetir Contraseña</span>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a href="login.php">Iniciar Sesión</a>
+                </div>
+                <input type="submit" value="Registrarse" name="registro">
+            </form>
+        </div>
+        </main>
+</body>
+</html>
