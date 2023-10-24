@@ -5,12 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reporta-Happy Pets</title>
-    <link rel="icon" href="../img/logos/logopets.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/styleReporta.css" />
-    <link rel="stylesheet" href="../css/header.css" />
-
-
-    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="icon" href="../../img/logos/logopets.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/styleReporta.css" />
+    <link rel="stylesheet" href="../../css/header.css" />
+    <link rel="stylesheet" href="../../css/footer.css" />
     <!-- BLOBLIOTECA jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -28,8 +26,8 @@
 <body>
     <!--CABECERA-->
     <header>
-         <a href="../php/index.php" class="logo">
-            <img src="../img/logos/logopets.jpeg" alt="logo de la empresa" class="logo-img">
+         <a href="../../index.php" class="logo">
+            <img src="../../img/logos/logopets.jpeg" alt="logo de la empresa" class="logo-img">
             <h2 class="logo-nombre">Happy Pets</h2>
         </a>
         <input type="checkbox" id="toggle">
@@ -37,17 +35,17 @@
 
         <nav class="nav">
             <ul>
-                <li><a href="../php/nosotros.php">¿Quiénes somos?</a></li>
-                <li><a href="../php/blog.php"><i class="fa-solid fa-newspaper"></i>Blog</a></li>
+                <li><a href="nosotros.php">¿Quiénes somos?</a></li>
+                <li><a href="blog.php"><i class="fa-solid fa-newspaper"></i>Blog</a></li>
                 <li><a href="#"><i class="fa-solid fa-paw"></i>Deja tu huella</a>
                     <ul>
-                        <li><a href="../php/adopta.php">Adopta</a></li>
-                        <li><a href="../php/reporta.php">Reporta</a></li>
-                        <li><a href="../php/donaciones.php">Donaciones</a>
+                        <li><a href="adopta.php">Adopta</a></li>
+                        <li><a href="reporta.php">Reporta</a></li>
+                        <li><a href="donaciones.php">Donaciones</a>
                     </ul>
                 </li>
-                <li><a href="../php/contacto.php">Contacto</a></li>
-                <li><a href="../php/login.php">Iniciar sesión</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
+                <li><a href="login.php">Iniciar sesión</a></li>
             </ul>
         </nav>
     </header>
@@ -59,8 +57,8 @@
     <section class="section-banner">
         <h1>
             Los peluditos te necesitan <br />
-            Sé su voz, reporta
-                </h1>
+            Sé su voz, reporta. SI ves esto, esto es una prueba
+        </h1>
 
         <button id="BotonBanner">¡Reporta!</button>
 
@@ -80,7 +78,7 @@
                     <div class="swiper-slide">
 
 
-                        <img src="../img/reporta-img/1.jpg">
+                        <img src="../../img/reporta-img/1.jpg">
                         <div class="cardDescription">
                             <div class="card-title">
                                 <h4>Gatito reportado</h4>
@@ -100,7 +98,7 @@
                     </div>
                     <div class="swiper-slide">
 
-                        <img src="../img/reporta-img/2.jpg">
+                        <img src="../../img/reporta-img/2.jpg">
                         <div class="cardDescription">
                             <div class="card-title">
                                 <h4>Gatito reportado</h4>
@@ -122,7 +120,7 @@
                     </div>
                     <div class="swiper-slide">
 
-                        <img src="../img/reporta-img/3.jpg">
+                        <img src="../../img/reporta-img/3.jpg">
                         <div class="cardDescription">
                             <div class="card-title">
                                 <h4>Perrito reportado</h4>
@@ -140,7 +138,7 @@
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="../img/reporta-img/4.jpg">
+                        <img src="../../img/reporta-img/4.jpg">
                         <div class="cardDescription">
                             <div class="card-title">
                                 <h4>Perrito reportado</h4>
@@ -159,7 +157,7 @@
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="../img/reporta-img/5.jpg">
+                        <img src="../../img/reporta-img/5.jpg">
                         <div class="cardDescription">
                             <div class="card-title">
                                 <h4>Perrito reportado</h4>
@@ -176,7 +174,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="../img/reporta-img/6.jpg">
+                        <img src="../../img/reporta-img/6.jpg">
                         <div class="cardDescription">
                             <div class="card-title">
                                 <h4>Gatito reportado</h4>
@@ -193,7 +191,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="../img/reporta-img/7.jpg">
+                        <img src="../../img/reporta-img/7.jpg">
                         <div class="cardDescription">
                             <div class="card-title">
                                 <h4>Gatito reportado</h4>
@@ -210,7 +208,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="../img/reporta-img/8.jpeg">
+                        <img src="../../img/reporta-img/8.jpeg">
                         <div class="cardDescription">
                             <div class="card-title">
                                 <h4>Gatito reportado</h4>
@@ -227,7 +225,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="../img/reporta-img/9.jpeg">
+                        <img src="../../img/reporta-img/9.jpeg">
                         <div class="cardDescription">
                             <div class="card-title">
                                 <h4>Perrito reportado</h4>
@@ -265,7 +263,7 @@
                 <div id="imagen1">
 
                     <div class="div-imagen">
-                        <img class="img-popup" src="../img/reporta-img/1.jpg" alt="Imagen X">
+                        <img class="img-popup" src="../../img/reporta-img/1.jpg" alt="Imagen X">
                     </div>
 
                     <div class=div-text>
@@ -285,7 +283,7 @@
                 </div>
                 <div id="imagen2" style="display: none;">
                     <div class="div-imagen">
-                        <img class="img-popup" src="../img/reporta-img/2.jpg" alt="Imagen X">
+                        <img class="img-popup" src="../../img/reporta-img/2.jpg" alt="Imagen X">
                     </div>
 
                     <div class=div-text>
@@ -304,7 +302,7 @@
                 </div>
                 <div id="imagen3" style="display: none;">
                     <div class="div-imagen">
-                        <img class="img-popup" src="../img/reporta-img/3.jpg" alt="Imagen X">
+                        <img class="img-popup" src="../../img/reporta-img/3.jpg" alt="Imagen X">
                     </div>
 
                     <div class=div-text>
@@ -322,7 +320,7 @@
                 </div>
                 <div id="imagen4" style="display: none;">
                     <div class="div-imagen">
-                        <img class="img-popup" src="../img/reporta-img/4.jpg" alt="Imagen X">
+                        <img class="img-popup" src="../../img/reporta-img/4.jpg" alt="Imagen X">
                     </div>
 
                     <div class=div-text>
@@ -340,7 +338,7 @@
                 </div>
                 <div id="imagen5" style="display: none;">
                     <div class="div-imagen">
-                        <img class="img-popup" src="../img/reporta-img/5.jpg" alt="Imagen X">
+                        <img class="img-popup" src="../../img/reporta-img/5.jpg" alt="Imagen X">
                     </div>
 
                     <div class=div-text>
@@ -358,7 +356,7 @@
                 </div>
                 <div id="imagen6" style="display: none;">
                     <div class="div-imagen">
-                        <img class="img-popup" src="../img/reporta-img/6.jpg" alt="Imagen X">
+                        <img class="img-popup" src="../../img/reporta-img/6.jpg" alt="Imagen X">
                     </div>
 
                     <div class=div-text>
@@ -376,7 +374,7 @@
                 </div>
                 <div id="imagen7" style="display: none;">
                     <div class="div-imagen">
-                        <img class="img-popup" src="../img/reporta-img/7.jpg" alt="Imagen X">
+                        <img class="img-popup" src="../../img/reporta-img/7.jpg" alt="Imagen X">
                     </div>
 
                     <div class=div-text>
@@ -394,7 +392,7 @@
                 </div>
                 <div id="imagen8" style="display: none;">
                     <div class="div-imagen">
-                        <img class="img-popup" src="../img/reporta-img/8.jpeg" alt="Imagen X">
+                        <img class="img-popup" src="../../img/reporta-img/8.jpeg" alt="Imagen X">
                     </div>
 
                     <div class=div-text>
@@ -412,7 +410,7 @@
                 </div>
                 <div id="imagen9" style="display: none;">
                     <div class="div-imagen">
-                        <img class="img-popup" src="../img/reporta-img/9.jpeg" alt="Imagen X">
+                        <img class="img-popup" src="../../img/reporta-img/9.jpeg" alt="Imagen X">
                     </div>
 
                     <div class=div-text>
@@ -438,7 +436,7 @@
 
     </section>
     <!-- Enlance que vincula con el js-->
-    <script src="../js/reporta.js"></script>
+    <script src="../../js/reporta.js"></script>
 
 
     <!-- PARTE PARA REPORTA UN ANIMAL-->
@@ -448,7 +446,7 @@
         <div class="section-formulario__div--container2">
             <h1>Formulario de Reporte</h1>
 
-            <form method="post" action="REPORTAPRUEBA.php">
+            <form method="post" action="../controlador/reporteControlador.php">
 
                 <div class="form-flex">
                     <div class="section-formulario__div--form1">
@@ -536,7 +534,7 @@
                                 </div>
                                 <div id="previsualizacion">
                                     <p>Imagen previa:</p>
-                                    <img id="imagen-previa" src="../img\reporta-img/gato-gif.gif"
+                                    <img id="imagen-previa" src="../../img\reporta-img/gato-gif.gif"
                                         alt="Vista previa de la imagen">
                                     <p id="nombre-archivo">Nombre del archivo: <span></span></p>
                                 </div>
@@ -549,21 +547,10 @@
                 <div class="form-boton">
                     <button type="submit" 
                     name= "enviarDatosForm"
-                    class="submit" formaction="#form">Enviar</button>
+                    class="submit" formaction="../controlador/reporteControlador.php">Enviar</button>
                 </div>
-
-
-
             </form>
         </div>
-
-
-        <?php 
-        include("REPORTAPRUEBA.php");
-        ?>
-
-
-
     </section>
 
 
@@ -573,18 +560,18 @@
         <section class="grupo-1">
             <div class="box">
                 <figure>
-                    <a href="../php/index.php">
-                        <img src="../img/logos/logo-footer.jpg" alt="Logo de Happy Pets">
+                    <a href="../../index.php">
+                        <img src="../../img/logos/logo-footer.jpg" alt="Logo de Happy Pets">
                     </a>
                 </figure>
             </div>
             <div class="box">
                 <h2>SERVICIOS</h2>
                 <ul>
-                    <li><a href="../php/adopta.php">Adopta</a></li>
-                    <li><a href="../php/reporta.php">Reporta</a></li>
-                    <li><a href="../php/donaciones.php">Donaciones</a></li>
-                    <li><a href="../php/blog.php">Blog</a></li>
+                    <li><a href="adopta.php">Adopta</a></li>
+                    <li><a href="reporta.php">Reporta</a></li>
+                    <li><a href="donaciones.php">Donaciones</a></li>
+                    <li><a href="blog.php">Blog</a></li>
                 </ul>
             </div>
             <div class="box">
