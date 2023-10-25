@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+
+//Importar de la carpeta config el archivo data base
 require_once __DIR__ . '/../config/database.php';
 
 class Reporte {
@@ -9,20 +13,110 @@ class Reporte {
     public function __construct($conn) {
         $this->conn = $conn;
     }
+
+
+
+
+    
+
     //CRUD
-    public function agregarReporte($nombre, $celular, $correo, $animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal) {
+    public function codigoAnimal($especie, $foto){
+         
+        $cod_ani = "";
         
-        $sql = "INSERT INTO reportes (nombre, celular, correo, animal, distrito, referencia, direccion, info_adicional, foto_animal) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "SELECT cod_ani FROM animal WHERE especie = ? AND foto = ?";
         $stmt = $this->conn->prepare($sql);
+
+        
+
+
+        // Verificar si la consulta preparada se ejecutó correctamente.
+        if ($stmt) {
+            // Vincula los parámetros a la consulta.
+            $stmt->bind_param("ss", $especie, $foto);
+
+            // Ejecuta la consulta.
+            $stmt->execute();
+
+            // Obtiene el resultado de la consulta.
+            $stmt->bind_result($cod_ani);
+
+            // Recupera el resultado.
+            if ($stmt->fetch()) {
+            // El resultado se almacenará en $cod_ani.
+            return $cod_ani;
+            }
+        }
+
+        return $cod_ani;
+
+    }
+
+    public function codigoUsuario($nombre, $email){
+         
+        $cod_usu = "";
+        
+        $sql = "SELECT cod_usu FROM usuario WHERE nombre = ? AND email = ?";
+        $stmt = $this->conn->prepare($sql);
+
+        
+
+
+        // Verificar si la consulta preparada se ejecutó correctamente.
+        if ($stmt) {
+            // Vincula los parámetros a la consulta.
+            $stmt->bind_param("ss", $nombre, $email);
+
+            // Ejecuta la consulta.
+            $stmt->execute();
+
+            // Obtiene el resultado de la consulta.
+            $stmt->bind_result($cod_usu);
+
+            // Recupera el resultado.
+            if ($stmt->fetch()) {
+            // El resultado se almacenará en $cod_usu.
+            return $cod_usu;
+            }
+        }
+
+        return $cod_usu;
+
+    }
+
+
+    public function agregarReporte($animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal) {
+
+
+        
+        
+        $sql = "INSERT INTO animal (especie, foto) VALUES (?, ?)";
+        $stmt = $this->conn->prepare($sql);//stmt = statement
+
+
+        $sql1 = "INSERT INTO reporte (distrito, referencia, direccion, info_adicional, cod_usu, cod_ani) VALUES (?, ?,?,?,?,?)";
+        $stmt2 = $this->conn->prepare($sql1);
 
         // Verificar si la consulta preparada se ejecutó correctamente
         if ($stmt) {
             // Asociar los parámetros y ejecutar la consulta
-            $stmt->bind_param("sssssssss", $nombre, $celular, $correo, $animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal);
+            //las s son por es STRING, y son 9 por nueva parametros
+            $stmt->bind_param("ss", $animal, $fotoAnimal);
             $stmt->execute();
 
+
+
+            $cod_usu = $this->codigoUsuario($_SESSION["usuario"], $_SESSION["email"]);
+            $cod_ani = $this->codigoAnimal($animal, $fotoAnimal);
+            
+            $stmt2->bind_param("ssssss", $distrito, $referencia, $direccion, $infoAdicional, $cod_usu, $cod_ani);
+            $stmt2->execute();
+
+
+
+
             // Verificar si la inserción fue exitosa
-            if ($stmt->affected_rows > 0) {
+            if ($stmt->affected_rows > 0) {//Fila agrega mayor a 0 
                 return true; // Reporte agregado exitosamente
             } else {
                 return false; // Error al agregar el reporte
@@ -34,5 +128,9 @@ class Reporte {
             return false; // Error al preparar la consulta
         }
     }
+
+
+
+
     
 }

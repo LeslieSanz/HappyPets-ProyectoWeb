@@ -1,3 +1,9 @@
+
+<?php 
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +63,7 @@
     <section class="section-banner">
         <h1>
             Los peluditos te necesitan <br />
-            Sé su voz, reporta. SI ves esto, esto es una prueba
+            Sé su voz, reporta.
         </h1>
 
         <button id="BotonBanner">¡Reporta!</button>
@@ -449,34 +455,6 @@
             <form method="post" action="../controlador/reporteControlador.php">
 
                 <div class="form-flex">
-                    <div class="section-formulario__div--form1">
-                        <h2>Información de contacto</h2>
-                        <div class="form-container1">
-
-
-                            <div class="nombre-div">
-                                <label for="nombres-apellidos">Nombres y Apellidos</label>
-                                <input type="text" class="form-text" name="nombres-apellidos"
-                                    value="Ingrese nombres y apellidos" oninput="cambiarColor(this)"
-                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)">
-                            </div>
-
-                            <div class="celular-div">
-                                <label for="celular">Celular</label>
-                                <input type="text" class="form-text" name="celular" oninput="cambiarColor(this)"
-                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)"
-                                    value="Ingrese su telefono(opcional)">
-
-                            </div>
-
-                            <div class="correo-div">
-                                <label for="correo">Correo</label>
-                                <input type="email" class="form-text" name="correo" oninput="cambiarColor(this)"
-                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)"
-                                    value="Ingrese su correo electronico" required>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="section-formulario__div--form2">
                         <h2>Información del Animal</h2>
@@ -487,7 +465,7 @@
                                 <label for="especie">Especie del Animal Encontrado</label>
 
                                 <select id="animal" name="animal" onchange="mostrarCampoTexto()">
-                                    <option value="gato">Ingrese especie</option>
+                                    <option value="ingreseEspecie">Ingrese especie</option>
                                     <option value="gato">Felino</option>
                                     <option value="perro">Canino</option>
                                     <option value="otro">Otro</option>

@@ -1,14 +1,15 @@
 <?php
+
+session_start();
+
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Reporte.php';
 
 if (isset($_POST["enviarDatosForm"])) {
 
     if (
-        strlen($_POST['nombres-apellidos']) >= 1 &&
-        strlen($_POST['celular']) >= 1 &&
-        strlen($_POST['correo']) >= 1 &&
-        strlen($_POST['animal']) >= 1 &&
+        strlen($_POST['animal']) >= 1 && 
+        $_POST['animal'] != "ingreseEspecie" &&
         strlen($_POST['distrito']) >= 1 &&
         strlen($_POST['direccion']) >= 1 &&
         strlen($_POST['referencia']) >= 1 &&
@@ -16,10 +17,16 @@ if (isset($_POST["enviarDatosForm"])) {
         strlen($_POST['foto-animal']) >= 1
     ) {
 
-        $nombresApellidos = $_POST["nombres-apellidos"];
-        $celular = $_POST["celular"];
-        $correo = $_POST["correo"];
+        
+        
         $animal = $_POST["animal"];
+
+
+        IF($animal == "otro"){
+            $animal = $_POST['otroAnimal'];
+        }
+
+
         $distrito = $_POST["distrito"];
         $direccion = $_POST["direccion"];
         $referencia = $_POST["referencia"];
@@ -30,7 +37,7 @@ if (isset($_POST["enviarDatosForm"])) {
         $reporte = new Reporte($conn);
 
         // Intentar agregar el reporte a la base de datos
-        if ($reporte->agregarReporte($nombresApellidos, $celular, $correo, $animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal)) {
+        if ($reporte->agregarReporte($animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal)) {
             // Reporte registrado exitosamente, redirigir a una página princial que es index
             header("Location: ../../index.php");
             exit();
@@ -39,6 +46,12 @@ if (isset($_POST["enviarDatosForm"])) {
             header("Location: error.php");
             exit();
         }
+
+
+
+
+    }else{
+        echo"Error";
     }
 }
 ?>
