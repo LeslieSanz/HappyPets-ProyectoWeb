@@ -11,8 +11,8 @@
     <div class="contenedor">
         <section class="tarjeta" id="tarjeta">
             <div class="delantera">
-                <div class="logo-marca">
-                    <img src="../img/tarjeta/visa.png" alt="">
+                <div class="logo-marca" id="logo-marca">
+                    
                 </div>
                 <img src="../img/tarjeta/chip-tarjeta.png" class="chip" alt="">
                 <div class="datos">
@@ -23,7 +23,7 @@
                     <div class="flexbox">
                         <div class="grupo" id="nombre">
                             <p class="label">Nombre Tarjeta</p>
-                            <p class="nombre">Walter Falcon</p>
+                            <p class="nombre"></p>
                         </div>
 
                         <div class="grupo" id="expiracion">
@@ -47,9 +47,10 @@
                     </div>
                 </div>
                 <p class="leyenda">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quibusdam sint dolorum animi libero maxime dignissimos omnis quisquam labore quo nostrum illo iure, repudiandae unde ipsum doloribus soluta doloremque atque.
+                    Esta tarjeta es propiedad del banco y deberá ser devuelta cuando este lo solicite. Esta tarjeta es instransferible y su uso se rige por las estippulaciones del contrato firmado entre el titular
+                    y el banco. En caso de pérdida o robo y el titular deberá llanar a banca por telefono.
                 </p>
-                <a href="#" class="link-banco">www.adasd.com</a>
+                <a href="#" class="link-banco">www.MiBancoFavorito.com</a>
             </div>
         </section>
 
@@ -92,8 +93,16 @@
                     <input type="text" id="inputCCV" maxlength="3">
                 </div>
             </div>
-            <button type="submit" class="btn-enviar">Enviar</button>
-
+            <div class="grupo2">
+                <label for="inputNumero1">Monto a donar</label>
+                <input type="text" id="inputNumero1" maxlength="19" autocomplete="off">
+            </div>
+            
+            
+            <button type="submit" class="btn-enviar" href="../html/donaciones.html">Enviar</button>
+            <div class="regresar">
+                <a href="../html/donaciones.html">regresar</a>
+            </div>
         </form>
     </div>
 
