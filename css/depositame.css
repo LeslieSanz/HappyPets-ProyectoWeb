@@ -5,7 +5,7 @@
 }
 
 body {
-    background: white;
+    background: #ffd799;;
     font-family: 'Lato', sans-serif;
 }
 
@@ -28,7 +28,6 @@ body {
     transition: .3s ease all;
     transform: rotateY(0deg);
     transform-style: preserve-3d;
-    backface-visibility: hidden;
     cursor: pointer;
     z-index: 2;
 }
@@ -178,10 +177,10 @@ body {
     cursor: pointer;
 }
 
-.contenedor-btn .btn-abrir-formulario:hover{
+.contenedor-btn .btn-abrir-formulario:hover {
     background-color: 1850b1;
 }
-.contenedor-btn .btn-abrir-formulario.active{
+.contenedor-btn .btn-abrir-formulario.active {
     transform: rotate(45deg);
 }
 
@@ -201,6 +200,101 @@ body {
 
 .formulario-tarjeta.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+  }
+
+.formulario-tarjeta label {
+     display: block;
+     color: #7d8994;
+     margin-bottom: 5px;
+     font-size: 16px;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+    border: 2px solid #CED6E0;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    padding: 5px 12px;
+    transition: .3s ease all;
+    border-radius: 5px;
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+    border: 2px solid #93BDED;
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+    outline: rgb(4, 4, 4);
+    box-shadow: 1px 7px 18px -5px rgba(90, 116, 148, 0.3);
+}
+
+.formulario-tarjeta input {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.formulario-tarjeta .flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+    width: 100%;
+}
+
+.formulario-tarjeta .ccv {
+    min-width: 100px;
+}
+
+.formulario-tarjeta .grupo-select {
+    width: 100%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.formulario-tarjeta select {
+    -webkit-appearance: none;
+}
+
+.formulario-tarjeta .grupo-select i {
+    position: absolute;
+    color: #CED6E8;
+    top: 18px;
+    right: 15px;
+    transition: .3s ease all;
+}
+
+.formulario-tarjeta .grupo-select:hover {
+    color: #93bfed;
+}
+
+.formulario-tarjeta .btn-enviar {
+    border: none;
+    padding: 18px;
+    font-size: 22px;
+    color: #fff;
+    background: #ffae33;
+    box-shadow: 2px 2px 10px 0px rgba(0, 85, 212, 0.4);
+    cursor: pointer;
+}
+
+.formulario-tarjeta .btn-enviar:hover {
+    background: #1850b1;
 }
 
 /* Me quedé en el minuto 1:23:37 tengo sueño*/
