@@ -8,43 +8,36 @@
     <link rel="stylesheet" type="text/css" href="../../css/styleDona.css" />
     <link rel="stylesheet"   href="../../css/header.css" />
     <link rel="stylesheet"   href="../../css/footer.css" />
-    <script src="../../js/donaciones.js"></script>
     <script
       src="https://kit.fontawesome.com/09bca36bc3.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../../js/donaciones.js"></script>
    
   </head>
   <body>
    <!--CABECERA-->
    <header>
     <a href="../../index.php" class="logo">
-        <img src="../../img/logos/logopets.jpeg" alt="logo de la empresa" class="logo-img">
-        <h2 class="logo-nombre">Happy Pets</h2>
+       <img src="../../img/logos/logopets.jpeg" alt="logo de la empresa" class="logo-img">
+       <h2 class="logo-nombre">Happy Pets</h2>
     </a>
-    <input type="checkbox" id="toggle">
+    <input type="checkbox"  id="toggle">
     <label for="toggle">&#9776;</label>
-
+    <!--BARRA DE NAVEGACIÓN-->
     <nav class="nav">
-        <ul>
+        <ul>  
             <li><a href="nosotros.php">¿Quiénes somos?</a></li>
             <li><a href="blog.php"><i class="fa-solid fa-newspaper"></i>Blog</a></li>
             <li><a href="#"><i class="fa-solid fa-paw"></i>Deja tu huella</a>
                 <ul>
                     <li><a href="adopta.php">Adopta</a></li>
                     <li><a href="reporta.php">Reporta</a></li>
-                    <li><a href="donaciones.php">Donaciones</a></li>
+                    <li><a href="donaciones.php">Donaciones</a>
                 </ul>
             </li>
             <li><a href="contacto.php">Contacto</a></li>
-            <?php
-            session_start();
-            if (isset($_SESSION["usuario"])) {
-                echo '<li><a href="#"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
-            } else {
-                echo '<li><a href="login.php">Iniciar sesión</a></li>';
-            }
-            ?>
+            <li><a href="login.php">Iniciar sesión</a></li>
         </ul>
     </nav>
 </header>
@@ -64,7 +57,7 @@
               <h3>Método tranferencia</h3>
               <p>Tenemos estos 2 bancos disponibles para transferencias<br>     
                 BCP: 19378445869515744 <br> Scotiabank: 1874581217862</b></p>
-              <a href="#">Leer Más</a>
+              <a href="depositame.php">Leer Más</a>
           </div>
       </div>
       <div class="card economico">
