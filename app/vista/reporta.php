@@ -32,29 +32,36 @@ session_start();
 <body>
     <!--CABECERA-->
     <header>
-         <a href="../../index.php" class="logo">
-            <img src="../../img/logos/logopets.jpeg" alt="logo de la empresa" class="logo-img">
-            <h2 class="logo-nombre">Happy Pets</h2>
-        </a>
-        <input type="checkbox" id="toggle">
-        <label for="toggle">&#9776;</label>
+    <a href="../../index.php" class="logo">
+        <img src="../../img/logos/logopets.jpeg" alt="logo de la empresa" class="logo-img">
+        <h2 class="logo-nombre">Happy Pets</h2>
+    </a>
+    <input type="checkbox" id="toggle">
+    <label for="toggle">&#9776;</label>
 
-        <nav class="nav">
-            <ul>
-                <li><a href="nosotros.php">¿Quiénes somos?</a></li>
-                <li><a href="blog.php"><i class="fa-solid fa-newspaper"></i>Blog</a></li>
-                <li><a href="#"><i class="fa-solid fa-paw"></i>Deja tu huella</a>
-                    <ul>
-                        <li><a href="adopta.php">Adopta</a></li>
-                        <li><a href="reporta.php">Reporta</a></li>
-                        <li><a href="donaciones.php">Donaciones</a>
-                    </ul>
-                </li>
-                <li><a href="contacto.php">Contacto</a></li>
-                <li><a href="login.php">Iniciar sesión</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="nosotros.php">¿Quiénes somos?</a></li>
+            <li><a href="blog.php"><i class="fa-solid fa-newspaper"></i>Blog</a></li>
+            <li><a href="#"><i class="fa-solid fa-paw"></i>Deja tu huella</a>
+                <ul>
+                    <li><a href="adopta.php">Adopta</a></li>
+                    <li><a href="reporta.php">Reporta</a></li>
+                    <li><a href="donaciones.php">Donaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="contacto.php">Contacto</a></li>
+            <?php
+            session_start();
+            if (isset($_SESSION["usuario"])) {
+                echo '<li><a href="#"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
+            } else {
+                echo '<li><a href="login.php">Iniciar sesión</a></li>';
+            }
+            ?>
+        </ul>
+    </nav>
+</header>
 
 
 
