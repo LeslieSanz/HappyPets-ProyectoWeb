@@ -1,12 +1,12 @@
 <?php
 
 // conexion con la base de datos
-$host = "localhost";
+$servidor = "localhost";
 $usuario = "root";
 $contrasena = "";
-$base_de_datos = "happypets";
+$BD = "bd_happypets";
 
-$conn = new mysqli($host, $usuario, $contrasena, $base_de_datos);
+$conn = new mysqli($servidor, $usuario, $contrasena, $BD);
 
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);

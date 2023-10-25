@@ -10,13 +10,13 @@ class Usuario {
         $this->conn = $conn;
     }
 
-    public function agregarUsuario($usuario, $email, $password, $repassword) {
-        $sql = "INSERT INTO login (usuario, email, password, repassword) VALUES (?, ?, ?, ?)";
+    public function agregarUsuario($usuario, $email, $password) {
+        $sql = "INSERT INTO usuario (nombre, email, password) VALUES (?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
 
         // Verificar si la consulta preparada se ejecutó correctamente
         if ($stmt) {
-            $stmt->bind_param("ssss", $usuario, $email, $password, $repassword);
+            $stmt->bind_param("sss", $usuario, $email, $password);
             $stmt->execute();
 
             // Verificar si la inserción fue exitosa
@@ -35,7 +35,7 @@ class Usuario {
 
     // Método para validar el inicio de sesión
     public function validarLogin($usuario, $password) {
-        $stmt = $this->conn->prepare("SELECT * FROM login WHERE usuario = ? AND password = ?");
+        $stmt = $this->conn->prepare("SELECT * FROM usuario WHERE nombre = ? AND password = ?");
         $stmt->bind_param("ss", $usuario, $password);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -47,5 +47,21 @@ class Usuario {
             return null;
         }
     }
+
+    public function listarUsuarios() {
+        $usuarios = [];
+    
+        $sql = "SELECT * FROM usuario";
+        $result = $this->conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $usuarios[] = $row;
+            }
+        }
+    
+        return $usuarios;
+    }
+    
 }
 ?>

@@ -14,7 +14,6 @@
             <form method="post">
                 <h2>Registrarse</h2>
                 <?php
-                include("../config/database.php");
                 include("../controlador/usuarioControlador.php")
                 ?>
                 <div class="inputBox">
@@ -44,5 +43,7 @@
             </form>
         </div>
         </main>
+        <!-- Enlance que vincula con el js-->
+        <script src="../../js/registro.js"></script>
 </body>
 </html>
