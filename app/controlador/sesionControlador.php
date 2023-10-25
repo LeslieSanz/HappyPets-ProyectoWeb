@@ -25,7 +25,7 @@ if (!empty($_POST["usuario"])) {
             $expira = time() + (30 * 24 * 60 * 60); // Caduca en 30 días
             setcookie("cod_usu", $datosUsuario->cod_usu, $expira, "/");
             
-            header("location: ../vista/index_log.php");
+            header("location: ../../index.php");
         } else {
             echo '<div>Acceso denegado</div>';
         }

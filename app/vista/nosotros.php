@@ -32,14 +32,6 @@
                 </ul>
             </li>
             <li><a href="contacto.php">Contacto</a></li>
-            <?php
-            session_start();
-            if (isset($_SESSION["usuario"])) {
-                echo '<li><a href="#"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
-            } else {
-                echo '<li><a href="login.php">Iniciar sesión</a></li>';
-            }
-            ?>
         </ul>
     </nav>
 </header>

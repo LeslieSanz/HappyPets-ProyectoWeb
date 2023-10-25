@@ -37,7 +37,14 @@
                     </ul>
                 </li>
                 <li><a href="app/vista/contacto.php">Contacto</a></li>
-                <li><a href="app/vista/login.php">Iniciar sesión</a></li>
+                <?php
+            session_start();
+            if (isset($_SESSION["usuario"])) {
+                echo '<li><a href="#"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
+            } else {
+                echo '<li><a href="login.php">Iniciar sesión</a></li>';
+            }
+            ?>
             </ul>
         </nav>
     </header>

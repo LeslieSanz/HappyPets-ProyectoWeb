@@ -56,8 +56,10 @@
           <div class="contenido">
               <h3>Método tranferencia</h3>
               <p>Tenemos estos 2 bancos disponibles para transferencias<br>     
-                BCP: 19378445869515744 <br> Scotiabank: 1874581217862</b></p>
-              <a href="depositame.php">Leer Más</a>
+                BCP: 19378445869515744 <br> Scotiabank: 1874581217862</b>
+                Tambien contamos con pago con tarjeta de debito BBVA
+            </p>
+              <a href="depositame.php">Donación con tarjeta</a>
           </div>
       </div>
       <div class="card economico">
