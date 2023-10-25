@@ -180,30 +180,25 @@
     </section>
 
     <div class="formulario">
-      <!--<label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" /><br />-->
-
       <label for="comentario">Comentario:</label><br />
       <textarea
         id="comentario"
-        onclick="borrarTexto()"
-        onblur="restaurarTexto()"
-      >
-Escribe un comentario</textarea
+        rows="4"
+        cols="50"
+        placeholder="Escribe un comentario"
+      ></textarea
       ><br />
-
       <button onclick="agregarComentario()">Enviar</button>
     </div>
-    <div class="comentarios">
-      <!-- Aquí se mostrarán los comentarios -->
-    </div>
+    <div class="comentarios" id="comentarios"></div>
+
     <!--script de movimiento-->
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
-    <script src="../js/noticias.js"></script>
+    <script src="../js/post-pagina.js"></script>
 
     <!--PIE DE PAGINA-->
     <footer class="pie-pagina">
