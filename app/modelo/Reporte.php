@@ -14,11 +14,6 @@ class Reporte {
         $this->conn = $conn;
     }
 
-
-
-
-    
-
     //CRUD
     public function codigoAnimal($especie, $foto){
          
