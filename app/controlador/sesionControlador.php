@@ -21,9 +21,32 @@ if (!empty($_POST["usuario"])) {
             $_SESSION["usuario"] = $datosUsuario->nombre;
             $_SESSION["email"] = $datosUsuario->email;
             $_SESSION["password"] = $datosUsuario->password;
+            // Establecer una cookie que mantenga al usuario autenticado por un cierto tiempo
+            $expira = time() + (30 * 24 * 60 * 60); // Caduca en 30 días
+            setcookie("cod_usu", $datosUsuario->cod_usu, $expira, "/");
+            
             header("location: ../vista/index_log.php");
         } else {
             echo '<div>Acceso denegado</div>';
         }
+    }
+
+
+}
+
+//Controla si hay un logeo activo mediante cookies
+if (isset($_COOKIE["cod_usu"]) && !isset($_SESSION["usuario"])) {
+    $cod_usu = $_COOKIE["cod_usu"];
+
+    // Crear una instancia de Usuario con la conexión a la base de datos
+    $usuarioObj = new Usuario($conn);
+
+    // Obtener los datos del usuario utilizando el $codusu
+    $datosUsuario = $usuarioObj->obtenerUsuarioPorCodUsu($cod_usu);
+
+    if ($datosUsuario) {
+        $_SESSION["usuario"] = $datosUsuario->nombre;
+        $_SESSION["email"] = $datosUsuario->email;
+        $_SESSION["password"] = $datosUsuario->password;
     }
 }
