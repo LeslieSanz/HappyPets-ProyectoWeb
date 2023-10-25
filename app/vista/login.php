@@ -14,7 +14,7 @@
                 <h2>Iniciar sesión</h2>
                 <?php
                 include("../config/database.php");
-                include("../controlador/usuarioControlador.php")
+                include("../controlador/sesionControlador.php")
                 ?>
                 <div class="inputBox">
                     <input id="usuario" type="text" required="required" name="usuario">
