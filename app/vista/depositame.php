@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Depositame</title>
     <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../css/depositame.css">
+	<link rel="stylesheet" href="../../css/depositame.css">
 </head>
 <body>
     <div class="contenedor">
@@ -14,7 +14,7 @@
                 <div class="logo-marca" id="logo-marca">
                     
                 </div>
-                <img src="../img/tarjeta/chip-tarjeta.png" class="chip" alt="">
+                <img src="../../img/tarjeta/chip-tarjeta.png" class="chip" alt="">
                 <div class="datos">
                     <div class="grupo" id="numero">
                         <p class="label">Número Tarjeta</p>
@@ -101,12 +101,12 @@
             
             <button type="submit" class="btn-enviar" href="../html/donaciones.html">Enviar</button>
             <div class="regresar">
-                <a href="../html/donaciones.html">regresar</a>
+                <a href="donaciones.php">regresar</a>
             </div>
         </form>
     </div>
 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script src="../js/depositame.js"></script>
+	<script src="../../js/depositame.js"></script>
 </body>
 </html>

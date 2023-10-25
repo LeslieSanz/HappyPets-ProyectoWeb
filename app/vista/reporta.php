@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,29 +27,36 @@
 <body>
     <!--CABECERA-->
     <header>
-         <a href="../../index.php" class="logo">
-            <img src="../../img/logos/logopets.jpeg" alt="logo de la empresa" class="logo-img">
-            <h2 class="logo-nombre">Happy Pets</h2>
-        </a>
-        <input type="checkbox" id="toggle">
-        <label for="toggle">&#9776;</label>
+    <a href="../../index.php" class="logo">
+        <img src="../../img/logos/logopets.jpeg" alt="logo de la empresa" class="logo-img">
+        <h2 class="logo-nombre">Happy Pets</h2>
+    </a>
+    <input type="checkbox" id="toggle">
+    <label for="toggle">&#9776;</label>
 
-        <nav class="nav">
-            <ul>
-                <li><a href="nosotros.php">¿Quiénes somos?</a></li>
-                <li><a href="blog.php"><i class="fa-solid fa-newspaper"></i>Blog</a></li>
-                <li><a href="#"><i class="fa-solid fa-paw"></i>Deja tu huella</a>
-                    <ul>
-                        <li><a href="adopta.php">Adopta</a></li>
-                        <li><a href="reporta.php">Reporta</a></li>
-                        <li><a href="donaciones.php">Donaciones</a>
-                    </ul>
-                </li>
-                <li><a href="contacto.php">Contacto</a></li>
-                <li><a href="login.php">Iniciar sesión</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="nosotros.php">¿Quiénes somos?</a></li>
+            <li><a href="blog.php"><i class="fa-solid fa-newspaper"></i>Blog</a></li>
+            <li><a href="#"><i class="fa-solid fa-paw"></i>Deja tu huella</a>
+                <ul>
+                    <li><a href="adopta.php">Adopta</a></li>
+                    <li><a href="reporta.php">Reporta</a></li>
+                    <li><a href="donaciones.php">Donaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="contacto.php">Contacto</a></li>
+            <?php
+            session_start();
+            if (isset($_SESSION["usuario"])) {
+                echo '<li><a href="#"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
+            } else {
+                echo '<li><a href="login.php">Iniciar sesión</a></li>';
+            }
+            ?>
+        </ul>
+    </nav>
+</header>
 
 
 
@@ -57,7 +65,7 @@
     <section class="section-banner">
         <h1>
             Los peluditos te necesitan <br />
-            Sé su voz, reporta. SI ves esto, esto es una prueba
+            Sé su voz, reporta.
         </h1>
 
         <button id="BotonBanner">¡Reporta!</button>
@@ -449,34 +457,6 @@
             <form method="post" action="../controlador/reporteControlador.php">
 
                 <div class="form-flex">
-                    <div class="section-formulario__div--form1">
-                        <h2>Información de contacto</h2>
-                        <div class="form-container1">
-
-
-                            <div class="nombre-div">
-                                <label for="nombres-apellidos">Nombres y Apellidos</label>
-                                <input type="text" class="form-text" name="nombres-apellidos"
-                                    value="Ingrese nombres y apellidos" oninput="cambiarColor(this)"
-                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)">
-                            </div>
-
-                            <div class="celular-div">
-                                <label for="celular">Celular</label>
-                                <input type="text" class="form-text" name="celular" oninput="cambiarColor(this)"
-                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)"
-                                    value="Ingrese su telefono(opcional)">
-
-                            </div>
-
-                            <div class="correo-div">
-                                <label for="correo">Correo</label>
-                                <input type="email" class="form-text" name="correo" oninput="cambiarColor(this)"
-                                    onfocus="borrarTexto(this)" onblur="restaurarTexto(this)"
-                                    value="Ingrese su correo electronico" required>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="section-formulario__div--form2">
                         <h2>Información del Animal</h2>
@@ -487,7 +467,7 @@
                                 <label for="especie">Especie del Animal Encontrado</label>
 
                                 <select id="animal" name="animal" onchange="mostrarCampoTexto()">
-                                    <option value="gato">Ingrese especie</option>
+                                    <option value="ingreseEspecie">Ingrese especie</option>
                                     <option value="gato">Felino</option>
                                     <option value="perro">Canino</option>
                                     <option value="otro">Otro</option>

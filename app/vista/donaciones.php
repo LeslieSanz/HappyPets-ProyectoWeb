@@ -8,11 +8,11 @@
     <link rel="stylesheet" type="text/css" href="../../css/styleDona.css" />
     <link rel="stylesheet"   href="../../css/header.css" />
     <link rel="stylesheet"   href="../../css/footer.css" />
-    <script src="../../js/donaciones.js"></script>
     <script
       src="https://kit.fontawesome.com/09bca36bc3.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../../js/donaciones.js"></script>
    
   </head>
   <body>
@@ -57,7 +57,7 @@
               <h3>Método tranferencia</h3>
               <p>Tenemos estos 2 bancos disponibles para transferencias<br>     
                 BCP: 19378445869515744 <br> Scotiabank: 1874581217862</b></p>
-              <a href="#">Leer Más</a>
+              <a href="depositame.php">Leer Más</a>
           </div>
       </div>
       <div class="card economico">

@@ -33,6 +33,22 @@ class Usuario {
         }
     }
 
+        // Método para obtenerUsuarioPorCodigoDeUsuario
+    public function obtenerUsuarioPorCodUsu($cod_usu) {
+        $stmt = $this->conn->prepare("SELECT * FROM usuario WHERE cod_usu = ?");
+        $stmt->bind_param("s", $cod_usu);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $usuario = $result->fetch_object();
+            return $usuario;
+        } else {
+            return null;
+        }
+    }
+
+    
     // Método para validar el inicio de sesión
     public function validarLogin($usuario, $password) {
         $stmt = $this->conn->prepare("SELECT * FROM usuario WHERE nombre = ? AND password = ?");
