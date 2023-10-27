@@ -8,12 +8,14 @@
 	<link rel="stylesheet" href="../../css/depositame.css">
 </head>
 <body>
+    
     <div class="contenedor">
         <section class="tarjeta" id="tarjeta">
             <div class="delantera">
                 <div class="logo-marca" id="logo-marca">
                     
                 </div>
+
                 <img src="../../img/tarjeta/chip-tarjeta.png" class="chip" alt="">
                 <div class="datos">
                     <div class="grupo" id="numero">
@@ -32,6 +34,10 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
             </div>
 
             <div class="trasera">

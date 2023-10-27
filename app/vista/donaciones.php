@@ -52,117 +52,175 @@
         </h1>
 
     </section>
+    <section class="but">
+        <p>Filtros:</p>
+        <div class="container-filtro">
+            <div class="boton-arriba">
+                <button class="btn" type="button" onclick="mostrarTodos()">Mostrar Todos</button>
+                <button class="btn" type="button" onclick="mostrarEconomico()">Apoyo Economico</button>
+            </div>
 
-
-
-
-
-<section class="but">
-  <button class="btn" type="button" onclick="mostrarTodos()">Mostrar Todos</button>
-  <button class="btn" type="button" onclick="mostrarEconomico()">Apoyo Economico</button>
-  <button class="btn" type="button" onclick="mostrarAlimentos()">Apoyo Alimentos</button>
-  <button class="btn" type="button" onclick="mostrarArticulos()">Apoyo Articulos</button>
-  </section>
-  <section>
-      <div class="container">
-      <div class="card economico">
-          <figure>
-              <img src="../../img/dona-img/transfe.png">
-          </figure>
-          <div class="contenido">
-              <h3>Método tranferencia</h3>
-              <p>Tenemos estos 2 bancos disponibles para transferencias<br>     
-                BCP: 19378445869515744 <br> Scotiabank: 1874581217862</b>
-                Tambien contamos con pago con tarjeta de debito BBVA
-            </p>
-              <a href="depositame.php">Donación con tarjeta</a>
-          </div>
-      </div>
-      <div class="card economico">
-          <figure>
-              <img src="../../img/dona-img/yape.png">
-          </figure>
-          <div class="contenido">
-              <h3>Método yape</h3>
-              <p>Contamos con Yape, la billetera digital más utilizada en Perú esperando
-                por tu donación</p>
-              <a href="#">Leer Más</a>
-          </div>
-      </div>
-      <div class="card economico">
-          <figure>
-              <img src="../../img/dona-img/plin.png">
-          </figure>
-          <div class="contenido">
-              <h3>Método Plin</h3>
-              <p>Por último, pero no menos importante ¡Plin!, la segunda billetera
-                digital más usada del Perú.</p>
-              <a href="#">Leer Más</a>
-          </div>
-      </div>
-  </div></section>
-  <section><div class="container">
-      <div class="card alimentos">
-          <figure>
-              <img src="../../img/dona-img/donaComida.jpg">
-          </figure>
-          <div class="contenido">
-              <h3>Apoyo con alimentos</h3>
-              <p>Aceptamos alimentos para mascotas, esta sería de gran ayuda para
-                las mascotas que tenemos si no puedes ayudar adoptando o con
-                dinero, este metodo siempre es importante para que nuestros
-                animales puedan alimentarse. Para donar escribe al <b>+51 963 029 680</b>.</p>
-              <a href="#">Leer Más</a>
-          </div>
-      </div>
-
-      <div class="card alimentos">
-        <figure>
-            <img src="../../img/dona-img/alimentosDonaciones.PNG">
-        </figure>
-        <div class="contenido">
-          <h3>Apoyo con alimentos</h3>
-          <p>
-            Algunos alimentos que se pueden donar son los siguientes: <br>
-            1. Alimentos secos para perros y gatos. <br>
-            2. Alimentos húmedos para perros y gatos. <br>
-            3. Comida para cachorros o gatitos. <br> 
-          </p>
+            <div class="boton-abajo">
+                <button class="btn" type="button" onclick="mostrarAlimentos()">Apoyo Alimentos</button>
+                <button class="btn" type="button" onclick="mostrarArticulos()">Apoyo Articulos</button>
+            </div>
         </div>
-    </div>
+    </section>
 
-  </div></section>
-  <section><div class="container">
-      <div class="card articulos">
-          <figure>
-              <img src="../../img/dona-img/donaArticulos.jpg">
-          </figure>
-          <div class="contenido">
-              <h3>Apoyo con articulos</h3>
-              <p>Cualquier tipo de objeto que pueda tener en su casa sin que los
-                usen sus mascotas, vienen de gran ayuda para las mascotas que
-                tenemos en el refugio. Entre los objetos a preferencia son: Camas,
-                rascadores, platos de alimentos o juguetes. Para donar escribe al
-                <b>+51 963 029 680</b></p>
-              <a href="#">Leer Más</a>
-          </div>
-      </div>
-      <div class="card articulos">
-        <figure>
-          <img src="../../img/dona-img/gatoArticulo.PNG">
-      </figure>
-        <div class="contenido">
-            <h3>Apoyo con articulos</h3>
-            <p>
-                Algunos articulos que se pueden donar son los siguientes: <br>
-                1. Juguetes: Como pelotas, cuerdas y juguetes interactivos. <br>
-                2. Ropa y mantas: Mantas, suéteres y abrigos para mascotas pueden ser donados para ayudar a mantener a las mascotas clientes y cómodas. <br>
-                3. Productos de aseo: Champús, cepillos, peines y otros productos de aseo pueden ayudar a mantener a las mascotas limpias y saludables. <br>
-            </p>
+    <section class=section-economico>
+        <div class="container">
+            <h2>Apoyo Economico</h2>
+
+            <div class="container-section">
+
+                <div class="card economico">
+
+                    <div class="card-centro">
+                        <figure class="img-pequeño">
+                            <img id="card-transfe" src="../../img/dona-img/transfe.png">
+                        </figure>
+
+                        <div class="conte">
+                            <div class="contenido">
+                                <h3>Método tranferencia</h3>
+                                <p>Tenemos estos 2 bancos disponibles para transferencias<br>
+                                    BCP: 19378445869515744 <br> Scotiabank: 1874581217862</b></p>
+                                <a href="depositame.php">Leer Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card economico">
+
+                    <div class="card-centro">
+                        <figure id="card-yape">
+                            <img src="../../img/dona-img/yape.png">
+                        </figure>
+
+                        <div class="conte">
+                            <div class="contenido">
+                                <h3>Método yape</h3>
+                                <p>Contamos con Yape, la billetera digital más utilizada en Perú esperando
+                                    por tu donación</p>
+                                <a href="#">Leer Más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card economico">
+
+                    <div class="card-centro">
+
+                        <figure id="card-plin" class="img-pequeño">
+                            <img src="../../img/dona-img/plin.png">
+                        </figure>
+
+                        <div class="conte">
+                            <div class="contenido">
+                                <h3>Método Plin</h3>
+                                <p>Por último, pero no menos importante ¡Plin!, la segunda billetera
+                                    digital más usada del Perú.</p>
+                                <a href="#">Leer Más</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
         </div>
-    </div>
-  </div></section>
-  
+    </section>
+
+
+
+    <section class=section-alimentos>
+        <div class="container">
+            <h2>Apoyo Alimentos</h2>
+            <div class="container-section">
+
+                <div class="card alimentos">
+                    <figure>
+                        <img src="../../img/dona-img/donaComida.jpg">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Apoyo con alimentos</h3>
+                        <p>Aceptamos alimentos para mascotas, esta sería de gran ayuda para
+                            las mascotas que tenemos si no puedes ayudar adoptando o con
+                            dinero, este metodo siempre es importante para que nuestros
+                            animales puedan alimentarse. Para donar escribe al <b>+51 963 029 680</b>.</p>
+                        <a href="#">Leer Más</a>
+                    </div>
+                </div>
+
+                <div class="card alimentos">
+                    <figure>
+                        <img src="../../img/dona-img/alimentosDonaciones.PNG">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Apoyo con alimentos</h3>
+                        <p>
+                            Algunos alimentos que se pueden donar son los siguientes: <br>
+                            1. Alimentos secos para perros y gatos. <br>
+                            2. Alimentos húmedos para perros y gatos. <br>
+                            3. Comida para cachorros o gatitos. <br>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class=" section-articulos">
+        <div class="container">
+            <h2>Apoyo Articulos</h2>
+            <div class="container-section">
+
+                <div class="card articulos">
+
+                    <figure>
+                        <img src="../../img/dona-img/donaArticulos.jpg">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Apoyo con articulos</h3>
+                        <p>Cualquier tipo de objeto que pueda tener en su casa sin que los
+                            usen sus mascotas, vienen de gran ayuda para las mascotas que
+                            tenemos en el refugio. Entre los objetos a preferencia son: Camas,
+                            rascadores, platos de alimentos o juguetes. Para donar escribe al
+                            <b>+51 963 029 680</b>
+                        </p>
+                        <a href="#">Leer Más</a>
+                    </div>
+                </div>
+                <div class="card articulos">
+                    <figure>
+                        <img src="../../img/dona-img/gatoArticulo.PNG">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Apoyo con articulos</h3>
+                        <p>
+                            Algunos articulos que se pueden donar son los siguientes: <br>
+                            1. Juguetes: Como pelotas, cuerdas y juguetes interactivos. <br>
+                            2. Ropa y mantas: Mantas, suéteres y abrigos para mascotas pueden ser donados para ayudar a
+                            mantener a las mascotas clientes y cómodas. <br>
+                            3. Productos de aseo: Champús, cepillos, peines y otros productos de aseo pueden ayudar a
+                            mantener a las mascotas limpias y saludables. <br>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    
     <!--PIE DE PAGINA-->
 
     <footer class="pie-pagina">

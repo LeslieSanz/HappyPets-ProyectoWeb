@@ -1,3 +1,4 @@
+/* -------------------------------------------------------------------------------- */
 /* Estilos para el banner */
 .section-banner {
   position: relative;
@@ -12,17 +13,78 @@
   background-image: linear-gradient(0deg,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)),
-    url(../img/reporta-img/gatoReportar.avif);
+    url(../img/dona-img/banner.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
-/* Estilos para el apyo economico */
+
+/* ------------------------------------------------------------------------------- */
+/* Estilos para los filtros */
+section.but {
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* contenedor de bloques de 2 botones */
+.container-filtro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* contenedor de los botones de arriba */
+
+.boton-arriba {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+/* contenedor de los botones de abajo */
+.boton-abajo {
+  display: flex;
+}
+
+/* Est ilos para los botones de los filtros */
+section .btn {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  padding: 9px 25px;
+  background: rgb(245, 183, 26);
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+
+section .btn:hover {
+  background: rgb(252, 207, 110);
+}
+
+
+/* ------------------------------------------------------------------------------- */
+
+/* Estilos para el apoyo economico */
 section .container-section {
   width: 100%;
   display: flex;
   max-width: 1100px;
+  justify-content: center;
+
+  /* PARA QUE NO SE GENERE MARGENES  */
+  margin: 0 auto;
 }
 
 /* Estilos para h2 del container */
@@ -102,52 +164,7 @@ section .card .contenido a:hover {
 }
 
 
-/* Estilos para los filtros */
-section.but {
-  width: 100%;
-  height: 10vh;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
 
-/* contenedor de bloques de 2 botones */
-.container-filtro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* contenedor de los botones de arriba */
-
-.boton-arriba {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  margin: 0 auto;
-}
-
-/* contenedor de los botones de abajo */
-.boton-abajo {
-  display: flex;
-}
-
-/* Est ilos para los botones de los filtros */
-section .btn {
-  margin-left: 10px;
-  margin-right: 10px;
-  border: none;
-  outline: none;
-  padding: 9px 25px;
-  background: rgb(245, 183, 26);
-  cursor: pointer;
-  font-size: 0.9em;
-  border-radius: 4px;
-  font-weight: 600;
-}
 
 
 section .btn:hover {
@@ -249,7 +266,7 @@ section {
   }
 
   #card-transfe {
-    width: 290px;
+    width: 190px;
   }
 
   .conte {
@@ -278,6 +295,8 @@ section {
   #card-yape {
     width: 100%;
   }
+
+
 
 
 
