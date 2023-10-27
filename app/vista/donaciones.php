@@ -41,6 +41,22 @@
         </ul>
     </nav>
 </header>
+
+
+    <!-- PARTE DEL BANNNER-->
+
+    <section class="section-banner">
+        <h1>
+            Dona a los que más <br />
+            lo necesitan
+        </h1>
+
+    </section>
+
+
+
+
+
 <section class="but">
   <button class="btn" type="button" onclick="mostrarTodos()">Mostrar Todos</button>
   <button class="btn" type="button" onclick="mostrarEconomico()">Apoyo Economico</button>
