@@ -288,6 +288,10 @@ section {
     margin: 0px auto;
   }
 
+  .container-filtro {
+    display: block;
+  }
+
   #card-plin {
     width: 100%;
   }
