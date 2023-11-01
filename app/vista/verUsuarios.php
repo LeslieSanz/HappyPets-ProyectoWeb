@@ -1,6 +1,6 @@
 <!--verUsuarios.php-->
 <?php
-require_once __DIR__ . '/../controlador/usuarioControlador.php';
+require_once __DIR__ . '/../controlador/animalControlador.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -8,27 +8,26 @@ require_once __DIR__ . '/../controlador/usuarioControlador.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuarios</title>
+    <link   rel="stylesheet" href="../../css/styleAdopta.css"/>
 </head>
 <body>
-    <h1>Lista de Usuarios</h1>
-    <table border='1'>
-        <thead>
-            <tr>
-                <th>Usuario</th>
-                <th>Email</th>
-                <th>Password</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($usuarios as $usuario): ?>
-                <tr>
-                    <td><?php echo $usuario['nombre']; ?></td>
-                    <td><?php echo $usuario['email']; ?></td>
-                    <td><?php echo $usuario['password']; ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-</table>
-
+        <section class="container">
+                <div class="card-container">
+                    <?php foreach ($animales as $animal): ?>
+                    <div class="card">
+                        <figure>
+                        <?php
+                        echo "<img src='/HappyPets-ProyectoWeb/uploads/" . $animal['foto'] . "' alt='Imagen'><br>";
+                        ?>
+                        </figure>
+                        <div class="contenido">
+                            <h3><?php echo $animal['cod_ani']; ?></h3>
+                            <p><?php echo $animal['especie']; ?></p>
+                            <a href="#">Leer Más</a>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+        </section>
 </body>
 </html>

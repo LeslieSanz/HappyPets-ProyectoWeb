@@ -14,7 +14,7 @@ if (isset($_POST["enviarDatosForm"])) {
         strlen($_POST['direccion']) >= 1 &&
         strlen($_POST['referencia']) >= 1 &&
         strlen($_POST['info-adicional']) >= 1 &&
-        strlen($_POST['foto-animal']) >= 1
+        isset($_FILES["foto-animal"]) && $_FILES["foto-animal"]["error"] == 0 
     ) {
 
         
@@ -31,13 +31,16 @@ if (isset($_POST["enviarDatosForm"])) {
         $direccion = $_POST["direccion"];
         $referencia = $_POST["referencia"];
         $infoAdicional = $_POST["info-adicional"];
-        $fotoAnimal = $_POST["foto-animal"];
+        
+        // Ruta donde se almacenará la imagen
+        $rutaImagen =   '../../uploads/' . basename($_FILES["foto-animal"]["name"]);
+        $fotoAnimal = basename($_FILES["foto-animal"]["name"]);
 
         // Crear una instancia de Reporte con los datos del formulario
         $reporte = new Reporte($conn);
 
-        // Intentar agregar el reporte a la base de datos
-        if ($reporte->agregarReporte($animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal)) {
+        // Intentar agregar el reporte a la base de datos y mover la imagen del directorio temporal al directorio final
+        if (move_uploaded_file($_FILES["foto-animal"]["tmp_name"], $rutaImagen ) && $reporte->agregarReporte($animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal)) {
             // Reporte registrado exitosamente, redirigir a una página princial que es index
             header("Location: ../../index.php");
             exit();

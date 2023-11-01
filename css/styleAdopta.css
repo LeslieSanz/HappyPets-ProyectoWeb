@@ -1,26 +1,28 @@
-  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
   .container {
     max-width:1170px;
     margin: auto;
     position: relative;
-    margin-top: 70px;
   }
+
   .row {
     display: flex;
     flex-wrap: wrap;
   }
-  ul {
-    list-style: none;
-  }
-  
+
   section .container {
     width: 100%;
     display: flex;
     max-width: 1100px;
   }
   section .card {
-    width: 100%;
-    margin: 20px;
+    width: calc(33.3333% - 20px); /* Ajusta el ancho de la tarjeta según el 33.3333% del contenedor menos el espacio entre las tarjetas (20px) */
+    margin: 10px;
     border-radius: 6px;
     overflow: hidden;
     background: #fff;
@@ -45,7 +47,7 @@
     color: #6a6a6a;
   }
   section .card .contenido h3 {
-    font-weight: 400;
+    font-weight: bold;
     margin-bottom: 15px;
   }
   section .card .contenido a {
@@ -62,56 +64,73 @@
     background: #2fb4cc;
     color: #fff;
   }
-section.but{
-  width: 100%;
-  height: 25vh;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-section .btn{
-  margin-right:40px;
-  border: none;
-  outline: none;
-  padding: 9px 25px;
-  background: rgb(245, 183, 26);
-  cursor: pointer;
-  font-size: 0.9em;
-  border-radius: 4px;
-  font-weight: 600;
-}
 
-section .btn:hover{
-  background: rgb(252, 207, 110);
-}
-
-main{
-  background-image: url(../img/adopta-img/gozu.jpg);
-}
-
-section {
-  background: transparent;
-}
-
-@media (max-width: 945px) {
-  section .container {
-    display: block; /* Cambiar de flex a bloque para que las tarjetas se apilen verticalmente */
-    max-width: 100vh 10%; /* Quitar el ancho máximo para que las tarjetas ocupen el ancho completo del contenedor */
-    margin: 0; /* Quitar el margen para aprovechar al máximo el espacio */
-    left: 100vh 10%;
+  section .btn{
+    margin-right:40px;
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: rgb(245, 183, 26);
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
   }
 
-  section.but{
-    width: 100%;
-    height: 40vh;
+  section .btn:hover{
+    background: rgb(252, 207, 110);
+  }
+
+  main{
+    background-image: url(../img/adopta-img/gozu.jpg);
+  }
+
+  section {
+    background: transparent;
+  }
+
+  section.filtros-busqueda{
+    position: relative;
     display: flex;
-    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
   }
 
-  section .card {
-    width: 60%;
-    margin: 10px auto; /* Asegurarse de que cada tarjeta ocupe el ancho completo del contenedor */
+  .filtros-busqueda form {
+      display: flex;
+      align-items: center;
   }
 
-}
+  .filtros-busqueda .filtro {
+      margin-right: 20px; /* Ajusta el espacio entre los filtros */
+  }
+
+  .resultados-mensaje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  @media (max-width: 945px) {
+    section .container {
+      display: block; /* Cambiar de flex a bloque para que las tarjetas se apilen verticalmente */
+      max-width: 100vh 10%; /* Quitar el ancho máximo para que las tarjetas ocupen el ancho completo del contenedor */
+      margin: 0; /* Quitar el margen para aprovechar al máximo el espacio */
+      left: 100vh 10%;
+    }
+
+    section.but{
+      width: 100%;
+      height: 40vh;
+      display: flex;
+      padding: 10px;
+    }
+
+    section .card {
+      width: 60%;
+      margin: 10px auto; /* Asegurarse de que cada tarjeta ocupe el ancho completo del contenedor */
+    }
+
+  }

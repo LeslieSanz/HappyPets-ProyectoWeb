@@ -454,7 +454,8 @@
         <div class="section-formulario__div--container2">
             <h1>Formulario de Reporte</h1>
 
-            <form method="post" action="../controlador/reporteControlador.php">
+            <form method="post" action="../controlador/reporteControlador.php" enctype="multipart/form-data">
+                <!--el enctype es para subir archivos-->
 
                 <div class="form-flex">
 
