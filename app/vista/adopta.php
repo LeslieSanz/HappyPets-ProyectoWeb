@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../controlador/animalControlador.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,6 +72,7 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
                         <option value="todos">Todos</option>
                         <option value="pequeño">Pequeño</option>
                         <option value="mediano">Mediano</option>
+                        <option value="grande">Grande</option>
                     </select>
                 </div>
                 <div class="filtro">

@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Registro de animales en adopcion</h1>
-    <form action="../controlador/animalControlador.php" method="post" enctype="multipart/form-data">
+    <form action="../../controlador/animalControlador.php" method="post" enctype="multipart/form-data">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required><br><br>
 
