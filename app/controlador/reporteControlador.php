@@ -50,9 +50,6 @@ if (isset($_POST["enviarDatosForm"])) {
             exit();
         }
 
-
-
-
     }else{
         echo"Error";
     }

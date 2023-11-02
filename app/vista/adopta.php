@@ -75,6 +75,17 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
                         <option value="mediano">Mediano</option>
                     </select>
                 </div>
+                <div class="filtro">
+                    <label for="edad-animal">Edad:</label>
+                    <select id="edad-animal" name="edad-animal">
+                        <option value="todos">Todos</option>
+                        <option value="0-6 meses">0 a 6 meses</option>
+                        <option value="6-12 meses">6 a 12 meses</option>
+                        <option value="1-2 años">1 a 2 años</option>
+                        <option value="2-4 años">2 a 4 años</option>
+                        <option value="Más de 4 años">Más de 4 años</option>
+                    </select>
+                </div>
                 <button type="submit" name= "enviar" >Buscar</button>
             </form>
         </section>
@@ -82,7 +93,13 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
         
         <!-- En la sección de resultados... -->
         <div class="resultados-mensaje">
-            <?php echo $mensajeResultados; ?>
+            <?php 
+            if (!empty($animales)) {
+                echo $mensajeResultados; 
+            } else {
+                echo $mensajeResultados; 
+                echo 'No se encontraron resultados para la busqueda';
+            }?>
         </div>
 
 
@@ -97,7 +114,14 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
                         </figure>
                         <div class="contenido">
                             <h3><?php echo $animal['nombre']; ?></h3>
-                            <p><?php echo $animal['sexo'] . ', ' . $animal['edad'] . '. De tamaño ' . $animal['tamano'] . '. ' . $animal['caracteristicas']; ?></p>
+                            <?php
+                            // Obtener las palabras de la descripción
+                            $palabras = explode(' ', $animal['caracteristicas']);
+                            
+                            // Limitar la cantidad de palabras a mostrar (por ejemplo, 20 palabras)
+                            $caracteristicasLimitadas = implode(' ', array_slice($palabras, 0, 20));
+                            ?>
+                            <p><?php echo $animal['sexo'] . ', de tamaño ' . $animal['tamano'] . '. ' . $caracteristicasLimitadas . '...'; ?></p>
                             <a href="#">Leer Más</a>
                         </div>
                     </div>
