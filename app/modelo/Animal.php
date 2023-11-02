@@ -32,6 +32,22 @@ class Animal {
         }
     }
 
+    public function listarUnAnimal($codigo){
+        $animal = null;
+    
+        // Preparar la consulta SQL con un parámetro
+        $stmt = $this->conn->prepare("SELECT * FROM animal_adopta WHERE cod_aniAdo = ?");
+        $stmt->bind_param("i", $codigo); // "i" indica que el parámetro es un entero
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if ($result->num_rows > 0) {
+            $animal = $result->fetch_assoc();
+        }
+    
+        return $animal;
+    }
+
     public function listarAnimales() {
         $animales = [];
     

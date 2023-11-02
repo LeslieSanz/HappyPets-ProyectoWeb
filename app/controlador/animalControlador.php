@@ -96,5 +96,19 @@ if (isset($_POST["enviar"])) {
     }
 }
 
+if (isset($_GET["codigo"])) { //Verifica que haya un codigo en la URL de animal_adopta
+    // Guardar la parte del código que está en la URL de animal_adopta y almacenarla en una variable
+    $codigoAnimal = $_GET["codigo"];
+    //Buscar los datos del animal con ese codigo
+    $animalDetalles = $animalDAO->listarUnAnimal($codigoAnimal);
+
+    if (!empty($animalDetalles)) {
+        echo "Vamos bien: $codigoAnimal";
+    } else {
+        echo "No se encontró info para el animal con el código: $codigoAnimal";
+    }
+}
+
+
 
 ?>
