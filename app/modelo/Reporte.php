@@ -19,7 +19,7 @@ class Reporte {
          
         $cod_ani = "";
         
-        $sql = "SELECT cod_ani FROM animal WHERE especie = ? AND foto = ?";
+        $sql = "SELECT cod_ani FROM animal_reporta WHERE especie = ? AND foto = ?";
         $stmt = $this->conn->prepare($sql);
 
         
@@ -85,7 +85,7 @@ class Reporte {
 
         
         
-        $sql = "INSERT INTO animal (especie, foto) VALUES (?, ?)";
+        $sql = "INSERT INTO animal_reporta (especie, foto) VALUES (?, ?)";
         $stmt = $this->conn->prepare($sql);//stmt = statement
 
 
