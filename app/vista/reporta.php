@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../controlador/animalControlador.php';
+require_once __DIR__ . '/../controlador/reporteControlador.php';
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +50,6 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
             </li>
             <li><a href="contacto.php">Contacto</a></li>
             <?php
-            session_start();
             if (isset($_SESSION["usuario"])) {
                 echo '<li><a href="#"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
             } else {
@@ -83,15 +82,17 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
 
         <div class="container">
 
-        <?php foreach ($animales as $animal): ?>
+        <?php foreach ($animales_reporte as $animal): ?>
                 <div class="swiper-container mySwiper">
                 
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="../../img/reporta-img/1.jpg">
+                            <?php
+                        echo "<img src='/HappyPets-ProyectoWeb/uploads/" . $animal['foto'] . "' alt='Imagen'><br>";
+                        ?>
                             <div class="cardDescription">
                                 <div class="card-title">
-                                    <h4><?php echo $animal['nombre']; ?></h4>
+                                    <h4><?php echo $animal['especie'] . " encontrado"; ?></h4>
                                 </div>
                                 <div class="card-text">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
@@ -104,7 +105,7 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
                             </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
+        <?php endforeach; ?>
 
             <!-- <div class="swiper-container mySwiper">
 

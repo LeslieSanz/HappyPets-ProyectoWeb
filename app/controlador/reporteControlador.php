@@ -1,9 +1,20 @@
 <?php
-
 session_start();
 
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Reporte.php';
+
+
+//Controlar mostrar usuarios
+$animal_reporteDAO = new Reporte($conn); // Suponiendo que $conn es tu conexión a la base de datos
+
+// Obtener la lista de usuarios
+$animales_reporte = $animal_reporteDAO->listarAnimalesReporta();
+$mensajeResultados='';
+
+
+
+
 
 if (isset($_POST["enviarDatosForm"])) {
 
@@ -35,6 +46,9 @@ if (isset($_POST["enviarDatosForm"])) {
         // Ruta donde se almacenará la imagen
         $rutaImagen =   '../../uploads/' . basename($_FILES["foto-animal"]["name"]);
         $fotoAnimal = basename($_FILES["foto-animal"]["name"]);
+
+
+
 
         // Crear una instancia de Reporte con los datos del formulario
         $reporte = new Reporte($conn);

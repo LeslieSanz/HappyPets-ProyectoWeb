@@ -14,6 +14,8 @@ class Reporte {
         $this->conn = $conn;
     }
 
+
+
     //CRUD
     public function codigoAnimal($especie, $foto){
          
@@ -46,6 +48,9 @@ class Reporte {
         return $cod_ani;
 
     }
+
+
+
 
     public function codigoUsuario($nombre, $email){
          
@@ -122,6 +127,21 @@ class Reporte {
         } else {
             return false; // Error al preparar la consulta
         }
+    }
+
+    public function listarAnimalesReporta() {
+        $animales_reporte = [];
+    
+        $sql = "SELECT * FROM animal_reporta";
+        $result = $this->conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $animales_reporte[] = $row;
+            }
+        }
+    
+        return $animales_reporte;
     }
 
 
