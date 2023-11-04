@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulario Adopcion</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="form">
+      <div class="form-container">
+        <!-- Barra lateral progresiva -->
+        <div class="form-sidebar">
+          <div class="step active">
+            <div class="circle">1</div>
+            <div class="step-content">
+              <span>Paso 1</span>
+              <b>Datos personales</b>
+            </div>
+          </div>
+          <div class="step">
+            <div class="circle">2</div>
+            <div class="step-content">
+              <span>Paso 2</span>
+              <b>Requisitos</b>
+            </div>
+          </div>
+          <div class="step">
+            <div class="circle">3</div>
+            <div class="step-content">
+              <span>Paso 3</span>
+              <b>Llena tu solicitud</b>
+            </div>
+          </div>
+          <div class="step">
+            <div class="circle">4</div>
+            <div class="step-content">
+              <span>Paso 4</span>
+              <b>Confirmación</b>
+            </div>
+          </div>
+        </div>
+        <!-- Fin de la barra lateral -->
+        <!-- Inicio del paso 1 -->
+        <div class="stp step-1">
+          <div class="header">
+            <h1 class="title">Confirma o actualiza tus datos</h1>
+            <p class="exp">
+              Por favor, indica tu nombre, correo, DNI, etc.
+            </p>
+          </div>
+          <form>
+            <div class="label">
+              <label for="name">Nombre</label>
+              <p class="error">Campo obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="name"
+            />
+            <div class="label">
+              <label for="email">Correo</label>
+              <p class="error">Campo obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="email"
+            />
+            <div class="label">
+              <label for="phone">Celular</label>
+              <p class="error">Campo obligatorio</p>
+            </div>
+            <input
+              required
+              type="tel"
+              id="phone"
+            />
+          </form>
+          <div class="btns">
+            <button class="next-stp" type="submit">Siguiente</button>
+          </div>
+        </div>
+        <!-- Fin del paso 1 -->
+        <!-- Inicio del paso 2 -->
+        <div class="stp step-2">
+          <div class="header">
+            <h1 class="title">¿Estoy listo para adoptar?</h1>
+            <p class="exp">Sé consciente de tu decisión</p>
+          </div>
+          <form>
+                <ol>
+                    <li>Los perros y gatos tienen necesidades de salud como una nutrición adecuada, atención médica, cepillado y paseos.
+                        También tienen necesidades afectivas como dedicarles tiempo, entrenarlos y que se integre a la vida de tu familia.</li>
+                    <li>Al adoptar te haces responsable de sus necesidades, asegúrate que estás dispuesto a hacerlo y si tienes el tiempo y los recursos para hacerlo.</li>
+                    <li>Busca a tu próximo compañero con base en su carácter y el tuyo, además de tus necesidades personales y modo de vida. No te guíes sólo por su aspecto físico, la idea es que haya armonía para que tú y tu familia estén felices.</li>
+                    <li>Considera dónde o con quién dejarlo cuando salgas de vacaciones y no puedas llevarlo contigo.</li>
+                </ol>
+          </form>
+          <input type="checkbox" id="miCheckbox" name="miCheckbox">
+          <label class="condiciones" for="checkbox">He leido y soy consciente de las implicaciones de adoptar, continuar con el proceso de adopción.</label>
+          <div class="btns">
+            <button class="prev-stp" type="button">Anterior</button>
+            <button class="next-stp" type="submit">Siguiente</button>
+          </div>
+        </div>
+        <!-- Fin del paso 2 -->
+        <!-- Inicio del paso 3 -->
+        <div class="stp step-3">
+          <div class="header">
+            <h1 class="title">Información básica</h1>
+            <p class="exp">Preguntas básicas</p>
+          </div>
+          <form>
+            <label for="vivienda">¿Tu vivienda es?</label>
+            <input type="radio" id="opcion1" name="grupo">
+            <label for="opcion1">Casa</label><br>
+
+            <input type="radio" id="opcion2" name="grupo">
+            <label for="opcion2">Opción 2</label><br>
+
+            <input type="radio" id="opcion3" name="grupo">
+            <label for="opcion3">Opción 3</label><br>
+          </form>
+          <div class="btns">
+            <button class="prev-stp" type="button">Anterior</button>
+            <button class="next-stp" type="submit">Siguiente</button>
+          </div>
+        </div>
+        <!-- Step 3 end -->
+        <!-- * Step 4 start -->
+        <div class="stp step-4">
+          <div class="header">
+            <h1 class="title">Finishing up</h1>
+            <p class="exp">
+              Double-check everything looks OK before confirming.
+            </p>
+          </div>
+          <div class="selection-box">
+            <div class="selection-container">
+              <div class="selected-plan">
+                <p class="plan-name">Arcade(Monthly)</p>
+                <p class="plan-price">$9/mo</p>
+              </div>
+              <hr />
+              <div class="addons">
+                <template>
+                  <div class="selected-addon">
+                    <span class="service-name">Online serivice</span>
+                    <span class="servic-price">+$1/mo</span>
+                  </div>
+                </template>
+              </div>
+            </div>
+            <p class="total">Total (per month) <b>+$12/mo</b></p>
+          </div>
+          <div class="btns">
+            <button class="prev-stp" type="button">Go Back</button>
+            <button class="next-stp" type="submit">Next Step</button>
+          </div>
+        </div>
+        <!-- Step 4 end -->
+        <!-- Step 5 start -->
+        <div class="stp step-5">
+          <img src="./assets/images/icon-thank-you.svg" alt="" />
+          <div class="header">
+            <h1 class="title">Thank you!</h1>
+            <p class="exp">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com.
+            </p>
+          </div>
+          <button class="next-stp"></button>
+        </div>
+        <!-- Step 5 end -->
+      </div>
+    </div>
+  </body>
+</html>
