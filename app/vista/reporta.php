@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/../controlador/animalControlador.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -80,12 +83,33 @@
 
         <div class="container">
 
-            <div class="swiper-container mySwiper">
+        <?php foreach ($animales as $animal): ?>
+                <div class="swiper-container mySwiper">
+                
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../../img/reporta-img/1.jpg">
+                            <div class="cardDescription">
+                                <div class="card-title">
+                                    <h4><?php echo $animal['nombre']; ?></h4>
+                                </div>
+                                <div class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
+                                    tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
+                                    architecto amet. Corrupti sapiente distinctio sint autem?
+                                </div>
+                                <div class="card-boton">
+                                    <button class="Reporte" id="boton1" data-imagen="1.jpg">+info</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+
+            <!-- <div class="swiper-container mySwiper">
 
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-
-
                         <img src="../../img/reporta-img/1.jpg">
                         <div class="cardDescription">
                             <div class="card-title">
@@ -99,13 +123,12 @@
                             <div class="card-boton">
                                 <button class="Reporte" id="boton1" data-imagen="1.jpg">+info</button>
                             </div>
-
                         </div>
+                </div>
 
+                
 
-                    </div>
                     <div class="swiper-slide">
-
                         <img src="../../img/reporta-img/2.jpg">
                         <div class="cardDescription">
                             <div class="card-title">
@@ -121,8 +144,6 @@
                             </div>
 
                         </div>
-
-
 
 
                     </div>
@@ -247,9 +268,9 @@
                                 <button class="Reporte" id="boton9">+info</button>
                             </div>
 
-                        </div>
-                    </div>
-                </div>
+                        </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
 
             </div>
             <div class="swiper-button-next"></div>
