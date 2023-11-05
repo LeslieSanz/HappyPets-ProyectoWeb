@@ -72,7 +72,6 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
                 <p><span><strong>¿Por qué adoptarlo?</strong><span> <?php echo $animalDetalles['razon']; ?></p>
                 <a target="_blank" href="form-adopta.php?codigo=<?php echo $animalDetalles['cod_aniAdo']; ?>">Adóptame</a>
             </div>
-            
         </div>
         
     </section>

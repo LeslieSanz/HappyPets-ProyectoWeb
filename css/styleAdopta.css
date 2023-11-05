@@ -55,30 +55,17 @@
     display: inline-block;
     padding: 10px;
     margin-top: 10px;
-    color: #2fb4cc;
-    border: 1px solid #2fb4cc;
-    border-radius: 4px;
+    color: rgb(170, 111, 70);
+    border: 1px solid rgb(170, 111, 70);
+    border-radius: 20px;
     transition: all 400ms ease;
+    font-weight: bold;
+    
   }
   section .card .contenido a:hover {
-    background: #2fb4cc;
+    background: rgb(170, 111, 70);
     color: #fff;
-  }
 
-  section .btn{
-    margin-right:40px;
-    border: none;
-    outline: none;
-    padding: 9px 25px;
-    background: rgb(245, 183, 26);
-    cursor: pointer;
-    font-size: 0.9em;
-    border-radius: 4px;
-    font-weight: 600;
-  }
-
-  section .btn:hover{
-    background: rgb(252, 207, 110);
   }
 
   main{
