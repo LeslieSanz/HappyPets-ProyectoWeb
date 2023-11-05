@@ -12,6 +12,7 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
 </head>
 <body>
     <!--Datos de prueba-->
+    <h1><?php echo $animalDetalles['cod_aniAdo']; ?></h1>
     <h1><?php echo $animalDetalles['nombre']; ?></h1>
     <p>Especie: <?php echo $animalDetalles['especie']; ?></p>
     <a target="_blank" href="form-adopta.php?codigo=<?php echo $animalDetalles['cod_aniAdo']; ?>">Adóptame</a>

@@ -22,7 +22,8 @@ class Animal {
             if ($stmt->affected_rows > 0) {
                 return true; // Usuario agregado exitosamente
             } else {
-                return false; // Error al agregar el usuario
+                echo "Error en la consulta: " . $stmt->error;
+                return false; // Error al ejecutar la consulta
             }
 
             // Cerrar la consulta preparada
@@ -37,7 +38,7 @@ class Animal {
     
         // Preparar la consulta SQL con un parámetro
         $stmt = $this->conn->prepare("SELECT * FROM animal_adopta WHERE cod_aniAdo = ?");
-        $stmt->bind_param("i", $codigo); // "i" indica que el parámetro es un entero
+        $stmt->bind_param("s", $codigo); // "s" indica que el parámetro es una cadena
         $stmt->execute();
         $result = $stmt->get_result();
     

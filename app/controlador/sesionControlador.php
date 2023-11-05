@@ -23,6 +23,8 @@ if (!empty($_POST["usuario"])) {
             $_SESSION["password"] = $datosUsuario->password;
             $_SESSION["cod_usu"] = $datosUsuario->cod_usu;
             $_SESSION["celular"] = $datosUsuario->celular;
+            $_SESSION["dni"] = $datosUsuario->dni;
+            $_SESSION["distrito"] = $datosUsuario->distrito;
             // Establecer una cookie que mantenga al usuario autenticado por un cierto tiempo
             $expira = time() + (30 * 24 * 60 * 60); // Caduca en 30 días
             setcookie("cod_usu", $datosUsuario->cod_usu, $expira, "/");
@@ -52,5 +54,7 @@ if (isset($_COOKIE["cod_usu"]) && !isset($_SESSION["usuario"])) {
         $_SESSION["password"] = $datosUsuario->password;
         $_SESSION["cod_usu"] = $datosUsuario->cod_usu;
         $_SESSION["celular"] = $datosUsuario->celular;
+        $_SESSION["dni"] = $datosUsuario->dni;
+        $_SESSION["distrito"] = $datosUsuario->distrito;
     }
 }
