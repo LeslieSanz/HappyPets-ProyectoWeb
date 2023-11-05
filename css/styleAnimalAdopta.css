@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(242, 242, 242);
+}
+
+#descripcion {
+    position: relative;
+    margin-top: 90px;
+    background-color: #f2f2f2;
+  }
+
+
+  #descripcion .container_refugio{
+    max-width: 1440px;
+    padding: 50px 5%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+
+#descripcion .refugio_img{
+    width: 30%;
+    border-radius: 10px;
+}
+
+
+#descripcion .refugio_img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+#descripcion .refugio_texto{
+    width: 50%;
+    padding-left: 60px;
+} 
+
+
+#descripcion .refugio_texto h2{
+    font-size: 1.7em;
+}
+
+
+#descripcion .refugio_texto p{
+    margin: 20px 0;
+}
+
+@media (max-width: 950px){
+   
+#descripcion .container_refugio{
+        flex-direction: column-reverse;
+    }
+
+    
+#descripcion .refugio_texto,
+    
+#descripcion .refugio_img{
+        width: 100%;
+        text-align: center;
+    } 
+}
+
+#descripcion a {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(245, 183, 26);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+#descripcion .container_refugio .refugio_texto p{
+    text-align: justify;
+   
+  }

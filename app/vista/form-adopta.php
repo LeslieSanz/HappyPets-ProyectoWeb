@@ -11,6 +11,7 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario Adopcion</title>
    <link rel="stylesheet" href="../../css/styleFormAdo.css" />
+   <link rel="icon" href = "../../img/logos/logopets.png" type = "image/x-icon">
   </head>
   <body>
     <div class="form">
