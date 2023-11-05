@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Usuario.php';
 
+
 //Controla el registro de usuarios
 if (!empty($_POST["registro"])) {
     if (empty($_POST["usuario"]) or empty($_POST["email"]) or empty($_POST["password"])) {

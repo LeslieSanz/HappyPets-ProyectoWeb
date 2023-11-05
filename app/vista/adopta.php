@@ -122,7 +122,7 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
                             $caracteristicasLimitadas = implode(' ', array_slice($palabras, 0, 20));
                             ?>
                             <p><?php echo $animal['sexo'] . ', de tamaño ' . $animal['tamano'] . '. ' . $caracteristicasLimitadas . '...'; ?></p>
-                            <a href="animal_adopta.php?codigo=<?php echo $animal['cod_aniAdo']; ?>" id="leerMasEnlace">Leer Más</a>
+                            <a target="_blank" href="animal_adopta.php?codigo=<?php echo $animal['cod_aniAdo']; ?>" id="leerMasEnlace">Leer Más</a>
                         </div>
                     </div>
                     <?php endforeach; ?>

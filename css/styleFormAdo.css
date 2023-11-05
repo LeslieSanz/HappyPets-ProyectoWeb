@@ -41,9 +41,16 @@
   .form-container {
     display: flex;
     padding: 1rem;
+    gap: 20px;
   }
+
+  .form-column {
+    flex: 1;
+    margin-right: 10px; /* Espacio entre las columnas */
+  }
+
   .form-sidebar {
-    background-image: url("bg-sidebar-desktop-happypets.svg");
+    background-image: url("../img/adopta-img/bg-sidebar-desktop-happypets.svg");
     background-repeat: no-repeat;
     width: 400px;
     height: 568px;
@@ -102,9 +109,13 @@
   .header .title {
     color: var(--Marine-blue);
   }
+
   .header .exp {
-    color: var(--Cool-gray);
+    text-align: justify;
+    margin: 10px;
+    line-height: 1;
   }
+  
   .next-stp {
     margin-top: auto;
     margin-bottom: 2rem;
@@ -122,13 +133,12 @@
     width: 90%;
   }
   .step-1 form {
-    display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: center;
     gap: 1rem;
   }
-  .label {
+  .step-1 .label {
     color: var(--Marine-blue);
     display: flex;
     align-items: center;
@@ -136,15 +146,27 @@
   }
   .step-1 form input {
     padding: 1rem;
-    border: 1px solid var(--Cool-gray);
+    border: 1px solid black;
     border-radius: 7px;
     font-weight: 500;
     font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
+
+  /* Estilo para el campo de entrada de archivos */
+  .step-1 form input[type="file"] {
+  border: none;
+  width: 100%; /* Establece el ancho al 100% del contenedor padre */
+  padding: 10px; /* Añade algo de espacio alrededor del texto en el campo */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+  border-radius: 5px; /* Agrega esquinas redondeadas al campo */
+}
+
   .step-1 form input:focus {
     outline-color: var(--Purplish-blue);
   }
-  form input::placeholder {
+  .step-1 form input::placeholder {
     font-weight: 500;
     font-size: 1rem;
     font-family: inherit;
@@ -172,37 +194,7 @@
     margin: 20px;
   }
 
-  .plan-card {
-    border: 2px solid var(--Light-gray);
-    border-radius: 7px;
-    width: 150px;
-    height: 170px;
-    cursor: pointer;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  .plan-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-  .plan-info b {
-    color: var(--Marine-blue);
-  }
-  .plan-info span {
-    color: var(--Cool-gray);
-  }
-  .monthly,
-  .yearly {
-    color: var(--Cool-gray);
-    font-weight: 500;
-  }
-  .sw-active {
-    color: var(--Marine-blue);
-  }
+  
   .btns {
     display: flex;
     align-items: center;
@@ -224,36 +216,26 @@
     display: none;
     width: 80%;
   }
-  /* .step-3 form {
-    display: flex;
+   .step-3 form {
     flex-direction: column;
     flex: 1;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
-  */
-  .step-3 form input {
-    accent-color: var(--Purplish-blue);
-    transform: scale(1.3);
-    user-select: none;
+
+  .step-3 form .pregunta{
+    margin: 15px;
   }
-  .description label {
-    color: var(--Marine-blue);
-    font-weight: 700;
-    user-select: none;
-  }
-  .description small {
-    color: var(--Cool-gray);
-    font-weight: 700;
-  }
-  .price {
-    color: var(--Purplish-blue);
-  }
+  
   /* STEP 4 */
   .step-4 {
     display: none;
     width: 80%;
   }
+
+  .step-4 .mensaje-fin{
+    margin: 50px;
+  } 
   .selection-box {
     display: flex;
     flex-direction: column;
@@ -297,18 +279,7 @@
     color: var(--Purplish-blue);
     font-size: 1.2rem;
   }
-  /* step 5 */
-  .step-5 {
-    display: none;
-    align-items: center;
-    width: 90%;
-    text-align: center;
-    justify-content: center;
-    margin: auto;
-  }
-  .step-5 button {
-    display: none;
-  }
+  
   /* SWITCH classes */
   .switcher {
     background-color: var(--Magnolia);
@@ -381,7 +352,7 @@
       top: 0;
       left: 0;
       right: 0;
-      background-image: url("bg-sidebar-mobile-happypets.svg");
+      background-image: url("../img/adopta-img/bg-sidebar-mobile-happypets.svg");
       flex-direction: row;
       height: 300px;
       background-size: cover;
@@ -399,9 +370,19 @@
       max-width: 375px;
       background-color: white;
     }
+
     .form-container {
+      flex-direction: column;
+      align-items: center;
       padding: 2rem;
     }
+  
+    .form-column {
+      width: 100%;
+      max-width: none;
+      text-align: justify;
+    }
+
     .btns {
       position: fixed;
       bottom: 0;
@@ -417,7 +398,18 @@
     .step-2 form {
       flex-direction: column;
       gap: 0.5rem;
+      text-align: justify;
     }
+
+    .stp.step-2 .form-container .form-column p ol {
+      text-align: justify;
+    }
+
+    .stp.step-2 .form-container .form-column p ol li {
+      text-align: left; /* Para alinear el texto del listado a la izquierda */
+      margin-bottom: 10px; /* Ajusta el espaciado entre los elementos de la lista */
+  }
+
     .plan-card {
       width: 100%;
       height: 100px;

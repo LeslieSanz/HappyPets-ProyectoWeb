@@ -103,7 +103,7 @@ if (isset($_GET["codigo"])) { //Verifica que haya un codigo en la URL de animal_
     $animalDetalles = $animalDAO->listarUnAnimal($codigoAnimal);
 
     if (!empty($animalDetalles)) {
-        echo "Vamos bien: $codigoAnimal";
+        // echo "Vamos bien: $codigoAnimal";
     } else {
         echo "No se encontró info para el animal con el código: $codigoAnimal";
     }

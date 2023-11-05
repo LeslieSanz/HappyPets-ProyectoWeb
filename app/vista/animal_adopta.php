@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once __DIR__ . '/../controlador/animalControlador.php';
 ?>
 
@@ -13,5 +14,7 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
     <!--Datos de prueba-->
     <h1><?php echo $animalDetalles['nombre']; ?></h1>
     <p>Especie: <?php echo $animalDetalles['especie']; ?></p>
+    <a target="_blank" href="form-adopta.php?codigo=<?php echo $animalDetalles['cod_aniAdo']; ?>">Adóptame</a>
+    <?php echo '<li><a href="#"> Bienvenido '.$_SESSION["cod_usu"].'</a></li>'?>
 </body>
 </html>
