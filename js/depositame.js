@@ -65,8 +65,13 @@ formulario.inputNumero.addEventListener('keyup',(e) => {
 
         logoMarca.innerHTML = '';
     }
-
-    if(valorInput[0] == 4){
+    
+    if(valorInput[0] == 3){
+        logoMarca.innerHTML = '';
+        const imagen = document.createElement('img');
+        imagen.src = '../../img/tarjeta/amexp.png';
+        logoMarca.appendChild(imagen);
+    } else if(valorInput[0] == 4){
         logoMarca.innerHTML = '';
         const imagen = document.createElement('img');
         imagen.src = '../../img/tarjeta/visa.png';

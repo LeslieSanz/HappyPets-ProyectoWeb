@@ -40,3 +40,16 @@ function mostrarTodos() {
         section.style.display = 'block';
     });
 }
+
+/*------------------------------------------------------------------------*/
+const abrir = document.getElementById('abrir');
+const contenedor_pop_yape = document.getElementById('contenedor_pop_yape');
+const cerrar = document.getElementById('cerrar');
+
+abrir.addEventListener('click', () => {
+    contenedor_pop_yape.classList.add('show');
+});
+
+cerrar.addEventListener('click', () => {
+    contenedor_pop_yape.classList.remove('show');
+});
