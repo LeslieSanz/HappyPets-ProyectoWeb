@@ -184,7 +184,7 @@
 </div>
 <div class="comentarios" id="comentarios">
     <!-- Aquí se mostrarán los comentarios -->
-    <?php include 'mostrarComentario.php'; ?>
+    <?php include '../controlador/ComentarioControlador.php'; ?>
 </div>
     <!--script de movimiento-->
     <script
