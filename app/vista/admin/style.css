@@ -94,8 +94,8 @@ nav .logo-image img{
 
 nav .logo-name .logo_name{
     font-size: 22px;
-    font-weight: 600;
-    color: var(--text-color);
+    font-weight: bold;
+    color:rgb(170, 111, 70);
     margin-left: 14px;
     transition: var(--tran-05);
 }
@@ -282,7 +282,7 @@ nav.close ~ .dashboard .top{
     position: relative;
     height: 35px;
     width: 35px;
-    background-color: var(--primary-color);
+    background-color:  rgb(245, 183, 26);
     border-radius: 6px;
     color: var(--title-icon-color);
     display: flex;
@@ -353,7 +353,9 @@ nav.close ~ .dashboard .top{
     font-weight: 500;
     color: var(--text-color);
 }
-.activity-data .data .data-list{
+.activity-data .data .data-list,
+.activity-data .data .boton-editar,
+.activity-data .data .boton-eliminar{
     font-size: 15px;
     text-align: center;
     font-weight: 400;
@@ -457,3 +459,39 @@ nav.close ~ .dashboard .top{
         width: 100%;
     }
 }
+
+.boton-editar a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    border: 1px solid blue;
+    background: blue;
+    border-radius: 20px;
+    transition: all 400ms ease;
+    font-weight: bold;
+  }
+  .boton-editar a:hover{
+    background: blue;
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+  .boton-eliminar a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    border: 1px solid red;
+    background: red;
+    border-radius: 20px;
+    transition: all 400ms ease;
+    font-weight: bold;
+  }
+  .boton-eliminar a:hover{
+    background: red;
+    color: #fff;
+    transform: scale(1.1);
+  }

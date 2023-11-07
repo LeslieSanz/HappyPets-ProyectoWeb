@@ -4,7 +4,7 @@
   
 //-------------------------------CODIGO PARA CARRUSEL DE CARTAS------------------
 
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.swiper-container mySwiper', {
 	navigation: {
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev'
@@ -51,74 +51,46 @@ var swiper = new Swiper('.swiper-container', {
 	
 //--------------------------VENTANA EMERGENTE----------------------
 
-	$(document).ready( function(){
-		$("#boton1").on("click", function(){
-			$("#popup").fadeIn("slow") ;
-		});
-		$("#boton2").on("click", function(){
-			$("#popup").fadeIn("slow") ;
-		});
+$(document).ready(function () {
+	
 
-		$("#close").on("click", function(){
-			$("#popup").fadeOut("slow") ;
-		});
-	});
+    $(document).on("click", ".animal-button", function () {
 
+		// Obtén el valor del atributo "data-foto" del botón en el que se hizo clic
+		var foto = $(this).data("foto");
+		// La variable "foto" almacena el valor del atributo "data-foto" del botón en el que se hizo clic.
 
+		console.log(foto);
+	
+		$.ajax({
+            url: "../controlador/reporteControlador.php",
+            type: "POST",
+            data: { foto: foto },
+            dataType: "json", // Esperamos una respuesta JSON
+            success: function (response) {
+                // Asigna los datos a los elementos del modal
+                $("#imagen").attr("src", '/HappyPets-ProyectoWeb/uploads/' + response.foto);
+                
+				//asigna el distrito
+				$("#distrito").text( "Dirección encontrado: " + response.direccion + ", " + response.distrito);
+				$("#referencia").text( "Referencia de la dirección: " + response.referencia);
+				$("#info_adicional").html("Información del animal encontrado:<br>" + response.info_adicional);
 
-
-
-	// Asigna el evento de apertura a los botones 1 al 9
-    for (let i = 1; i <= 9; i++) {
-        $(`#boton${i}`).on("click", function () {
-            abrirPopup(i);
+                // Abre el modal
+                $("#popup").modal("show");
+            },
+            error: function () {
+                console.error("Error en la solicitud AJAX.");
+            }
         });
-    }
-	function abrirPopup(imagenId) {
-        // Oculta todas las imágenes
-        $(".content-pop div[id^='imagen']").hide();
-        // Muestra la imagen correspondiente
-        $(`#imagen${imagenId}`).show();
-        $("#popup").fadeIn("slow");
-    }
-
-
-	
-	
-
-
-	$(document).ready(function () {
 		
-		$("#close").on("click", function (event) {
-			event.preventDefault();
-			var targetSectionId = $(this).data("target");
-			var targetSection = $(targetSectionId)[0];
-	
-			if (targetSection) {
-				targetSection.scrollIntoView({
-					behavior: "smooth",
-					block: "start"
-				});
-			}
-	
-			$("#popup").fadeOut("slow");
-			$(".overlay").fadeOut("slow");
-		});
-	});
-	
+    });
 
-// Obtener el formulario por su id
-const formulario = document.getElementById('form');
+    $("#close").on("click", function () {
 
-// Agregar un evento de escucha para el envío del formulario
-formulario.addEventListener('submit', function(event) {
-  event.preventDefault(); // Evitar el envío predeterminado del formulario
+        $("#popup").fadeOut("slow");
+    });
 
-  // Obtener la sección objetivo por su id
-  const seccionDestino = document.getElementById('form');
-
-  // Desplazarse hacia la sección objetivo
-  seccionDestino.scrollIntoView({ behavior: 'smooth' });
 });
 
 
