@@ -118,7 +118,11 @@ class Reporte {
     public function listarAnimalesReporta() {
         $animales_reporte = [];
     
-        $sql = "SELECT * FROM animal_reporta";
+        $sql = "SELECT * 
+        FROM animal_reporta ar 
+        JOIN reporte r ON ar.cod_ani = r.cod_ani
+        LIMIT 10;
+        ";
         $result = $this->conn->query($sql);
     
         if ($result->num_rows > 0) {
@@ -131,51 +135,30 @@ class Reporte {
     }
 
 
-    // public function agregarReporte($animal, $distrito, $referencia, $direccion, $infoAdicional, $fotoAnimal) {
+    public function listarAnimalUnico($dataImageValue){
 
-
-        
-        
-    //     $sql = "INSERT INTO animal_reporta (especie, foto) VALUES (?, ?)";
-    //     $stmt = $this->conn->prepare($sql);//stmt = statement
-
-
-    //     $sql1 = "INSERT INTO reporte (distrito, referencia, direccion, info_adicional, cod_usu, cod_ani) VALUES (?, ?,?,?,?,?)";
-    //     $stmt2 = $this->conn->prepare($sql1);
-
-    //     // Verificar si la consulta preparada se ejecutó correctamente
-    //     if ($stmt) {
-    //         // Asociar los parámetros y ejecutar la consulta
-    //         //las s son por es STRING, y son 9 por nueva parametros
-    //         $stmt->bind_param("ss", $animal, $fotoAnimal);
-    //         $stmt->execute();
+        $animalUnico = null;
+        // Preparar la consulta SQL con un parámetro
+        $stmt = $this->conn->prepare("SELECT *  FROM animal_reporta ar JOIN reporte r ON ar.cod_ani = r.cod_ani
+        where r.cod_ani = ? ");
+        $stmt->bind_param("s", $dataImageValue); // "s" indica que el parámetro es una cadena
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
 
 
 
-    //         $cod_usu = $this->codigoUsuario($_SESSION["usuario"], $_SESSION["email"]);
-    //         $cod_ani = $this->codigoAnimal($animal, $fotoAnimal);
-            
-    //         $stmt2->bind_param("ssssss", $distrito, $referencia, $direccion, $infoAdicional, $cod_usu, $cod_ani);
-    //         $stmt2->execute();
+        if ($result->num_rows > 0) {
+            $animalUnico = $result->fetch_assoc();
+            // Mensaje de depuración para verificar si se obtienen resultados de la base de datos
+            error_log("Resultados obtenidos: " . print_r($animalUnico, true));
+    
+        }
+    
+        return $animalUnico;
 
 
-
-
-    //         // Verificar si la inserción fue exitosa
-    //         if ($stmt->affected_rows > 0) {//Fila agrega mayor a 0 
-    //             return true; // Reporte agregado exitosamente
-    //         } else {
-    //             return false; // Error al agregar el reporte
-    //         }
-
-    //         // Cerrar la consulta preparada
-    //         $stmt->close();
-    //     } else {
-    //         return false; // Error al preparar la consulta
-    //     }
-    // }
-
-
+    }
 
 
     

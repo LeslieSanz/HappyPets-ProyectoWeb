@@ -202,23 +202,10 @@ h3 {
 
 
 
-
-/* Estilos para el fondo oscuro detrás del popup */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-}
-
 /* Estilos para el popup */
 #popup {
 
-    height: 75%;
+    height: auto;
 
 
     display: none;
@@ -250,16 +237,24 @@ h3 {
     font-size: 20px;
     cursor: pointer;
     color: red;
+    background: none;
+    border: none;
+}
+
+#X {
+    display: flex;
+    font-size: 30px;
 }
 
 /* Estilos para el contenido dentro del popup */
-.content-pop {
+.modal-body {
     text-align: center;
     margin: 20px;
 }
 
 /* Estilos para la imagen dentro del popup */
-.content-pop img {
+.modal-body img {
+    width: 100%;
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
