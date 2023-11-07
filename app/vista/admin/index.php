@@ -212,8 +212,8 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                             
                             <?php $rutaImagen =   '../../../uploads/' . $animal['foto']; ?>
                             <td class="data-list"><a target="_blank" href="<?php echo $rutaImagen; ?>"><?php echo $animal['foto']; ?></a></td>        
-                            <td class="boton-editar"><a href="#">Editar</a></td>
-                            <td class="boton-eliminar"><a href="#">Eliminar</a></td>
+                            <td class="data-button"><button class="boton-editar" onclick="animalEditar('<?=$animal['cod_aniAdo']?>')">Editar</button></td>
+                            <td class="data-button"><button class="boton-eliminar" onclick="animalEliminar('<?=$animal['cod_aniAdo']?>')">Eliminar</button></td>
                         </tr>
                         <?php endforeach; ?>
                         
@@ -227,7 +227,8 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
             </div>
         </div>
     </section>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
+    <script src="ajax.js"></script>
 </body>
 </html>

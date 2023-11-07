@@ -12,26 +12,43 @@ class Animal {
     public function agregarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$foto){
         $sql = "INSERT INTO animal_adopta(nombre,especie,sexo,edad,tamano,caracteristicas,razon,foto) VALUES (?,?,?,?,?,?,?,?)";
         $stmt = $this->conn->prepare($sql);
-
         // Verificar si la consulta preparada se ejecutó correctamente
         if ($stmt) {
             $stmt->bind_param("ssssssss", $nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$foto);
             $stmt->execute();
-
             // Verificar si la inserción fue exitosa
             if ($stmt->affected_rows > 0) {
-                return true; // Usuario agregado exitosamente
+                return true; 
             } else {
                 echo "Error en la consulta: " . $stmt->error;
-                return false; // Error al ejecutar la consulta
+                return false; 
             }
-
-            // Cerrar la consulta preparada
             $stmt->close();
         } else {
-            return false; // Error al preparar la consulta
+            return false; 
         }
     }
+
+    public function eliminarAnimal($codigo) {
+        $sql = "DELETE FROM animal_adopta WHERE cod_aniAdo = ?";
+        $stmt = $this->conn->prepare($sql);
+
+        if ($stmt) {
+            $stmt->bind_param("s", $codigo); 
+            $stmt->execute();
+            
+            if ($stmt->affected_rows > 0) {
+                return true; 
+            } else {
+                echo "Error en la consulta: " . $stmt->error;
+                return false;
+            }
+            $stmt->close();
+        } else {
+            return false; 
+        }
+    }
+    
 
     public function listarUnAnimal($codigo){
         $animal = null;

@@ -111,4 +111,6 @@ if (isset($_GET["codigo"])) { //Verifica que haya un codigo en la URL de animal_
 
 
 
+
+
 ?>

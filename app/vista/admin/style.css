@@ -354,13 +354,11 @@ nav.close ~ .dashboard .top{
     color: var(--text-color);
 }
 .activity-data .data .data-list,
-.activity-data .data .boton-editar,
-.activity-data .data .boton-eliminar{
+.activity-data .data .data-button{
     font-size: 15px;
     text-align: center;
     font-weight: 400;
     margin: 20px;
-    color: var(--text-color);
     padding: 10px;
 }
 
@@ -460,7 +458,7 @@ nav.close ~ .dashboard .top{
     }
 }
 
-.boton-editar a {
+.data-button .boton-editar {
     text-decoration: none;
     display: inline-block;
     padding: 10px;
@@ -472,13 +470,14 @@ nav.close ~ .dashboard .top{
     transition: all 400ms ease;
     font-weight: bold;
   }
-  .boton-editar a:hover{
+  .boton-editar:hover{
     background: blue;
     color: #fff;
     transform: scale(1.1);
+    cursor: pointer;
   }
 
-  .boton-eliminar a {
+  .data-button .boton-eliminar{
     text-decoration: none;
     display: inline-block;
     padding: 10px;
@@ -490,8 +489,9 @@ nav.close ~ .dashboard .top{
     transition: all 400ms ease;
     font-weight: bold;
   }
-  .boton-eliminar a:hover{
+  .boton-eliminar:hover{
     background: red;
     color: #fff;
     transform: scale(1.1);
+    cursor: pointer;
   }
