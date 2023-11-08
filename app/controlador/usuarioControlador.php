@@ -3,6 +3,12 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Usuario.php';
 
+//Controlar mostrar usuarios
+$usuarioDAO = new Usuario($conn); 
+
+// Obtener la lista de usuarios
+$usuarios = $usuarioDAO->listarUsuarios();
+
 
 //Controla el registro de usuarios
 if (!empty($_POST["registro"])) {

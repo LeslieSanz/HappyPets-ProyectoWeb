@@ -29,7 +29,7 @@
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Menu principal</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="adminAnimales.php">
                     <i class="fa-solid fa-paw"></i>
                     <span class="link-name">Peluditos</span>
                 </a></li>

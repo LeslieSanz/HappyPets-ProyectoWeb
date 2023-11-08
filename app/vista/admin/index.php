@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../../controlador/animalControlador.php';
+require_once __DIR__ . '/../../controlador/usuarioControlador.php';
 ?>
 
 <!DOCTYPE html>
@@ -64,8 +64,7 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
             <div class="activity">
                 <div class="title">
                     <i class="uil uil-clock-three"></i>
-                    <span class="text">Peluditos en adopción</span>
-                    <a href="registrarAnimalitos.php" target="_blank">Agregar uno más</a>
+                    <span class="text">Lista de Usuarios</span>
                 </div>
                 
                 <!--No borrar esto por si acaso-->
@@ -127,37 +126,24 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                 <table>
                     <thead>
                         <tr>
+                            <th class="data-title">Código</th>
                             <th class="data-title">Nombre</th>
-                            <th class="data-title">Especie</th>
-                            <th class="data-title">Sexo</th>
-                            <th class="data-title">Edad</th>
-                            <th class="data-title">Tamaño</th>
-                            <th class="data-title">Características</th>
-                            <th class="data-title">Foto</th>
+                            <th class="data-title">Email</th>
+                            <th class="data-title">Celular</th>
+                            <th class="data-title">DNI</th>
+                            <th class="data-title">Distrito</th>
                         </tr>
                     </thead>
                     <tbody>
                     
-                        <?php foreach ($animales as $animal): ?>
+                        <?php foreach ($usuarios as $usuario): ?>
                         <tr class="data">
-                            <td class="data-list"><?php echo $animal['nombre']; ?></td>
-                            <td class="data-list"><?php echo $animal['especie']; ?></td>
-                            <td class="data-list"><?php echo $animal['sexo']; ?></td>
-                            <td class="data-list"><?php echo $animal['edad']; ?></td>
-                            <td class="data-list"><?php echo $animal['tamano']; ?></td>
-                            <?php
-                            // Obtener las palabras de la descripción
-                            $palabras = explode(' ', $animal['caracteristicas']);
-                            
-                            // Limitar la cantidad de palabras a mostrar (por ejemplo, 20 palabras)
-                            $caracteristicasLimitadas = implode(' ', array_slice($palabras, 0, 10));
-                            ?>
-                            <td class="data-list"><?php echo $caracteristicasLimitadas . '...'; ?></td>
-                            
-                            <?php $rutaImagen =   '../../../uploads/' . $animal['foto']; ?>
-                            <td class="data-list"><a target="_blank" href="<?php echo $rutaImagen; ?>"><?php echo $animal['foto']; ?></a></td>        
-                            <td class="data-button"><button class="boton-editar" onclick="animalEditar('<?=$animal['cod_aniAdo']?>')">Editar</button></td>
-                            <td class="data-button"><button class="boton-eliminar" onclick="animalEliminar('<?=$animal['cod_aniAdo']?>')">Eliminar</button></td>
+                            <td class="data-list"><?php echo $usuario['cod_usu']; ?></td>
+                            <td class="data-list"><?php echo $usuario['nombre']; ?></td>
+                            <td class="data-list"><?php echo $usuario['email']; ?></td>
+                            <td class="data-list"><?php echo $usuario['celular']; ?></td>
+                            <td class="data-list"><?php echo $usuario['dni']; ?></td>
+                            <td class="data-list"><?php echo $usuario['distrito']; ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
