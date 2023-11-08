@@ -39,7 +39,8 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
             <?php
             session_start();
             if (isset($_SESSION["usuario"])) {
-                echo '<li><a href="#"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
+                echo '<li><a href="UsuarioEdit.php"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
+                echo '<li><a href="../../app/controlador/CierreSesion.php">Cerrar Sesion</a></li>';
             } else {
                 echo '<li><a href="login.php">Iniciar sesión</a></li>';
             }
