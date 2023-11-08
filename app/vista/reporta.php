@@ -88,10 +88,12 @@ require_once __DIR__ . '/../controlador/reporteControlador.php';
     <section class="section-animales">
 
         <div class="container">
-            <?php foreach ($animales_reporte as $animal): ?>
-                
-                <div class="swiper-container mySwiper">
-                    <div class="swiper-wrapper">
+            
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+
+                    <?php foreach ($animales_reporte as $animal): ?>
+
                         <div class="swiper-slide">
 
 
@@ -115,16 +117,14 @@ require_once __DIR__ . '/../controlador/reporteControlador.php';
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
-            <?php endforeach; ?>
-        
-
-            </div>
+            
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
 
             </div>
+
         </div>
 
 

@@ -4,7 +4,7 @@
   
 //-------------------------------CODIGO PARA CARRUSEL DE CARTAS------------------
 
-var swiper = new Swiper('.swiper-container mySwiper', {
+var swiper = new Swiper('.swiper-container', {
 	navigation: {
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev'

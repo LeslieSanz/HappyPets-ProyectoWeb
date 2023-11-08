@@ -205,9 +205,9 @@ h3 {
 /* Estilos para el popup */
 #popup {
 
-    height: auto;
+    height: 75%;
 
-
+    max-height: 600px;
     display: none;
     position: fixed;
     top: 50%;
