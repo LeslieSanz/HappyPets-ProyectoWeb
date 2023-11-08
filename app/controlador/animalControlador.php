@@ -42,8 +42,8 @@ if (!empty($_POST["RegistrarAnimal"])) {
         if ($animal->agregarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$foto)
         && move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaImagen )) {
 
-            echo '<div class="msgbddbien">Usuario registrado correctamente</div>';
-            header("location: ../../index.php");
+            echo '<div class="msgbddbien">Animal registrado correctamente</div>';
+            header("location: ../vista/admin/adminAnimales.php");
 
         } else {
             echo '<div class="msgbddnoreg">Error al registrar animal</div>';
