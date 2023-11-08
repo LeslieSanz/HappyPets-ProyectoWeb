@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/../controlador/depositameControlador.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,14 +70,14 @@
         </div>
 
         <!--Formulario-->
-        <form action="" id="formulario-tarjeta" class="formulario-tarjeta"> 
+        <form method="post" action="../controlador/depositameControlador.php" id="formulario-tarjeta" class="formulario-tarjeta"> 
             <div class="grupo">
                 <label for="inputNumero">Número tarjeta</label>
-                <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+                <input name="tarnum" type="text" id="inputNumero" maxlength="19" autocomplete="off">
             </div>
             <div class="grupo">
                 <label for="inputNombre">Nombre</label>
-                <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+                <input name="nombre" type="text" id="inputNombre" maxlength="19" autocomplete="off">
             </div>
             <div class="flexbox">
                 <div class="grupo expira">
@@ -101,11 +104,11 @@
             </div>
             <div class="grupo2">
                 <label for="inputNumero1">Monto a donar</label>
-                <input type="text" id="inputNumero1" maxlength="19" autocomplete="off">
+                <input name="monto" type="text" id="inputNumero1" maxlength="19" autocomplete="off">
             </div>
             
             
-            <button type="submit" class="btn-enviar" href="../html/donaciones.html">Enviar</button>
+            <button name="RegistrarTarjeta" type="submit" class="btn-enviar" form="formulario-tarjeta">Enviar</button>
             <div class="regresar">
                 <a href="donaciones.php">regresar</a>
             </div>
