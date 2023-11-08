@@ -102,7 +102,7 @@
                                 <h3>Método yape</h3>
                                 <p>Contamos con Yape, la billetera digital más utilizada en Perú esperando
                                     por tu donación</p>
-                                <a href="#">Leer Más</a>
+                                    <a href="#" class="hero_cta">Yapea Aquí!!</a>
                             </div>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                                 <h3>Método Plin</h3>
                                 <p>Por último, pero no menos importante ¡Plin!, la segunda billetera
                                     digital más usada del Perú.</p>
-                                <a href="#">Leer Más</a>
+                                <a href="#" class="abrir_plin">Plinea Aquí</a>
                             </div>
                         </div>
 
@@ -218,6 +218,22 @@
 
 
             </div>
+        </div>
+    </section>
+
+    <!--POPUP Yape-->
+    <section class="modal ">
+        <div class="modal_container">
+            <img src="../../img/dona-img/YapeWalter.PNG" alt="">
+            <a href="#" class="modal_close">Cerrar</a>
+        </div>
+    </section>
+
+    <!--POPUP Plin-->
+    <section class="modalplin">
+        <div class="modal_containerP">
+            <img src="../../img/dona-img/yapeqr.PNG" alt="">
+            <a href="#" class="modal_closeP">Cerrar</a>
         </div>
     </section>
     
