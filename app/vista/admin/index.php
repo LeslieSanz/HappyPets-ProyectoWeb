@@ -10,11 +10,12 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="style.css">
-     
+    
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="https://kit.fontawesome.com/09bca36bc3.js" crossorigin="anonymous"></script>
 
-    <title>Admin Dashboard Panel</title> 
+    <title>Panel de control</title> 
+    <link rel="icon" href = "../../../img/logos/logopets.png" type = "image/x-icon">
 </head>
 <body>
     <nav>
@@ -212,22 +213,18 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                             
                             <?php $rutaImagen =   '../../../uploads/' . $animal['foto']; ?>
                             <td class="data-list"><a target="_blank" href="<?php echo $rutaImagen; ?>"><?php echo $animal['foto']; ?></a></td>        
-                            <td class="boton-editar"><a href="#">Editar</a></td>
-                            <td class="boton-eliminar"><a href="#">Eliminar</a></td>
+                            <td class="data-button"><button class="boton-editar" onclick="animalEditar('<?=$animal['cod_aniAdo']?>')">Editar</button></td>
+                            <td class="data-button"><button class="boton-eliminar" onclick="animalEliminar('<?=$animal['cod_aniAdo']?>')">Eliminar</button></td>
                         </tr>
                         <?php endforeach; ?>
-                        
-                        
                     </tbody>
                 </table>
             </div>
-
-           
-                
             </div>
         </div>
     </section>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
+    <script src="ajax.js"></script>
 </body>
 </html>
