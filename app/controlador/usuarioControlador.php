@@ -3,13 +3,6 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Usuario.php';
 
-//Controlar mostrar usuarios
-$usuarioDAO = new Usuario($conn); 
-
-// Obtener la lista de usuarios
-$usuarios = $usuarioDAO->listarUsuarios();
-
-
 //Controla el registro de usuarios
 if (!empty($_POST["registro"])) {
     if (empty($_POST["usuario"]) or empty($_POST["email"]) or empty($_POST["password"])) {
@@ -22,8 +15,10 @@ if (!empty($_POST["registro"])) {
         // Crear una instancia de Usuario con la conexión a la base de datos
         $usuarioObj = new Usuario($conn);
 
+        $passenc=encriptar($password,$clave);
+
         // Intentar agregar el usuario a la base de datos
-        if ($usuarioObj->agregarUsuario($usuario, $email, $password)) {
+        if ($usuarioObj->agregarUsuario($usuario, $email, $passenc)) {
             echo '<div class="msgbddbien">Usuario registrado correctamente</div>';
             header("location: ../../index.php");
         } else {
