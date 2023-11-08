@@ -54,36 +54,36 @@
           Si tienes alguna sugerencia o pregunta, hacernos alguna donación o ser
           parte de nuestro equipo mandanos un mensaje!
         </h3>
-        <form action="">
+        <form action="../controlador/ContactoControlador.php" method="post">
           <!--el id se usará para el javascript-->
           <p>
             <label for="nombre">Escribe tu nombre </label>
-            <input type="text" id="nombre" class="respuesta" />
+            <input type="text" name="nombre" class="respuesta" />
           </p>
           <p>
-            <label for="correo">Correo electronico</label>
-            <input type="email" id="email" class="respuesta" />
+            <label for="email">Correo electronico</label>
+            <input type="email" name="email" class="respuesta" />
           </p>
           <p>
             <label for="telefono">Número de celular</label>
             <input
               type="tel"
-              id="telefono"
+              name="telefono"
               class="respuesta"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
               required
             />
           </p>
           <p>
             <label for="asunto">Asunto/Motivo</label>
-            <input type="text" id="asunto" class="respuesta" />
+            <input type="text" name="asunto" class="respuesta" />
           </p>
           <p class="block">
             <!--para que este en una franja (block)-->
             <label for="mensaje">Mensaje</label>
             <textarea
               class="respuesta"
-              name="Mensaje"
+              name="mensaje"
               id="mensaje"
               cols="20"
               rows="10"
@@ -91,7 +91,9 @@
             <!-- el name no es necesario, porque está relacionado al codigo del servidor-->
           </p>
           <p class="block">
-            <button>Enviar</button>
+            <button type="submit" 
+                    name= "enviarDatosForm"
+                    class="submit">Enviar</button>
           </p>
         </form>
       </div>

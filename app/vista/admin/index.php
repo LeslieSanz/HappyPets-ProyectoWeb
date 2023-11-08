@@ -212,8 +212,8 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                             
                             <?php $rutaImagen =   '../../../uploads/' . $animal['foto']; ?>
                             <td class="data-list"><a target="_blank" href="<?php echo $rutaImagen; ?>"><?php echo $animal['foto']; ?></a></td>        
-                            <td class="data-list"><a href="#">Editar</a></td>
-                            <td class="data-list"><a href="#">Eliminar</a></td>
+                            <td class="boton-editar"><a href="#">Editar</a></td>
+                            <td class="boton-eliminar"><a href="#">Eliminar</a></td>
                         </tr>
                         <?php endforeach; ?>
                         

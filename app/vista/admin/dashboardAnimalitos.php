@@ -33,8 +33,8 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                 <td><?php echo $animal['razon']; ?></td>
                 <?php $rutaImagen =   '../../../uploads/' . $animal['foto']; ?>
                 <td><a target="_blank" href="<?php echo $rutaImagen; ?>"><?php echo $animal['foto']; ?></a></td>        
-                <td><a href="#">Editar</a></td>
-                <td><a href="#">Eliminar</a></td>
+                <button class=".btn"><a href="#">Editar</a></button>
+                <button class=".btn"><a href="#">Eliminar</a></button>
             </tr>
             <?php endforeach; ?>
         </table>
