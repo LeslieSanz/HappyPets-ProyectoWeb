@@ -1,3 +1,34 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const openModal = document.querySelector('.hero_cta');
+    const modal = document.querySelector('.modal');
+    const closeModal = document.querySelector('.modal_close');
+    const openModalPlin = document.querySelector('.abrir_plin');
+    const modalPlin = document.querySelector('.modalplin');
+    const closeModalPlin = document.querySelector('.modal_closeP');
+
+    openModal.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.add('modal--show');
+    });
+
+    closeModal.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.remove('modal--show');
+    });
+
+    openModalPlin.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalPlin.classList.add('modalplin--show');
+    });
+
+    closeModalPlin.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalPlin.classList.remove('modalplin--show');
+    });
+});
+
+
+
 function mostrarEconomico() {
     let sections = document.querySelectorAll('.section-economico');
     sections.forEach(section => {
@@ -42,14 +73,3 @@ function mostrarTodos() {
 }
 
 /*------------------------------------------------------------------------*/
-const abrir = document.getElementById('abrir');
-const contenedor_pop_yape = document.getElementById('contenedor_pop_yape');
-const cerrar = document.getElementById('cerrar');
-
-abrir.addEventListener('click', () => {
-    contenedor_pop_yape.classList.add('show');
-});
-
-cerrar.addEventListener('click', () => {
-    contenedor_pop_yape.classList.remove('show');
-});
