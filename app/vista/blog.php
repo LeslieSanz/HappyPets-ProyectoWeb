@@ -85,9 +85,11 @@
           en avión en compañía de tu hijo de ‘cuatro patas’.
         </p>
         <!--Autor1-->
-        <div class="perfil">
-          <img src="../../img/blog-img/Adr.jpg" alt="" class="perfil-img" />
-          <span class="perfil-nombre">Adrián Cisneros</span>
+        <div class = "container-perfil">
+          <div class="perfil">
+            <img src="../../img/blog-img/Adr.jpg" alt="" class="perfil-img" />
+            <span class="perfil-nombre">Adrián Cisneros</span>
+          </div>
           <!--icono-->
           <div class="boton-like">
             <div class="heart-bg">
@@ -116,9 +118,11 @@
           región de Loreto. Una mujer vistió a su mascota con traje de gala
         </p>
         <!--Autor2-->
+        <div class = "container-perfil">
         <div class="perfil">
           <img src="../../img/blog-img/Les.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Leslie Sanchez</span>
+          </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
@@ -142,9 +146,11 @@
           saludable.
         </p>
         <!--Autor3-->
+        <div class = "container-perfil"> 
         <div class="perfil">
           <img src="../../img/blog-img/Dom.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Dominith Anton</span>
+          </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
@@ -167,9 +173,11 @@
           que hace que su presencia no pase desapercibida.
         </p>
         <!--Autor4-->
+        <div class = "container-perfil"> 
         <div class="perfil">
           <img src="../../img/blog-img/Adr.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Adrián Cisneros</span>
+        </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
@@ -197,9 +205,11 @@
           hay un método mucho más eficaz para llamar su atención.
         </p>
         <!--Autor5-->
+        <div class = "container-perfil"> 
         <div class="perfil">
           <img src="../../img/blog-img/Les.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Leslie Sanchez</span>
+        </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
@@ -228,9 +238,11 @@
           naturaleza y jugar en un espacio amplio.
         </p>
         <!--Autor6-->
+        <div class = "container-perfil"> 
         <div class="perfil">
           <img src="../../img/blog-img/Dom.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Dominith Anton</span>
+        </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
@@ -262,9 +274,11 @@
           evitar riesgos y enfermedades.
         </p>
         <!--Autor7-->
+        <div class = "container-perfil"> 
         <div class="perfil">
           <img src="../../img/blog-img/Adr.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Adrián Cisneros</span>
+      </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
@@ -295,9 +309,11 @@
           razones)
         </p>
         <!--Autor8-->
+        <div class = "container-perfil"> 
         <div class="perfil">
           <img src="../../img/blog-img/Les.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Leslie Sanchez</span>
+        </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
@@ -326,9 +342,11 @@
           desgraciadamente su longevidad es algo escasa en términos humanos.
         </p>
         <!--Autor9-->
+        <div class = "container-perfil"> 
         <div class="perfil">
           <img src="../../img/blog-img/Cristina.jfif" alt="" class="perfil-img" />
           <span class="perfil-nombre">Cristina Fernández</span>
+      </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
@@ -358,9 +376,11 @@
           como ISAR por sus siglas en inglés.
         </p>
         <!--Autor10-->
+        <div class = "container-perfil"> 
         <div class="perfil">
           <img src="../../img/blog-img/Ant.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Anthony Peña</span>
+        </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
@@ -389,9 +409,11 @@
           historia.
         </p>
         <!--Autor11-->
+        <div class = "container-perfil"> 
         <div class="perfil">
           <img src="../../img/blog-img/mr world.PNG" alt="" class="perfil-img" />
           <span class="perfil-nombre">Miguel Fernandez</span>
+        </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
@@ -421,9 +443,11 @@
           patas.
         </p>
         <!--Autor12-->
+        <div class = "container-perfil"> 
         <div class="perfil">
           <img src="../../img/blog-img/ricolas.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Nicolas de las casas</span>
+       </div>
           <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
