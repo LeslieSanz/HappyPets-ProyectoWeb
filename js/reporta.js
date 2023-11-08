@@ -38,6 +38,17 @@ var swiper = new Swiper('.swiper-container', {
 	} 
     });
 
+
+	//DIRIGIR BOTON DEL BANNER A SECCION DE FORMULARIO
+
+	document.addEventListener("DOMContentLoaded", function () {
+		document.getElementById("BotonBanner").addEventListener("click", function () {
+			var seccion = document.getElementById("form");
+			seccion.scrollIntoView({ behavior: "smooth"});
+		});
+	});
+	
+
 	$(document).ready(function () {
 		// Función para centrar verticalmente las flechas de navegación
 		function centerSwiperNavigation() {
