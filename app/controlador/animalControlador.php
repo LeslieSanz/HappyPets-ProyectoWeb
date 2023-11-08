@@ -117,8 +117,6 @@ if (isset($_POST["record"])) {
     } else {
         echo "Hubo un problema al eliminar el animal";
     }
-} else {
-    echo "Parámetro 'record' no encontrado en la solicitud";
-}
+} 
 
 ?>

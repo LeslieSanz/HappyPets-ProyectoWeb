@@ -1,4 +1,4 @@
-console.log(data);
+
 //eliminar un animal adopta sin recargar la pagina
 function animalEliminar(codigo){
     $.ajax({
@@ -6,8 +6,10 @@ function animalEliminar(codigo){
         method:"post",
         data:{record:codigo},
         success:function(data){
-            alert('Animal eliminado existosamente');
-            
+        // console.log(data); linea de prueba para imprimir el error de sql
+        alert('Animal eliminado exitosamente');
+        location.reload();
         }
     });
 }
+

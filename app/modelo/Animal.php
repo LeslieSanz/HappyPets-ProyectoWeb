@@ -32,22 +32,24 @@ class Animal {
     public function eliminarAnimal($codigo) {
         $sql = "DELETE FROM animal_adopta WHERE cod_aniAdo = ?";
         $stmt = $this->conn->prepare($sql);
-
+    
         if ($stmt) {
             $stmt->bind_param("s", $codigo); 
             $stmt->execute();
             
             if ($stmt->affected_rows > 0) {
+                $stmt->close(); // Cierra la declaración preparada antes de salir de la función
                 return true; 
             } else {
                 echo "Error en la consulta: " . $stmt->error;
+                $stmt->close(); // Cierra la declaración preparada en caso de error
                 return false;
             }
-            $stmt->close();
         } else {
             return false; 
         }
     }
+    
     
 
     public function listarUnAnimal($codigo){
