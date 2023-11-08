@@ -10,8 +10,27 @@ $animal_reporteDAO = new Reporte($conn); // Suponiendo que $conn es tu conexión
 $animales_reporte = $animal_reporteDAO->listarAnimalesReporta();
 $mensajeResultados='';
 
+if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
+    if (isset($_POST['foto'])) {
+        $dataImageValue = $_POST['foto'];
+
+        // Mensaje de depuración para verificar el valor de $dataImageValue
+        error_log("Valor de dataImageValue recibido: " . $dataImageValue);
 
 
+        // Crea una instancia de la clase AnimalReporteDAO
+        $animal_unicoDAO = new Reporte($conn);
+
+        // Llama a la función listarAnimalUnico con el parámetro dataImageValue
+        $animalUnico = $animal_unicoDAO->listarAnimalUnico($dataImageValue);
+
+        // Después de obtener los datos de la base de datos, devuelve los datos en formato JSON
+        echo json_encode($animalUnico);
+
+    } else {
+        echo "No se recibió el valor dataImageValue.";
+    }
+}
 
 
 if (isset($_POST["enviarDatosForm"])) {

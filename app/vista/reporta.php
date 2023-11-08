@@ -25,6 +25,13 @@ require_once __DIR__ . '/../controlador/reporteControlador.php';
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
 </head>
 
 <body>
@@ -81,387 +88,83 @@ require_once __DIR__ . '/../controlador/reporteControlador.php';
     <section class="section-animales">
 
         <div class="container">
+            
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
 
-        <?php foreach ($animales_reporte as $animal): ?>
-                <div class="swiper-container mySwiper">
-                
-                    <div class="swiper-wrapper">
+                    <?php foreach ($animales_reporte as $animal): ?>
+
                         <div class="swiper-slide">
+
+
                             <?php
-                        echo "<img src='/HappyPets-ProyectoWeb/uploads/" . $animal['foto'] . "' alt='Imagen'><br>";
-                        ?>
+                            echo "<img src='/HappyPets-ProyectoWeb/uploads/" . $animal['foto'] . "' alt='Imagen'><br>";
+                            ?>
                             <div class="cardDescription">
                                 <div class="card-title">
                                     <h4><?php echo $animal['especie'] . " encontrado"; ?></h4>
                                 </div>
                                 <div class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
-                                    tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
-                                    architecto amet. Corrupti sapiente distinctio sint autem?
+                                    <?php echo "Encontrado en: " . $animal['distrito']; ?>
                                 </div>
                                 <div class="card-boton">
-                                    <button class="Reporte" id="boton1" data-imagen="1.jpg">+info</button>
+                                    <button 
+                                        class="animal-button Reporte" 
+                                        data-foto="<?php echo $animal['cod_ani']; ?>"      
+                                        data-toggle= "modal" >+info
+                                    </button>
+
                                 </div>
                             </div>
-                    </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-        <?php endforeach; ?>
-
-            <!-- <div class="swiper-container mySwiper">
-
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="../../img/reporta-img/1.jpg">
-                        <div class="cardDescription">
-                            <div class="card-title">
-                                <h4>Gatito reportado</h4>
-                            </div>
-                            <div class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
-                                tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
-                                architecto amet. Corrupti sapiente distinctio sint autem?
-                            </div>
-                            <div class="card-boton">
-                                <button class="Reporte" id="boton1" data-imagen="1.jpg">+info</button>
-                            </div>
-                        </div>
-                </div>
-
-                
-
-                    <div class="swiper-slide">
-                        <img src="../../img/reporta-img/2.jpg">
-                        <div class="cardDescription">
-                            <div class="card-title">
-                                <h4>Gatito reportado</h4>
-                            </div>
-                            <div class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
-                                tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
-                                architecto amet. Corrupti sapiente distinctio sint autem?
-                            </div>
-                            <div class="card-boton">
-                                <button class="Reporte" id="boton2" data-imagen="2.jpg">+info</button>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <div class="swiper-slide">
-
-                        <img src="../../img/reporta-img/3.jpg">
-                        <div class="cardDescription">
-                            <div class="card-title">
-                                <h4>Perrito reportado</h4>
-                            </div>
-                            <div class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
-                                tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
-                                architecto amet. Corrupti sapiente distinctio sint autem?
-                            </div>
-                            <div class="card-boton">
-                                <button class="Reporte" id="boton3">+info</button>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../../img/reporta-img/4.jpg">
-                        <div class="cardDescription">
-                            <div class="card-title">
-                                <h4>Perrito reportado</h4>
-                            </div>
-                            <div class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
-                                tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
-                                architecto amet. Corrupti sapiente distinctio sint autem?
-                            </div>
-                            <div class="card-boton">
-                                <button class="Reporte" id="boton4">+info</button>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../../img/reporta-img/5.jpg">
-                        <div class="cardDescription">
-                            <div class="card-title">
-                                <h4>Perrito reportado</h4>
-                            </div>
-                            <div class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
-                                tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
-                                architecto amet. Corrupti sapiente distinctio sint autem?
-                            </div>
-                            <div class="card-boton">
-                                <button class="Reporte" id="boton5">+info</button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../../img/reporta-img/6.jpg">
-                        <div class="cardDescription">
-                            <div class="card-title">
-                                <h4>Gatito reportado</h4>
-                            </div>
-                            <div class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
-                                tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
-                                architecto amet. Corrupti sapiente distinctio sint autem?
-                            </div>
-                            <div class="card-boton">
-                                <button class="Reporte" id="boton6">+info</button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../../img/reporta-img/7.jpg">
-                        <div class="cardDescription">
-                            <div class="card-title">
-                                <h4>Gatito reportado</h4>
-                            </div>
-                            <div class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
-                                tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
-                                architecto amet. Corrupti sapiente distinctio sint autem?
-                            </div>
-                            <div class="card-boton">
-                                <button class="Reporte" id="boton7">+info</button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../../img/reporta-img/8.jpeg">
-                        <div class="cardDescription">
-                            <div class="card-title">
-                                <h4>Gatito reportado</h4>
-                            </div>
-                            <div class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
-                                tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
-                                architecto amet. Corrupti sapiente distinctio sint autem?
-                            </div>
-                            <div class="card-boton">
-                                <button class="Reporte" id="boton8">+info</button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../../img/reporta-img/9.jpeg">
-                        <div class="cardDescription">
-                            <div class="card-title">
-                                <h4>Perrito reportado</h4>
-                            </div>
-                            <div class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nostrum quam commodi
-                                tempore dolor eos iste est cum, quibusdam repudiandae adipisci neque inventore
-                                architecto amet. Corrupti sapiente distinctio sint autem?
-                            </div>
-                            <div class="card-boton">
-                                <button class="Reporte" id="boton9">+info</button>
-                            </div>
-
-                        </div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
+            
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
 
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
 
         </div>
 
-        <!-- Este div con clase "overlay" crea un fondo oscuro detrás del popup -->
-        <div class="overlay"></div>
 
-        <!-- El div con el ID "popup" es la ventana emergente -->
-        <div id="popup">
-            <div class="content-pop">
-                <div>
-                    <!-- El enlace de la "X" ahora tiene un atributo data-target -->
-                    <a href="#" id="close" data-target="#section-animales">x</a>
+        <!-- --------VENTANA MODAL - EMERGENTE------- -->
+        <!-- TABINDEX =  significa que no es posible accedar mientras se navega por tab 
+            role = dialog  = siginfica que solo es un cuadro que muestra informacion
+        -->
+
+        <div class="modal fade" id="popup" tabindex = "-1" role="dialog" aria-hidden="true">
+            <!-- actua como un contenedor  para el contenido modal -->
+            <div class="modal-dialog" role = "document"><!--el role=document, indica que que es un contenedor-->
+                <div class="modal-content"> 
+                    <!-- lugar donde irá el boton de cerrar -->
+                    <div class="modal-header">
+                        <button type="button" id="close" data-dismiss="modal" aria-label="Close">
+                            <span id = "X"aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+
+                    <!-- EL CUERPO DE LA VENTANA -->
+                    <div class="modal-body">
+
+                        <img id="imagen" src="" alt="Imagen">
+
+                        <div class=div-text>
+                            <p id = distrito>  </p>
+                            <br>
+                            <p id = referencia>  </p>
+                            <br>
+                            <p id = info_adicional>
+                        </div>
+
+                    </div>
 
                 </div>
-                <div id="imagen1">
 
-                    <div class="div-imagen">
-                        <img class="img-popup" src="../../img/reporta-img/1.jpg" alt="Imagen X">
-                    </div>
-
-                    <div class=div-text>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorum laboriosam expedita,
-                            perspiciatis officiis dolor sapiente aspernatur ex quae maiores impedit eveniet quod, ipsam
-                            ab
-                            aut possimus quasi! Modi, ab!
-                        </p>
-                    </div>
-                    <p>Encontrado en:</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d487.82890943881046!2d-77.11552014422199!3d-11.999995986811081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDAwJzAwLjUiUyA3N8KwMDYnNTQuOSJX!5e0!3m2!1sen!2spe!4v1696961831765!5m2!1sen!2spe"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-                </div>
-                <div id="imagen2" style="display: none;">
-                    <div class="div-imagen">
-                        <img class="img-popup" src="../../img/reporta-img/2.jpg" alt="Imagen X">
-                    </div>
-
-                    <div class=div-text>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorum laboriosam expedita,
-                            perspiciatis officiis dolor sapiente aspernatur ex quae maiores impedit eveniet quod, ipsam
-                            ab
-                            aut possimus quasi! Modi, ab!
-                        </p>
-                    </div>
-                    <p>Encontrado en:</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.8614151685054!2d-77.04319924334953!3d-12.058470857405656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c363f2c8b3%3A0xd7af2f162d0abf6!2sIquique%20823%2C%20Bre%C3%B1a%2015082!5e0!3m2!1ses-419!2spe!4v1696920831543!5m2!1ses-419!2spe"
-                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                <div id="imagen3" style="display: none;">
-                    <div class="div-imagen">
-                        <img class="img-popup" src="../../img/reporta-img/3.jpg" alt="Imagen X">
-                    </div>
-
-                    <div class=div-text>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorum laboriosam expedita,
-                            perspiciatis officiis dolor sapiente aspernatur ex quae maiores impedit eveniet quod, ipsam
-                            ab
-                            aut possimus quasi! Modi, ab!
-                        </p>
-                    </div>
-                    <p>Encontrado en:</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.9100422136627!2d-77.0539508714833!3d-11.9301109871278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d03586ed7acb%3A0x69c5f3fb62ccb115!2sAv.%20Micaela%20Bastidas%2C%20Comas%2015312!5e0!3m2!1sen!2spe!4v1696962230658!5m2!1sen!2spe"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div id="imagen4" style="display: none;">
-                    <div class="div-imagen">
-                        <img class="img-popup" src="../../img/reporta-img/4.jpg" alt="Imagen X">
-                    </div>
-
-                    <div class=div-text>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorum laboriosam expedita,
-                            perspiciatis officiis dolor sapiente aspernatur ex quae maiores impedit eveniet quod, ipsam
-                            ab
-                            aut possimus quasi! Modi, ab!
-                        </p>
-                    </div>
-                    <p>Encontrado en:</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d976.1774665405428!2d-77.1217726714833!3d-11.855570786772578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d40df2ac55ab%3A0x3cb5594615db597a!2sAv.%20Cuzco%2C%20Mi%20Per%C3%BA%2007056!5e0!3m2!1sen!2spe!4v1696962310722!5m2!1sen!2spe"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div id="imagen5" style="display: none;">
-                    <div class="div-imagen">
-                        <img class="img-popup" src="../../img/reporta-img/5.jpg" alt="Imagen X">
-                    </div>
-
-                    <div class=div-text>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorum laboriosam expedita,
-                            perspiciatis officiis dolor sapiente aspernatur ex quae maiores impedit eveniet quod, ipsam
-                            ab
-                            aut possimus quasi! Modi, ab!
-                        </p>
-                    </div>
-                    <p>Encontrado en:</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.4283587337134!2d-77.02690537148312!3d-12.063227287767743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c896221d3483%3A0xdfcec210635860c3!2sTrasportes%20carhuamayo!5e0!3m2!1sen!2spe!4v1696962366106!5m2!1sen!2spe"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div id="imagen6" style="display: none;">
-                    <div class="div-imagen">
-                        <img class="img-popup" src="../../img/reporta-img/6.jpg" alt="Imagen X">
-                    </div>
-
-                    <div class=div-text>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorum laboriosam expedita,
-                            perspiciatis officiis dolor sapiente aspernatur ex quae maiores impedit eveniet quod, ipsam
-                            ab
-                            aut possimus quasi! Modi, ab!
-                        </p>
-                    </div>
-                    <p>Encontrado en:</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.71153769285377!2d-77.03699960090228!3d-12.06467935071001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8ea61085def%3A0x21f78bc2f6a3db79!2sAv.%2028%20de%20Julio%20886%2C%20Lima%2015046!5e0!3m2!1sen!2spe!4v1696962401978!5m2!1sen!2spe"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div id="imagen7" style="display: none;">
-                    <div class="div-imagen">
-                        <img class="img-popup" src="../../img/reporta-img/7.jpg" alt="Imagen X">
-                    </div>
-
-                    <div class=div-text>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorum laboriosam expedita,
-                            perspiciatis officiis dolor sapiente aspernatur ex quae maiores impedit eveniet quod, ipsam
-                            ab
-                            aut possimus quasi! Modi, ab!
-                        </p>
-                    </div>
-                    <p>Encontrado en:</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.3194621040016!2d-77.04984747376206!3d-12.031921531470486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf2fa28a690d%3A0xcec4fbee4e9083f4!2sQuimper%20415%2C%20Lima%2015102!5e0!3m2!1sen!2spe!4v1696962500705!5m2!1sen!2spe"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div id="imagen8" style="display: none;">
-                    <div class="div-imagen">
-                        <img class="img-popup" src="../../img/reporta-img/8.jpeg" alt="Imagen X">
-                    </div>
-
-                    <div class=div-text>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorum laboriosam expedita,
-                            perspiciatis officiis dolor sapiente aspernatur ex quae maiores impedit eveniet quod, ipsam
-                            ab
-                            aut possimus quasi! Modi, ab!
-                        </p>
-                    </div>
-                    <p>Encontrado en:</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6951.912492326535!2d-77.11624508153686!3d-12.069026246804215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cbe98f20d981%3A0xce1f815b45b0ba07!2s%C3%93valo%20de%20La%20Perla%2C%20La%20Perla!5e0!3m2!1sen!2spe!4v1696962546250!5m2!1sen!2spe"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div id="imagen9" style="display: none;">
-                    <div class="div-imagen">
-                        <img class="img-popup" src="../../img/reporta-img/9.jpeg" alt="Imagen X">
-                    </div>
-
-                    <div class=div-text>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorum laboriosam expedita,
-                            perspiciatis officiis dolor sapiente aspernatur ex quae maiores impedit eveniet quod, ipsam
-                            ab
-                            aut possimus quasi! Modi, ab!
-                        </p>
-                    </div>
-                    <p>Encontrado en:</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.595530380765!2d-77.12102068851293!3d-12.07132624231092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cbc3c3d66a1f%3A0x71338fa1440a42b!2sTupac%20Amaru%201689-1604%2C%20La%20Perla%2007016!5e0!3m2!1sen!2spe!4v1696962588392!5m2!1sen!2spe"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
 
             </div>
         </div>
-
-
-
 
 
     </section>

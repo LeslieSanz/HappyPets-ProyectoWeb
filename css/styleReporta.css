@@ -137,7 +137,7 @@ h3 {
     background: blanchedalmond;
     border-radius: 15px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-
+    height: 479px;
 
 }
 
@@ -162,15 +162,6 @@ h3 {
 
 
 
-.swiper-button-next {
-    right: 25px !important;
-    transform: translateY(1550%) !important;
-}
-
-.swiper-button-prev {
-    left: 25px !important;
-    transform: translateY(1550%) !important;
-}
 
 
 .Reporte {
@@ -202,25 +193,12 @@ h3 {
 
 
 
-
-/* Estilos para el fondo oscuro detrás del popup */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-}
-
 /* Estilos para el popup */
 #popup {
 
     height: 75%;
 
-
+    max-height: 600px;
     display: none;
     position: fixed;
     top: 50%;
@@ -250,16 +228,24 @@ h3 {
     font-size: 20px;
     cursor: pointer;
     color: red;
+    background: none;
+    border: none;
+}
+
+#X {
+    display: flex;
+    font-size: 30px;
 }
 
 /* Estilos para el contenido dentro del popup */
-.content-pop {
+.modal-body {
     text-align: center;
     margin: 20px;
 }
 
 /* Estilos para la imagen dentro del popup */
-.content-pop img {
+.modal-body img {
+    width: 100%;
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
@@ -296,6 +282,8 @@ iframe {
     width: 100%;
     height: auto;
 }
+
+
 
 
 /* --------------------------------- FORMULARIO --------------------------------------*/
@@ -565,17 +553,6 @@ textarea {
         width: 85%;
     }
 
-    /*  POSICION DE LAS FLECHAS DEL CARRUSEL*/
-
-    .swiper-button-next {
-        right: 25px !important;
-        transform: translateY(750px) !important;
-    }
-
-    .swiper-button-prev {
-        left: 25px !important;
-        transform: translateY(750px) !important;
-    }
 
 }
 
@@ -673,15 +650,6 @@ textarea {
         width: 90%;
     }
 
-    .swiper-button-next {
-        right: 25px !important;
-        transform: translateY(800px) !important;
-    }
-
-    .swiper-button-prev {
-        left: 25px !important;
-        transform: translateY(800px) !important;
-    }
 }
 
 @media(min-width: 1080px) {
@@ -754,17 +722,4 @@ textarea {
 
 
 
-}
-
-@media(min-width: 1240px) {
-
-    .swiper-button-next {
-        right: 25px !important;
-        transform: translateY(750px) !important;
-    }
-
-    .swiper-button-prev {
-        left: 25px !important;
-        transform: translateY(750px) !important;
-    }
 }

@@ -38,87 +38,75 @@ var swiper = new Swiper('.swiper-container', {
 	} 
     });
 
-
-//DIRIGIR BOTON DEL BANNER A SECCION DE FORMULARIO
-
-	document.addEventListener("DOMContentLoaded", function () {
-		document.getElementById("BotonBanner").addEventListener("click", function () {
-			var seccion = document.getElementById("form");
-			seccion.scrollIntoView({ behavior: "smooth"});
-		});
+	$(document).ready(function () {
+		// Función para centrar verticalmente las flechas de navegación
+		function centerSwiperNavigation() {
+			var sectionAnimales = $(".section-animales");
+			var prevButton = $(".swiper-button-prev");
+			var nextButton = $(".swiper-button-next");
+	
+			// Calcula la posición vertical central de la sección
+			var sectionTop = sectionAnimales.offset().top;
+			var sectionHeight = sectionAnimales.height();
+			var centerY = sectionTop + sectionHeight / 2;
+	
+			// Establece la posición vertical de las flechas en el centro
+			prevButton.css("top", centerY - prevButton.height() / 2);
+			nextButton.css("top", centerY - nextButton.height() / 2);
+		}
+	
+		// Llama a la función cuando se carga la página y cuando cambia el tamaño de la ventana
+		centerSwiperNavigation();
+		$(window).on("resize", centerSwiperNavigation);
 	});
+	
+	
+	
+	
 	
 	
 //--------------------------VENTANA EMERGENTE----------------------
 
-	$(document).ready( function(){
-		$("#boton1").on("click", function(){
-			$("#popup").fadeIn("slow") ;
-		});
-		$("#boton2").on("click", function(){
-			$("#popup").fadeIn("slow") ;
-		});
+$(document).ready(function () {
+	
 
-		$("#close").on("click", function(){
-			$("#popup").fadeOut("slow") ;
-		});
-	});
+    $(document).on("click", ".animal-button", function () {
 
+		// Obtén el valor del atributo "data-foto" del botón en el que se hizo clic
+		var foto = $(this).data("foto");
+		// La variable "foto" almacena el valor del atributo "data-foto" del botón en el que se hizo clic.
 
+		console.log(foto);
+	
+		$.ajax({
+            url: "../controlador/reporteControlador.php",
+            type: "POST",
+            data: { foto: foto },
+            dataType: "json", // Esperamos una respuesta JSON
+            success: function (response) {
+                // Asigna los datos a los elementos del modal
+                $("#imagen").attr("src", '/HappyPets-ProyectoWeb/uploads/' + response.foto);
+                
+				//asigna el distrito
+				$("#distrito").text( "Dirección encontrado: " + response.direccion + ", " + response.distrito);
+				$("#referencia").text( "Referencia de la dirección: " + response.referencia);
+				$("#info_adicional").html("Información del animal encontrado:<br>" + response.info_adicional);
 
-
-
-	// Asigna el evento de apertura a los botones 1 al 9
-    for (let i = 1; i <= 9; i++) {
-        $(`#boton${i}`).on("click", function () {
-            abrirPopup(i);
+                // Abre el modal
+                $("#popup").modal("show");
+            },
+            error: function () {
+                console.error("Error en la solicitud AJAX.");
+            }
         });
-    }
-	function abrirPopup(imagenId) {
-        // Oculta todas las imágenes
-        $(".content-pop div[id^='imagen']").hide();
-        // Muestra la imagen correspondiente
-        $(`#imagen${imagenId}`).show();
-        $("#popup").fadeIn("slow");
-    }
-
-
-	
-	
-
-
-	$(document).ready(function () {
 		
-		$("#close").on("click", function (event) {
-			event.preventDefault();
-			var targetSectionId = $(this).data("target");
-			var targetSection = $(targetSectionId)[0];
-	
-			if (targetSection) {
-				targetSection.scrollIntoView({
-					behavior: "smooth",
-					block: "start"
-				});
-			}
-	
-			$("#popup").fadeOut("slow");
-			$(".overlay").fadeOut("slow");
-		});
-	});
-	
+    });
 
-// Obtener el formulario por su id
-const formulario = document.getElementById('form');
+    $("#close").on("click", function () {
 
-// Agregar un evento de escucha para el envío del formulario
-formulario.addEventListener('submit', function(event) {
-  event.preventDefault(); // Evitar el envío predeterminado del formulario
+        $("#popup").fadeOut("slow");
+    });
 
-  // Obtener la sección objetivo por su id
-  const seccionDestino = document.getElementById('form');
-
-  // Desplazarse hacia la sección objetivo
-  seccionDestino.scrollIntoView({ behavior: 'smooth' });
 });
 
 
