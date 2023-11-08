@@ -95,15 +95,13 @@ class Usuario {
         return $usuario;
     }
 
-    public function actualizarUsuario($nombre,$correo,$dni,$celular,$distrito,$foto) {
-        $sql = "UPDATE usuario SET nombre = ?,email = ?,dni = ?,celular = ?, distrito = ?, foto = ? where cod_usu = ?";
+    public function actualizarUsuario($cod, $nombre,$correo,$dni,$celular,$distrito) {
+        $sql = "UPDATE usuario SET nombre = ?,email = ?,dni = ?,celular = ?, distrito = ? WHERE cod_usu = ?";
         $stmt = $this->conn->prepare($sql);
         
         // Verificar si la consulta preparada se ejecutó correctamente
-        $codigo=$_SESSION['cod_usu']; //sacamos el codigo del usuario para actualizarlo a este webonaso
-
         if ($stmt) {
-            $stmt->bind_param("sssssss", $nombre, $correo, $dni, $celular, $distrito, $foto, $codigo);
+            $stmt->bind_param("ssssss", $nombre, $correo, $dni, $celular, $distrito,$cod);
             $stmt->execute();
         
             // Verificar si la actualización fue exitosa
