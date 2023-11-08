@@ -59,10 +59,12 @@ if (isset($_COOKIE["cod_usu"]) && !isset($_SESSION["usuario"])) {
         $_SESSION["dni"] = $datosUsuario->dni;
         $_SESSION["distrito"] = $datosUsuario->distrito;
     }
-}<?php
-session_start();
-require_once __DIR__ . '/../config/database.php';
-require_once __DIR__ . '/../modelo/Usuario.php';
+}
+
+// <?php
+// session_start();
+// require_once __DIR__ . '/../config/database.php';
+// require_once __DIR__ . '/../modelo/Usuario.php';
 
 //Controla el inicio de sesion
 if (!empty($_POST["usuario"])) {
