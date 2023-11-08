@@ -23,7 +23,7 @@ if (isset($_POST["enviarDatosForm"])) {
         $contacto = new Contacto($conn);
 
         if ($contacto->agregarContacto($nombre, $email, $telefono, $asunto, $mensaje)) {
-            header("Location: ../../index.php");
+            header("Location: ../vista/contacto.php");
             exit();
         } else {
             echo "Error al agregar el contacto. Por favor, inténtalo de nuevo más tarde.";

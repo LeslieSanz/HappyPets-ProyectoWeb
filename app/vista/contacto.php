@@ -90,12 +90,9 @@
             ></textarea>
             <!-- el name no es necesario, porque está relacionado al codigo del servidor-->
           </p>
-          <p class="block">
-            <button type="submit" 
-                    name= "enviarDatosForm"
-                    class="submit">Enviar</button>
-          </p>
-        </form>
+          <input class="btn"  type="submit"  name= "enviarDatosForm" value="Enviar">
+          </input>
+        </form>   
       </div>
     </div>
 

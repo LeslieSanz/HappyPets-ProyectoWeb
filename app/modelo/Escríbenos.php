@@ -25,6 +25,7 @@ Class Contacto {
             if ($stmt->affected_rows > 0) {
                return true; // Contacto agregado exitosamente
              } else {
+                 echo "Error en la consulta: " . $stmt->error;
                  return false; // Error al agregar el contacto
                  }
 
