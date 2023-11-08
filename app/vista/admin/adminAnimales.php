@@ -86,8 +86,19 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                 </table>
             </div>
             </div>
+
+            <img src="../../img/dona-img/YapeWalter.PNG" alt="">
         </div>
     </section>
+    
+    <!--POPUP Agregar animal-->
+    <section class="modal ">
+        <div class="modal_container">
+            <img src="../../img/dona-img/YapeWalter.PNG" alt="">
+            <a href="#" class="modal_close">Cerrar</a>
+        </div>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <script src="ajax.js"></script>

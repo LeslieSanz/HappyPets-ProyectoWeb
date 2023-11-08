@@ -41,8 +41,9 @@
             session_start();
             if (isset($_SESSION["usuario"])) {
                 echo '<li><a href="#"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
+                echo '<li><a href="app/controlador/CierreSesion.php">Cerrar Sesion</a></li>';
             } else {
-                echo '<li><a href="login.php">Iniciar sesión</a></li>';
+                echo '<li><a href="app/vista/login.php">Iniciar sesión</a></li>';
             }
             ?>
             </ul>
