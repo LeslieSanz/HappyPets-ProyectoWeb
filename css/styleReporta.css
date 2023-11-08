@@ -137,7 +137,7 @@ h3 {
     background: blanchedalmond;
     border-radius: 15px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-
+    height: 479px;
 
 }
 
@@ -162,15 +162,6 @@ h3 {
 
 
 
-.swiper-button-next {
-    right: 25px !important;
-    transform: translateY(1550%) !important;
-}
-
-.swiper-button-prev {
-    left: 25px !important;
-    transform: translateY(1550%) !important;
-}
 
 
 .Reporte {
@@ -291,6 +282,8 @@ iframe {
     width: 100%;
     height: auto;
 }
+
+
 
 
 /* --------------------------------- FORMULARIO --------------------------------------*/
@@ -560,17 +553,6 @@ textarea {
         width: 85%;
     }
 
-    /*  POSICION DE LAS FLECHAS DEL CARRUSEL*/
-
-    .swiper-button-next {
-        right: 25px !important;
-        transform: translateY(750px) !important;
-    }
-
-    .swiper-button-prev {
-        left: 25px !important;
-        transform: translateY(750px) !important;
-    }
 
 }
 
@@ -668,15 +650,6 @@ textarea {
         width: 90%;
     }
 
-    .swiper-button-next {
-        right: 25px !important;
-        transform: translateY(800px) !important;
-    }
-
-    .swiper-button-prev {
-        left: 25px !important;
-        transform: translateY(800px) !important;
-    }
 }
 
 @media(min-width: 1080px) {
@@ -749,17 +722,4 @@ textarea {
 
 
 
-}
-
-@media(min-width: 1240px) {
-
-    .swiper-button-next {
-        right: 25px !important;
-        transform: translateY(750px) !important;
-    }
-
-    .swiper-button-prev {
-        left: 25px !important;
-        transform: translateY(750px) !important;
-    }
 }

@@ -38,15 +38,31 @@ var swiper = new Swiper('.swiper-container', {
 	} 
     });
 
-
-//DIRIGIR BOTON DEL BANNER A SECCION DE FORMULARIO
-
-	document.addEventListener("DOMContentLoaded", function () {
-		document.getElementById("BotonBanner").addEventListener("click", function () {
-			var seccion = document.getElementById("form");
-			seccion.scrollIntoView({ behavior: "smooth"});
-		});
+	$(document).ready(function () {
+		// Función para centrar verticalmente las flechas de navegación
+		function centerSwiperNavigation() {
+			var sectionAnimales = $(".section-animales");
+			var prevButton = $(".swiper-button-prev");
+			var nextButton = $(".swiper-button-next");
+	
+			// Calcula la posición vertical central de la sección
+			var sectionTop = sectionAnimales.offset().top;
+			var sectionHeight = sectionAnimales.height();
+			var centerY = sectionTop + sectionHeight / 2;
+	
+			// Establece la posición vertical de las flechas en el centro
+			prevButton.css("top", centerY - prevButton.height() / 2);
+			nextButton.css("top", centerY - nextButton.height() / 2);
+		}
+	
+		// Llama a la función cuando se carga la página y cuando cambia el tamaño de la ventana
+		centerSwiperNavigation();
+		$(window).on("resize", centerSwiperNavigation);
 	});
+	
+	
+	
+	
 	
 	
 //--------------------------VENTANA EMERGENTE----------------------
