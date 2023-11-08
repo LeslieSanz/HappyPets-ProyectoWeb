@@ -84,7 +84,7 @@ class Usuario {
     
         // Preparar la consulta SQL con un parámetro
         $stmt = $this->conn->prepare("SELECT * FROM usuario WHERE id = ?");
-        $stmt->bind_param("i", $idUsuario); // "i" indica que el parámetro es un entero
+        $stmt->bind_param("i", $id); // "i" indica que el parámetro es un entero
         $stmt->execute();
         $result = $stmt->get_result();
     
@@ -95,13 +95,15 @@ class Usuario {
         return $usuario;
     }
 
-    public function actualizarUsuario($cod, $nombre,$correo,$dni,$celular,$distrito) {
-        $sql = "UPDATE usuario SET nombre = ?,email = ?,dni = ?,celular = ?, distrito = ? WHERE cod_usu = ?";
+    public function actualizarUsuario($nombre,$correo,$dni,$celular,$distrito,$foto) {
+        $sql = "UPDATE usuario SET nombre = ?,email = ?,dni = ?,celular = ?, distrito = ?, foto = ? where cod_usu = ?";
         $stmt = $this->conn->prepare($sql);
         
         // Verificar si la consulta preparada se ejecutó correctamente
+        $codigo=$_SESSION['cod_usu']; //sacamos el codigo del usuario para actualizarlo a este webonaso
+
         if ($stmt) {
-            $stmt->bind_param("ssssss", $nombre, $correo, $dni, $celular, $distrito,$cod);
+            $stmt->bind_param("sssssss", $nombre, $correo, $dni, $celular, $distrito, $foto, $codigo);
             $stmt->execute();
         
             // Verificar si la actualización fue exitosa
@@ -120,4 +122,32 @@ class Usuario {
         }
     } 
 }
+
+
+$clave="m3m0c0d3";
+
+function encriptar($string, $key){
+    $result = '';
+    for($i = 0; $i < strlen($string); $i++){
+    $char = substr($string, $i, 1);
+    $keychar = substr($key, ($i % strlen($key)) - 1, 1);
+    $char = chr(ord($char) + ord($keychar));
+    $result .= $char;
+    }
+    return base64_encode($result);
+    }
+    
+    function desencriptar($string, $key){
+    $result = '';
+    $string = base64_decode($string);
+    for($i = 0; $i < strlen($string); $i++){
+    $char = substr($string, $i, 1);
+    $keychar = substr($key, ($i % strlen($key)) - 1, 1);
+    $char = chr(ord($char) - ord($keychar));
+    $result .= $char;
+    }
+    return $result;
+    }
+
+
 ?>
