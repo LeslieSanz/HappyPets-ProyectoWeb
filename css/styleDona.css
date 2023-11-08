@@ -307,40 +307,113 @@ section {
 }
 
 /*------------------------------------------------------------------------*/
-button {
-  background-color: #fff;
-  color: #2fb4cc;
-  border: 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgb(19, 125, 139);
-  font-size: 14px;
-  padding: 10px 25px;
-}
-.contenedor-pop-yape {
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.3);
-  align-items: center;
-  justify-content: center;
+/*Estilo del modal YAPE-*/
+.modal {
   position: fixed;
-  pointer-events: none;
-  opacity: 0;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.contenedor-yape {
-  width: 600px;
-  background-color: #fff;
-  max-width: 100%;
-  padding: 30px 50px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-.show {
-  pointer-events: auto;
+.modal--show {
   opacity: 1;
+  pointer-events: unset;
 }
+
+.modal_container {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  grid-auto-columns: 100%;
+}
+
+.modal_img {
+  width: 90%;
+  max-width: 300px;
+}
+
+.modal_close {
+  text-decoration: none;
+  color: #fff;
+  background-color: #F26250;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color .3s;
+}
+
+.modal_close:hover {
+  color: #F26250;
+  background-color: #fff;
+}
+
+/*Estilo del modal PLIN-*/
+.modalplin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+.modal_containerP {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  grid-auto-columns: 100%;
+}
+
+.modalplin_img {
+  width: 90%;
+  max-width: 300px;
+}
+
+.modal_closeP {
+  text-decoration: none;
+  color: #fff;
+  background-color: #F26250;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color .3s;
+}
+
+.modal_closeP:hover {
+  color: #F26250;
+  background-color: #fff;
+}
+
+.modalplin--show {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+
