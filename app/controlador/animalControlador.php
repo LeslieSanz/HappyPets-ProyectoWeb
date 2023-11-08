@@ -4,7 +4,7 @@ require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Animal.php';
 
 //Controlar mostrar usuarios
-$animalDAO = new Animal($conn); // Suponiendo que $conn es tu conexión a la base de datos
+$animalDAO = new Animal($conn); 
 
 // Obtener la lista de usuarios
 $animales = $animalDAO->listarAnimales();

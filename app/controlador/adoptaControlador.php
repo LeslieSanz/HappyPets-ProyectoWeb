@@ -3,6 +3,12 @@ require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Usuario.php';
 require_once __DIR__ . '/../modelo/SolicitudAdopta.php';
 
+//Controlar mostrar usuarios
+$solicitudDAO = new SolicitudAdopta($conn); 
+
+// Obtener la lista de usuarios
+$solicitudes = $solicitudDAO->listarSolicitudes();
+
 if (isset($_POST["procesar-solicitud"])) {
 
     if (

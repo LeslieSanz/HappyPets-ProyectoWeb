@@ -18,66 +18,9 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
     <link rel="icon" href = "../../../img/logos/logopets.png" type = "image/x-icon">
 </head>
 <body>
-    <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-                <img src="../../../img/logos/logopets.png" alt="">
-            </div>
-
-            <span class="logo_name">Happy Pets</span>
-        </div>
-
-        <div class="menu-items">
-            <ul class="nav-links">
-                <li><a href="#">
-                    <i class="uil uil-estate"></i>
-                    <span class="link-name">Menu principal</span>
-                </a></li>
-                <li><a href="#">
-                    <i class="fa-solid fa-paw"></i>
-                    <span class="link-name">Peluditos</span>
-                </a></li>
-                <li><a href="#">
-                    <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">Solicitudes de adopción</span>
-                </a></li>
-                <li><a href="#">
-                    <i class="fa-solid fa-map-pin"></i>
-                    <span class="link-name">Reportes</span>
-                </a></li>
-                <li><a href="#">
-                    <i class="fa-solid fa-hand-holding-heart"></i>
-                    <span class="link-name">Donaciones</span>
-                </a></li>
-                <li><a href="#">
-                    <i class="uil uil-comments"></i>
-                    <span class="link-name">Comentarios</span>
-                </a></li>
-                <li><a href="#">
-                    <i class="fa-solid fa-phone"></i>
-                    <span class="link-name">Mensajes de contacto</span>
-                </a></li>
-            </ul>
-            
-            <ul class="logout-mode">
-                <li><a href="#">
-                    <i class="uil uil-signout"></i>
-                    <span class="link-name">Cerrar sesión</span>
-                </a></li>
-
-                <li class="mode">
-                    <a href="#">
-                        <i class="uil uil-moon"></i>
-                    <span class="link-name">Modo oscuro</span>
-                </a>
-
-                <div class="mode-toggle">
-                  <span class="switch"></span>
-                </div>
-            </li>
-            </ul>
-        </div>
-    </nav>
+        <?php
+            include "sidebar.php";
+        ?>
 
     <section class="dashboard">
         <div class="top">
