@@ -183,30 +183,30 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
                 </div>
                 <div class="pregunta">
                   <label for="vivienda">¿Todas las personas en tu hogar están de acuerdo con adoptar?</label><br>
-                  <input type="radio" id="casa" name="ninoc">
-                  <label for="opcion1">chi</label><br>
+                  <input type="radio" id="casa" name="acuerdo">
+                  <label for="opcion1">Sí</label><br>
 
-                  <input type="radio" id="depa" name="ninos">
-                  <label for="opcion2">nuSe</label><br>
+                  <input type="radio" id="depa" name="acuerdo">
+                  <label for="opcion2">No</label><br>
                 </div>
 
 
 
                 <div class="pregunta">
                   <label for="vivienda">¿Hay niños pequeños en tu vivienda?</label><br>
-                  <input type="radio" id="casa" name="ninoc">
-                  <label for="opcion1">chi</label><br>
+                  <input type="radio" id="casa" name="ninos">
+                  <label for="opcion1">Sí</label><br>
 
                   <input type="radio" id="depa" name="ninos">
-                  <label for="opcion2">nuSe</label><br>
+                  <label for="opcion2">No</label><br>
                 </div>
                 <div class="pregunta">
                   <label for="vivienda">¿Algún miembro de tu hogar tiene alergias a animales o problemas de salud que debamos tener en cuenta?</label><br>
-                  <input type="radio" id="casa" name="ninoc">
-                  <label for="opcion1">chi</label><br>
+                  <input type="radio" id="casa" name="alergias">
+                  <label for="opcion1">Sí</label><br>
 
-                  <input type="radio" id="depa" name="ninos">
-                  <label for="opcion2">nuSe</label><br>
+                  <input type="radio" id="depa" name="alergias">
+                  <label for="opcion2">No</label><br>
                 </div>
               
          
