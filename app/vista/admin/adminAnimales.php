@@ -179,7 +179,7 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                 <div class="form-container">
 
                         <div class="form-column">
-                            <input id="codigo-secreto" name="codigo-secreto">
+                            <input type="hidden" id="codigo-secreto" name="codigo-secreto">
                             <label for="nombre-editar">Nombre:</label>
                             <input type="text" id="nombre-editar" name="nombre-editar" required><br><br>
                             
