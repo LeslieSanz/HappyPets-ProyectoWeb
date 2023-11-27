@@ -37,7 +37,7 @@
                     <i class="uil uil-files-landscapes"></i>
                     <span class="link-name">Solicitudes de adopción</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="adminPrueba.php">
                     <i class="fa-solid fa-map-pin"></i>
                     <span class="link-name">Reportes</span>
                 </a></li>

@@ -80,7 +80,13 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                             
                             <?php $rutaImagen =   '../../../uploads/' . $animal['foto']; ?>
                             <td class="data-list"><a target="_blank" href="<?php echo $rutaImagen; ?>"><?php echo $animal['foto']; ?></a></td>        
-                            <td class="data-button"><button class="boton-editar" onclick="animalEditar('<?=$animal['cod_aniAdo']?>')">Editar</button></td>
+                            <td class="data-button">
+                                <button 
+                                        class="boton-editar" 
+                                        data-codigo="<?php echo $animal['cod_aniAdo']; ?>"      
+                                        data-toggle= "modal" >Editar
+                                </button>
+                            </td>
                             <td class="data-button"><button class="boton-eliminar" onclick="animalEliminar('<?=$animal['cod_aniAdo']?>')">Eliminar</button></td>
                         </tr>
                         <?php endforeach; ?>
@@ -93,7 +99,7 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
         </div>
     </section>
     
-    <!--POPUP Agregar animal-->
+    <!--POPUP REGISTRAR ANIMAL-->
     <section class="modal" id="miModal">
 
         <div class="modal_container">
@@ -147,7 +153,7 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                         <label for="razon">Razón:</label><br>
                         <textarea id="razon" name="razon" rows="4" cols="50" required></textarea><br><br>
 
-                        <label for="foto">Subir Foto:</label>
+                        <label for="foto">Subir foto:</label>
                         <input type="file" id="foto" name="foto" accept="image/*" required><br><br>
 
                         <input type="submit" value="Ingresar" name="RegistrarAnimal">
@@ -157,12 +163,77 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
         </div>
     </section>
 
-    
-    
+    <!--POPUP EDITAR ANIMAL-->
+   
+    <section class="modalEditar" id="miModal">
+
+            <div class="modal_container">
+
+            <div class="modal-header">
+                <h1>Editar animales en adopción</h1>
+                <a href="#" class="modal_close" id="close">X</a>
+            </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
-    <script src="ajax.js"></script>
-</body>
+            <form action="../../controlador/animalControlador.php" method="post" enctype="multipart/form-data">
+                <div class="form-container">
+
+                        <div class="form-column">
+                            <input id="codigo-secreto" name="codigo-secreto">
+                            <label for="nombre-editar">Nombre:</label>
+                            <input type="text" id="nombre-editar" name="nombre-editar" required><br><br>
+                            
+                            <label for="especie-editar">Especie:</label>
+                            <select id="especie-editar" name="especie-editar" required>
+                                <option value="Felino">Felino</option>
+                                <option value="Canino">Canino</option>
+                            </select><br><br>
+
+                            <label for="sexo-editar">Sexo:</label>
+                            <select id="sexo-editar" name="sexo-editar" required>
+                                <option value="Hembra">Hembra</option>
+                                <option value="Macho">Macho</option>
+                            </select><br><br>
+
+                            <label for="edad-editar">Edad:</label>
+                            <select id="edad-editar" name="edad-editar" required>
+                                <option value="0-6 meses">0 a 6 meses</option>
+                                <option value="6-12 meses">6 a 12 meses</option>
+                                <option value="1-2 años">1 a 2 años</option>
+                                <option value="2-4 años">2 a 4 años</option>
+                                <option value="Más de 4 años">Más de 4 años</option>
+                            </select><br><br>
+
+                            <label for="tamano-editar">Tamaño:</label>
+                            <select id="tamano-editar" name="tamano-editar" required>
+                                <option value="pequeño">Pequeño</option>
+                                <option value="mediano">Mediano</option>
+                                <option value="grande">Grande</option>
+                            </select><br><br>
+                        </div>
+                        <div class="form-column">
+                            <label for="caracteristicas-editar">Características:</label><br>
+                            <textarea id="caracteristicas-editar" name="caracteristicas-editar" rows="4" cols="50" required></textarea><br><br>
+
+                            <label for="razon-editar">Razón:</label><br>
+                            <textarea id="razon-editar" name="razon-editar" rows="4" cols="50" required></textarea><br><br>
+
+                            <label for="foto-editar">Actualizar foto:</label>
+                            <input type="file" id="foto-editar" name="foto-editar" accept="image/*" required><br><br>
+
+                            <input type="submit" value="Guardar" name="ActualizarAnimal">
+                        <!-- <img id="imagen" src="" alt="Imagen"> -->
+                        </div>
+                        
+                </div>
+            </form> 
+            </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="animales.js"></script>
+    </body>
+    
 </html>

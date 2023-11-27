@@ -527,7 +527,8 @@ nav.close ~ .dashboard .top{
     margin-right: 10px; /* Espacio entre las columnas */
   }
 
-.modal {
+.modal,
+.modalEditar {
     position: fixed;
     top: 0;
     left: 0;
@@ -540,6 +541,11 @@ nav.close ~ .dashboard .top{
   }
   
   .modal--show {
+    opacity: 1;
+    pointer-events: unset;
+  }
+
+  .modalEditar--show {
     opacity: 1;
     pointer-events: unset;
   }

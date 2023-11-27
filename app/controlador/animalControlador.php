@@ -1,7 +1,7 @@
-<!--animalControlador.php-->
 <?php
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Animal.php';
+
 
 //Controlar mostrar usuarios
 $animalDAO = new Animal($conn); 
@@ -47,6 +47,48 @@ if (!empty($_POST["RegistrarAnimal"])) {
 
         } else {
             echo '<div class="msgbddnoreg">Error al registrar animal</div>';
+        }
+    } 
+}
+
+if (!empty($_POST["ActualizarAnimal"])) {
+    
+    if (
+        strlen($_POST['nombre-editar']) >= 1 && 
+        strlen($_POST['codigo-secreto']) >= 1 && 
+        strlen($_POST['especie-editar']) >= 1 &&
+        strlen($_POST['sexo-editar']) >= 1 &&
+        strlen($_POST['edad-editar']) >= 1 &&
+        strlen($_POST['tamano-editar']) >= 1 &&
+        strlen($_POST['caracteristicas-editar']) >= 1 &&
+        strlen($_POST['razon-editar']) >= 1 &&
+        isset($_FILES["foto-editar"]) && $_FILES["foto-editar"]["error"] == 0 
+
+     ) {
+        $codigo = $_POST["codigo-secreto"];
+        $nombre = $_POST["nombre-editar"];
+        $especie = $_POST["especie-editar"];
+        $sexo = $_POST["sexo-editar"];
+        $edad = $_POST["edad-editar"];
+        $tamano = $_POST["tamano-editar"];
+        $caracteristicas = $_POST["caracteristicas-editar"];
+        $razon = $_POST["razon-editar"];
+        
+        // Ruta donde se almacenará la imagen
+        $rutaImagen =   '../../uploads/' . basename($_FILES["foto-editar"]["name"]);
+        $foto = basename($_FILES["foto-editar"]["name"]);
+
+        $animal = new Animal($conn);
+
+        // Intentar agregar el usuario a la base de datos
+        if ($animal->ActualizarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$foto,$codigo)
+        && move_uploaded_file($_FILES["foto-editar"]["tmp_name"], $rutaImagen )) {
+
+            echo '<div class="msgbddbien">Animal actualizado correctamente</div>';
+            header("location: ../vista/admin/adminAnimales.php");
+
+        } else {
+            echo '<div class="msgbddnoreg">Error al actualizar animal</div>';
         }
     } 
 }
@@ -119,4 +161,23 @@ if (isset($_POST["record"])) {
     }
 } 
 
+if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
+    if (isset($_POST['codigo'])) {
+        $codigo = $_POST['codigo'];
+
+        // Mensaje de depuración para verificar el valor de $dataImageValue
+        error_log("Valor de codigo recibido: " . $codigo);
+
+        // Llama a la función listar un animal
+        $animalDetalles = $animalDAO->listarUnAnimal($codigo);
+
+        // Después de obtener los datos de la base de datos, devuelve los datos en formato JSON
+        echo json_encode($animalDetalles);
+
+    } else {
+        echo "No se recibió el valor codigo.";
+    }
+}
+
 ?>
+
