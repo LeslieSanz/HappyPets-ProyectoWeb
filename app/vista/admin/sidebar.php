@@ -45,11 +45,11 @@
                     <i class="fa-solid fa-hand-holding-heart"></i>
                     <span class="link-name">Donaciones</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="adminComentarios.php">
                     <i class="uil uil-comments"></i>
                     <span class="link-name">Comentarios</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="adminContacto.php">
                     <i class="fa-solid fa-phone"></i>
                     <span class="link-name">Mensajes de contacto</span>
                 </a></li>

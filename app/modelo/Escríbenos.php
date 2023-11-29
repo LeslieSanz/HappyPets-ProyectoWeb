@@ -35,5 +35,20 @@ Class Contacto {
         }
     }
 
+    public function listarContactos() {
+        $contactos = [];
+    
+        $sql = "SELECT * FROM contacto";
+        $result = $this->conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $contactos[] = $row;
+            }
+        }
+    
+        return  $contactos;
+    }
+
 }
 ?>

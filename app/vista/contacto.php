@@ -91,11 +91,14 @@
             ></textarea>
             <!-- el name no es necesario, porque está relacionado al codigo del servidor-->
           </p>
-          <input class="btn"  type="submit"  name= "enviarDatosForm" value="Enviar">
+          <input class="btn"  type="submit"  name= "enviarDatosForm" onclick="return validar()"; value="Enviar">
           </input>
         </form>   
       </div>
     </div>
+    
+    <script src="../../js/Contacto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
        <!--PIE DE PAGINA-->
 

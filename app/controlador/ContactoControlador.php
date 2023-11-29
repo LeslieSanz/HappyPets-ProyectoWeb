@@ -2,7 +2,11 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Escríbenos.php';
 
+//Controlar mostrar usuarios
+$contactoDAO = new contacto($conn); 
 
+// Obtener la lista de usuarios
+$contactos = $contactoDAO->listarContactos();
 
 if (isset($_POST["enviarDatosForm"])) {
     if (
