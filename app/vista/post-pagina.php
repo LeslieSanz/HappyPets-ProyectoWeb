@@ -178,15 +178,61 @@
       </p>
     </section>
 
-    <div class="formulario">
-    <label for="comentario">Comentario:</label><br>
-    <textarea id="comentario" rows="4" cols="50" placeholder="Escribe un comentario"></textarea><br>
-    <button onclick="agregarComentario()">Enviar</button>
+    <section id="jjjd" class="section">
+	<div class="comment post-container">
+		<div class="row">
+
+			<div class="col-12">
+				<!-- section title -->
+				
+			
+			<br>
+			<br>
+
+				<h3>Comentario</h3>
+				<p>Cuentanos tu opinion acerca de nuestro sitio</p>
+					<br>	
+
+			<!-- Contact Details -->
+			<div class="contact-info col-lg-6 wow fadeInUp" data-wow-duration="500ms">
+			
+	
+
+<form id="frm-comment">
+<div class="input-row">
+    <input type="hidden" name="comment_id" id="post" placeholder="Nombre" />
+	<label for="nombre" class="form-label">Usuario:</label> 
+    <input class="form-control" type="text" name="nombre" id="nombre" readonly value="<?php echo $_SESSION['cod_usu']; ?>" required/>
 </div>
-<div class="comentarios" id="comentarios">
-    <!-- Aquí se mostrarán los comentarios -->
-    <?php include '../controlador/ComentarioControlador.php'; ?>
+
+<div class="input-row">
+<label for="comme" class="form-label">Comentario:</label>
+    <p class="emoji-picker-container">
+      <textarea rows="6" class="form-control" 
+	  type="text" name="comentario" id="comentario" placeholder="Agregue su comentario" required></textarea>
+    </p>
 </div>
+
+<div>
+    <button onclick="agregarComentario()"class="btn-primary " id="submitButton">Agregar Comentario</button>
+</div>
+<br>
+<div id="comment-message">¡Tu comentario se agrego!</div>
+<?php include '../controlador/ComentarioControlador.php'; ?>
+</form>
+</div><div id="output"></div>
+
+</div>
+
+				</form>
+			</div>
+			</div>
+			
+					
+			<!-- / End Contact Details -->
+
+			<!-- Contact Form -->
+    
     <!--script de movimiento-->
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
@@ -194,6 +240,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="../../js/post-pagina.js"></script>
+    
+    </section>
 
     <!--PIE DE PAGINA-->
     <footer class="pie-pagina">

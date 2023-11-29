@@ -140,3 +140,155 @@
   padding: 10px 20px;
   cursor: pointer;
 }
+
+
+
+
+.col-12{
+  max-width: 800px;
+  border: 0px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
+.frm-comment{
+	border: #000000 1px solid;
+	padding: 30px;
+	border-radius: 2px;
+
+}
+.input-row {
+	margin-bottom: 20px;
+}
+
+.input-row textarea{
+    cursor: text;
+    resize: none;
+    padding: 6px 10px 8px 10px;
+    margin: 0;
+    width: 100%;
+    min-height: 44px;
+    height: auto;
+    line-height: 1.4;
+    font-size: 14px;
+    /*word-break: break-word;
+    transition: all .15s ease-in-out;*/
+}
+
+.btn-primary{
+  background-color:  rgb(245, 183, 26);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.form-control {
+  background-color: #fff;
+  border-radius: 25px ;
+	margin-bottom: 15px;
+	padding: 15px;
+  
+}
+
+.comentario{
+margin: 20px;
+border-top: 1px solid #ccc;
+padding: 15px;
+}
+
+
+
+/*a{
+	text-decoration: none;
+}
+.output-container {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.comment-form-container {
+	border: #000000 1px solid;
+	padding: 30px;
+	border-radius: 3px;
+  cursor: text;
+}
+
+
+.input-field {
+	width: 100%;
+	border-radius: 3px;
+	padding: 10px;
+	border: #424141 1px solid;
+    box-sizing: border-box;
+
+}
+
+.btn-submit {
+	padding: 10px 20px;
+    background: #2083f3;
+    border: #137aea 1px solid;
+    color: #f0f0f0;
+    border-radius: 3px;
+}
+
+.output-container ul {
+	list-style-type: none;
+}
+
+.comment-row {
+	border-bottom: #b6d4ff 1px solid;
+	margin-bottom: 15px;
+	padding: 15px;
+	
+}
+
+.outer-comment {
+	padding: 30px;
+	
+    border-radius: 3px;
+}
+
+span.commet-row-label {
+	font-style: italic;
+}
+
+span.posted-by {
+	
+	margin-left:10px;
+}
+
+.comment-info {
+	font-size: 0.9em;
+	color: #000000;
+}
+
+.comment-text {
+	margin: 10px 0px;
+	margin-left: 40px;
+	color: #000000;
+}
+
+.btn-reply {
+	text-decoration: none;
+    color: #0026ff !important;
+    font-size: 0.9em;
+    cursor: pointer;
+	
+	margin-left:40px;
+}
+
+
+.icon-smile:before {
+    content: " ";
+    width: 16px;
+    height: 16px;
+    display: flex;
+    background: url(primary-smile.png);
+}*/
+
+#comment-message {
+	margin-left: 20px;
+	color: #189a18;
+	display: none;
+}
