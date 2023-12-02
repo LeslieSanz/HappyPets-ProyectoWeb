@@ -135,6 +135,24 @@ class Reporte {
     }
 
 
+    public function listarAnimalesReportaTodos() {
+        $lista_reporte = [];
+    
+        $sql = "SELECT * 
+        FROM animal_reporta ar 
+        JOIN reporte r ON ar.cod_ani = r.cod_ani;
+        ";
+        $result = $this->conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $lista_reporte[] = $row;
+            }
+        }
+    
+        return $lista_reporte;
+    }
+
     public function listarAnimalUnico($dataImageValue){
 
         $animalUnico = null;
@@ -159,6 +177,28 @@ class Reporte {
 
 
     }
+
+    public function eliminarAnimal($codigo) {
+        $sql = "DELETE FROM reporte WHERE cod_rep = ?";
+        $stmt = $this->conn->prepare($sql);
+    
+        if ($stmt) {
+            $stmt->bind_param("s", $codigo); 
+            $stmt->execute();
+            
+            if ($stmt->affected_rows > 0) {
+                $stmt->close(); // Cierra la declaración preparada antes de salir de la función
+                return true; 
+            } else {
+                echo "Error en la consulta: " . $stmt->error;
+                $stmt->close(); // Cierra la declaración preparada en caso de error
+                return false;
+            }
+        } else {
+            return false; 
+        }
+    }
+    
 
 
     

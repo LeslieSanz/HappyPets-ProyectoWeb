@@ -8,6 +8,8 @@ $animal_reporteDAO = new Reporte($conn); // Suponiendo que $conn es tu conexión
 
 // Obtener la lista de usuarios
 $animales_reporte = $animal_reporteDAO->listarAnimalesReporta();
+
+$lista_reporte = $animal_reporteDAO ->listarAnimalesReportaTodos();
 $mensajeResultados='';
 
 if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
@@ -85,4 +87,24 @@ if (isset($_POST["enviarDatosForm"])) {
         echo"Error";
     }
 }
+
+
+
+
+
+
+if (isset($_POST["record"])) {
+    $codigoAnimal = $_POST["record"];
+
+    if ($animal_reporteDAO->eliminarAnimal($codigoAnimal)) {
+        echo "Animal eliminado correctamente";
+    } else {
+        echo "Hubo un problema al eliminar el animal";
+    }
+} 
+
+
+
+
+
 ?>
