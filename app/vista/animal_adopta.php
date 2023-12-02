@@ -74,12 +74,13 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
 
                 
                 <?php
-                    if (isset($_SESSION["usuario"])) {
-                        echo '<a target="_blank" href="form-adopta.php? codigo ='. $animalDetalles['cod_aniAdo'] . ' " >Adóptame</a>';
+                    if (isset($_SESSION["usuario"]) && isset($animalDetalles['cod_aniAdo'])) {
+                        echo '<a target="_blank" href="form-adopta.php?codigo=' . $animalDetalles['cod_aniAdo'] . '">Adóptame</a>';
                     } else {
-                        echo '<a target="_blank" href="login.php"> Iniciar sesion </a>';
+                        echo '<a target="_blank" href="login.php">Iniciar sesión</a>';
                     }
-                ?>
+                    ?>
+
 
             </div>
         </div>
