@@ -71,7 +71,16 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
 
                 <p><?php echo $animalDetalles['caracteristicas']; ?></p>
                 <p><span><strong>¿Por qué adoptarlo?</strong><span> <?php echo $animalDetalles['razon']; ?></p>
-                <a target="_blank" href="form-adopta.php?codigo=<?php echo $animalDetalles['cod_aniAdo']; ?>">Adóptame</a>
+
+                
+                <?php
+                    if (isset($_SESSION["usuario"])) {
+                        echo '<a target="_blank" href="form-adopta.php? codigo ='. $animalDetalles['cod_aniAdo'] . ' " >Adóptame</a>';
+                    } else {
+                        echo '<a target="_blank" href="login.php"> Iniciar sesion </a>';
+                    }
+                ?>
+
             </div>
         </div>
         
