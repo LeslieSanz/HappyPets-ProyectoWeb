@@ -34,6 +34,7 @@ class Usuario {
     }
 
         // Método para obtenerUsuarioPorCodigoDeUsuario
+    // Método para obtenerUsuarioPorCodigoDeUsuario
     public function obtenerUsuarioPorCodUsu($cod_usu) {
         $stmt = $this->conn->prepare("SELECT * FROM usuario WHERE cod_usu = ?");
         $stmt->bind_param("s", $cod_usu);
@@ -41,12 +42,16 @@ class Usuario {
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
-            $usuario = $result->fetch_object();
+            // Devolver un array asociativo en lugar de un objeto
+            $usuario = $result->fetch_assoc();
+            $stmt->close(); // Cerrar la declaración preparada
             return $usuario;
         } else {
+            $stmt->close(); // Cerrar la declaración preparada en caso de que no haya resultados
             return null;
         }
     }
+
 
     
     // Método para validar el inicio de sesión
@@ -77,22 +82,6 @@ class Usuario {
         }
     
         return $usuarios;
-    }
-
-    public function buscarUsuario($id) {
-        $usuario = null;
-    
-        // Preparar la consulta SQL con un parámetro
-        $stmt = $this->conn->prepare("SELECT * FROM usuario WHERE id = ?");
-        $stmt->bind_param("i", $id); // "i" indica que el parámetro es un entero
-        $stmt->execute();
-        $result = $stmt->get_result();
-    
-        if ($result->num_rows > 0) {
-            $usuario = $result->fetch_assoc();
-        }
-    
-        return $usuario;
     }
 
     public function actualizarUsuario($cod, $nombre,$correo,$dni,$celular,$distrito) {

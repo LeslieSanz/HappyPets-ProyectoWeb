@@ -79,21 +79,21 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
                   <p class="error">Campo obligatorio</p>
                 </div>
                 <input required type="text" id="nombre" name="nombre"
-                 value="<?php echo htmlspecialchars($_SESSION["usuario"]); ?>"/>
+                 value="<?php echo htmlspecialchars($usuario["nombre"]); ?>"/>
 
                 <div class="label">
                   <label for="correo">Correo</label>
                   <p class="error">Campo obligatorio</p>
                 </div>
                 <input required type="text" id="correo" name="correo" 
-                value="<?php echo htmlspecialchars($_SESSION["email"]); ?>"/>
+                value="<?php echo htmlspecialchars($usuario["email"]); ?>"/>
 
                 <div class="label">
                   <label for="distrito">Distrito</label>
                   <p class="error">Campo obligatorio</p>
                 </div>
                 <input required type="text" id="distrito" name="distrito"
-                value="<?php echo htmlspecialchars($_SESSION["distrito"]); ?>"/>
+                value="<?php echo htmlspecialchars($usuario["distrito"]); ?>"/>
 
               </div>
 
@@ -105,14 +105,14 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
                   <p class="error">Campo obligatorio</p>
                 </div>
                 <input required type="text" id="dni" name="dni"
-                value="<?php echo htmlspecialchars($_SESSION["dni"]); ?>"/>
+                value="<?php echo htmlspecialchars($usuario["dni"]); ?>"/>
 
                 <div class="label">
                   <label for="celular">Celular</label>
                   <p class="error">Campo obligatorio</p>
                 </div>
                 <input required type="text" id="celular" name="celular"
-                value="<?php echo htmlspecialchars($_SESSION["celular"]); ?>"/>
+                value="<?php echo htmlspecialchars($usuario["celular"]); ?>"/>
                 </div>
 
             </div>

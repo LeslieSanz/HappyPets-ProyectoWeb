@@ -9,6 +9,22 @@ $solicitudDAO = new SolicitudAdopta($conn);
 // Obtener la lista de usuarios
 $solicitudes = $solicitudDAO->listarSolicitudes();
 
+
+if (isset($_SESSION['usuario'])) {
+    $usuario = new Usuario($conn);
+    $cod = $_SESSION["cod_usu"];
+    $usuario = $usuario->obtenerUsuarioPorCodUsu($cod); // Asigna el resultado a $usuario
+
+    // Verifica si el usuario se obtuvo correctamente
+    if ($usuario !== null) {
+        // Depuración
+       // var_dump($usuario); // Verifica la estructura y los valores de $usuario
+    } else {
+        echo "Usuario no encontrado";
+    }
+}
+
+
 if (isset($_POST["procesar-solicitud"])) {
 
     if (
