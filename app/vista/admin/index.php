@@ -46,17 +46,17 @@ require_once __DIR__ . '/../../controlador/usuarioControlador.php';
                     <div class="box box1">
                         <i class="fa-solid fa-user"></i>
                         <span class="text">Total de usuarios</span>
-                        <span class="number">5</span>
+                        <span class="number" id = "totalUsuarios">0</span>
                     </div>
                     <div class="box box2">
                         <i class="fa-solid fa-dog"></i>
                         <span class="text">Peluditos en adopción</span>
-                        <span class="number">8</span>
+                        <span class="number" id = "peluditosAdopcion">0</span>
                     </div>
                     <div class="box box3">
                         <i class="fa-solid fa-cat"></i>
                         <span class="text">Peluditos reportados</span>
-                        <span class="number">2</span>
+                        <span class="number" id = "peluditosReportados">0</span>
                     </div>
                 </div>
             </div>
@@ -155,5 +155,6 @@ require_once __DIR__ . '/../../controlador/usuarioControlador.php';
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <script src="ajax.js"></script>
+    <script src="admin.js"></script>
 </body>
 </html>

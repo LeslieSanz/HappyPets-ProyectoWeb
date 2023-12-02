@@ -181,3 +181,8 @@ function borrarTexto(input) {
 	  document.getElementById('previsualizacion').style.display = 'none';
 	}
   }
+
+
+ 
+
+

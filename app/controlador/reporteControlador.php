@@ -37,6 +37,14 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'
 
 if (isset($_POST["enviarDatosForm"])) {
 
+
+    // Verifica si el usuario no está logueado
+    if (!isset($_SESSION['usuario'])) {
+        // Redirige a la página de inicio de sesión
+        header("Location: ../vista/login.php");
+        exit();
+    }
+
     if (
         strlen($_POST['animal']) >= 1 && 
         $_POST['animal'] != "ingreseEspecie" &&
