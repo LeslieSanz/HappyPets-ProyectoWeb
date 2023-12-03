@@ -202,6 +202,19 @@ padding: 15px;
   margin-left: 20px;
 }
 
+.perfil{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.imagen-perfil{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid rgb(245, 183, 26) ;
+}
 .mensaje-error{
   background-color:  rgb(141, 80, 36);
   margin: 20px;

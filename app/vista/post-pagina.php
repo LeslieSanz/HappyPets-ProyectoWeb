@@ -234,8 +234,11 @@ if(isset($_SESSION['cod_usu'])){
   if ($result->num_rows > 0) {
      while ($row = $result->fetch_assoc()) {
           echo "<div class='comentario'>";
-          
+          echo "<div class='perfil'>";
+          echo "<img src='../../img/blog-img/perfilCom.png' alt='Imagen de perfil fija' class='imagen-perfil'>";
           echo "<span class='usuario'><strong>" . $row['nombre'] ."</strong> <br>";
+          echo"</div>";
+          
          echo "<span class='fecha'>" . $row['fecha_publi'] . "</span>";
           echo "<div class='contenido'>" . $row['contenido'] . "</div>";
           echo "</div>";
