@@ -111,7 +111,7 @@ class Animal {
     public function filtroAnimales($filtro) {
         $animales = [];
     
-        $sql = "SELECT * FROM animal_adopta WHERE $filtro";
+        $sql = "SELECT * FROM animal_adopta WHERE disponibilidad = 'Sí' AND $filtro";
         $result = $this->conn->query($sql);
     
         if ($result->num_rows > 0) {
