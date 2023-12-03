@@ -197,11 +197,18 @@ border-top: 1px solid #ccc;
 padding: 15px;
 }
 
+.contenido{
+  margin-top: 10px;
+  margin-left: 20px;
+}
 
 .mensaje-error{
+  background-color:  rgb(141, 80, 36);
   margin: 20px;
 border-top: 1px solid #ccc;
 padding: 15px;
+text-align: center;
+color: white;
 }
 
 /*a{

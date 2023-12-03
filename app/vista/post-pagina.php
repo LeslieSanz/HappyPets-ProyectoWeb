@@ -200,11 +200,11 @@
 	
 
 <form id="frm-comment">
-<div class="input-row">
+<!--<div class="input-row">
     <input type="hidden" name="comment_id" id="post" placeholder="Nombre" />
 	<label for="nombre" class="form-label">Usuario:</label> 
     <input class="form-control" type="text" name="nombre" id="nombre" readonly value="<?php echo $_SESSION['cod_usu']; ?>" required/>
-</div>
+</div>-->
 
 <div class="input-row">
 <label for="comme" class="form-label">Comentario:</label>
@@ -234,7 +234,8 @@ if(isset($_SESSION['cod_usu'])){
   if ($result->num_rows > 0) {
      while ($row = $result->fetch_assoc()) {
           echo "<div class='comentario'>";
-          echo "<span class='usuario'>" . $row['nombre'] . "<br>";
+          
+          echo "<span class='usuario'><strong>" . $row['nombre'] ."</strong> <br>";
          echo "<span class='fecha'>" . $row['fecha_publi'] . "</span>";
           echo "<div class='contenido'>" . $row['contenido'] . "</div>";
           echo "</div>";
@@ -243,7 +244,7 @@ if(isset($_SESSION['cod_usu'])){
      echo "No hay comentarios aún.";
       }
   } else {
-    echo "<div class='mensaje-error'>Usuario no logeado</div>";
+    echo "<div class='mensaje-error'>Se necesita <a href='login.php'><strong>iniciar sesión</strong></a>para comentar y ver los comentarios  </div>";
   ;
   } ?>
 
