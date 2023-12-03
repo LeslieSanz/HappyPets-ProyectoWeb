@@ -248,7 +248,7 @@
     <!--ModalFormulario Alimentos-->
     <section class="modalAlimentos">
         <div class="modal_containerAlimentos" >
-            <form method="post" action="../controlador/depositameControlador.php" id="formulario-alimentos" class="formulario-alimentos"> 
+            <form method="post" action="../controlador/depositameControlador.php" id="formulario-alimentos" class="formulario-alimentos" enctype="multipart/form-data"> 
             <div class="grupo">
                 <label for="inputNombre">Nombres y apellidos</label>
                 <input name="nombre" type="text" id="inputNombre" maxlength="19" autocomplete="off">
@@ -277,7 +277,7 @@
                             <i class="fas fa-angle-down"></i>
                         </div>
                         <div class="grupo-select">
-                            <select name="tipoMarco" id="selectMarca">
+                            <select name="tipoMarca" id="selectMarca">
                                 <option disabled selected>Marca</option>
                             </select>
                             <i class="fas fa-angle-down"></i>
@@ -287,10 +287,11 @@
             </div>
             <div class="grupo">
                 <label for="inputPeso">Peso</label>
-                <input name="Peso" type="text" id="inputPeso" maxlength="19" autocomplete="off">
+                <input name="peso" type="text" id="inputPeso" maxlength="19" autocomplete="off">
             </div>
-            <button name="Registrar" type="submit" class="btn-enviar" form="formulario-tarjeta">Enviar</button>
+            <button name="RegistrarAlimentos" type="submit" class="btn-enviar" form="formulario-alimentos">Enviar</button>
                 <div class="regresar">
+                <p>El recojo del articulo se realizará en los 5 días hábiles siguentes al de la fecha</p>
                      <a href="#" class="modal_closeAlimentos">Cerrar</a>
                 </div>
             </form>
@@ -321,8 +322,9 @@
                 <label for="inputDescripcion">Descripción del articulo</label>
                 <input name="descripcion" type="text" id="inputDescripcion" maxlength="60" autocomplete="off">
             </div>
-            <button name="Registrar" type="submit" class="btn-enviar" form="formulario-tarjeta">Enviar</button>
+            <button name="RegistrarArticulos" type="submit" class="btn-enviar" form="formulario-articulos">Enviar</button>
                 <div class="regresar">
+                        <p>El recojo del articulo se realizará en los 5 días hábiles siguentes al de la fecha</p>
                      <a href="#" class="modal_closeArticulos">Cerrar</a>
                 </div>
             </form>
