@@ -436,7 +436,6 @@ section .card .contenido a:hover {
   }
 
 
-
   @media (max-width: 950px) {
 
     .resultados .container-resultados {
@@ -512,3 +511,50 @@ section .card .contenido a:hover {
     }
   }
 }
+
+/* Estilos base */
+.adoptados {
+  background-color: white;
+  padding: 40px 0;
+}
+
+.container-adoptados {
+  margin: 20px 40px;
+}
+
+.animales {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 100px;
+}
+
+.animal {
+  flex-basis: 260px;
+}
+
+.animal .animal-img {
+  height: 180px;
+  width: 240px;
+  border-radius: 15%;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .animales {
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas más pequeñas */
+    margin: 20px 20px; /* Ajustar el margen para dar más espacio en pantallas más pequeñas */
+  }
+
+  .animal {
+    flex-basis: 100%; /* Ocupar todo el ancho en pantallas más pequeñas */
+    margin-bottom: 20px; /* Añadir espacio entre elementos */
+  }
+
+  .animal .animal-img {
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+  }
+}
+

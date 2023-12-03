@@ -83,6 +83,21 @@ class Animal {
         return $animales;
     }
 
+    public function listarAnimalesAdoptados() {
+        $animalesAdoptados = [];
+    
+        $sql = "SELECT * FROM animal_adopta WHERE disponibilidad = 'No'";
+        $result = $this->conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $animalesAdoptados[] = $row;
+            }
+        }
+    
+        return $animalesAdoptados;
+    }
+
     public function actualizarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$foto,$codigo) {
         $sql = "UPDATE animal_adopta SET nombre = ?,especie = ?,sexo = ?,edad = ?, tamano = ?, caracteristicas = ?, razon = ?, foto = ? WHERE cod_aniAdo = ?";
         $stmt = $this->conn->prepare($sql);

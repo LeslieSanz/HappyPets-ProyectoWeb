@@ -8,6 +8,7 @@ $animalDAO = new Animal($conn);
 
 // Obtener la lista de usuarios
 $animales = $animalDAO->listarAnimales();
+$animalesAdoptados = $animalDAO->listarAnimalesAdoptados();
 $mensajeResultados='';
 
 

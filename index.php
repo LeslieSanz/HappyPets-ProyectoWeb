@@ -8,7 +8,7 @@ require_once __DIR__ . '/app/controlador/animalControlador.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Pets</title>
-    <link rel="stylesheet" href="css/styleInicio.css" />
+    <link rel="stylesheet" href="css/stylesInicio.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="icon" href="img/logos/logopets.png" type="image/x-icon">
@@ -206,6 +206,21 @@ require_once __DIR__ . '/app/controlador/animalControlador.php';
     <section class="unete">
         <h1 class="titulo-unete">Sé parte de nuestra manada</h1>
         <a href="javascript:popUp('app/vista/registro.php')">Súmate al cambio hoy</a>
+    </section>
+
+    <section class="adoptados" >
+        <div class="container-adoptados" >
+            <div class="animales" >
+            <?php foreach ($animalesAdoptados as $animal): ?>
+                <div class="animal" >
+                    <?php
+                        echo "<img src='/HappyPets-ProyectoWeb/uploads/" . $animal['foto'] . "' alt='Imagen' class='animal-img' 
+                        ><br>";
+                    ?>
+                </div>
+            <?php endforeach; ?>
+            </div>
+        </div>
     </section>
 
     <!--CARRUSEL DE LOGOS DE AUSPICIADORES-->
