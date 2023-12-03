@@ -28,6 +28,46 @@ class Deposito {
             return false; 
         }
     }
+
+    public function agregarAlimento($numero,$nombre,$direccion,$tAlimento,$tEdad,$tMarca,$peso){
+        $sql = "INSERT INTO donacion(numContact,nombre,direccion,tAlimento,tEdad,marca,peso) VALUES (?,?,?,?,?,?,?)";
+        $stmt = $this->conn->prepare($sql);
+        // Verificar si la consulta preparada se ejecutó correctamente
+        if ($stmt) {
+            $stmt->bind_param("sssssss", $numero,$nombre,$direccion,$tAlimento,$tEdad,$tMarca,$peso);
+            $stmt->execute();
+            // Verificar si la inserción fue exitosa
+            if ($stmt->affected_rows > 0) {
+                return true; 
+            } else {
+                echo "Error en la consulta: " . $stmt->error;
+                return false; 
+            }
+            $stmt->close();
+        } else {
+            return false; 
+        }
+    }
+
+    public function agregarArticulo($numero,$nombre,$direccion,$tArticulo,$descripcion){
+        $sql = "INSERT INTO donacion(numContact,nombre,direccion,tArticulo,desArticulo) VALUES (?,?,?,?,?)";
+        $stmt = $this->conn->prepare($sql);
+        // Verificar si la consulta preparada se ejecutó correctamente
+        if ($stmt) {
+            $stmt->bind_param("sssss", $numero,$nombre,$direccion,$tArticulo,$descripcion);
+            $stmt->execute();
+            // Verificar si la inserción fue exitosa
+            if ($stmt->affected_rows > 0) {
+                return true; 
+            } else {
+                echo "Error en la consulta: " . $stmt->error;
+                return false; 
+            }
+            $stmt->close();
+        } else {
+            return false; 
+        }
+    }
     
 
     public function listarDeposito($codigo){

@@ -427,7 +427,7 @@ section {
   display: flex;
   opacity: 0;
   pointer-events: none;
-
+  overflow-y: auto;
 }
 
 .modal_containerAlimentos {
@@ -442,6 +442,7 @@ section {
   gap: 1em;
   place-items: center;
   grid-auto-columns: 100%;
+  overflow-y: auto;
 }
 
 .modal_closeAlimentos {
@@ -563,6 +564,12 @@ section {
   cursor: pointer;
 }
 
+.modal_containerAlimentos p {
+  margin: 5px 5px 5px 5px;
+  color: #F26250;
+  font-weight: 900;
+}
+
 .formulario-alimentos .btn-enviar:hover {
   background: #1850b1;
 }
@@ -577,7 +584,13 @@ section {
   display: flex;
   opacity: 0;
   pointer-events: none;
+  overflow-y: auto;
+}
 
+.modal_containerArticulos p {
+  margin: 5px 5px 5px 5px;
+  color: #F26250;
+  font-weight: 900;
 }
 
 .modal_containerArticulos {
@@ -592,6 +605,7 @@ section {
   gap: 1em;
   place-items: center;
   grid-auto-columns: 100%;
+  overflow-y: auto;
 }
 
 .modal_closeArticulos {
@@ -615,6 +629,7 @@ section {
   opacity: 1;
   pointer-events: unset;
 }
+
 /* Formulario Articulos */
 .formulario-articulos {
   background: #fff;
