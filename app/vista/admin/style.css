@@ -477,7 +477,8 @@ nav.close ~ .dashboard .top{
     cursor: pointer;
   }
 
-  .data-button .boton-eliminar{
+  .data-button .boton-eliminar,
+  .data-button .boton-danger{
     text-decoration: none;
     display: inline-block;
     padding: 10px;
@@ -489,8 +490,28 @@ nav.close ~ .dashboard .top{
     transition: all 400ms ease;
     font-weight: bold;
   }
-  .boton-eliminar:hover{
+  .boton-eliminar:hover,
+  .boton-danger:hover{
     background: red;
+    color: #fff;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .data-button .boton-success {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    border: 1px solid green;
+    background: green;
+    border-radius: 20px;
+    transition: all 400ms ease;
+    font-weight: bold;
+  }
+  .boton-success:hover{
+    background: green;
     color: #fff;
     transform: scale(1.1);
     cursor: pointer;

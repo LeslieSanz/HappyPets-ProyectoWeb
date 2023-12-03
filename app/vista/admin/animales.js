@@ -15,6 +15,19 @@ function animalEliminar(codigo){
     });
 }
 
+//funcion para cambiar el estado de una solicitud
+function cambiarEstadoSolicitud(id){
+    $.ajax({
+       url:"../../controlador/adoptaControlador.php",
+       method:"post",
+       data:{record:id},
+       success:function(data){
+           alert('Estado de la solicitud actualizado correctamente');
+           location.reload();
+       }
+   });
+}
+
 //--------------------------VENTANA EMERGENTE----------------------
 
 $(document).ready(function () {

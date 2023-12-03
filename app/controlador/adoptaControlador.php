@@ -64,4 +64,15 @@ if (isset($_POST["procesar-solicitud"])) {
     }
 }
 
+//Para cambiar el estado de una solicitud a "pendiente (0)" o "adoptado (1)"
+if (isset($_POST["record"])) {
+    $codigoSolicitud = $_POST["record"];
+
+    if ($solicitudDAO->modificarEstadoSolicitud($codigoSolicitud)) {
+        echo "Solicitud actualizada, bien Leslie";
+    } else {
+        echo "Hubo un problema al actualizar";
+    }
+} 
+
 ?>
