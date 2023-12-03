@@ -92,12 +92,12 @@
             <span class="perfil-nombre">Adrián Cisneros</span>
           </div>
           <!--icono-->
-          <div class="boton-like">
-            <div class="heart-bg">
+          <!--<div class="boton-like">-->
+            <!--<div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
       <!--publicacion 2-->
@@ -124,12 +124,12 @@
           <img src="../../img/blog-img/Les.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Leslie Sanchez</span>
           </div>
-          <div class="boton-like">
+           <!--<div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
 
@@ -152,12 +152,12 @@
           <img src="../../img/blog-img/Dom.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Dominith Anton</span>
           </div>
-          <div class="boton-like">
+          <!-- <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
 
@@ -179,12 +179,12 @@
           <img src="../../img/blog-img/Adr.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Adrián Cisneros</span>
         </div>
-          <div class="boton-like">
+           <!--<div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
       <!--publicacion 5-->
@@ -211,12 +211,12 @@
           <img src="../../img/blog-img/Les.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Leslie Sanchez</span>
         </div>
-          <div class="boton-like">
+           <!--<div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
 
@@ -244,12 +244,12 @@
           <img src="../../img/blog-img/Dom.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Dominith Anton</span>
         </div>
-          <div class="boton-like">
+          <!-- <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
       <!--publicacion 7-->
@@ -280,12 +280,12 @@
           <img src="../../img/blog-img/Adr.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Adrián Cisneros</span>
       </div>
-          <div class="boton-like">
+          <!-- <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
       <!--publicacion 8-->
@@ -315,12 +315,12 @@
           <img src="../../img/blog-img/Les.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Leslie Sanchez</span>
         </div>
-          <div class="boton-like">
+           <!--<div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
 
@@ -348,12 +348,12 @@
           <img src="../../img/blog-img/Cristina.jfif" alt="" class="perfil-img" />
           <span class="perfil-nombre">Cristina Fernández</span>
       </div>
-          <div class="boton-like">
+           <!--<div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
       <!--publicacion 10-->
@@ -382,12 +382,12 @@
           <img src="../../img/blog-img/Ant.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Anthony Peña</span>
         </div>
-          <div class="boton-like">
+           <!--<div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
       <!--publicacion 11-->
@@ -415,12 +415,12 @@
           <img src="../../img/blog-img/mr world.PNG" alt="" class="perfil-img" />
           <span class="perfil-nombre">Miguel Fernandez</span>
         </div>
-          <div class="boton-like">
+          <!-- <div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
 
@@ -449,12 +449,12 @@
           <img src="../../img/blog-img/ricolas.jpg" alt="" class="perfil-img" />
           <span class="perfil-nombre">Nicolas de las casas</span>
        </div>
-          <div class="boton-like">
+           <!--<div class="boton-like">
             <div class="heart-bg">
               <div class="icono-corazon"></div>
             </div>
             <div class="contador-like">7</div>
-          </div>
+          </div>-->
         </div>
       </div>
     </section>

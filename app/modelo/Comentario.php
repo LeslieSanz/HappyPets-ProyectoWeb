@@ -20,16 +20,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
 
-        echo "<div class='comentario'>";
-        echo "<span class='usuario'>" . $row['cod_usu'] . "<br>";
-        echo "<span class='fecha'>" . $row['fecha_publi'] . "<br>";
-        echo "<div class='contenido'>" . $row['contenido'] . "<br>";
-        echo "</div>";
+
         exit();
     } else {
         echo "Error al agregar el comentario: " . $conn->error;
     }
 
     $stmt->close();
-}
+}   
+
+class comentario{
+    private $conn;
+
+    // Constructor para asignar la conexión a la propiedad $conn
+    public function __construct($conn) {
+        $this->conn = $conn;
+    }
+
+
+    public function listarComentarios() {
+        $comentarios = [];
+    
+        $sql = "SELECT * FROM comentario";
+        $result = $this->conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $comentarios[] = $row;
+            }
+        }
+    
+        return  $comentarios;
+    }
+
+    public function eliminarComentario($codigo){
+        $sql = "DELETE FROM comentario WHERE cod_com = ?";
+        $stmt = $this->conn->prepare($sql);
+    
+        if ($stmt) {
+            $stmt->bind_param("s", $codigo); 
+            $stmt->execute();
+            
+            if ($stmt->affected_rows > 0) {
+                $stmt->close(); // Cierra la declaración preparada antes de salir de la función
+                return true; 
+            } else {
+                echo "Error en la consulta: " . $stmt->error;
+                $stmt->close(); // Cierra la declaración preparada en caso de error
+                return false;
+            }
+        } else {
+            return false; 
+        }
+    }
+
+    }
 ?>

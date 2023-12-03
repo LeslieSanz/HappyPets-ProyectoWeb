@@ -178,6 +178,7 @@
       </p>
     </section>
 
+
     <section id="jjjd" class="section">
 	<div class="comment post-container">
 		<div class="row">
@@ -217,8 +218,39 @@
     <button onclick="agregarComentario()"class="btn-primary " id="submitButton">Agregar Comentario</button>
 </div>
 <br>
+
 <div id="comment-message">¡Tu comentario se agrego!</div>
-<?php include '../controlador/ComentarioControlador.php'; ?>
+
+<?php include '../controlador/ComentarioControlador.php'; 
+if(isset($_SESSION['cod_usu'])){
+  $codigo_usuario = $_SESSION['cod_usu'];
+
+  // Obtener la lista de comentarios
+  $sql = "SELECT c.cod_com, c.contenido, c.fecha_publi, c.cod_usu, u.nombre 
+          FROM comentario c 
+          INNER JOIN usuario u ON c.cod_usu = u.cod_usu";
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+     while ($row = $result->fetch_assoc()) {
+          echo "<div class='comentario'>";
+          echo "<span class='usuario'>" . $row['nombre'] . "<br>";
+         echo "<span class='fecha'>" . $row['fecha_publi'] . "</span>";
+          echo "<div class='contenido'>" . $row['contenido'] . "</div>";
+          echo "</div>";
+      }
+  } else {
+     echo "No hay comentarios aún.";
+      }
+  } else {
+    echo "<div class='mensaje-error'>Usuario no logeado</div>";
+  ;
+  } ?>
+
+
+
+
+
 </form>
 </div><div id="output"></div>
 
@@ -227,6 +259,8 @@
 				</form>
 			</div>
 			</div>
+			
+    
 			
 					
 			<!-- / End Contact Details -->
@@ -240,7 +274,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../../js/post-pagina.js"></script>
-    
     </section>
 
     <!--PIE DE PAGINA-->
