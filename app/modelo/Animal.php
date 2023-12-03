@@ -86,7 +86,7 @@ class Animal {
     public function listarAnimalesAdoptados() {
         $animalesAdoptados = [];
     
-        $sql = "SELECT * FROM animal_adopta WHERE disponibilidad = 'No'";
+        $sql = "SELECT * FROM animal_adopta WHERE disponibilidad = 'No' LIMIT 4";
         $result = $this->conn->query($sql);
     
         if ($result->num_rows > 0) {
