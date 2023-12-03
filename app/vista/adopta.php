@@ -51,43 +51,62 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
     <main>
             <section class="filtros-busqueda">
             <form id="form-busqueda-adopta" name="form-busqueda-adopta" method="post">
-                <div class="filtro">
-                    <label for="tipo-animal">Tipo de Animal:</label>
-                    <select id="tipo-animal" name="tipo-animal">
-                        <option value="todos">Todos</option>
-                        <option value="felino">Felino</option>
-                        <option value="canino">Canino</option>
-                    </select>
+            <div class="form-container">
+              <div class="form-column">
+                <h1>Encuentra al nuevo integrante de tu familia</h1>
+              </div>
+                
+              <div class="form-column">
+                    <div class="filtro">
+                    <h4>Quiero adoptar a un ...</h4>
+                        <label for="tipo-animal">Tipo de Animal:</label>
+                        <select class="select" id="tipo-animal" name="tipo-animal">
+                            <option value="todos">Todos</option>
+                            <option value="felino">Felino</option>
+                            <option value="canino">Canino</option>
+                        </select>
+                    </div>
+                
+                    
                 </div>
-                <div class="filtro">
-                    <label for="sexo-animal">Sexo:</label>
-                    <select id="sexo-animal" name="sexo-animal">
-                        <option value="todos">Todos</option>
-                        <option value="hembra">Hembra</option>
-                        <option value="macho">Macho</option>
-                    </select>
+
+                <div class="form-column">
+                    <div class="filtro">
+                        <label for="sexo-animal">Sexo:</label>
+                        <select class="select" id="sexo-animal" name="sexo-animal">
+                            <option value="todos">Todos</option>
+                            <option value="hembra">Hembra</option>
+                            <option value="macho">Macho</option>
+                        </select>
+                    </div>
+                    <div class="filtro">
+                        <label for="tamano-animal">Tamaño:</label>
+                        <select class="select" id="tamano-animal" name="tamano-animal">
+                            <option value="todos">Todos</option>
+                            <option value="pequeño">Pequeño</option>
+                            <option value="mediano">Mediano</option>
+                            <option value="grande">Grande</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="filtro">
-                    <label for="tamano-animal">Tamaño:</label>
-                    <select id="tamano-animal" name="tamano-animal">
-                        <option value="todos">Todos</option>
-                        <option value="pequeño">Pequeño</option>
-                        <option value="mediano">Mediano</option>
-                        <option value="grande">Grande</option>
-                    </select>
+
+                <div class="form-column">
+                    <div class="filtro">
+                        <label for="edad-animal">Edad:</label>
+                        <select  class="select" id="edad-animal" name="edad-animal">
+                            <option value="todos">Todos</option>
+                            <option value="0-6 meses">0 a 6 meses</option>
+                            <option value="6-12 meses">6 a 12 meses</option>
+                            <option value="1-2 años">1 a 2 años</option>
+                            <option value="2-4 años">2 a 4 años</option>
+                            <option value="Más de 4 años">Más de 4 años</option>
+                        </select>
+                        <button class="buscar" type="submit" name= "enviar" >Buscar</button>
+                    </div>
+                    
                 </div>
-                <div class="filtro">
-                    <label for="edad-animal">Edad:</label>
-                    <select id="edad-animal" name="edad-animal">
-                        <option value="todos">Todos</option>
-                        <option value="0-6 meses">0 a 6 meses</option>
-                        <option value="6-12 meses">6 a 12 meses</option>
-                        <option value="1-2 años">1 a 2 años</option>
-                        <option value="2-4 años">2 a 4 años</option>
-                        <option value="Más de 4 años">Más de 4 años</option>
-                    </select>
-                </div>
-                <button type="submit" name= "enviar" >Buscar</button>
+
+            </div>
             </form>
         </section>
 
