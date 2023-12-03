@@ -50,7 +50,7 @@ require_once __DIR__ . '/../../controlador/usuarioControlador.php';
                     </div>
                     <div class="box box2">
                         <i class="fa-solid fa-dog"></i>
-                        <span class="text">Peluditos en adopción</span>
+                        <span class="text">Peluditos adoptados</span>
                         <span class="number" id = "peluditosAdopcion">0</span>
                     </div>
                     <div class="box box3">

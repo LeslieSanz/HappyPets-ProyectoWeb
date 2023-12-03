@@ -56,8 +56,8 @@ class SolicitudAdopta {
         $solicitud = $this->listarUnaSolicitud($cod_ado);
 
         if($solicitud["estado"]=='pendiente'){
-            $sql = "UPDATE adopcion SET estado = 'adoptado' WHERE cod_ado = ?";
-        }else if($solicitud["estado"]=='adoptado'){
+            $sql = "UPDATE adopcion SET estado = 'aprobada' WHERE cod_ado = ?";
+        }else if($solicitud["estado"]=='aprobada'){
             $sql = "UPDATE adopcion SET estado = 'pendiente' WHERE cod_ado = ?";
         }
         $stmt = $this->conn->prepare($sql);

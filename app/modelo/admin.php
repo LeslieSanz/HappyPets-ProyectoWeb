@@ -13,7 +13,7 @@ class admin {
     public function usuarios(){
         // Ejecuta las sentencias SQL para obtener datos (reemplaza con tus propias consultas)
         $sqlTotalUsuarios = "SELECT COUNT(*) as total FROM usuario";
-        $sqlPeluditosAdopcion = "SELECT COUNT(*) as total FROM adopcion WHERE estado = 'adoptado'";
+        $sqlPeluditosAdopcion = "SELECT COUNT(*) as total FROM adopcion WHERE estado = 'aprobada'";
         $sqlPeluditosReportados = "SELECT COUNT(*) as total FROM reporte ";
 
         $resultTotalUsuarios = $this->conn->query($sqlTotalUsuarios);

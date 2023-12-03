@@ -63,7 +63,7 @@ require_once __DIR__ . '/../../controlador/adoptaControlador.php';
                             <?php if ($solicitud["estado"] == 'pendiente'): ?>
                                 <td class="data-button"><button class="boton-danger" onclick="cambiarEstadoSolicitud('<?=$solicitud['cod_ado']?>')">Pendiente</button></td>
                             <?php else: ?>
-                                <td class="data-button"><button class="boton-success" onclick="cambiarEstadoSolicitud('<?=$solicitud['cod_ado']?>')">Adoptado</button></td>
+                                <td class="data-button"><button class="boton-success" onclick="cambiarEstadoSolicitud('<?=$solicitud['cod_ado']?>')">Aprobada</button></td>
                             <?php endif; ?>
 
                             <td class="data-list"><?php echo $solicitud['cod_usu']; ?></td>
