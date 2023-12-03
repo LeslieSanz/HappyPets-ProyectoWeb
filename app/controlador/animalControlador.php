@@ -127,15 +127,15 @@ if (isset($_POST["enviar"])) {
         $filtro .= "edad = '$edad_animal'";
     }
 
-    // Construir el mensaje de resultados para la búsqueda
-    $mensajeResultados = "Resultados para la búsqueda: $filtro";
-
-    $animales = $animalDAO->filtroAnimales($filtro);
-
-    if (!empty($animales)) {
-        // La consulta se realizó correctamente, puedes mostrar los resultados
-    } else {
-        echo '<div>No se encontraron resultados para la busqueda</div>';
+    if(!empty($filtro)){
+        // Construir el mensaje de resultados para la búsqueda
+        $mensajeResultados = "Resultados para la búsqueda: $filtro";
+        $animales = $animalDAO->filtroAnimales($filtro);
+        if(empty($animales)){
+            echo '<div> No se encontraron resultados para la busqueda </div>';
+        }
+    }else{
+        $animales = $animalDAO->listarAnimales();
     }
 }
 
