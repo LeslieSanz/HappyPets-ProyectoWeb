@@ -160,7 +160,7 @@
                             las mascotas que tenemos si no puedes ayudar adoptando o con
                             dinero, este metodo siempre es importante para que nuestros
                             animales puedan alimentarse. Para donar escribe al <b>+51 963 029 680</b>.</p>
-                        <a href="#">Leer Más</a>
+                        <a href="#" class="abrir_alimentos">Dona alimentos aquí</a>
                     </div>
                 </div>
 
@@ -186,7 +186,7 @@
 
 
 
-    <section class=" section-articulos">
+    <section class="section-articulos">
         <div class="container">
             <h2>Apoyo Articulos</h2>
             <div class="container-section">
@@ -204,7 +204,7 @@
                             rascadores, platos de alimentos o juguetes. Para donar escribe al
                             <b>+51 963 029 680</b>
                         </p>
-                        <a href="#">Leer Más</a>
+                        <a href="#" class="abrir_articulos">Leer Más</a>
                     </div>
                 </div>
                 <div class="card articulos">
@@ -242,6 +242,90 @@
         <div class="modal_containerP">
             <img src="../../img/dona-img/yapeqr.PNG" alt="">
             <a href="#" class="modal_closeP">Cerrar</a>
+        </div>
+    </section>
+
+    <!--ModalFormulario Alimentos-->
+    <section class="modalAlimentos">
+        <div class="modal_containerAlimentos" >
+            <form method="post" action="../controlador/depositameControlador.php" id="formulario-alimentos" class="formulario-alimentos"> 
+            <div class="grupo">
+                <label for="inputNombre">Nombres y apellidos</label>
+                <input name="nombre" type="text" id="inputNombre" maxlength="19" autocomplete="off">
+            </div>
+            <div class="grupo">
+                <label for="inputNumero">Número de contacto</label>
+                <input name="numero" type="text" id="inputNumero" maxlength="32" autocomplete="off">
+            </div>
+            <div class="grupo">
+                <label for="inputDireccion">Direccion</label>
+                <input name="direccion" type="text" id="inputDireccion" maxlength="32" autocomplete="off">
+            </div>
+            <div class="flexbox">
+                <div class="grupo alimento">
+                    <div class="flexbox">
+                        <div class="grupo-select">
+                            <select name="tipoAlimento" id="selectAlimento">
+                                <option disabled selected>Tipo de Alimento</option>
+                            </select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="grupo-select">
+                            <select name="tipoEdad" id="selectEdad">
+                                <option disabled selected>Tipo por edad</option>
+                            </select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="grupo-select">
+                            <select name="tipoMarco" id="selectMarca">
+                                <option disabled selected>Marca</option>
+                            </select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo">
+                <label for="inputPeso">Peso</label>
+                <input name="Peso" type="text" id="inputPeso" maxlength="19" autocomplete="off">
+            </div>
+            <button name="Registrar" type="submit" class="btn-enviar" form="formulario-tarjeta">Enviar</button>
+                <div class="regresar">
+                     <a href="#" class="modal_closeAlimentos">Cerrar</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!--ModalFormulario Articulos-->
+    <section class="modalArticulos">
+        <div class="modal_containerArticulos" >
+            <form method="post" action="../controlador/depositameControlador.php" id="formulario-articulos" class="formulario-articulos"> 
+            <div class="grupo">
+                <label for="inputNombre2">Nombres y apellidos</label>
+                <input name="nombre2" type="text" id="inputNombre2" maxlength="19" autocomplete="off">
+            </div>
+            <div class="grupo">
+                <label for="inputNumero2">Número de contacto</label>
+                <input name="numero2" type="text" id="inputNumero2" maxlength="32" autocomplete="off">
+            </div>
+            <div class="grupo">
+                <label for="inputDireccion2">Direccion</label>
+                <input name="direccion2" type="text" id="inputDireccion2" maxlength="32" autocomplete="off">
+            </div>
+            <div class="grupo">
+                <label for="inputTipoArticulo">Tipo de articulo</label>
+                <input name="tipoArticulo" type="text" id="inputTipoArticulo" maxlength="32" autocomplete="off">
+            </div>
+            <div class="grupo">
+                <label for="inputDescripcion">Descripción del articulo</label>
+                <input name="descripcion" type="text" id="inputDescripcion" maxlength="60" autocomplete="off">
+            </div>
+            <button name="Registrar" type="submit" class="btn-enviar" form="formulario-tarjeta">Enviar</button>
+                <div class="regresar">
+                     <a href="#" class="modal_closeArticulos">Cerrar</a>
+                </div>
+            </form>
         </div>
     </section>
     

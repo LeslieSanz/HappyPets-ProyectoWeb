@@ -1,10 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
+    //*funciones para abrir modal yape
     const openModal = document.querySelector('.hero_cta');
     const modal = document.querySelector('.modal');
     const closeModal = document.querySelector('.modal_close');
+    
+    //*funciones para abrir modal plin
     const openModalPlin = document.querySelector('.abrir_plin');
     const modalPlin = document.querySelector('.modalplin');
     const closeModalPlin = document.querySelector('.modal_closeP');
+
+    //*funciones para abrir modal formulario alimentos
+    const openModalAlimentos = document.querySelector('.abrir_alimentos');
+    const modalAlimentos = document.querySelector('.modalAlimentos');
+    const closeModalAlimentos = document.querySelector('.modal_closeAlimentos');
+
+    //*funciones para abrir modal formulario articulos
+    const openModalArticulos = document.querySelector('.abrir_articulos');
+    const modalArticulos = document.querySelector('.modalArticulos');
+    const closeModalArticulos = document.querySelector('.modal_closeArticulos');
+
+
+
+    const formulario = document.querySelector('#formulario-alimentos');
 
     openModal.addEventListener('click', function(e) {
         e.preventDefault();
@@ -25,7 +42,93 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         modalPlin.classList.remove('modalplin--show');
     });
+
+    openModalAlimentos.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalAlimentos.classList.add('modalAlimentos--show');
+    });
+
+    closeModalAlimentos.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalAlimentos.classList.remove('modalAlimentos--show');
+    });
+
+    openModalArticulos.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalArticulos.classList.add('modalArticulos--show');
+    });
+
+    closeModalArticulos.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalArticulos.classList.remove('modalArticulos--show');
+    });
+
+ 
+    // * Función para llenar el tipo de comida
+    if (formulario) {
+        // El formulario existe
+        const opciones = ["Húmedo", "Seco"];
+        
+        opciones.forEach(valor => {
+        let opcion = document.createElement('option');
+        opcion.value = valor.toLowerCase(); 
+        opcion.innerText = valor;
+        
+        if (formulario.selectAlimento) {
+            // selectAlimento existe en el formulario
+            formulario.selectAlimento.appendChild(opcion);
+        } else {
+            console.error('selectAlimento no está definido en el formulario.');
+        }
+        });
+    } else {
+        console.error('El formulario no está definido.');
+    }
+    // * Función para llenar el tipo de edad
+    if (formulario) {
+        // El formulario existe
+        const opciones = ["Cachorro", "Jóven", "Adulto", "Mayor"];
+        
+        opciones.forEach(valor => {
+        let opcion = document.createElement('option');
+        opcion.value = valor.toLowerCase(); 
+        opcion.innerText = valor;
+        
+        if (formulario.selectEdad) {
+            // selectEdad existe en el formulario
+            formulario.selectEdad.appendChild(opcion);
+        } else {
+            console.error('selectEdad no está definido en el formulario.');
+        }
+        });
+    } else {
+        console.error('El formulario no está definido.');
+    }
+
+    // * Función para llenar las marcas
+    if (formulario) {
+        // El formulario existe
+        const opciones = ["Ricocan/cat", "Mimaskot", "Canbo", "Brit", "Gran Plus", "Dog/cat Chow",
+        "Propac", "Pedigree"];
+        
+        opciones.forEach(valor => {
+        let opcion = document.createElement('option');
+        opcion.value = valor.toLowerCase(); 
+        opcion.innerText = valor;
+        
+        if (formulario.selectEdad) {
+            // selectMarca existe en el formulario
+            formulario.selectMarca.appendChild(opcion);
+        } else {
+            console.error('selectMarca no está definido en el formulario.');
+        }
+        });
+    } else {
+        console.error('El formulario no está definido.');
+    }
 });
+
+
 
 
 
@@ -71,5 +174,8 @@ function mostrarTodos() {
         section.style.display = 'block';
     });
 }
+
+/*Funciones formulario alimento*/
+
 
 /*------------------------------------------------------------------------*/
