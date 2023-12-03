@@ -74,6 +74,7 @@ require_once __DIR__ . '/../../controlador/ContactoControlador.php';
             </div>
         </div>
     </section>
+    <script src="script.js"></script>
     
 </body>
 </html>

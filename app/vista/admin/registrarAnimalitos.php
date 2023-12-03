@@ -50,5 +50,6 @@
 
         <input type="submit" value="Ingresar" name="RegistrarAnimal">
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
