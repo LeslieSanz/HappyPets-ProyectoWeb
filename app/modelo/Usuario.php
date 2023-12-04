@@ -84,30 +84,34 @@ class Usuario {
         return $usuarios;
     }
 
-    public function actualizarUsuario($cod, $nombre,$correo,$dni,$celular,$distrito) {
-        $sql = "UPDATE usuario SET nombre = ?,email = ?,dni = ?,celular = ?, distrito = ? WHERE cod_usu = ?";
+    public function actualizarUsuario($cod, $nombre, $correo, $dni, $celular, $distrito)
+    {
+        $sql = "UPDATE usuario SET nombre = ?, email = ?, dni = ?, celular = ?, distrito = ? WHERE cod_usu = ?";
         $stmt = $this->conn->prepare($sql);
-        
-        // Verificar si la consulta preparada se ejecutó correctamente
+
         if ($stmt) {
-            $stmt->bind_param("ssssss", $nombre, $correo, $dni, $celular, $distrito,$cod);
+            $stmt->bind_param("ssssss", $nombre, $correo, $dni, $celular, $distrito, $cod);
             $stmt->execute();
-        
-            // Verificar si la actualización fue exitosa
+
+            if ($stmt->error) {
+                // Imprimir información detallada sobre cualquier error en la consulta
+                echo "Error en la consulta: " . $stmt->error;
+            }
+
             if ($stmt->affected_rows > 0) {
                 return true; // Usuario actualizado exitosamente
             } else {
-                // Mostrar el mensaje de error específico de MySQL
-                echo "Error en la consulta: " . $stmt->error;
-                return false; // Error al ejecutar la consulta
+                return false; // No se realizó ninguna actualización
             }
-        
-            // Cerrar la consulta preparada
+
             $stmt->close();
         } else {
-            return false; // Error al preparar la consulta
+            // Imprimir información detallada sobre cualquier error en la preparación de la consulta
+            echo "Error en la preparación de la consulta: " . $this->conn->error;
+            return false;
         }
-    } 
+    }
+
 }
 
 
