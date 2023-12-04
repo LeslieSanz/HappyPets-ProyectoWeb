@@ -2,6 +2,8 @@
 <?php
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Deposito.php';
+$deposito = new Deposito($conn);
+$listaDepositos = $deposito->listarDepositos();
 
 if (isset($_POST["RegistrarTarjeta"])) {
     

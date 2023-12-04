@@ -41,7 +41,7 @@
                     <i class="fa-solid fa-map-pin"></i>
                     <span class="link-name">Reportes</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="adminDonaciones.php">
                     <i class="fa-solid fa-hand-holding-heart"></i>
                     <span class="link-name">Donaciones</span>
                 </a></li>

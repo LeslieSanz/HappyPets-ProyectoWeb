@@ -10,7 +10,7 @@ class Deposito {
     }
 
     public function agregarDeposito($monto,$nombre,$tarnum){
-        $sql = "INSERT INTO donacion(monto,nombre,tarnum) VALUES (?,?,?)";
+        $sql = "INSERT INTO donacion(monto,nombre,tarnum,tipoDonacion) VALUES (?,?,?,'D')";
         $stmt = $this->conn->prepare($sql);
         // Verificar si la consulta preparada se ejecutó correctamente
         if ($stmt) {
@@ -30,7 +30,7 @@ class Deposito {
     }
 
     public function agregarAlimento($numero,$nombre,$direccion,$tAlimento,$tEdad,$tMarca,$peso){
-        $sql = "INSERT INTO donacion(numContact,nombre,direccion,tAlimento,tEdad,marca,peso) VALUES (?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO donacion(numContact,nombre,direccion,tAlimento,tEdad,marca,peso,tipoDonacion) VALUES (?,?,?,?,?,?,?,'Al')";
         $stmt = $this->conn->prepare($sql);
         // Verificar si la consulta preparada se ejecutó correctamente
         if ($stmt) {
@@ -50,7 +50,7 @@ class Deposito {
     }
 
     public function agregarArticulo($numero,$nombre,$direccion,$tArticulo,$descripcion){
-        $sql = "INSERT INTO donacion(numContact,nombre,direccion,tArticulo,desArticulo) VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO donacion(numContact,nombre,direccion,tArticulo,desArticulo,tipoDonacion) VALUES (?,?,?,?,?,'Ar')";
         $stmt = $this->conn->prepare($sql);
         // Verificar si la consulta preparada se ejecutó correctamente
         if ($stmt) {
