@@ -10,7 +10,7 @@ class Animal {
     }
 
     public function agregarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$foto){
-        $sql = "INSERT INTO animal_adopta(nombre,especie,sexo,edad,tamano,caracteristicas,razon,foto) VALUES (?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO animal_adopta(nombre,especie,sexo,edad,tamano,caracteristicas,razon,foto,disponibilidad) VALUES (?,?,?,?,?,?,?,?,'Sí')";
         $stmt = $this->conn->prepare($sql);
         // Verificar si la consulta preparada se ejecutó correctamente
         if ($stmt) {
