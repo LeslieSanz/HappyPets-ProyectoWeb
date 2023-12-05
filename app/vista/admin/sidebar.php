@@ -56,7 +56,7 @@
             </ul>
             
             <ul class="logout-mode">
-                <li><a href="#">
+                <li><a href="../../controlador/CierreSesion.php">
                     <i class="uil uil-signout"></i>
                     <span class="link-name">Cerrar sesión</span>
                 </a></li>
