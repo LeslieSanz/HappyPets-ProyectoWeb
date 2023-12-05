@@ -33,16 +33,37 @@ steps.forEach((step) => {
 
 function validateForm() {
   let valid = true;
-  for (let i = 0; i < formInputs.length; i++) {
-    if (!formInputs[i].value) {
-      valid = false;
-      formInputs[i].classList.add("err");
-      findLabel(formInputs[i]).nextElementSibling.style.display = "flex";
-    } else {
-      formInputs[i].classList.remove("err");
-      findLabel(formInputs[i]).nextElementSibling.style.display = "none";
+
+  // Validar otros campos solo si estamos en el Paso 1
+  if (currentStep === 1) {
+    for (let i = 0; i < formInputs.length; i++) {
+      if (!formInputs[i].value) {
+        valid = false;
+        formInputs[i].classList.add("err");
+        findLabel(formInputs[i]).nextElementSibling.style.display = "flex";
+      } else {
+        formInputs[i].classList.remove("err");
+        findLabel(formInputs[i]).nextElementSibling.style.display = "none";
+      }
     }
   }
+
+  // Validar el checkbox solo si estamos en el Paso 2
+  if (currentStep === 2) {
+    const miCheckbox = document.getElementById("miCheckbox");
+    const checkboxLabel = findLabel(miCheckbox);
+    if (!miCheckbox.checked) {
+      valid = false;
+      // Agregar un estilo para resaltar el checkbox
+      checkboxLabel.style.color = "red";
+      checkboxLabel.style.fontWeight = "bold";
+    } else {
+      // Restablecer el estilo si el checkbox está marcado
+      checkboxLabel.style.color = "";
+      checkboxLabel.style.fontWeight = "";
+    }
+  }
+
   return valid;
 }
 

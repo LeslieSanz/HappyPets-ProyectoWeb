@@ -154,7 +154,7 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
                   ?>
                 </figure>
                 <input required type="checkbox" id="miCheckbox" name="miCheckbox">
-                <label class="condiciones" for="checkbox">He leido y soy consciente de las implicaciones de adoptar, continuar con el proceso de adopción.</label>
+                <label class="condiciones" for="miCheckbox">He leido y soy consciente de las implicaciones de adoptar, continuar con el proceso de adopción.</label>
               </div>
           </div>
           </form>
