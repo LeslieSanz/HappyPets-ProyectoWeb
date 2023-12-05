@@ -164,12 +164,14 @@ main {
     align-items: center;
     justify-content: flex-end;
 }
-.verPassword{
-    font-size: 20px;
+.bx {
     cursor: pointer;
     position: absolute;
-    float: right;
-    margin-top: -60px;
+    left: 100%;
+    padding: 20px 0px 10px;
+    color: rgb(141, 80, 36);
+    font-size: 1em;
+    letter-spacing: 0.05em;
 }
 .msgbddnoreg {
     color: red;
