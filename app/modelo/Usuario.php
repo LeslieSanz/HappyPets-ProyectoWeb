@@ -33,7 +33,24 @@ class Usuario {
         }
     }
 
-        // Método para obtenerUsuarioPorCodigoDeUsuario
+    public function agregarUsuarioAct($usuario, $email, $password, $tipo){
+        $sql = "INSERT INTO usuario (nombre, email, password, tipo) VALUES (?, ?, ?, ?)";
+        $stmt = $this->conn->prepare($sql);
+
+        if($stmt){
+            $stmt->bind_param("ssss", $usuario, $email, $password, $tipo);
+            $stmt->execute();
+            if($stmt->affected_rows > 0){
+                return true;
+            } else {
+                return false;
+            }
+            $stmt->close();
+        } else {
+            return false;
+        }
+    }
+
     // Método para obtenerUsuarioPorCodigoDeUsuario
     public function obtenerUsuarioPorCodUsu($cod_usu) {
         $stmt = $this->conn->prepare("SELECT * FROM usuario WHERE cod_usu = ?");
@@ -84,34 +101,30 @@ class Usuario {
         return $usuarios;
     }
 
-    public function actualizarUsuario($cod, $nombre, $correo, $dni, $celular, $distrito)
-    {
-        $sql = "UPDATE usuario SET nombre = ?, email = ?, dni = ?, celular = ?, distrito = ? WHERE cod_usu = ?";
+    public function actualizarUsuario($cod, $nombre,$correo,$dni,$celular,$distrito) {
+        $sql = "UPDATE usuario SET nombre = ?,email = ?,dni = ?,celular = ?, distrito = ? WHERE cod_usu = ?";
         $stmt = $this->conn->prepare($sql);
-
+        
+        // Verificar si la consulta preparada se ejecutó correctamente
         if ($stmt) {
-            $stmt->bind_param("ssssss", $nombre, $correo, $dni, $celular, $distrito, $cod);
+            $stmt->bind_param("ssssss", $nombre, $correo, $dni, $celular, $distrito,$cod);
             $stmt->execute();
-
-            if ($stmt->error) {
-                // Imprimir información detallada sobre cualquier error en la consulta
-                echo "Error en la consulta: " . $stmt->error;
-            }
-
+        
+            // Verificar si la actualización fue exitosa
             if ($stmt->affected_rows > 0) {
                 return true; // Usuario actualizado exitosamente
             } else {
-                return false; // No se realizó ninguna actualización
+                // Mostrar el mensaje de error específico de MySQL
+                echo "Error en la consulta: " . $stmt->error;
+                return false; // Error al ejecutar la consulta
             }
-
+        
+            // Cerrar la consulta preparada
             $stmt->close();
         } else {
-            // Imprimir información detallada sobre cualquier error en la preparación de la consulta
-            echo "Error en la preparación de la consulta: " . $this->conn->error;
-            return false;
+            return false; // Error al preparar la consulta
         }
-    }
-
+    } 
 }
 
 
