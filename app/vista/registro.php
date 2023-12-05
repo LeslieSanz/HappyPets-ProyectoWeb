@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro-HappyPets</title>
     <link rel="stylesheet" href="../../css/styleRegistro.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href = "../../img/logos/logopets.png" type = "image/x-icon">
 </head>
 <body>
@@ -28,7 +29,7 @@
                 </div>
                 <div class="inputBox">
                     <input id="password" type="password" required="required" name="password">
-                    <span>Contraseña</span>
+                    <span>Contraseña</span><div class="bx bx-show-alt"></div>
                     <i></i>
                 </div>
                 <div class="inputBox">
