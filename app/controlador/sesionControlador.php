@@ -25,13 +25,19 @@ if (!empty($_POST["usuario"])) {
             $_SESSION["password"] = $datosUsuario->password;
             $_SESSION["cod_usu"] = $datosUsuario->cod_usu;
             $_SESSION["celular"] = $datosUsuario->celular;
+            $_SESSION["tipo"] = $datosUsuario->tipo;
             $_SESSION["dni"] = $datosUsuario->dni;
             $_SESSION["distrito"] = $datosUsuario->distrito;
             // Establecer una cookie que mantenga al usuario autenticado por un cierto tiempo
             $expira = time() + (30 * 24 * 60 * 60); // Caduca en 30 días
             setcookie("cod_usu", $datosUsuario->cod_usu, $expira, "/");
-            
-            header("location: ../../index.php");
+            if($_SESSION["tipo"] === "adm"){
+                header("location: ../vista/admin/index.php");
+                exit();
+            } else {
+                header("location: ../../index.php");
+                exit();
+            }
         } else {
             echo '<div>Acceso denegado</div>';
         }
