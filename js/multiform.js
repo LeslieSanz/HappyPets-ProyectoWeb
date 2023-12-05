@@ -9,6 +9,7 @@ let currentCircle = 0;
 steps.forEach((step) => {
   const nextBtn = step.querySelector(".next-stp");
   const prevBtn = step.querySelector(".prev-stp");
+  
   if (prevBtn) {
     prevBtn.addEventListener("click", () => {
       document.querySelector(`.step-${currentStep}`).style.display = "none";
@@ -18,15 +19,15 @@ steps.forEach((step) => {
       currentCircle--;
     });
   }
+
   nextBtn.addEventListener("click", () => {
-    document.querySelector(`.step-${currentStep}`).style.display = "none";
     if (currentStep < 5 && validateForm()) {
+      document.querySelector(`.step-${currentStep}`).style.display = "none";
       currentStep++;
       currentCircle++;
+      document.querySelector(`.step-${currentStep}`).style.display = "flex";
+      circleSteps[currentCircle].classList.add("active");
     }
-    document.querySelector(`.step-${currentStep}`).style.display = "flex";
-    circleSteps[currentCircle].classList.add("active");
-
   });
 });
 
@@ -38,13 +39,13 @@ function validateForm() {
       formInputs[i].classList.add("err");
       findLabel(formInputs[i]).nextElementSibling.style.display = "flex";
     } else {
-      valid = true;
       formInputs[i].classList.remove("err");
       findLabel(formInputs[i]).nextElementSibling.style.display = "none";
     }
   }
   return valid;
 }
+
 function findLabel(el) {
   const idVal = el.id;
   const labels = document.getElementsByTagName("label");
