@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Login-HappyPets</title>
-        <link rel="stylesheet" href="../../css/styleLogin.css"> 
+        <link rel="stylesheet" href="../../css/styleLogin.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" href = "../../img/logos/logopets.png" type = "image/x-icon">
     </head>
     <body>
@@ -23,11 +24,8 @@
                 </div>
                 <div class="inputBox">
                     <input id="password" type="password" required="required" name="password">
-                    <span>Contraseña</span>
+                    <span>Contraseña</span><div class="bx bx-show-alt"></div>
                     <i></i>
-                </div>
-                <div class="ver">
-                    <div class="fas fa-eye verPassword" onclick="vista()" id="verPassword"></div>
                 </div>
                 <div class="links">
                     <a href="#">Recordar contraseña</a>
@@ -37,5 +35,6 @@
             </form>
         </div>
         </main>
+        <script src="../../js/registro.js"></script>
     </body>
 </html>
