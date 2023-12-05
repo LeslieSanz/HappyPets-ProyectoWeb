@@ -34,16 +34,53 @@ steps.forEach((step) => {
 function validateForm() {
   let valid = true;
 
-  // Validar otros campos solo si estamos en el Paso 1
+  // Validar campos solo si estamos en el Paso 1
   if (currentStep === 1) {
     for (let i = 0; i < formInputs.length; i++) {
-      if (!formInputs[i].value) {
+      const input = formInputs[i];
+      const label = findLabel(input);
+      const errorMessage = label.nextElementSibling;
+
+      if (!input.value) {
         valid = false;
-        formInputs[i].classList.add("err");
-        findLabel(formInputs[i]).nextElementSibling.style.display = "flex";
+        input.classList.add("err");
+        errorMessage.style.display = "flex";
       } else {
-        formInputs[i].classList.remove("err");
-        findLabel(formInputs[i]).nextElementSibling.style.display = "none";
+        input.classList.remove("err");
+        errorMessage.style.display = "none";
+
+        // Validar el DNI
+        if (input.id === "dni") {
+          const dniRegex = /^\d{8}$/; // DNI debe tener exactamente 8 dígitos numéricos
+          if (!dniRegex.test(input.value)) {
+            valid = false;
+            input.classList.add("err");
+            errorMessage.textContent = " inválido (debe tener 8 dígitos)";
+            errorMessage.style.display = "flex";
+          }
+        }
+
+        // Validar el celular
+        if (input.id === "celular") {
+          const celularRegex = /^\d{9}$/; // Celular debe tener exactamente 9 dígitos numéricos
+          if (!celularRegex.test(input.value)) {
+            valid = false;
+            input.classList.add("err");
+            errorMessage.textContent = " inválido (debe tener 9 dígitos)";
+            errorMessage.style.display = "flex";
+          }
+        }
+
+        // Validar el correo
+        if (input.id === "correo") {
+          const correoRegex = /.+@.+/; // Correo debe contener al menos un arroba
+          if (!correoRegex.test(input.value)) {
+            valid = false;
+            input.classList.add("err");
+            errorMessage.textContent = "Correo inválido";
+            errorMessage.style.display = "flex";
+          }
+        }
       }
     }
   }
@@ -66,6 +103,7 @@ function validateForm() {
 
   return valid;
 }
+
 
 function findLabel(el) {
   const idVal = el.id;

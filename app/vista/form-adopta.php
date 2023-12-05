@@ -78,7 +78,7 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
                   <label for="nombre">Nombre</label>
                   <p class="error">Campo obligatorio</p>
                 </div>
-                <input required type="text" id="nombre" name="nombre"
+                <input required type="email" id="nombre" name="nombre"
                  value="<?php echo htmlspecialchars($usuario["nombre"]); ?>"/>
 
                 <div class="label">
