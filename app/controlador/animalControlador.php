@@ -62,8 +62,7 @@ if (!empty($_POST["ActualizarAnimal"])) {
         strlen($_POST['edad-editar']) >= 1 &&
         strlen($_POST['tamano-editar']) >= 1 &&
         strlen($_POST['caracteristicas-editar']) >= 1 &&
-        strlen($_POST['razon-editar']) >= 1 &&
-        isset($_FILES["foto-editar"]) && $_FILES["foto-editar"]["error"] == 0 
+        strlen($_POST['razon-editar']) >= 1 
 
      ) {
         $codigo = $_POST["codigo-secreto"];
@@ -74,16 +73,22 @@ if (!empty($_POST["ActualizarAnimal"])) {
         $tamano = $_POST["tamano-editar"];
         $caracteristicas = $_POST["caracteristicas-editar"];
         $razon = $_POST["razon-editar"];
-        
-        // Ruta donde se almacenará la imagen
-        $rutaImagen =   '../../uploads/' . basename($_FILES["foto-editar"]["name"]);
-        $foto = basename($_FILES["foto-editar"]["name"]);
+
+                
 
         $animal = new Animal($conn);
 
-        // Intentar agregar el usuario a la base de datos
-        if ($animal->ActualizarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$foto,$codigo)
-        && move_uploaded_file($_FILES["foto-editar"]["tmp_name"], $rutaImagen )) {
+        if(isset($_FILES["foto-editar"]) && $_FILES["foto-editar"]["error"] == 0){
+            // Ruta donde se almacenará la imagen
+            $rutaImagen =   '../../uploads/' . basename($_FILES["foto-editar"]["name"]);
+            $foto = basename($_FILES["foto-editar"]["name"]);
+            $resultado = $animal->ActualizarFotoAnimal($foto,$codigo);
+        }else{
+            $resultado = $animal->ActualizarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$codigo);
+        }
+
+        // Intentar actualizar los datos del animal
+        if ($resultado) {
 
             echo '<div class="msgbddbien">Animal actualizado correctamente</div>';
             header("location: ../vista/admin/adminAnimales.php");

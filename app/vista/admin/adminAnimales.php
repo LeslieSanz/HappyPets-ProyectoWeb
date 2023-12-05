@@ -219,7 +219,7 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                             <textarea id="razon-editar" name="razon-editar" rows="4" cols="50" required></textarea><br><br>
 
                             <label for="foto-editar">Actualizar foto:</label>
-                            <input type="file" id="foto-editar" name="foto-editar" accept="image/*" required><br><br>
+                            <input type="file" id="foto-editar" name="foto-editar" accept="image/*"><br><br>
 
                             <input type="submit" value="Guardar" name="ActualizarAnimal">
                         <!-- <img id="imagen" src="" alt="Imagen"> -->

@@ -98,13 +98,13 @@ class Animal {
         return $animalesAdoptados;
     }
 
-    public function actualizarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$foto,$codigo) {
-        $sql = "UPDATE animal_adopta SET nombre = ?,especie = ?,sexo = ?,edad = ?, tamano = ?, caracteristicas = ?, razon = ?, foto = ? WHERE cod_aniAdo = ?";
+    public function actualizarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$codigo) {
+        $sql = "UPDATE animal_adopta SET nombre = ?,especie = ?,sexo = ?,edad = ?, tamano = ?, caracteristicas = ?, razon = ? WHERE cod_aniAdo = ?";
         $stmt = $this->conn->prepare($sql);
         
         // Verificar si la consulta preparada se ejecutó correctamente
         if ($stmt) {
-            $stmt->bind_param("sssssssss", $nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$foto,$codigo);
+            $stmt->bind_param("ssssssss", $nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$codigo);
             $stmt->execute();
         
             // Verificar si la actualización fue exitosa
@@ -122,6 +122,32 @@ class Animal {
             return false; // Error al preparar la consulta
         }
     }
+
+    public function actualizarFotoAnimal($foto,$codigo) {
+        $sql = "UPDATE animal_adopta SET foto = ? WHERE cod_aniAdo = ?";
+        $stmt = $this->conn->prepare($sql);
+        
+        // Verificar si la consulta preparada se ejecutó correctamente
+        if ($stmt) {
+            $stmt->bind_param("ss", $foto,$codigo);
+            $stmt->execute();
+        
+            // Verificar si la actualización fue exitosa
+            if ($stmt->affected_rows > 0) {
+                return true; // Usuario actualizado exitosamente
+            } else {
+                // Mostrar el mensaje de error específico de MySQL
+                echo "Error en la consulta: " . $stmt->error;
+                return false; // Error al ejecutar la consulta
+            }
+        
+            // Cerrar la consulta preparada
+            $stmt->close();
+        } else {
+            return false; // Error al preparar la consulta
+        }
+    }
+
 
     public function filtroAnimales($filtro) {
         $animales = [];
