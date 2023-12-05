@@ -336,7 +336,7 @@ nav.close~.dashboard .top {
 .dash-content .title {
     display: flex;
     align-items: center;
-    margin: 60px 0 30px 0;
+    margin: 20px 0 30px 0;
 }
 
 .dash-content .title i {

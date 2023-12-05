@@ -25,13 +25,7 @@ require_once __DIR__ . '/../../controlador/usuarioControlador.php';
     <section class="dashboard">
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
-            
-
-            <div class="search-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="Buscar aquí...">
-            </div>
-            
+        
             <img src="../../../img/nosotros-img/Wal.jpg" alt="">
         </div>
 
