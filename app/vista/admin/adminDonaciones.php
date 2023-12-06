@@ -10,6 +10,7 @@ require_once __DIR__ . '/../../controlador/depositameControlador.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleAdopta.css" />
     
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="https://kit.fontawesome.com/09bca36bc3.js" crossorigin="anonymous"></script>
@@ -36,6 +37,7 @@ require_once __DIR__ . '/../../controlador/depositameControlador.php';
                     <span class="text">Solicitudes de donaciones</span>
                 </div>
                 <form id="form-donaciones" name="form-donaciones" method="post">
+                <p>Aplique el filtro que desee</p>
                 <label for="tipo-donacion">Tipo de Donaciones:</label>
                         <select class="select" id="tipo-donacion" name="tipo-donacion">
                             <option value="monetaria">Monetario</option>
@@ -51,7 +53,7 @@ require_once __DIR__ . '/../../controlador/depositameControlador.php';
                 <thead>
                     <tr>
                         <?php if ($tipo_donacion == ''): ?>
-                            <p>Aplique el filtro que desee</p>
+                            
                         <?php elseif ($tipo_donacion == 'monetaria'): ?>
                             <th class="data-title">Código de donación</th>
                             <th class="data-title">Tipo de donación</th>

@@ -1,0 +1,101 @@
+/* ----------------------------------------------ESTILOS PARA DONACIONES -------------------------------------- */
+
+
+/* Estilo para el contenedor principal */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Estilo para la parte superior del dashboard */
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.top img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Estilo para el formulario y la tabla de datos */
+.activity {
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Estilo para el título del formulario */
+.activity .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los elementos del formulario */
+.activity form label {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.activity .select {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.activity .buscar {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: rgb(245, 183, 26);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.activity .buscar:hover {
+    background-color: rgb(197, 146, 17);
+}
+
+/* Estilo para la tabla de datos */
+.activity-data {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+thead {
+    background-color: rgb(245, 183, 26);
+    color: #fff;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Estilo para las filas de datos */
+.data-list {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilo para el mensaje cuando no hay datos seleccionados */
+.activity p {
+    margin-bottom: 10px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------- */

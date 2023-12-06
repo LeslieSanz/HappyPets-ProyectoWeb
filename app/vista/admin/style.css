@@ -37,7 +37,7 @@ th {
     margin-top: 20px;
 }
 
-/* Estilo para el enlace "Registrar uno" */
+/* Estilo para el enlace "Regisdar uno" */
 a.hero_cta {
     display: inline-block;
     padding: 12px 24px;
@@ -240,6 +240,19 @@ select {
 
 
 /* ---------------------------------------------------------------------------------------------------*/
+/* Estilos generales */
+
+
+/* Estilos para el contenido específico en el modo oscuro */
+body.dark p {
+    color: #fff;
+    /* Color de texto para los elementos p en el modo oscuro */
+}
+
+body.dark label {
+    color: #fff;
+    /* Color de texto para los elementos label en el modo oscuro */
+}
 
 /* Estilos normales */
 table {
@@ -261,7 +274,12 @@ a {
 
 /* Estilos para las etiquetas a en modo oscuro */
 body.dark a {
-    color: #6FA2D3;
+    color: white;
+    /* Cambia el color de las etiquetas a en modo oscuro */
+}
+
+body.dark a {
+    color: white;
     /* Cambia el color de las etiquetas a en modo oscuro */
 }
 
@@ -284,10 +302,6 @@ body.dark a {
     --tran-03: all 0.2s ease;
 }
 
-body {
-    min-height: 100vh;
-    background-color: var(--primary-color);
-}
 
 body.dark {
     --primary-color: #3A3B3C;
@@ -658,6 +672,7 @@ nav.close~.dashboard .top {
     font-size: 20px;
     font-weight: 500;
     color: var(--text-color);
+    text-align: center;
 }
 
 .activity-data .data .data-list,
@@ -917,6 +932,8 @@ nav.close~.dashboard .top {
     grid-auto-columns: 100%;
     overflow-y: auto;
 }
+
+
 
 @media (max-width: 768px) {
     .form-container {
