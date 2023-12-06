@@ -125,8 +125,8 @@
                         class="fa fa-facebook"></a>
                     <a href="https://instagram.com/happypets2023web?igshid=NGVhN2U2NjQ0Yg==" target="_blank"
                         class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="https://twitter.com/pets_happy123" class="fa fa-x"></a>
+                    <a href="https://www.youtube.com/@HappyPets-cf1ug/featured" class="fa fa-youtube"></a>
                 </div>
             </div>
         </section>
