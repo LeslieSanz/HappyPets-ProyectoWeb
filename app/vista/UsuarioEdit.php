@@ -73,9 +73,9 @@ require_once __DIR__ . '/../controlador/ActualizarUsuario.php';
             <?php
             if (isset($_SESSION["usuario"]))
             echo '<span>Usuario : </span>';
-            echo '<input type="text" name="nombre" required class="box" placeholder="Ingresar tu nombre" value="'. $_SESSION["usuario"] .'">';
+            echo '<input type="text" name="nombre" required class="box" placeholder="Ingresar tu nombre" value="'. $usuario["nombre"] .'">';
             echo '<span>Email : </span>';
-            echo '<input type="email" name="email" required class="box" placeholder="Ingresar tu email" value="'. $_SESSION['email'] .'">';
+            echo '<input type="email" name="email" required class="box" placeholder="Ingresar tu email" value="'. $usuario['email'] .'">';
             echo '<span>Foto de perfil : </span>';
             echo '<input type="file" name="foto" class="box" accept="image/jpg, image/jpeg, image/png">';
             ?>
@@ -83,7 +83,7 @@ require_once __DIR__ . '/../controlador/ActualizarUsuario.php';
          <div class="inputBox">
          <?php
             if (isset($_SESSION["usuario"]))
-            echo'<input type="hidden" class= "box" name="codigo" value="'.$_SESSION['cod_usu'].'">';
+            echo'<input type="hidden" class= "box" name="codigo" value="'.$usuario['cod_usu'].'">';
             echo'<span>N° de Celular :</span>';
             echo'<input type="tel" class="box" name="telefono" value="'.$usuario['celular'].'" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required >';
             echo'<span>Dni :</span>';

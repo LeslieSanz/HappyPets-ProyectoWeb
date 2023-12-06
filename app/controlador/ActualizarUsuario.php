@@ -9,8 +9,8 @@ if (isset($_POST["update"]))
         strlen($_POST['email']) >= 1 && 
         strlen($_POST['telefono']) >= 1 && 
         strlen($_POST['dni']) >= 1 && 
-        strlen($_POST['distrito']) >= 1 &&
-        isset($_FILES['foto']) >= 1 &&  $_FILES["foto"]["error"] == 0 
+        strlen($_POST['distrito']) >= 1
+        
     ) {
         $cod = $_POST["codigo"];
         $nombre = $_POST["nombre"];
@@ -24,13 +24,14 @@ if (isset($_POST["update"]))
 
         $usuarioObj = new Usuario($conn);
 
-        if (move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaImagen ) && $usuarioObj->actualizarUsuario($cod,$nombre,$email,$dni,$telefono,$distrito,$fotoUsuario)) {
+        if (move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaImagen ) && $usuarioObj->actualizarUsuarioConFoto($cod,$nombre,$email,$dni,$telefono,$distrito,$fotoUsuario)) {
             // Reporte registrado exitosamente, redirigir a una página princial que es index
             header("Location: ../../index.php");
             exit();
         } else {
             // Error al registrar el reporte, redirigir a una página de error
-            header("Location: ../vista/post-pagina.php");
+            $usuarioObj->actualizarUsuarioSinFoto($cod,$nombre,$email,$dni,$telefono,$distrito);
+            header("Location: ../../index.php");
             exit();
         }
 
