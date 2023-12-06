@@ -45,6 +45,9 @@
         </ul>
     </nav>
 </header>
+    <!-- Enlance que vincula con el js-->
+    <script src="../../js/reporta.js"></script>
+    
     <main>
     
     <div class="container">
@@ -90,23 +93,25 @@
             }
             ?>
           <!--el id se usará para el javascript-->
-          <div class="form-foto">
-                                    <input type="file" id="boton-file" 
-                                    name="foto"
-                                    accept="image/*" onchange="mostrarImagen()"
+                        <div class="container-fotos">
+                            <div class="form-foto">
+                                <input type="file" id="boton-file-usuario" 
+                                    name="foto-animal"
+                                    accept="image/*" onchange="mostrarImagen('usuario')"
                                     required>
 
-                                    <input type="button" value="Subir Foto" class="form-file"
-                                        onclick="document.getElementById('boton-file').click()">
-                                </div>
-          </p>
-          <p id="previsualizacion">
-                                    <p>Imagen previa:</p>
-                                    <img id="imagen-previa" src="../../img\reporta-img/gato-gif.gif"
-                                        alt="Vista previa de la imagen">
-                                    <p id="nombre-archivo">Nombre del archivo: <span></span></p>
-                                </p>
-                                <p class="block">
+                                <input type="button" value="Subir Foto del animal" class="form-file"
+                                        onclick="document.getElementById('boton-file-usario').click()">
+                            </div>
+                            <div id="previsualizacion">
+                                <p>Imagen previa:</p>
+                                <img id="imagen-previa-usuario" src="../../../img/reporta-img/gato-gif.gif"
+                                            alt="Vista previa de la imagen" required>
+                                <p id="nombre-archivo-usuario">Nombre del archivo: <span></span></p>
+                            </div>
+                        </div>
+
+
             <button type="submit" 
                     name= "enviarDatosForm"
                     class="submit">Enviar</button>
