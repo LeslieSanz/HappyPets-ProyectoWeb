@@ -9,30 +9,39 @@ class SolicitudAdopta {
         $this->conn = $conn;
     }
 
-    public function agregarSolicitudAdopta($cod_usu, $cod_ani){
-        $sql = "INSERT INTO adopcion (fecha_solicitud, estado, cod_usu, cod_aniAdo) VALUES (NOW(),'pendiente',?,?)";
-        $stmt = $this->conn->prepare($sql);
+    public function agregarSolicitudAdopta($cod_usu, $cod_ani, $viv, $acu, $nin, $ale)
+{
+    try {
+        $sql = "INSERT INTO adopcion (fecha_solicitud, estado, cod_usu, cod_aniAdo, vivienda, acuerdo, ninos, alergias) VALUES (NOW(),'pendiente',?,?,?,?,?,?)";
+        $this->stmt = $this->conn->prepare($sql);
 
         // Verificar si la consulta preparada se ejecutó correctamente
-        if ($stmt) {
-            $stmt->bind_param("ss", $cod_usu, $cod_ani);
-            $stmt->execute();
+        if (!$this->stmt) {
+            throw new Exception('Error en la preparación de la consulta: ' . $this->conn->error);
+        }
 
-            // Verificar si la inserción fue exitosa
-            if ($stmt->affected_rows > 0) {
-                return true; 
-            } else {
-                // Mostrar el mensaje de error específico de MySQL
-                echo "Error en la consulta: " . $stmt->error;
-                return false; // Error al ejecutar la consulta
-            }
+        $this->stmt->bind_param("ssssss", $cod_usu, $cod_ani, $viv, $acu, $nin, $ale);
+        $this->stmt->execute();
 
-            // Cerrar la consulta preparada
-            $stmt->close();
+        // Verificar si la inserción fue exitosa
+        if ($this->stmt->affected_rows > 0) {
+            return true;
         } else {
-            return false; 
+            throw new Exception('Error al ejecutar la consulta: ' . $this->stmt->error);
+        }
+    } catch (Exception $e) {
+        // Manejar la excepción (puedes loguearla, mostrar un mensaje, etc.)
+        echo '<div style="color: red;">' . $e->getMessage() . '</div>';
+        return false;
+    } finally {
+        // Cerrar la consulta preparada en el bloque finally para garantizar que se cierre incluso si hay una excepción
+        if ($this->stmt) {
+            $this->stmt->close();
         }
     }
+}
+
+    
 
     public function listarUnaSolicitud($cod_ado){
         $stmt = $this->conn->prepare("SELECT * FROM adopcion WHERE cod_ado = ?");
