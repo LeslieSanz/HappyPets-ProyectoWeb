@@ -45,6 +45,7 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                 <table>
                     <thead>
                         <tr>
+                            <th class="data-title">Código</th>
                             <th class="data-title">Nombre</th>
                             <th class="data-title">Especie</th>
                             <th class="data-title">Sexo</th>
@@ -52,12 +53,15 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                             <th class="data-title">Tamaño</th>
                             <th class="data-title">Características</th>
                             <th class="data-title">Foto</th>
+                            <th class="data-title"></th>
+                            <th class="data-title"></th>
                         </tr>
                     </thead>
                     <tbody>
                     
                         <?php foreach ($animales as $animal): ?>
                         <tr class="data">
+                            <td class="data-list"><?php echo $animal['cod_aniAdo']; ?></td>
                             <td class="data-list"><?php echo $animal['nombre']; ?></td>
                             <td class="data-list"><?php echo $animal['especie']; ?></td>
                             <td class="data-list"><?php echo $animal['sexo']; ?></td>
@@ -98,14 +102,14 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
 
         <div class="modal_container">
         
-        <div class="modal-header">
-            <h1>Registro de animales en adopción</h1>
-            <a href="#" class="modal_close">X</a>
-        </div>
+            <div class="modal-header">
+                <h1>Registro de animales en adopción</h1>
+                <a href="#" class="modal_close">X</a>
+            </div>
 
         
-        <form action="../../controlador/animalControlador.php" method="post" enctype="multipart/form-data">
-            <div class="form-container">
+            <form action="../../controlador/animalControlador.php" method="post" enctype="multipart/form-data">
+             <div class="form-container">
 
                     <div class="form-column">
                         <label for="nombre">Nombre:</label>
@@ -145,19 +149,39 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                         <textarea id="caracteristicas" name="caracteristicas" rows="4" cols="50" required></textarea><br><br>
 
                         <label for="razon">Razón:</label><br>
-                        <textarea id="razon" name="razon" rows="4" cols="50" required></textarea><br><br>
+                        <textarea id="razon" name="razon" rows="4" cols="50" required></textarea><br><br> 
+                        <div class="container-fotos">
+                            <div class="form-foto">
+                                <input type="file" id="boton-file-registro" 
+                                    name="foto-animal"
+                                    accept="image/*" onchange="mostrarImagen('registro')"
+                                    required>
 
-                        <label for="foto">Subir foto:</label>
-                        <input type="file" id="foto" name="foto" accept="image/*" required><br><br>
+                                <input type="button" value="Subir Foto del animal" class="form-file"
+                                        onclick="document.getElementById('boton-file-registro').click()">
+                            </div>
+                            <div id="previsualizacion">
+                                <p>Imagen previa:</p>
+                                <img id="imagen-previa-registro" src="../../../img/reporta-img/gato-gif.gif"
+                                            alt="Vista previa de la imagen" required>
+                                <p id="nombre-archivo-registro">Nombre del archivo: <span></span></p>
+                            </div>
+                        </div>
 
-                        <input type="submit" value="Ingresar" name="RegistrarAnimal">
                     </div>
-                 </div>
+                    
+
+                    
+                </div>
+                <input type="submit" value="Ingresar" name="RegistrarAnimal">
             </form> 
         </div>
     </section>
 
     <!--POPUP EDITAR ANIMAL-->
+
+    <!-- Enlance que vincula con el js-->
+    <script src="../../../js/reporta.js"></script>
    
     <section class="modalEditar" id="miModal">
 
@@ -212,14 +236,34 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                             <label for="razon-editar">Razón:</label><br>
                             <textarea id="razon-editar" name="razon-editar" rows="4" cols="50" required></textarea><br><br>
 
-                            <label for="foto-editar">Actualizar foto:</label>
-                            <input type="file" id="foto-editar" name="foto-editar" accept="image/*"><br><br>
+                            <div class="container-fotos">
+                                <div class="form-foto">
+                                    <input type="file" id="boton-file-edicion" 
+                                        name="foto-editar"
+                                        accept="image/*" onchange="mostrarImagen('edicion')">
 
-                            <input type="submit" value="Guardar" name="ActualizarAnimal">
-                        <!-- <img id="imagen" src="" alt="Imagen"> -->
+                                    <input type="button" value="Subir Foto del animal" class="form-file"
+                                            onclick="document.getElementById('boton-file-edicion').click()">
+                                </div>
+                                <div id="previsualizacion">
+                                    <p>Imagen previa:</p>
+                                    <img id="imagen-previa-edicion" src="../../../img/reporta-img/gato-gif.gif"
+                                                alt="Vista previa de la imagen">
+                                    <p id="nombre-archivo-edicion">Nombre del archivo: <span></span></p>
+                                </div>
+                            </div>
+
+
+
+                            
+
+                        
                         </div>
                         
                 </div>
+                <input type="submit" value="Guardar" name="ActualizarAnimal">
+                <!-- <img id="imagen" src="" alt="Imagen"> -->
+
             </form> 
             </div>
     </section>

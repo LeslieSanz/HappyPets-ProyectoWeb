@@ -48,7 +48,7 @@ if (isset($_POST["procesar-solicitud"])) {
         // Crear una instancia de Reporte con los datos del formulario
         $usuario = new Usuario($conn);
         $solicitud = new SolicitudAdopta($conn);
-        $usuario->actualizarUsuario($cod, $nombre,$correo,$dni,$celular,$distrito);
+        $usuario->actualizarUsuarioAdopta($cod, $nombre,$correo,$dni,$celular,$distrito);
 
         // Intentar agregar el reporte a la base de datos y mover la imagen del directorio temporal al directorio final
         if ($solicitud->agregarSolicitudAdopta($cod, $cod_ani) ){

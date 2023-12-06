@@ -22,7 +22,7 @@ if (!empty($_POST["RegistrarAnimal"])) {
         strlen($_POST['tamano']) >= 1 &&
         strlen($_POST['caracteristicas']) >= 1 &&
         strlen($_POST['razon']) >= 1 &&
-        isset($_FILES["foto"]) && $_FILES["foto"]["error"] == 0 
+        isset($_FILES["foto-animal"]) && $_FILES["foto-animal"]["error"] == 0 
 
      ) {
         $nombre = $_POST["nombre"];
@@ -34,20 +34,21 @@ if (!empty($_POST["RegistrarAnimal"])) {
         $razon = $_POST["razon"];
         
         // Ruta donde se almacenará la imagen
-        $rutaImagen =   '../../uploads/' . basename($_FILES["foto"]["name"]);
-        $foto = basename($_FILES["foto"]["name"]);
+        $rutaImagen =   '../../uploads/' . basename($_FILES["foto-animal"]["name"]);
+        $fotoAnimal = basename($_FILES["foto-animal"]["name"]);
 
         $animal = new Animal($conn);
 
         // Intentar agregar el usuario a la base de datos
-        if ($animal->agregarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$foto)
-        && move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaImagen )) {
+        if ($animal->agregarAnimal($nombre,$especie,$sexo,$edad,$tamano,$caracteristicas,$razon,$fotoAnimal)
+        && move_uploaded_file($_FILES["foto-animal"]["tmp_name"], $rutaImagen )) {
 
             echo '<div class="msgbddbien">Animal registrado correctamente</div>';
             header("location: ../vista/admin/adminAnimales.php");
 
         } else {
             echo '<div class="msgbddnoreg">Error al registrar animal</div>';
+            header("location: ../vista/admin/index.php");
         }
     } 
 }
@@ -94,7 +95,8 @@ if (!empty($_POST["ActualizarAnimal"])) {
             header("location: ../vista/admin/adminAnimales.php");
 
         } else {
-            echo '<div class="msgbddnoreg">Error al actualizar animal</div>';
+            header("location: ../vista/admin/adminAnimales.php");
+            //echo '<div class="msgbddnoreg">Error al actualizar animal</div>';
         }
     } 
 }

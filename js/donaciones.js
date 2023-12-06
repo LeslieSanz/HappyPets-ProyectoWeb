@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     const formulario = document.querySelector('#formulario-alimentos');
+    
 
     openModal.addEventListener('click', function(e) {
         e.preventDefault();
@@ -176,6 +177,4 @@ function mostrarTodos() {
 }
 
 /*Funciones formulario alimento*/
-
-
 /*------------------------------------------------------------------------*/

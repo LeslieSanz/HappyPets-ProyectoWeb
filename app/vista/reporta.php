@@ -234,7 +234,7 @@ require_once __DIR__ . '/../controlador/reporteControlador.php';
                                 <div class="form-foto">
                                     <input type="file" id="boton-file" 
                                     name="foto-animal"
-                                    accept="image/*" onchange="mostrarImagen()"
+                                    accept="image/*" onchange="mostrarImg()"
                                     required>
 
                                     <input type="button" value="Subir Foto del animal" class="form-file"
