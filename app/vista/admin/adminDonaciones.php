@@ -56,8 +56,6 @@ require_once __DIR__ . '/../../controlador/depositameControlador.php';
                             <th class="data-title">Código de donación</th>
                             <th class="data-title">Tipo de donación</th>
                             <th class="data-title">Nombres y apellidos</th>
-                            <th class="data-title">Número de contacto</th>
-                            <th class="data-title">Dirección</th>
                             <th class="data-title">Monto</th>
                             <th class="data-title">Número de la tarjeta</th>
                         <?php elseif ($tipo_donacion == 'alimentos'): ?>
@@ -90,8 +88,6 @@ require_once __DIR__ . '/../../controlador/depositameControlador.php';
                                 <td class="data-list"><?php echo $deposito['cod_don']; ?></td>
                                 <td class="data-list"><?php echo $deposito['tipoDonacion']; ?></td>
                                 <td class="data-list"><?php echo $deposito['nombre']; ?></td>
-                                <td class="data-list"><?php echo $deposito['numContact']; ?></td>
-                                <td class="data-list"><?php echo $deposito['direccion']; ?></td>
                                 <td class="data-list"><?php echo $deposito['monto']; ?></td>
                                 <td class="data-list"><?php echo $deposito['tarnum']; ?></td>
                             </tr>
