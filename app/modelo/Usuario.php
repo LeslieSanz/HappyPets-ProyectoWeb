@@ -101,15 +101,15 @@ class Usuario {
         return $usuarios;
     }
 
-    public function actualizarUsuario($cod, $nombre,$correo,$dni,$celular,$distrito) {
-        $sql = "UPDATE usuario SET nombre = ?,email = ?,dni = ?,celular = ?, distrito = ? WHERE cod_usu = ?";
+    public function actualizarUsuario($cod, $nombre, $correo, $dni, $celular, $distrito, $foto) {
+        $sql = "UPDATE usuario SET nombre = ?, email = ?, dni = ?, celular = ?, distrito = ?, foto = ? WHERE cod_usu = ?";
         $stmt = $this->conn->prepare($sql);
-        
+    
         // Verificar si la consulta preparada se ejecutó correctamente
         if ($stmt) {
-            $stmt->bind_param("ssssss", $nombre, $correo, $dni, $celular, $distrito,$cod);
+            $stmt->bind_param("sssssss", $nombre, $correo, $dni, $celular, $distrito, $foto, $cod);
             $stmt->execute();
-        
+    
             // Verificar si la actualización fue exitosa
             if ($stmt->affected_rows > 0) {
                 return true; // Usuario actualizado exitosamente
@@ -118,14 +118,14 @@ class Usuario {
                 echo "Error en la consulta: " . $stmt->error;
                 return false; // Error al ejecutar la consulta
             }
-        
+    
             // Cerrar la consulta preparada
             $stmt->close();
         } else {
             return false; // Error al preparar la consulta
         }
-    } 
-}
+    }
+}    
 
 
 $clave="m3m0c0d3";
