@@ -49,8 +49,8 @@ require_once __DIR__ . '/../controlador/animalControlador.php';
                     // Limitar la cantidad de palabras a mostrar (por ejemplo, 6 palabras)
                     $nombreLimitado = implode(' ', array_slice($nombre, 0, 1));
                 
-                    echo '<li><a href="app/vista/UsuarioEdit.php"> Bienvenido ' . $nombreLimitado . '</a></li>';
-                    echo '<li><a href="app/controlador/CierreSesion.php">Cerrar Sesión</a></li>';
+                    echo '<li><a href="UsuarioEdit.php"> Bienvenido ' . $nombreLimitado . '</a></li>';
+                    echo '<li><a href="../controlador/CierreSesion.php">Cerrar Sesión</a></li>';
                 } else {
                     echo '<li><a href="login.php">Iniciar sesión</a></li>';
                 }
