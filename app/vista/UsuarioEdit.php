@@ -101,11 +101,11 @@
                                     required>
 
                                 <input type="button" value="Subir Foto del animal" class="form-file"
-                                        onclick="document.getElementById('boton-file-usario').click()">
+                                        onclick="document.getElementById('boton-file-usuario').click()">
                             </div>
                             <div id="previsualizacion">
                                 <p>Imagen previa:</p>
-                                <img id="imagen-previa-usuario" src="../../../img/reporta-img/gato-gif.gif"
+                                <img id="imagen-previa-usuario" src="../../img/reporta-img/gato-gif.gif"
                                             alt="Vista previa de la imagen" required>
                                 <p id="nombre-archivo-usuario">Nombre del archivo: <span></span></p>
                             </div>
