@@ -45,6 +45,7 @@ require_once __DIR__ . '/../../controlador/ComentarioControlador.php';
                         <th class="data-title">Fecha</th>
                         <th class="data-title">Comentario</th>
                         <th class="data-title">Codigo de usuario</th>
+                        <th class="data-title"></th>
                     </tr>
                 </thead>
                 <tbody>

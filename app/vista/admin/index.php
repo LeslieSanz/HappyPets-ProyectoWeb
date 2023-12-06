@@ -61,66 +61,13 @@ require_once __DIR__ . '/../../controlador/usuarioControlador.php';
                     <span class="text">Lista de Usuarios</span>
                 </div>
                 
-                <!--No borrar esto por si acaso-->
-
-                <!-- <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Name</span>
-                        <span class="data-list">Prem Shahi</span>
-                        <span class="data-list">Deepa Chand</span>
-                        <span class="data-list">Manisha Chand</span>
-                        <span class="data-list">Pratima Shahi</span>
-                        <span class="data-list">Man Shahi</span>
-                        <span class="data-list">Ganesh Chand</span>
-                        <span class="data-list">Bikash Chand</span>
-                    </div>
-                    <div class="data email">
-                        <span class="data-title">Email</span>
-                        <span class="data-list">premshahi@gmail.com</span>
-                        <span class="data-list">deepachand@gmail.com</span>
-                        <span class="data-list">prakashhai@gmail.com</span>
-                        <span class="data-list">manishachand@gmail.com</span>
-                        <span class="data-list">pratimashhai@gmail.com</span>
-                        <span class="data-list">manshahi@gmail.com</span>
-                        <span class="data-list">ganeshchand@gmail.com</span>
-                    </div>
-                    <div class="data joined">
-                        <span class="data-title">Joined</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-15</span>
-                    </div>
-                    <div class="data type">
-                        <span class="data-title">Type</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                    </div>
-                    <div class="data status">
-                        <span class="data-title">Status</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                    </div>
-                </div> -->
             <div class="activity-data">
             
                 <table>
                     <thead>
                         <tr>
                             <th class="data-title">Código</th>
+                            <th class="data-title">Tipo</th>
                             <th class="data-title">Nombre</th>
                             <th class="data-title">Email</th>
                             <th class="data-title">Celular</th>
@@ -133,6 +80,19 @@ require_once __DIR__ . '/../../controlador/usuarioControlador.php';
                         <?php foreach ($usuarios as $usuario): ?>
                         <tr class="data">
                             <td class="data-list"><?php echo $usuario['cod_usu']; ?></td>
+                            <?php
+                                $mostrarUsuario = "";
+                                if($usuario['tipo'] == 'cli')
+                                    $mostrarUsuario = "Cliente";
+                                else
+                                    if($usuario['tipo'] == 'adm')
+                                        $mostrarUsuario = "Administrador";
+                                    
+                                    
+                                
+                            ?>
+
+                            <td class="data-list"><?php echo $mostrarUsuario; ?></td>
                             <td class="data-list"><?php echo $usuario['nombre']; ?></td>
                             <td class="data-list"><?php echo $usuario['email']; ?></td>
                             <td class="data-list"><?php echo $usuario['celular']; ?></td>
