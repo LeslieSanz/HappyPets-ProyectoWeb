@@ -38,4 +38,19 @@ $usuarios = $usuarioObj->listarUsuarios();
 
 //var_dump($usuarios); --> para verificar que el arreglo se llene
 
+
+//var_dump($usuarios); --> para verificar que el arreglo se llene
+if (isset($_SESSION['usuario'])) {
+    $usuarioDAO = new Usuario($conn);
+    $cod = $_SESSION["cod_usu"];
+    $usuario = $usuarioDAO->obtenerUsuarioPorCodUsu($cod); // Asigna el resultado a $usuario
+
+    // Verifica si el usuario se obtuvo correctamente
+    if ($usuario !== null) {
+        //Depuración
+        var_dump($usuario); // Verifica la estructura y los valores de $usuario
+    } else {
+        echo "Usuario no encontrado";
+    }
+}
 ?>
