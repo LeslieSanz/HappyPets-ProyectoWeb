@@ -46,27 +46,6 @@ if (!empty($_POST["usuario"])) {
 
 }
 
-//Controla si hay un logeo activo mediante cookies
-if (isset($_COOKIE["cod_usu"]) && !isset($_SESSION["usuario"])) {
-    $cod_usu = $_COOKIE["cod_usu"];
-
-    // Crear una instancia de Usuario con la conexión a la base de datos
-    $usuarioObj = new Usuario($conn);
-
-    // Obtener los datos del usuario utilizando el $codusu
-    $datosUsuario = $usuarioObj->obtenerUsuarioPorCodUsu($cod_usu);
-
-    if ($datosUsuario) {
-        $_SESSION["usuario"] = $datosUsuario->nombre;
-        $_SESSION["email"] = $datosUsuario->email;
-        $_SESSION["password"] = $datosUsuario->password;
-        $_SESSION["cod_usu"] = $datosUsuario->cod_usu;
-        $_SESSION["celular"] = $datosUsuario->celular;
-        $_SESSION["dni"] = $datosUsuario->dni;
-        $_SESSION["distrito"] = $datosUsuario->distrito;
-    }
-}
-
 // <?php
 // session_start();
 // require_once __DIR__ . '/../config/database.php';
