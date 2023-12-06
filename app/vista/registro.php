@@ -46,5 +46,20 @@
         </main>
         <!-- Enlance que vincula con el js-->
         <script src="../../js/registro.js"></script>
+            <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.querySelector("form");
+            form.addEventListener("submit", function (event) {
+                var password = document.getElementById("password").value;
+                var repassword = document.getElementById("repassword").value;
+
+                if (password !== repassword) {
+                    alert("Las contraseñas no coinciden. Por favor, inténtalo de nuevo.");
+                    event.preventDefault(); // Evita que el formulario se envíe
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
