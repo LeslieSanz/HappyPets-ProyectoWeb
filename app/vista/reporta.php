@@ -57,13 +57,22 @@ require_once __DIR__ . '/../controlador/reporteControlador.php';
             </li>
             <li><a href="contacto.php">Contacto</a></li>
             <?php
-            
-            if (isset($_SESSION["usuario"])) {
-                echo '<li><a href="UsuarioEdit.php"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
-                echo '<li><a href="../../app/controlador/CierreSesion.php">Cerrar Sesion</a></li>';
-            } else {
-                echo '<li><a href="login.php">Iniciar sesión</a></li>';
-            }
+
+                if (isset($_SESSION["usuario"])) {
+                    // Obtener el nombre de usuario
+                    $nombreCompleto = $_SESSION["usuario"];
+                
+                    // Dividir el nombre en palabras
+                    $nombre = explode(' ', $nombreCompleto);
+                
+                    // Limitar la cantidad de palabras a mostrar (por ejemplo, 6 palabras)
+                    $nombreLimitado = implode(' ', array_slice($nombre, 0, 1));
+                
+                    echo '<li><a href="UsuarioEdit.php"> Bienvenido ' . $nombreLimitado . '</a></li>';
+                    echo '<li><a href="../controlador/CierreSesion.php">Cerrar Sesión</a></li>';
+                } else {
+                    echo '<li><a href="login.php">Iniciar sesión</a></li>';
+                }
             ?>
         </ul>
     </nav>
@@ -305,8 +314,8 @@ require_once __DIR__ . '/../controlador/reporteControlador.php';
                         class="fa fa-facebook"></a>
                     <a href="https://instagram.com/happypets2023web?igshid=NGVhN2U2NjQ0Yg==" target="_blank"
                         class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="https://twitter.com/pets_happy123" class="fa fa-x"></a>
+                    <a href="https://www.youtube.com/@HappyPets-cf1ug/featured" class="fa fa-youtube"></a>
                 </div>
             </div>
         </section>

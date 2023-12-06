@@ -58,6 +58,11 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
             <input type="hidden" id="dniHidden" name="dni">
             <input type="hidden" id="celularHidden" name="celular">
             <input type="hidden" id="distritoHidden" name="distrito">
+
+            <input type="hidden" id="viviendaHidden" name="vivienda">
+            <input type="hidden" id="acuerdoHidden" name="acuerdo">
+            <input type="hidden" id="ninosHidden" name="ninos">
+            <input type="hidden" id="alergiaHidden" name="alergias">
         </form>
 
         <!-- Inicio del paso 1 -->
@@ -175,37 +180,37 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
                 <div class="pregunta">
                   <label for="vivienda">¿Tu vivienda es?</label><br>
 
-                  <input type="radio" id="casa" name="vivienda">
+                  <input type="radio" id="vivienda" name="vivienda" value="Casa">
                   <label for="casa">Casa</label><br>
 
-                  <input type="radio" id="depa" name="vivienda">
+                  <input type="radio" id="vivienda" name="vivienda" value="Departamento">
                   <label for="depa">Departamento</label><br>
                 </div>
                 <div class="pregunta">
-                  <label for="vivienda">¿Todas las personas en tu hogar están de acuerdo con adoptar?</label><br>
-                  <input type="radio" id="casa" name="acuerdo">
+                  <label for="acuerdo">¿Todas las personas en tu hogar están de acuerdo con adoptar?</label><br>
+                  <input type="radio" id="si-ac" name="acuerdo" value="Sí">
                   <label for="opcion1">Sí</label><br>
 
-                  <input type="radio" id="depa" name="acuerdo">
+                  <input type="radio" id="no-ac" name="acuerdo" value="No">
                   <label for="opcion2">No</label><br>
                 </div>
 
 
 
                 <div class="pregunta">
-                  <label for="vivienda">¿Hay niños pequeños en tu vivienda?</label><br>
-                  <input type="radio" id="casa" name="ninos">
+                  <label for="ninos">¿Hay niños pequeños en tu vivienda?</label><br>
+                  <input type="radio" id="si-nin" name="ninos" value="Sí">
                   <label for="opcion1">Sí</label><br>
 
-                  <input type="radio" id="depa" name="ninos">
+                  <input type="radio" id="no-nin" name="ninos" value="No">
                   <label for="opcion2">No</label><br>
                 </div>
                 <div class="pregunta">
-                  <label for="vivienda">¿Algún miembro de tu hogar tiene alergias a animales o problemas de salud que debamos tener en cuenta?</label><br>
-                  <input type="radio" id="casa" name="alergias">
+                  <label for="alergias">¿Algún miembro de tu hogar tiene alergias a animales o problemas de salud que debamos tener en cuenta?</label><br>
+                  <input type="radio" id="si-ale" name="alergias" value="Sí">
                   <label for="opcion1">Sí</label><br>
 
-                  <input type="radio" id="depa" name="alergias">
+                  <input type="radio" id="no-ale" name="alergias" value="No">
                   <label for="opcion2">No</label><br>
                 </div>
               
@@ -240,6 +245,19 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
             let dniCapturado = document.getElementById('dni').value;
             let celularCapturado = document.getElementById('celular').value;
             let distritoCapturado = document.getElementById('distrito').value;
+
+           //Para los radio button
+           let viviendaCapturado = document.querySelector('input[name="vivienda"]:checked').value;
+            let acuerdoCapturado = document.querySelector('input[name="acuerdo"]:checked').value;
+            let ninosCapturado = document.querySelector('input[name="ninos"]:checked').value;
+            let alergiasCapturado = document.querySelector('input[name="alergias"]:checked').value;
+
+            // Imprimir respuestas en la consola
+      // console.log('Respuestas Capturadas:');
+      // console.log('Vivienda:', viviendaCapturado);
+      // console.log('Acuerdo:', acuerdoCapturado);
+      // console.log('Niños:', ninosCapturado);
+      // console.log('Alergias:', alergiasCapturado);
             
             // Llenar los campos ocultos con los valores capturados
             document.getElementById('nombreHidden').value = nombreCapturado;
@@ -247,6 +265,16 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
             document.getElementById('dniHidden').value = dniCapturado;
             document.getElementById('celularHidden').value = celularCapturado;
             document.getElementById('distritoHidden').value = distritoCapturado;
+
+            document.getElementById('viviendaHidden').value = viviendaCapturado;
+            document.getElementById('acuerdoHidden').value = acuerdoCapturado;
+            document.getElementById('ninosHidden').value = ninosCapturado;
+            document.getElementById('alergiaHidden').value = alergiasCapturado;
+
+            console.log(document.getElementById('viviendaHidden').value);
+            console.log(document.getElementById('acuerdoHidden').value);
+            console.log(document.getElementById('ninosHidden').value);
+            console.log(document.getElementById('alergiaHidden').value);
 
             // Enviar el formulario oculto al controlador
             document.getElementById('formularioOculto').submit();
