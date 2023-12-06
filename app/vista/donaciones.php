@@ -12,7 +12,7 @@
       src="https://kit.fontawesome.com/09bca36bc3.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../../js/donaciones.js"></script>
+    
    
   </head>
   <body>
@@ -251,11 +251,11 @@
             <form method="post" action="../controlador/depositameControlador.php" id="formulario-alimentos" class="formulario-alimentos" enctype="multipart/form-data"> 
             <div class="grupo">
                 <label for="inputNombre">Nombres y apellidos</label>
-                <input name="nombre" type="text" id="inputNombre" maxlength="19" autocomplete="off">
+                <input name="nombre" type="text" id="inputNombre" maxlength="30" autocomplete="off">
             </div>
             <div class="grupo">
                 <label for="inputNumero">Número de contacto</label>
-                <input name="numero" type="text" id="inputNumero" maxlength="32" autocomplete="off">
+                <input name="numero" type="text" id="inputNumero" maxlength="11" autocomplete="off">
             </div>
             <div class="grupo">
                 <label for="inputDireccion">Direccion</label>
@@ -286,7 +286,7 @@
                 </div>
             </div>
             <div class="grupo">
-                <label for="inputPeso">Peso</label>
+                <label for="inputPeso">Peso (kg)</label>
                 <input name="peso" type="text" id="inputPeso" maxlength="19" autocomplete="off">
             </div>
             <button name="RegistrarAlimentos" type="submit" class="btn-enviar" form="formulario-alimentos">Enviar</button>
@@ -304,11 +304,11 @@
             <form method="post" action="../controlador/depositameControlador.php" id="formulario-articulos" class="formulario-articulos"> 
             <div class="grupo">
                 <label for="inputNombre2">Nombres y apellidos</label>
-                <input name="nombre2" type="text" id="inputNombre2" maxlength="19" autocomplete="off">
+                <input name="nombre2" type="text" id="inputNombre2" maxlength="30" autocomplete="off">
             </div>
             <div class="grupo">
                 <label for="inputNumero2">Número de contacto</label>
-                <input name="numero2" type="text" id="inputNumero2" maxlength="32" autocomplete="off">
+                <input name="numero2" type="text" id="inputNumero2" maxlength="11" autocomplete="off">
             </div>
             <div class="grupo">
                 <label for="inputDireccion2">Direccion</label>
@@ -370,8 +370,8 @@
               <div class="red-social">
                   <a href="https://www.facebook.com/profile.php?id=61551118926851" target="_blank" class="fa fa-facebook"></a>
                   <a href="https://instagram.com/happypets2023web?igshid=NGVhN2U2NjQ0Yg==" target="_blank" class="fa fa-instagram"></a>
-                  <a href="#" class="fa fa-twitter"></a>
-                  <a href="#" class="fa fa-youtube"></a>
+                  <a href="https://twitter.com/pets_happy123" class="fa fa-x"></a>
+                  <a href="https://www.youtube.com/@HappyPets-cf1ug/featured" class="fa fa-youtube"></a>
               </div>
           </div>
       </section>
@@ -379,5 +379,6 @@
           <small>&copy; 2023 <b>HappyPets</b> - Todos los Derechos Reservados.</small>
       </section>
   </footer>
+  <script src="../../js/donaciones.js"></script>
   </body>
 </html>
