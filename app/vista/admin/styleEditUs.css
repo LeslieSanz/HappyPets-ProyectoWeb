@@ -1,192 +1,194 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
-:root{
-   --blue:#0097e6;
-   --orange:#f39c12;
-   --red:#e74c3c;
-   --white:#fff;
-   --light-color:#aaa;
-   --black:#222;
-   --light-bg:#333;
+:root {
+   --blue: #0097e6;
+   --orange: #f39c12;
+   --red: #e74c3c;
+   --white: #fff;
+   --light-color: #aaa;
+   --black: #222;
+   --light-bg: #333;
 }
 
-*{
+* {
    font-family: 'Nunito', sans-serif;
-   margin:0; padding:0;
+   margin: 0;
+   padding: 0;
    box-sizing: border-box;
-   outline: none; border:none;
+   outline: none;
+   border: none;
    text-decoration: none;
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
    height: 5px;
-   width:10px;
+   width: 10px;
 }
 
-*::-webkit-scrollbar-track{
+*::-webkit-scrollbar-track {
    background-color: transparent;
 }
 
-*::-webkit-scrollbar-thumb{
+*::-webkit-scrollbar-thumb {
    background-color: var(--blue);
 }
 
-html{
+html {
    font-size: 62.5%;
    overflow-x: hidden;
    background-color: var(--light-bg);
 }
 
-.message{
+.message {
    position: sticky;
-   top:0;
+   top: 0;
    max-width: 1200px;
-   padding:1.5rem 2rem;
+   padding: 1.5rem 2rem;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   gap:1.5rem;
+   gap: 1.5rem;
    z-index: 1000;
    background-color: var(--light-bg);
-   margin:0 auto;
+   margin: 0 auto;
 }
 
-.message span{
-   color:var(--white);
+.message span {
+   color: var(--white);
    font-size: 2rem;
 }
 
-.message i{
-   color:var(--red);
+.message i {
+   color: var(--red);
    font-size: 2.5rem;
    cursor: pointer;
 }
 
-.message i:hover{
-   color:var(--white);
+.message i:hover {
+   color: var(--white);
 }
 
-.title{
-   padding:1.5rem 1rem;
+.title {
+   padding: 1.5rem 1rem;
    text-align: center;
    background-color: var(--black);
    font-size: 3rem;
    text-transform: uppercase;
-   color:var(--white);
+   color: var(--white);
 }
 
-.title span{
-   color:var(--red);
+.title span {
+   color: var(--red);
 }
 
 .btn,
 .delete-btn,
-.option-btn{
+.option-btn {
    display: block;
    width: 100%;
    border-radius: .5rem;
-   color:var(--white);
+   color: var(--white);
    font-size: 1.8rem;
    cursor: pointer;
-   padding:1rem 3rem;
+   padding: 1rem 3rem;
    text-transform: capitalize;
    text-align: center;
    margin-top: 1rem;
 }
 
-.btn{
+.btn {
    background-color: var(--blue);
 }
 
-.delete-btn{
+.delete-btn {
    background-color: var(--red);
 }
 
-.option-btn{
+.option-btn {
    background-color: var(--orange);
 }
 
 .btn:hover,
 .delete-btn:hover,
-.option-btn:hover{
+.option-btn:hover {
    background-color: var(--white);
-   color:var(--black);
+   color: var(--black);
 }
 
-.flex-btn{
+.flex-btn {
    display: flex;
    flex-wrap: wrap;
-   gap:1rem;
+   gap: 1rem;
 }
 
-.flex-btn > *{
-   flex:1;
+.flex-btn>* {
+   flex: 1;
 }
 
-.form-container{
+.form-container {
    display: flex;
    align-items: center;
    justify-content: center;
-   padding:2rem;
+   padding: 2rem;
    min-height: 100vh;
 }
 
-.form-container form{
+.form-container form {
    width: 50rem;
    border-radius: .5rem;
    background-color: var(--black);
-   padding:2rem;
+   padding: 2rem;
    text-align: center;
 }
 
-.form-container form h3{
+.form-container form h3 {
    font-size: 3rem;
    margin-bottom: 1rem;
-   color:var(--white);
+   color: var(--white);
    text-transform: uppercase;
 }
 
-.form-container form .box{
+.form-container form .box {
    width: 100%;
    border-radius: .5rem;
-   padding:1.2rem 1.4rem;
+   padding: 1.2rem 1.4rem;
    font-size: 1.8rem;
-   color:var(--white);
+   color: var(--white);
    background-color: var(--light-bg);
-   margin:1rem 0;
+   margin: 1rem 0;
 }
 
-.form-container form p{
+.form-container form p {
    font-size: 2.3rem;
-   color:var(--light-color);
-   padding:1rem 0;
+   color: var(--light-color);
+   padding: 1rem 0;
 }
 
-.form-container form p a{
-   color:var(--red);
+.form-container form p a {
+   color: var(--red);
 }
 
-.form-container form p a:hover{
+.form-container form p a:hover {
    text-decoration: underline;
 }
 
-.profile-container{
+.profile-container {
    display: flex;
    align-items: center;
    justify-content: center;
-   padding:2rem;
+   padding: 2rem;
    min-height: 100vh;
 }
 
-.profile-container .profile{
+.profile-container .profile {
    width: 40rem;
    border-radius: .5rem;
    background-color: var(--black);
-   padding:2rem;
+   padding: 2rem;
    text-align: center;
 }
 
-.profile-container .profile img{
+.profile-container .profile img {
    height: 20rem;
    width: 20rem;
    border-radius: 50%;
@@ -194,90 +196,90 @@ html{
    margin-bottom: .5rem;
 }
 
-.profile-container .profile h3{
+.profile-container .profile h3 {
    font-size: 2.5rem;
-   padding:.5rem 0;
-   color:var(--white);
+   padding: .5rem 0;
+   color: var(--white);
 }
 
-.update-profile-container{
+.update-profile-container {
    display: flex;
    align-items: center;
    justify-content: center;
-   padding:2rem;
+   padding: 2rem;
    min-height: 100vh;
 }
 
-.update-profile-container form{
+.update-profile-container form {
    width: 70rem;
    border-radius: .5rem;
    background-color: var(--black);
-   padding:2rem;
+   padding: 2rem;
    text-align: center;
 }
 
-.update-profile-container form .flex{
+.update-profile-container form .flex {
    text-align: left;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
 }
 
-.update-profile-container form .flex .inputBox{
+.update-profile-container form .flex .inputBox {
    width: 49%;
 }
 
-.update-profile-container form img{
+.update-profile-container form img {
    height: 20rem;
    width: 20rem;
    border-radius: 50%;
    margin-bottom: 1rem;
 }
 
-.update-profile-container form .flex .inputBox span{
+.update-profile-container form .flex .inputBox span {
    font-size: 2rem;
-   color:var(--light-color);
+   color: var(--light-color);
    display: block;
    padding-top: 1rem;
 }
 
-.update-profile-container form .flex .inputBox .box{
+.update-profile-container form .flex .inputBox .box {
    width: 100%;
-   padding:1.2rem 1.4rem;
+   padding: 1.2rem 1.4rem;
    border-radius: .5rem;
    font-size: 1.8rem;
-   color:var(--white);
-   margin:1rem 0;
+   color: var(--white);
+   margin: 1rem 0;
    background-color: var(--light-bg);
 }
 
 /* media queries  */
 
-@media (max-width:991px){
+@media (max-width:991px) {
 
-   html{
+   html {
       font-size: 55%;
    }
 
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-   .update-profile-container form .flex .inputBox{
-      width:100%;
+   .update-profile-container form .flex .inputBox {
+      width: 100%;
    }
 
 }
 
-@media (max-width:450px){
+@media (max-width:450px) {
 
-   html{
+   html {
       font-size: 50%;
    }
 
-   .flex-btn{
+   .flex-btn {
       flex-flow: column;
-      gap:0;
+      gap: 0;
    }
 
 }
