@@ -52,6 +52,8 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                             <th class="data-title">Tamaño</th>
                             <th class="data-title">Características</th>
                             <th class="data-title">Foto</th>
+                            <th class="data-title"></th>
+                            <th class="data-title"></th>
                         </tr>
                     </thead>
                     <tbody>

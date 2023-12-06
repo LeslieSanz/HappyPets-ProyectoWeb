@@ -7,6 +7,30 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(170, 111, 70);
+    /* Borde delgado de color gris claro */
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(170, 111, 70);
+    /* Color de fondo para las celdas de encabezado */
+}
+
+
 /* Estilos normales */
 table {
     color: var(--text-color);

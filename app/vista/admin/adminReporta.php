@@ -51,6 +51,7 @@ require_once __DIR__ . '/../../controlador/reporteControlador.php';
                             <th class="data-title">Codigo usuario</th>
                             <th class="data-title">Especie</th>
                             <th class="data-title">Foto</th>
+                            <th class="data-title"></th>
                         </tr>
                     </thead>
                     <tbody>
