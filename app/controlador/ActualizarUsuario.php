@@ -2,39 +2,41 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Usuario.php';
 
-if (isset($_POST["enviarDatosForm"])) {
-   if (
-        strlen($_POST['cod_usu']) >= 1 &&
-        strlen($_POST['nombre']) >= 1 && 
-        strlen($_POST['correo']) >= 1 && 
-        strlen($_POST['celular']) >= 1 && 
-        strlen($_POST['dni']) >= 1 && 
-        strlen($_POST['edad']) >= 1 &&
-        strlen($_POST['distrito']) >= 1 &&
-        strlen($_POST['foto']) >= 1
-        
-    ) {
-        $cod = $_POST["cod_usu"];
-        $nombre = $_POST["nombre"];
-        $email = $_POST["correo"];
-        $celular = $_POST["celular"];
-        $dni = $_POST["dni"];
-        $edad = $_POST["edad"];
-        $distrito = $_POST["distrito"];
-        $foto = $_POST["foto"];
+if (isset($_POST["update"]))
 
-// Crear una instancia de Contacto con los datos del formulario
+    if (
+        strlen($_POST['nombre']) >= 1 && 
+        strlen($_POST['email']) >= 1 && 
+        strlen($_POST['telefono']) >= 1 && 
+        strlen($_POST['dni']) >= 1 && 
+        strlen($_POST['distrito']) >= 1 &&
+        isset($_FILES['foto']) >= 1 &&  $_FILES["foto"]["error"] == 0 
+    ) {
+        $cod = $_POST["codigo"];
+        $nombre = $_POST["nombre"];
+        $email = $_POST["email"];
+        $telefono = $_POST["telefono"];
+        $distrito = $_POST["distrito"];
+        $dni = $_POST["dni"];
+
+        $rutaImagen =   '../../uploads/' . basename($_FILES["foto"]["name"]);
+        $fotoUsuario = basename($_FILES["foto"]["name"]);
+
         $usuarioObj = new Usuario($conn);
 
-        if ($usuarioObj->actualizarUsuario($cod, $nombre, $email, $celular, $dni, $edad, $distrito, $foto)) {
-            header("Location: ../vista/UsuarioEdit.php");
+        if (move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaImagen ) && $usuarioObj->actualizarUsuario($cod,$nombre,$email,$dni,$telefono,$distrito,$fotoUsuario)) {
+            // Reporte registrado exitosamente, redirigir a una página princial que es index
+            header("Location: ../../index.php");
             exit();
         } else {
-            echo "Error al actualizar los datos por favor intentelo mais tarde.";
+            // Error al registrar el reporte, redirigir a una página de error
+            header("Location: ../vista/post-pagina.php");
+            exit();
         }
-    } else {
-        echo "Error: Todos los campos son obligatorios.";
-    }
+
+    }else{
+        echo"Error";
+
 }
 
 ?>
