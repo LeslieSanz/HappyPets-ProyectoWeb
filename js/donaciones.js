@@ -177,4 +177,83 @@ function mostrarTodos() {
 }
 
 /*Funciones formulario alimento*/
+
+/*Restricciones */
+const formulario = document.querySelector('#formulario-alimentos');
+
+/*Restricción de numeros en el nombre */
+formulario.inputNombre.addEventListener('keyup', (e) => {
+    let valorInput = e.target.value;
+
+    formulario.inputNombre.value= valorInput.replace(/[0-9]/g, '');
+
+});
+/* restricción de letras en el número y espaciado cada 3 números*/
+formulario.inputNumero.addEventListener('keyup',(e) => {
+    let valorInput = e.target.value;
+
+    formulario.inputNumero.value = valorInput
+    //Elimina espacios en blanco
+    .replace(/\s/g, '')
+    //Eliminar letras
+    .replace(/\D/g, '')
+    //Ponemos 3 espacios cada 3 puntos
+    .replace(/([0-9]{3})/g, '$1 ')
+    //Elimina el ultimo espaciado
+    .trim();
+});
+
+/* Restricción de letras en peso */
+formulario.inputPeso.addEventListener('keyup',(e) => {
+    let valorInput = e.target.value;
+
+    formulario.inputPeso.value = valorInput
+    //Elimina espacios en blanco
+    .replace(/\s/g, '')
+    //Eliminar letras
+    .replace(/\D/g, '')
+    //Elimina el ultimo espaciado
+    .trim();
+});
+
+/*Funciones formulario articulos/
+
+/*Restricciones */
+const formularioArticulo = document.querySelector('#formulario-articulos');
+
+/*Restricción de numeros en el nombre */
+formularioArticulo.inputNombre2.addEventListener('keyup', (e) => {
+    let valorInput = e.target.value;
+
+    formularioArticulo.inputNombre2.value= valorInput.replace(/[0-9]/g, '');
+
+});
+/* restricción de letras en el número y espaciado cada 3 números*/
+formularioArticulo.inputNumero2.addEventListener('keyup',(e) => {
+    let valorInput = e.target.value;
+
+    formularioArticulo.inputNumero2.value = valorInput
+    //Elimina espacios en blanco
+    .replace(/\s/g, '')
+    //Eliminar letras
+    .replace(/\D/g, '')
+    //Ponemos 3 espacios cada 3 puntos
+    .replace(/([0-9]{3})/g, '$1 ')
+    //Elimina el ultimo espaciado
+    .trim();
+});
+
+/* Restricción de letras en peso */
+formularioArticulo.inputTipoArticulo.addEventListener('keyup',(e) => {
+    let valorInput = e.target.value;
+
+    formularioArticulo.inputTipoArticulo.value = valorInput
+    //Elimina espacios en blanco
+    .replace(/\s/g, '')
+    //Eliminar letras
+    .replace(/[0-9]/g, '')
+    //Elimina el ultimo espaciado
+    .trim();
+});
+
 /*------------------------------------------------------------------------*/
