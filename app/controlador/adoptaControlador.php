@@ -45,24 +45,27 @@ if (isset($_POST["procesar-solicitud"])) {
         $celular = $_POST["celular"];
         $distrito = $_POST["distrito"];
 
+        $viv= $_POST["vivienda"];
+        $acu = $_POST["acuerdo"];
+        $nin = $_POST["ninos"];
+        $ale = $_POST["alergias"];
+
         // Crear una instancia de Reporte con los datos del formulario
         $usuario = new Usuario($conn);
         $solicitud = new SolicitudAdopta($conn);
         $usuario->actualizarUsuario($cod, $nombre,$correo,$dni,$celular,$distrito);
 
         // Intentar agregar el reporte a la base de datos y mover la imagen del directorio temporal al directorio final
-        if ($solicitud->agregarSolicitudAdopta($cod, $cod_ani) ){
+        if ($solicitud->agregarSolicitudAdopta($cod, $cod_ani,$cod_ani,$viv,$acu,$nin,$ale) ){
             header("Location: ../../index.php");
             exit();
         } else {
-
-            
             // Error al registrar el reporte, redirigir a una página de error
             echo "Error al actualizar los datos del usuario. Por favor, inténtalo de nuevo más tarde.";
         }
 
     }else{
-        echo"Error";
+        echo"Naaaaaaaaaaaaada";
     }
 }
 
