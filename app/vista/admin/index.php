@@ -34,6 +34,7 @@ require_once __DIR__ . '/../../controlador/usuarioControlador.php';
                 <div class="title">
                     <i class="uil uil-tachometer-fast-alt"></i>
                     <span class="text">Panel de control</span>
+                    <a href="registraadmin.php" class="hero_cta">Registrar un administrador</a>
                 </div>
 
                 <div class="boxes">
