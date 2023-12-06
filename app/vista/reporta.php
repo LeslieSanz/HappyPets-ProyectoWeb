@@ -57,13 +57,22 @@ require_once __DIR__ . '/../controlador/reporteControlador.php';
             </li>
             <li><a href="contacto.php">Contacto</a></li>
             <?php
-            
-            if (isset($_SESSION["usuario"])) {
-                echo '<li><a href="UsuarioEdit.php"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
-                echo '<li><a href="../../app/controlador/CierreSesion.php">Cerrar Sesion</a></li>';
-            } else {
-                echo '<li><a href="login.php">Iniciar sesión</a></li>';
-            }
+
+                if (isset($_SESSION["usuario"])) {
+                    // Obtener el nombre de usuario
+                    $nombreCompleto = $_SESSION["usuario"];
+                
+                    // Dividir el nombre en palabras
+                    $nombre = explode(' ', $nombreCompleto);
+                
+                    // Limitar la cantidad de palabras a mostrar (por ejemplo, 6 palabras)
+                    $nombreLimitado = implode(' ', array_slice($nombre, 0, 1));
+                
+                    echo '<li><a href="app/vista/UsuarioEdit.php"> Bienvenido ' . $nombreLimitado . '</a></li>';
+                    echo '<li><a href="app/controlador/CierreSesion.php">Cerrar Sesión</a></li>';
+                } else {
+                    echo '<li><a href="login.php">Iniciar sesión</a></li>';
+                }
             ?>
         </ul>
     </nav>
