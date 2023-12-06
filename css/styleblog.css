@@ -106,6 +106,9 @@ section .card .contenido p {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-transform: uppercase;
+  
+  font-weight: 500;
 }
 section .card .contenido a {
   font-weight: bold;

@@ -470,7 +470,7 @@ require_once __DIR__ . '/../controlador/postControlador.php';
                         ?>
                         </figure>
                         <div class="contenido">
-                        <p ><?php echo $post['categoria'] ; ?></p>
+                        <p style="color:  rgb(245, 183, 26)"><?php echo $post['categoria'] ; ?></p>
                             <a target="_blank" href="postInd.php?codigo=<?php echo $post['cod_post']; ?>" id="leerMasEnlace"><?php echo $post['titulo']; ?></a>
                             <?php
                             // Obtener las palabras de la descripción

@@ -50,6 +50,9 @@ require_once __DIR__ . '/../../controlador/postControlador.php';
                             <th class="data-title">Titulo</th>
                             <th class="data-title">Contenido</th>
                             <th class="data-title">Foto</th>
+                            <th class="data-title"></th>
+
+
                         </tr>
                     </thead>
                     <tbody>
@@ -71,9 +74,7 @@ require_once __DIR__ . '/../../controlador/postControlador.php';
                             
                             <?php $rutaImagen =   '../../../uploads/' . $post['foto']; ?>
                             <td class="data-list"><a target="_blank" href="<?php echo $rutaImagen; ?>"><?php echo $post['foto']; ?></a></td>        
-                            <td class="data-button">
                         
-                            </td>
                             <td class="data-button"><button class="boton-eliminar" onclick="postEliminar('<?=$post['cod_post']?>')">Eliminar</button></td>
                         </tr>
                         <?php endforeach; ?>
