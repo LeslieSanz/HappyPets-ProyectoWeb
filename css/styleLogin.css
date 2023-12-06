@@ -179,6 +179,16 @@ main {
     opacity: 0.8;
 }
 
+.bx {
+    cursor: pointer;
+    position: absolute;
+    left: 100%;
+    padding: 20px 0px 10px;
+    color: rgb(141, 80, 36);
+    font-size: 1em;
+    letter-spacing: 0.05em;
+}
+
 .view {
     width: 100%;
     display: flex;
