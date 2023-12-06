@@ -24,11 +24,11 @@ require_once __DIR__ . '/../../controlador/postControlador.php';
         ?>
 
     <section class="dashboard">
-        <div class="top">
+        <!-- <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
             
             <img src="../../../img/nosotros-img/Wal.jpg" alt="">
-        </div>
+        </div> -->
 
         <div class="dash-content">
 

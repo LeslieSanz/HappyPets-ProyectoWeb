@@ -23,11 +23,11 @@ require_once __DIR__ . '/../../controlador/usuarioControlador.php';
         ?>
 
     <section class="dashboard">
-        <div class="top">
+        <!-- <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
         
             <img src="../../../img/nosotros-img/Wal.jpg" alt="">
-        </div>
+        </div> -->
 
         <div class="dash-content">
             <div class="overview">
