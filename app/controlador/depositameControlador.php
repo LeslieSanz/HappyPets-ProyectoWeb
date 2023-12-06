@@ -3,8 +3,8 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../modelo/Deposito.php';
 $deposito = new Deposito($conn);
-$listaDepositos = $deposito->listarDepositos();
-
+$donacioness = $deposito->listarDepositos();
+$tipo_donacion = '';
 if (isset($_POST["RegistrarTarjeta"])) {
     
     if (
@@ -62,7 +62,7 @@ if (isset($_POST["RegistrarAlimentos"])) {
         }
     } 
 } else {
-    echo '<div class="msgbddnoreg">estoy cansado jefe</div>';
+    /* echo '<div class="msgbddnoreg">estoy cansado jefe</div>'; */
 }
 
 if (isset($_POST["RegistrarArticulos"])) {
@@ -85,19 +85,40 @@ if (isset($_POST["RegistrarArticulos"])) {
         // Intentar agregar el usuario a la base de datos
         if ($deposito->agregarArticulo($numero,$nombre,$direccion,$tArticulo,$descripcion)) {
 
-            echo '<div class="msgbddbien">donacion de alimentos correctamente</div>';
+            /* echo '<div class="msgbddbien">donacion de alimentos correctamente</div>'; */
             header("location: ../vista/donaciones.php");
 
         } else {
-            echo '<div class="msgbddnoreg">Error al registrar la donacion de alimentos</div>';
+            /* echo '<div class="msgbddnoreg">Error al registrar la donacion de alimentos</div>'; */
             header("location: ../modelo/Deposito.php");
         }
     } 
 } else {
-    echo '<div class="msgbddnoreg">estoy cansado jefe</div>';
+     /* echo '<div class="msgbddnoreg">estoy cansado jefe</div>'; */
 }
+
+if (isset($_POST["buscar"])) {
+    echo '<div> presionó el boton buscar </div>';
+
+    $tipo_donacion = $_POST["tipo-donacion"];
+
+
+    if ($tipo_donacion == 'monetaria') {
+        /* echo '<div> Leslie me debes un pan con pollo </div>'; */
+        $donaciones = $deposito->filtroMonetario();
+    }
+
+    if ($tipo_donacion == 'alimentos') {
+        /* echo '<div> Leslie me debes 2 panes con pollo </div>'; */
+        $alimentos = $deposito->filtroAlimento();
+    }
+
+    if ($tipo_donacion == 'articulos') {
+        /* echo '<div> Leslie me debes 3 panes con pollo </div>'; */
+        $articulos = $deposito->filtroArticulos();
+    }
+
+    echo($tipo_donacion);
     
-
-
-
+}
 ?>

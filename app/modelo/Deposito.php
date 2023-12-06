@@ -87,9 +87,39 @@ class Deposito {
     }
 
     public function listarDepositos() {
-        $depositos = [];
+        $donaciones = [];
     
         $sql = "SELECT * FROM donacion";
+        $result = $this->conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $donaciones[] = $row;
+            }
+        }
+    
+        return $donaciones;
+    }
+
+    public function filtroDepositos($tipoDonacion) {
+        $donaciones = [];
+    
+        $sql = "SELECT * FROM donacion WHERE $tipoDonacion";
+        $result = $this->conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $donaciones[] = $row;
+            }
+        }
+    
+        return $donaciones;
+    }
+
+    public function filtroMonetario() {
+        $depositos = [];
+    
+        $sql = "SELECT tipoDonacion , cod_don , monto , nombre , tarnum , numContact , direccion FROM donacion WHERE tipoDonacion = 'D'";
         $result = $this->conn->query($sql);
     
         if ($result->num_rows > 0) {
@@ -101,19 +131,36 @@ class Deposito {
         return $depositos;
     }
 
-    public function filtroDepositos($filtro) {
-        $depositos = [];
+    public function filtroAlimento() {
+        $alimentos = [];
     
-        $sql = "SELECT * FROM donacion WHERE $filtro";
+        $sql = "SELECT tipoDonacion , cod_don , monto , nombre , tAlimento , tEdad , marca , peso , direccion, numContact FROM donacion WHERE tipoDonacion = 'Al'";
         $result = $this->conn->query($sql);
     
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                $depositos[] = $row;
+                $alimentos[] = $row;
             }
         }
     
-        return $depositos;
+        return $alimentos;
     }
+
+    public function filtroArticulos() {
+        $articulos = [];
+    
+        $sql = "SELECT tipoDonacion , cod_don , monto , nombre , direccion , tArticulo , desArticulo , numContact FROM donacion WHERE tipoDonacion = 'Ar'";
+        $result = $this->conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $articulos[] = $row;
+            }
+        }
+    
+        return $articulos;
+    }
+
+
 
 }
