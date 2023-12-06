@@ -45,6 +45,7 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                 <table>
                     <thead>
                         <tr>
+                            <th class="data-title">Código</th>
                             <th class="data-title">Nombre</th>
                             <th class="data-title">Especie</th>
                             <th class="data-title">Sexo</th>
@@ -60,6 +61,7 @@ require_once __DIR__ . '/../../controlador/animalControlador.php';
                     
                         <?php foreach ($animales as $animal): ?>
                         <tr class="data">
+                            <td class="data-list"><?php echo $animal['cod_aniAdo']; ?></td>
                             <td class="data-list"><?php echo $animal['nombre']; ?></td>
                             <td class="data-list"><?php echo $animal['especie']; ?></td>
                             <td class="data-list"><?php echo $animal['sexo']; ?></td>
