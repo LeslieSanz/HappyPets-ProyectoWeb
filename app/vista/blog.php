@@ -461,7 +461,9 @@ require_once __DIR__ . '/../controlador/postControlador.php';
           </div>-->
         </div>
       </div>
-      <div class="card-container">
+      </section>
+      <Section class="container2">
+
                     <?php foreach ($posts as $post): ?>
                     <div class="card">
                         <figure>
@@ -484,9 +486,9 @@ require_once __DIR__ . '/../controlador/postControlador.php';
                         </div>
                     </div>
                     <?php endforeach; ?>
-                </div>
 
-    </section>
+                </Section>
+    
     <!--script de movimiento-->
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"

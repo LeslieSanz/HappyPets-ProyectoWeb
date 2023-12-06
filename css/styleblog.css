@@ -106,8 +106,7 @@ section .card .contenido p {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-transform: uppercase;
-  
+
   font-weight: 500;
 }
 section .card .contenido a {
@@ -129,7 +128,13 @@ section .card .contenido a {
   }
 
 }
-
+section.container2{
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,auto));
+    justify-content: center;
+    gap: 2rem;
+    margin: 5%;
+}
 
 .category{
   font-size: 0.9rem;
