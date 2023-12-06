@@ -56,7 +56,7 @@ if (isset($_POST["procesar-solicitud"])) {
         $usuario->actualizarUsuarioAdopta($cod, $nombre,$correo,$dni,$celular,$distrito);
 
         // Intentar agregar el reporte a la base de datos y mover la imagen del directorio temporal al directorio final
-        if ($solicitud->agregarSolicitudAdopta($cod, $cod_ani,$cod_ani,$viv,$acu,$nin,$ale) ){
+        if ($solicitud->agregarSolicitudAdopta($cod, $cod_ani,$viv,$acu,$nin,$ale) ){
             header("Location: ../../index.php");
             exit();
         } else {
