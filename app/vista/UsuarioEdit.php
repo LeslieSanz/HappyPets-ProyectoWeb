@@ -49,8 +49,8 @@ require_once __DIR__ . '/../controlador/ActualizarUsuario.php';
                     // Limitar la cantidad de palabras a mostrar (por ejemplo, 6 palabras)
                     $nombreLimitado = implode(' ', array_slice($nombre, 0, 1));
                 
-                    echo '<li><a href="app/vista/UsuarioEdit.php"> Bienvenido ' . $nombreLimitado . '</a></li>';
-                    echo '<li><a href="app/controlador/CierreSesion.php">Cerrar Sesión</a></li>';
+                    echo '<li><a href="../vista/UsuarioEdit.php"> Bienvenido ' . $nombreLimitado . '</a></li>';
+                    echo '<li><a href="../controlador/CierreSesion.php">Cerrar Sesión</a></li>';
                 } else {
                     echo '<li><a href="app/vista/login.php">Iniciar sesión</a></li>';
                 }
@@ -59,9 +59,11 @@ require_once __DIR__ . '/../controlador/ActualizarUsuario.php';
     </nav>
 </header>
 <main>
-<h1 class="title"> Actualizar Perfil </h1>
 <section class="update-profile-container">
+    
    <form action="" method="post" enctype="multipart/form-data">
+    
+<h1 class="title"> Actualizar Perfil </h1>
    <?php   
    if(isset($_SESSION["usuario"]))
    echo '<img src="../../uploads/'. $usuario['foto'] .'" alt="">';

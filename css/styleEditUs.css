@@ -6,8 +6,8 @@
    --red: #e74c3c;
    --white: #fff;
    --light-color: #aaa;
-   --black: #222;
-   --light-bg: #333;
+   --black: rgb(248, 198, 73);
+   --light-bg:--white ;
 }
 
 * {
@@ -16,7 +16,6 @@
    padding: 0;
    box-sizing: border-box;
    outline: none;
-   border: none;
    text-decoration: none;
 }
 
@@ -69,12 +68,11 @@ html {
 }
 
 .title {
-   padding: 1.5rem 1rem;
+   PADDING-BOTTOM: 31PX;
    text-align: center;
-   background-color: var(--black);
    font-size: 3rem;
    text-transform: uppercase;
-   color: var(--white);
+   color: black;
 }
 
 .title span {
@@ -97,8 +95,37 @@ html {
 }
 
 .btn {
-   background-color: var(--blue);
+   width: 100%;
+   height: 70px;
+   cursor: pointer;
+   margin: 5px 5px;
+   font-size: 1.35em;
+   font-weight: bold;
+   padding: 9px 15px;
+   border-radius: 9px;
+   border: 0px;
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+   color: white;
+   text-shadow: 2px 2px 4px rgba(83, 63, 13, 0.5);
+   ;
+   background-color: rgb(245, 183, 26);
+   ;
+   transition: transform 0.2s;
+   /* Agrega una transición suave para el efecto de agrandamiento */
+
+
 }
+
+.btn:hover {
+   transform: scale(1.0);
+   /* Aumenta el tamaño en un 10% al pasar el cursor */
+
+   background-color: rgb(248, 198, 73);
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+
+}
+
 
 .delete-btn {
    background-color: var(--red);
@@ -194,6 +221,7 @@ html {
    border-radius: 50%;
    object-fit: cover;
    margin-bottom: .5rem;
+   
 }
 
 .profile-container .profile h3 {
@@ -206,7 +234,7 @@ html {
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 2rem;
+   padding: 6rem;
    min-height: 100vh;
 }
 
@@ -230,27 +258,27 @@ html {
 }
 
 .update-profile-container form img {
-   height: 20rem;
-   width: 20rem;
-   border-radius: 50%;
-   margin-bottom: 1rem;
+   height: 100%;
+    width: 50%;
+    border-radius: 13%;
+    margin-bottom: 1rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .update-profile-container form .flex .inputBox span {
    font-size: 2rem;
-   color: var(--light-color);
+   font-weight: bold;
    display: block;
    padding-top: 1rem;
 }
 
 .update-profile-container form .flex .inputBox .box {
+   border-radius: 10px;
    width: 100%;
    padding: 1.2rem 1.4rem;
-   border-radius: .5rem;
    font-size: 1.8rem;
-   color: var(--white);
    margin: 1rem 0;
-   background-color: var(--light-bg);
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* media queries  */

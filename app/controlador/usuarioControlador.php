@@ -48,7 +48,7 @@ if (isset($_SESSION['usuario'])) {
     // Verifica si el usuario se obtuvo correctamente
     if ($usuario !== null) {
         //Depuración
-        var_dump($usuario); // Verifica la estructura y los valores de $usuario
+        //var_dump($usuario); // Verifica la estructura y los valores de $usuario
     } else {
         echo "Usuario no encontrado";
     }
