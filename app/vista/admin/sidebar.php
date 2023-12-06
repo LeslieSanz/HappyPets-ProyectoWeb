@@ -45,6 +45,10 @@
                     <i class="fa-solid fa-hand-holding-heart"></i>
                     <span class="link-name">Donaciones</span>
                 </a></li>
+                <li><a href="adminPost.php">
+                    <i class="fa-solid fa-pen"></i>
+                    <span class="link-name">Posts</span>
+                </a></li>
                 <li><a href="adminComentarios.php">
                     <i class="uil uil-comments"></i>
                     <span class="link-name">Comentarios</span>

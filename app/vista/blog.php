@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . '/../controlador/postControlador.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -457,6 +461,31 @@
           </div>-->
         </div>
       </div>
+      <div class="card-container">
+                    <?php foreach ($posts as $post): ?>
+                    <div class="card">
+                        <figure>
+                        <?php
+                        echo "<img src='/HappyPets-ProyectoWeb/uploads/" . $post['foto'] . "' alt='Imagen'><br>";
+                        ?>
+                        </figure>
+                        <div class="contenido">
+                        <p ><?php echo $post['categoria'] ; ?></p>
+                            <a target="_blank" href="postInd.php?codigo=<?php echo $post['cod_post']; ?>" id="leerMasEnlace"><?php echo $post['titulo']; ?></a>
+                            <?php
+                            // Obtener las palabras de la descripción
+                            $palabras = explode(' ', $post['contenido']);
+                            
+                            // Limitar la cantidad de palabras a mostrar (por ejemplo, 20 palabras)
+                            $caracteristicasLimitadas = implode(' ', array_slice($palabras, 0, 30));
+                            ?>
+                            
+                            <p> <?php echo $caracteristicasLimitadas . '...'; ?> </p>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+
     </section>
     <!--script de movimiento-->
     <script

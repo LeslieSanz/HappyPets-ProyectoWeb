@@ -1,19 +1,23 @@
+<?php
+require_once __DIR__ . '/../controlador/postControlador.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog-HappyPets</title>
-    <link rel="stylesheet" href="../../css/stylePost_pagina.css" />
-    <link rel="stylesheet" href="../../css/header.css" />
-    <link rel="stylesheet" href="../../css/footer.css" />
-    <link rel="icon" href="../../img/logos/logopets.png" type="image/x-icon" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de <?php echo $postDetalles['titulo']; ?></title>
+    <link rel="stylesheet"   href="../../css/stylePost_pagina.css" />
+    <link rel="stylesheet"   href="../../css/header.css" /> 
+    <link rel="stylesheet"   href="../../css/footer.css" />
+    <link rel="icon" href = "../../img/logos/logopets.png" type = "image/x-icon">
     <script
       src="https://kit.fontawesome.com/09bca36bc3.js"
       crossorigin="anonymous"
     ></script>
-  </head>
-  <body>
+</head>
+<body>
     <!--CABECERA-->
     <header>
     <a href="../../index.php" class="logo">
@@ -47,137 +51,36 @@
         </ul>
     </nav>
 </header>
-    <!--Contenido del post-->
-    <section class="post-header">
+    <!--FIN CABECERA-->
+
+<!--Contenido del post-->
+<section class="post-header" id="descripcion">
       <div class="header-content post-container">
         <!--Retroceder a la pagina de noticias-->
         <a href="blog.php" class="back-home">Regresar</a>
         <!--Titulo-->
         <h1 class="header-title">
-          3 hábitos para tener una mascota sana y activa
+        <?php echo $postDetalles['titulo']; ?>
         </h1>
         <!--Imagen del post-->
-        <img src="../../img/blog-img/post3.PNG" alt="" class="header-img" />
+        <div class="post_img">
+            <?php
+            echo "<img src='/HappyPets-ProyectoWeb/uploads/" . $postDetalles['foto'] . "' alt='Imagen'><br>";
+            ?>
+            </div>
       </div>
     </section>
 
+
+
     <!--publicaciones/posts-->
     <section class="post-content post-container">
-      <p class="post-text">
-        Según diferentes estudios de empresas colombianas, se estima que, en
-        nuestro país,
-        <strong
-          >6 de cada 9 familias tienen alguna mascota o animal de
-          compañía.</strong
-        >
-        Cada vez es más común que los hogares opten por incluir a uno de estos
-        miembros.
-      </p>
-      <p class="post-text">
-        Cada animal, según su raza, tamaño y edad
-        <strong
-          >requiere de diferentes cuidados y rutinas que le ayudarán a
-          garantizar una vida larga y saludable.</strong
-        >
-        Por esta razón en Canal Institucional hemos consultado a los expertos
-        para conocer más sobre las prácticas para cuidar a nuestras mascotas.
-      </p>
-      <p class="post-text">
-        La médica veterinaria, Ana Milena Herrera, afirma que, al hablar de
-        mascotas,
-        <strong
-          >la base para un cuidado óptimo es la creación de hábitos o rutinas
-          saludables</strong
-        >
-        en todas las áreas de la vida del animal.
-      </p>
-      <p class="post-text">
-        “Crear una rutina es muy importante para ellos: en cuanto a la comida, a
-        sus horas de salida para hacer sus necesidades, si lo mandan a pasear,
-        si sus salidas son diarias, cada tercer día, una vez a la semana, etc”,
-        coincide Clara Peña, paseadora de perros.
-      </p>
-      <p class="post-text">
-        La médica Ana Milena, desde su opinión profesional, afirma que estas
-        prácticas se pueden clasificar dentro de
-        <strong>3 hábitos que harán a tu mascota más sana y activa.</strong>
-      </p>
-      &nbsp;
+    <div style="display: flex; flex-direction: row-reverse;  justify-content: space-between;">
+                    <p><?php echo $postDetalles['categoria']; ?></p>
+                </div>
 
-      <h2 class="sub-heading">Top 3 hábitos para el cuidado de tu mascota</h2>
-      <h3 class="sub-sub-heading">1.La alimentación</h3>
-      <p class="post-text">
-        Dar
-        <strong
-          >una muy buena alimentación a tu mascota y acostumbrarla a ciertas
-          horas para administrar sus comidas</strong
-        >
-        ayudará a disminuir el riesgo de tener enfermedades que pueden ser
-        causadas por ayunos prolongados o por malos hábitos en ese régimen de
-        alimentación, como la obesidad.
-      </p>
-      <p class="post-text">
-        Según su edad y raza
-        <strong
-          >puedes escoger la comida que sea más conveniente para tu
-          mascota,</strong
-        >
-        sea concentrado o preparada en casa. Es importante
-        <strong
-          >consultar al veterinario para definir la dieta o si se desean hacer
-          cambios en ella.</strong
-        >
-      </p>
-
-      <h3 class="sub-sub-heading">2.El ejercicio</h3>
-      <p class="post-text">
-        Es fundamental tener
-        <strong
-          >una rutina relacionada con la actividad física en las
-          mascotas,</strong
-        >
-        especialmente en los perros, sin importar su raza, la edad o
-        características particulares.
-      </p>
-      <p class="post-text">
-        Estos animales deben salir a hacer ciertas rutinas de ejercicio. Caminar
-        o salir a trotar
-        <strong>les ayuda a liberar la carga de estrés o ansiedad.</strong>
-        También ayuda a tener una mascota saludable, ya que evitará tener
-        problemas de obesidad por sedentarismo.
-      </p>
-
-      <h3 class="sub-sub-heading">3.Salud e higiene</h3>
-      <p class="post-text">
-        Es fundamental cuidar estos aspectos en nuestras mascotas, ya que, en
-        mayor parte son áreas que ellos no pueden cubrir por su cuenta. Esto
-        incluyen
-        <strong
-          >rutinas como el cepillado de pelo y dientes, la limpieza de patas
-          después de salir, baños periódicos </strong
-        >y monitoreo de cualquier síntoma extraño para
-        <strong>acudir a un veterinario.</strong>
-      </p>
-      <p class="post-text">
-        Este último aspecto es indispensable
-        <strong
-          >ante cambios en el comportamiento y en el estado de salud,</strong
-        >
-        por ejemplo, si la mascota deja de comer, dificultad para defecar,
-        vómitos, rasquiña frecuente, entre muchos aspectos más que pueden ser
-        indicativos de que la mascota requiere atención a su salud.
-      </p>
-      <p class="post-text">
-        También
-        <strong
-          >es necesario tener el esquema de vacunas al día, hacer las
-          respectivas desparasitaciones</strong
-        >
-        cuando se necesiten, el control de pulgas y garrapatas y el cuidado de
-        la salud oral.
-      </p>
+                <p><?php echo $postDetalles['contenido']; ?></p>
     </section>
-
 
     <section id="jjjd" class="section">
 	<div class="comment post-container">
@@ -280,6 +183,14 @@ if(isset($_SESSION['cod_usu'])){
     <script src="../../js/post-pagina.js"></script>
     </section>
 
+
+
+
+
+
+
+        
+    </section>
     <!--PIE DE PAGINA-->
     <footer class="pie-pagina">
         <section class="grupo-1">
@@ -329,5 +240,5 @@ if(isset($_SESSION['cod_usu'])){
             <small>&copy; 2023 <b>HappyPets</b> - Todos los Derechos Reservados.</small>
         </section>
     </footer>
-  </body>
+</body>
 </html>
