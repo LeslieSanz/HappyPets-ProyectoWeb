@@ -33,23 +33,13 @@
             </li>
             <li><a href="contacto.php">Contacto</a></li>
             <?php
-                session_start();
-
-                if (isset($_SESSION["usuario"])) {
-                    // Obtener el nombre de usuario
-                    $nombreCompleto = $_SESSION["usuario"];
-                
-                    // Dividir el nombre en palabras
-                    $nombre = explode(' ', $nombreCompleto);
-                
-                    // Limitar la cantidad de palabras a mostrar (por ejemplo, 6 palabras)
-                    $nombreLimitado = implode(' ', array_slice($nombre, 0, 1));
-                
-                    echo '<li><a href="UsuarioEdit.php"> Bienvenido ' . $nombreLimitado . '</a></li>';
-                    echo '<li><a href="../controlador/CierreSesion.php">Cerrar Sesión</a></li>';
-                } else {
-                    echo '<li><a href="login.php">Iniciar sesión</a></li>';
-                }
+            session_start();
+            if (isset($_SESSION["usuario"])) {
+                echo '<li><a href="UsuarioEdit.php"> Bienvenido '.$_SESSION["usuario"].'</a></li>';
+                echo '<li><a href="../../app/controlador/CierreSesion.php">Cerrar Sesion</a></li>';
+            } else {
+                echo '<li><a href="login.php">Iniciar sesión</a></li>';
+            }
             ?>
         </ul>
     </nav>
@@ -58,36 +48,37 @@
 <h1 class="title"> Actualizar Perfil </h1>
 <section class="update-profile-container">
    <form action="" method="post" enctype="multipart/form-data">
-      <img src="../../uploads/5.jpg" alt="">
-      <div class="flex">
+   <?php   
+   if(isset($_SESSION["usuario"]))
+   echo '<img src="../../uploads/'. $_SESSION['foto'] .'" alt="">';
+   ?>
+   <div class="flex">
          <div class="inputBox">
             <?php
             if (isset($_SESSION["usuario"]))
             echo '<span>Usuario : </span>';
-            echo '<input type="text" name="name" required class="box" placeholder="Ingresar tu nombre" value="'. $_SESSION["usuario"] .'">';
+            echo '<input type="text" name="nombre" required class="box" placeholder="Ingresar tu nombre" value="'. $_SESSION["usuario"] .'">';
             echo '<span>Email : </span>';
             echo '<input type="email" name="email" required class="box" placeholder="Ingresar tu email" value="'. $_SESSION['email'] .'">';
             echo '<span>Foto de perfil : </span>';
-            echo '<input type="hidden" name="old_image" value="">';
-            echo '<input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png">';
+            echo '<input type="file" name="foto" class="box" accept="image/jpg, image/jpeg, image/png">';
             ?>
          </div>
          <div class="inputBox">
          <?php
             if (isset($_SESSION["usuario"]))
-            echo'<input type="hidden" name="old_pass" value="'. $_SESSION['password'] .'">';
-            echo'<span>Antigua contraseña :</span>';
-            echo'<input type="password" class="box" name="previous_pass" placeholder="'. $_SESSION['password'] .'" >';
-            echo'<span>Nueva contraseña :</span>';
-            echo'<input type="password" class="box" name="new_pass" placeholder="Ingresar nueva contraseña" >';
-            echo'<span>Confirmar contraseña :</span>';
-            echo'<input type="password" class="box" name="confirm_pass" placeholder="Confirmar nueva contraseña" >';
+            echo'<input type="hidden" class= "box" name="codigo" value="'.$_SESSION['cod_usu'].'">';
+            echo'<span>N° de Celular :</span>';
+            echo'<input type="tel" class="box" name="telefono" placeholder="'.$_SESSION['celular'].'" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required >';
+            echo'<span>Dni :</span>';
+            echo'<input type="text" class="box" name="dni" placeholder="'. $_SESSION['dni'] .'" >';
+            echo'<span>Distrito :</span>';
+            echo'<input type="text" class="box" name="distrito" placeholder="'.$_SESSION['distrito'].'" >';
             ?>
          </div>
       </div>
       <div class="flex-btn">
-         <input type="submit" value="Actualizar" name="update" class="btn">
-         <a href="admin_page.php" class="option-btn">Retroceder</a>
+         <input type="submit" value="Actualizar" name="update" formaction="../controlador/ActualizarUsuario.php" class="btn">
       </div>
    </form>
 
@@ -135,8 +126,8 @@
                         class="fa fa-facebook"></a>
                     <a href="https://instagram.com/happypets2023web?igshid=NGVhN2U2NjQ0Yg==" target="_blank"
                         class="fa fa-instagram"></a>
-                    <a href="https://twitter.com/pets_happy123" class="fa fa-x"></a>
-                    <a href="https://www.youtube.com/@HappyPets-cf1ug/featured" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
                 </div>
             </div>
         </section>
