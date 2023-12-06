@@ -271,7 +271,10 @@ require_once __DIR__ . '/../controlador/adoptaControlador.php';
             document.getElementById('ninosHidden').value = ninosCapturado;
             document.getElementById('alergiaHidden').value = alergiasCapturado;
 
-            console.log('aaaaaaaaaaaa'+document.getElementById('viviendaHidden').value);
+            console.log(document.getElementById('viviendaHidden').value);
+            console.log(document.getElementById('acuerdoHidden').value);
+            console.log(document.getElementById('ninosHidden').value);
+            console.log(document.getElementById('alergiaHidden').value);
 
             // Enviar el formulario oculto al controlador
             document.getElementById('formularioOculto').submit();
