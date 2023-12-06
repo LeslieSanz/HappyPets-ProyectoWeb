@@ -159,7 +159,7 @@ function borrarTexto(input) {
 
   
 
-  function mostrarImagen() {
+  function mostrarImg() {
 	const botonFile = document.getElementById('boton-file');
 	const imagenPrevia = document.getElementById('imagen-previa');
 	const nombreArchivo = document.getElementById('nombre-archivo').querySelector('span');
@@ -182,7 +182,28 @@ function borrarTexto(input) {
 	}
   }
 
-
- 
+//ESTO SE USA EN LA PARTE DEL ADMIN
+  function mostrarImagen(formulario) {
+    const botonFile = document.getElementById(`boton-file-${formulario}`);
+    const imagenPrevia = document.getElementById(`imagen-previa-${formulario}`);
+    const nombreArchivo = document.getElementById(`nombre-archivo-${formulario}`).querySelector('span');
+	const archivo = botonFile.files[0];
+  
+	if (archivo) {
+	  const lector = new FileReader();
+  
+	  lector.onload = function (e) {
+		imagenPrevia.src = e.target.result;
+	  };
+  
+	  lector.readAsDataURL(archivo);
+  
+	  nombreArchivo.textContent = archivo.name;
+	  document.getElementById('previsualizacion').style.display = 'block';
+	} else {
+	  document.getElementById('previsualizacion').style.display = 'none';
+	}
+  }
+  
 
 
